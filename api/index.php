@@ -10,6 +10,11 @@ $requestUri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = parse_url($requestUri, PHP_URL_PATH);
 $path = trim($path, '/');
 
+// Explicitly send text/html header so browser never treats output as a downloadable binary
+if (!headers_sent() && strpos($path, 'api/') !== 0) {
+    header('Content-Type: text/html; charset=utf-8');
+}
+
 // Security: Prevent direct web access to sensitive internal directories & files
 $blockedPrefixes = ['data', 'storage', 'includes', '.git', '.env', '.htaccess'];
 foreach ($blockedPrefixes as $prefix) {
