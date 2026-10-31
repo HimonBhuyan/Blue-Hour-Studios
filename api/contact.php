@@ -87,6 +87,66 @@ if ($targetPath) {
     @file_put_contents($targetPath, json_encode($existing, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 }
 
+// Seamless Direct Integration: Instantly push lead to Aura Mini CRM
+$crmDir = __DIR__ . '/../../aura-crm/storage';
+$crmStorageFile = $crmDir . '/leads.json';
+if (@is_dir($crmDir) || @is_dir(__DIR__ . '/../../aura-crm')) {
+    if (!@is_dir($crmDir)) {
+        @mkdir($crmDir, 0777, true);
+    }
+    $crmLeads = [];
+    if (@file_exists($crmStorageFile)) {
+        $crmContent = @file_get_contents($crmStorageFile);
+        $crmDecoded = json_decode($crmContent, true);
+        if (is_array($crmDecoded)) {
+            $crmLeads = $crmDecoded;
+        }
+    }
+
+    $dealValue = 0;
+    if (preg_match('/(\d[\d,]*)/', $budget, $m)) {
+        $dealValue = (float)str_replace(',', '', $m[1]);
+    }
+
+    $crmLead = [
+        'id' => 'lead_' . bin2hex(random_bytes(6)),
+        'website_inquiry_id' => $inquiry['id'],
+        'name' => htmlspecialchars($name, ENT_QUOTES, 'UTF-8'),
+        'email' => filter_var($email, FILTER_SANITIZE_EMAIL),
+        'phone' => htmlspecialchars($phone, ENT_QUOTES, 'UTF-8'),
+        'company' => '',
+        'service' => htmlspecialchars($service, ENT_QUOTES, 'UTF-8'),
+        'budget' => htmlspecialchars($budget, ENT_QUOTES, 'UTF-8'),
+        'deal_value' => $dealValue,
+        'currency' => 'INR',
+        'status' => 'new',
+        'priority' => 'warm',
+        'message' => htmlspecialchars($message, ENT_QUOTES, 'UTF-8'),
+        'source' => 'Aura Studios Website',
+        'ip_address' => $_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN',
+        'notes' => [
+            [
+                'id' => 'note_' . uniqid(),
+                'text' => 'Inquiry received live from Aura Studios website strategic brief form.',
+                'author' => 'Website Integration',
+                'created_at' => date('c')
+            ]
+        ],
+        'timeline' => [
+            [
+                'action' => 'Inquiry Received',
+                'detail' => 'Submitted via Aura Studios website brief form',
+                'timestamp' => date('c')
+            ]
+        ],
+        'created_at' => date('c'),
+        'updated_at' => date('c')
+    ];
+
+    array_unshift($crmLeads, $crmLead);
+    @file_put_contents($crmStorageFile, json_encode($crmLeads, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+}
+
 http_response_code(200);
 echo json_encode([
     'success' => true,

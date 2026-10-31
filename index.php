@@ -1,8 +1,9 @@
 <?php
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Engineering Digital Supremacy & Viral Brand Growth';
-$pageDesc = 'Blue Hour Creative Studios is a hybrid creative and technology powerhouse. We architect bespoke high-performance web applications, enterprise ERPs, and hyper-growth social media campaigns.';
+$pageTitle = 'The Blue Hour Studios | Creative & Software Engineering Studio';
+$pageDesc = 'Discover The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India — delivering custom web & SaaS development, enterprise ERP/CRM systems, mobile apps, high-ROAS paid ads, and social media marketing. Explore our work and get in touch.';
+$pageOgDesc = 'Explore the custom software engineering, enterprise ERP/CRM platforms, mobile apps, and viral social media marketing services of The Blue Hour Studios in Guwahati & New Delhi, India.';
 $activePage = 'home';
 
 require_once __DIR__ . '/includes/header.php';

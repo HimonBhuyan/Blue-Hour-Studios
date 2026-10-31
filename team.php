@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/init.php';
 
 $pageTitle = 'Leadership & Studio Collective';
-$pageDesc = 'Meet the core leaders of Blue Hour Creative Studios: Himon Bhuyan (Founder & Principal Software Architect) and Darshana (Partner — Head of Client Growth & Social Media Strategy).';
+$pageDesc = 'Meet the core leaders of The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India: Himon Bhuyan (Founder & Principal Software Architect) and Darshana (Partner — Head of Client Growth & Social Media Strategy).';
 $activePage = 'team';
 
 require_once __DIR__ . '/includes/header.php';

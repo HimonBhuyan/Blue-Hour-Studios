@@ -7,6 +7,13 @@
   },
   "routes": [
     {
+      "src": "/og-image.jpg",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/assets/images/og-image.jpg"
+    },
+    {
       "src": "/assets/(.*)",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"

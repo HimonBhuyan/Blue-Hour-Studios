@@ -9,22 +9,124 @@
  * @var array  $agency
  */
 
-$title = !empty($pageTitle) 
-    ? $pageTitle . ' — ' . ($agency['name'] ?? 'Blue Hour Creative Studios')
-    : ($agency['name'] ?? 'Blue Hour Creative Studios') . ' — Software Engineering & Viral Brand Growth';
+$currentPage = $activePage ?? 'home';
+$baseUrl = 'https://theblue-hour-studios.vercel.app';
+
+$canonicalPathMap = [
+    'home'     => '/',
+    'services' => '/services',
+    'works'    => '/works',
+    'pricing'  => '/pricing',
+    'team'     => '/team',
+    'contact'  => '/contact',
+];
+$canonicalPath = $canonicalPathMap[$currentPage] ?? '/';
+$canonicalUrl = $baseUrl . $canonicalPath;
+
+if ($currentPage === 'home') {
+    $title = !empty($pageTitle)
+        ? $pageTitle
+        : 'The Blue Hour Studios | Creative & Software Engineering Studio in Guwahati & New Delhi';
+} else {
+    $title = !empty($pageTitle)
+        ? $pageTitle . ' | The Blue Hour Studios (' . ($agency['name'] ?? 'Blue Hour Creative Studios') . ')'
+        : 'The Blue Hour Studios | ' . ($agency['name'] ?? 'Blue Hour Creative Studios');
+}
 
 $description = !empty($pageDesc)
     ? $pageDesc
-    : 'Blue Hour Creative Studios is a hybrid creative technology powerhouse. We architect bespoke high-performance web applications, enterprise ERPs, and hyper-growth social media campaigns.';
+    : 'Discover The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India — a creative and software engineering studio delivering custom web & SaaS development, enterprise ERP & CRM systems, iOS & Android mobile apps, high-ROAS paid ads, and viral social media marketing.';
 
-$currentPage = $activePage ?? 'home';
+$ogDescription = !empty($pageOgDesc)
+    ? $pageOgDesc
+    : $description;
+
+$ogImage = $baseUrl . '/og-image.jpg';
 ?>
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
   <title><?= htmlspecialchars($title) ?></title>
+
+  <meta
+    name="description"
+    content="<?= htmlspecialchars($description) ?>"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="<?= htmlspecialchars($canonicalUrl) ?>"
+  />
+
+  <meta name="keywords" content="The Blue Hour Studios, Blue Hour Creative Studios, creative studio Guwahati, software engineering New Delhi, custom web development, SaaS, enterprise ERP, CRM systems, mobile app development, social media marketing, performance ads, brand identity, India" />
+  <meta name="author" content="The Blue Hour Studios (Blue Hour Creative Studios)" />
+  <meta name="geo.region" content="IN-AS, IN-DL" />
+  <meta name="geo.placename" content="Guwahati & New Delhi, India" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Blue Hour Studios" />
+
+  <meta
+    property="og:title"
+    content="<?= htmlspecialchars($title) ?>"
+  />
+
+  <meta
+    property="og:description"
+    content="<?= htmlspecialchars($ogDescription) ?>"
+  />
+
+  <meta
+    property="og:url"
+    content="<?= htmlspecialchars($canonicalUrl) ?>"
+  />
+
+  <meta
+    property="og:image"
+    content="<?= htmlspecialchars($ogImage) ?>"
+  />
+  <meta property="og:image:alt" content="The Blue Hour Studios — Blue Hour Creative Studios" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<?= htmlspecialchars($title) ?>" />
+  <meta name="twitter:description" content="<?= htmlspecialchars($ogDescription) ?>" />
+  <meta name="twitter:image" content="<?= htmlspecialchars($ogImage) ?>" />
+
+  <!-- Structured Data (JSON-LD) for Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "The Blue Hour Studios",
+    "alternateName": "Blue Hour Creative Studios",
+    "url": "https://theblue-hour-studios.vercel.app/",
+    "logo": "https://theblue-hour-studios.vercel.app/assets/images/blue_hour_full.png",
+    "image": "https://theblue-hour-studios.vercel.app/og-image.jpg",
+    "description": "Discover The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India — delivering custom web & SaaS development, enterprise ERP/CRM systems, mobile apps, high-ROAS paid ads, and social media marketing.",
+    "telephone": "+91-7002201534",
+    "email": "hello@bluehourcreativestudios.com",
+    "areaServed": [
+      { "@type": "City", "name": "Guwahati" },
+      { "@type": "City", "name": "New Delhi" },
+      { "@type": "Country", "name": "India" }
+    ],
+    "sameAs": [
+      "https://instagram.com/bluehourcreativestudios",
+      "https://linkedin.com/company/blue-hour-creative-studios",
+      "https://twitter.com/bluehour_studio",
+      "https://github.com/HimonBhuyan"
+    ]
+  }
+  </script>
 
   <!-- Immediate Theme Initializer (Default: White / Porcelain Light Mode) -->
   <script>
@@ -36,14 +138,6 @@ $currentPage = $activePage ?? 'home';
       } catch (e) {}
     })();
   </script>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="<?= htmlspecialchars($description) ?>">
-  <meta name="keywords" content="Blue Hour Creative Studios, software engineering, web development, SaaS, enterprise ERP, social media agency, performance marketing, high ROAS, Guwahati, New Delhi">
-  <meta name="author" content="Blue Hour Creative Studios">
-  <meta property="og:title" content="<?= htmlspecialchars($title) ?>">
-  <meta property="og:description" content="<?= htmlspecialchars($description) ?>">
-  <meta property="og:type" content="website">
 
   <!-- Precision Google Typography: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

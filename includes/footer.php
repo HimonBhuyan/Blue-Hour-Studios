@@ -102,6 +102,7 @@
             <li><a href="pricing.php">Pricing & Packages</a></li>
             <li><a href="team.php">Leadership & Team</a></li>
             <li><a href="contact.php">Strategic Desk</a></li>
+            <li><a href="../aura-crm/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line" style="font-size: 0.72rem; color: var(--accent-champagne);"></i> Leads CRM</a></li>
           </ul>
         </div>
 

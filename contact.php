@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/init.php';
 
 $pageTitle = 'Strategic Intake Desk & Inquiries';
-$pageDesc = 'Initiate your project brief with Blue Hour Creative Studios. Direct consultation with founders, transparent package selection, and sub-4-hour response time.';
+$pageDesc = 'Initiate your project brief with The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India. Direct founder consultation, transparent packages, and sub-4-hour response time.';
 $activePage = 'contact';
 
 // Read query params for intelligent pre-fill

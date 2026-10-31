@@ -10,6 +10,17 @@ $requestUri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = parse_url($requestUri, PHP_URL_PATH);
 $path = trim($path, '/');
 
+// Serve og-image.jpg directly if requested through front controller
+if ($path === 'og-image.jpg' || $path === 'public/og-image.jpg') {
+    $ogFile = dirname(__DIR__) . '/assets/images/og-image.jpg';
+    if (file_exists($ogFile)) {
+        header('Content-Type: image/jpeg');
+        header('Cache-Control: public, max-age=31536000, immutable');
+        readfile($ogFile);
+        exit;
+    }
+}
+
 // Explicitly send text/html header so browser never treats output as a downloadable binary
 if (!headers_sent() && strpos($path, 'api/') !== 0) {
     header('Content-Type: text/html; charset=utf-8');
