@@ -109,12 +109,12 @@
         <div>
           <h4 class="footer-col-title">Capabilities</h4>
           <ul class="footer-links-list">
-            <li><a href="services.php#web">Custom Web & SaaS</a></li>
-            <li><a href="services.php#erp">Enterprise ERP & Logistics</a></li>
-            <li><a href="services.php#mobile">Mobile Apps & Edge AI</a></li>
-            <li><a href="services.php#social">Social Media Strategy</a></li>
-            <li><a href="services.php#ads">Paid Performance Ads</a></li>
-            <li><a href="services.php#brand">Brand Identity Systems</a></li>
+            <li><a href="/website-development/">Website Development</a></li>
+            <li><a href="/ecommerce-development/">E-Commerce Development</a></li>
+            <li><a href="/social-media-management/">Social Media Management</a></li>
+            <li><a href="/branding-design/">Branding &amp; Graphic Design</a></li>
+            <li><a href="/seo-digital-marketing/">SEO &amp; Digital Marketing</a></li>
+            <li><a href="/portfolio/">Portfolio &amp; Case Studies</a></li>
           </ul>
         </div>
 

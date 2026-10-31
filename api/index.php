@@ -17,6 +17,18 @@ if ($path === 'googlefb1d7f6a60216a85.html') {
     exit;
 }
 
+// Serve robots.txt and sitemap.xml directly
+if ($path === 'robots.txt' && file_exists(dirname(__DIR__) . '/robots.txt')) {
+    header('Content-Type: text/plain; charset=utf-8');
+    readfile(dirname(__DIR__) . '/robots.txt');
+    exit;
+}
+if ($path === 'sitemap.xml' && file_exists(dirname(__DIR__) . '/sitemap.xml')) {
+    header('Content-Type: application/xml; charset=utf-8');
+    readfile(dirname(__DIR__) . '/sitemap.xml');
+    exit;
+}
+
 // Serve og-image.jpg directly if requested through front controller
 if ($path === 'og-image.jpg' || $path === 'public/og-image.jpg') {
     $ogFile = dirname(__DIR__) . '/assets/images/og-image.jpg';
@@ -60,11 +72,21 @@ $routeMap = [
     'packages'        => 'pricing.php',
     'team'            => 'team.php',
     'team.php'        => 'team.php',
-    'contact'         => 'contact.php',
-    'contact.php'     => 'contact.php',
-    'inquiry'         => 'contact.php',
-    'api/contact'     => 'api/contact.php',
-    'api/contact.php' => 'api/contact.php',
+    'contact'                     => 'contact.php',
+    'contact.php'                 => 'contact.php',
+    'inquiry'                     => 'contact.php',
+    'website-development'         => 'website-development.php',
+    'website-development.php'     => 'website-development.php',
+    'ecommerce-development'       => 'ecommerce-development.php',
+    'ecommerce-development.php'   => 'ecommerce-development.php',
+    'social-media-management'     => 'social-media-management.php',
+    'social-media-management.php' => 'social-media-management.php',
+    'branding-design'             => 'branding-design.php',
+    'branding-design.php'         => 'branding-design.php',
+    'seo-digital-marketing'       => 'seo-digital-marketing.php',
+    'seo-digital-marketing.php'   => 'seo-digital-marketing.php',
+    'api/contact'                 => 'api/contact.php',
+    'api/contact.php'             => 'api/contact.php',
 ];
 
 if (isset($routeMap[$path])) {

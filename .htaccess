@@ -7,6 +7,15 @@ ServerSignature Off
     RewriteEngine On
     RewriteRule ^storage/(.*)$ - [F,L]
     RewriteRule ^data/(.*)$ - [F,L]
+
+    # Clean SEO routes for service pages, portfolio & contact
+    RewriteRule ^website-development/?$ website-development.php [L,QSA]
+    RewriteRule ^ecommerce-development/?$ ecommerce-development.php [L,QSA]
+    RewriteRule ^social-media-management/?$ social-media-management.php [L,QSA]
+    RewriteRule ^branding-design/?$ branding-design.php [L,QSA]
+    RewriteRule ^seo-digital-marketing/?$ seo-digital-marketing.php [L,QSA]
+    RewriteRule ^portfolio/?$ works.php [L,QSA]
+    RewriteRule ^contact/?$ contact.php [L,QSA]
 </IfModule>
 
 # Enable GZIP / Deflate Compression

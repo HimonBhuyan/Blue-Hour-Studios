@@ -15,27 +15,37 @@ $baseUrl = 'https://theblue-hour-studios.vercel.app';
 $canonicalPathMap = [
     'home'     => '/',
     'services' => '/services',
-    'works'    => '/works',
+    'works'    => '/portfolio/',
     'pricing'  => '/pricing',
     'team'     => '/team',
-    'contact'  => '/contact',
+    'contact'  => '/contact/',
 ];
-$canonicalPath = $canonicalPathMap[$currentPage] ?? '/';
+$canonicalPath = !empty($customCanonicalPath)
+    ? $customCanonicalPath
+    : ($canonicalPathMap[$currentPage] ?? '/');
 $canonicalUrl = $baseUrl . $canonicalPath;
+
+// Compute base href so trailing-slash routes (/website-development/, /portfolio/, etc.) resolve relative assets cleanly
+$scriptDir = isset($_SERVER['SCRIPT_NAME']) ? str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])) : '/';
+if ($scriptDir === '/api' || $scriptDir === '.' || $scriptDir === '/') {
+    $baseHref = '/';
+} else {
+    $baseHref = rtrim($scriptDir, '/') . '/';
+}
 
 if ($currentPage === 'home') {
     $title = !empty($pageTitle)
         ? $pageTitle
-        : 'The Blue Hour Studios | Creative & Software Engineering Studio in Guwahati & New Delhi';
+        : 'Blue Hour Creative Studios | Web Development & Digital Marketing';
 } else {
     $title = !empty($pageTitle)
-        ? $pageTitle . ' | The Blue Hour Studios (' . ($agency['name'] ?? 'Blue Hour Creative Studios') . ')'
-        : 'The Blue Hour Studios | ' . ($agency['name'] ?? 'Blue Hour Creative Studios');
+        ? $pageTitle . ' | Blue Hour Creative Studios'
+        : 'Blue Hour Creative Studios | Web Development & Digital Marketing';
 }
 
 $description = !empty($pageDesc)
     ? $pageDesc
-    : 'Discover The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India — a creative and software engineering studio delivering custom web & SaaS development, enterprise ERP & CRM systems, iOS & Android mobile apps, high-ROAS paid ads, and viral social media marketing.';
+    : 'Blue Hour Creative Studios (The Blue Hour Studios) offers website development, e-commerce websites, social media management, branding, graphic design and digital marketing services for businesses in Guwahati, Assam & New Delhi.';
 
 $ogDescription = !empty($pageOgDesc)
     ? $pageOgDesc
@@ -47,6 +57,7 @@ $ogImage = $baseUrl . '/og-image.jpg';
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
+  <base href="<?= htmlspecialchars($baseHref) ?>" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1"
@@ -65,13 +76,13 @@ $ogImage = $baseUrl . '/og-image.jpg';
     href="<?= htmlspecialchars($canonicalUrl) ?>"
   />
 
-  <meta name="keywords" content="The Blue Hour Studios, Blue Hour Creative Studios, creative studio Guwahati, software engineering New Delhi, custom web development, SaaS, enterprise ERP, CRM systems, mobile app development, social media marketing, performance ads, brand identity, India" />
-  <meta name="author" content="The Blue Hour Studios (Blue Hour Creative Studios)" />
-  <meta name="geo.region" content="IN-AS, IN-DL" />
-  <meta name="geo.placename" content="Guwahati & New Delhi, India" />
+  <meta name="keywords" content="Blue Hour Creative Studios, The Blue Hour Studios, website development services in Guwahati, social media management for businesses in Assam, e-commerce website development for small businesses, branding and digital marketing services, Guwahati, Assam, New Delhi" />
+  <meta name="author" content="Blue Hour Creative Studios (The Blue Hour Studios)" />
+  <meta name="geo.region" content="IN-AS" />
+  <meta name="geo.placename" content="Guwahati, Assam & New Delhi, India" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="The Blue Hour Studios" />
+  <meta property="og:site_name" content="Blue Hour Creative Studios" />
 
   <meta
     property="og:title"

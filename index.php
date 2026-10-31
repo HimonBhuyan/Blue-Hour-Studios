@@ -1,9 +1,9 @@
 <?php
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'The Blue Hour Studios | Creative & Software Engineering Studio';
-$pageDesc = 'Discover The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India — delivering custom web & SaaS development, enterprise ERP/CRM systems, mobile apps, high-ROAS paid ads, and social media marketing. Explore our work and get in touch.';
-$pageOgDesc = 'Explore the custom software engineering, enterprise ERP/CRM platforms, mobile apps, and viral social media marketing services of The Blue Hour Studios in Guwahati & New Delhi, India.';
+$pageTitle = 'Blue Hour Creative Studios | Web Development & Digital Marketing';
+$pageDesc = 'Blue Hour Creative Studios (The Blue Hour Studios) offers website development, e-commerce websites, social media management, branding, graphic design and digital marketing services for businesses in Guwahati, Assam & New Delhi.';
+$pageOgDesc = 'Blue Hour Creative Studios offers website development, e-commerce websites, social media management, branding, graphic design and digital marketing services in Guwahati, Assam & New Delhi.';
 $activePage = 'home';
 
 require_once __DIR__ . '/includes/header.php';
@@ -265,12 +265,77 @@ require_once __DIR__ . '/includes/header.php';
         <?php endforeach; ?>
       </div>
 
-      <!-- Link to Dedicated Services Page -->
-      <div style="text-align: center; margin-top: 2.5rem;" class="reveal-on-scroll">
-        <a href="services.php" class="btn btn-secondary magnetic-btn">
-          <span>Explore Detailed Capabilities & Architecture</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
+      <!-- Step 7 & Step 8: Core Services & Local Guwahati / Assam Discovery Block -->
+      <div class="service-card-editorial spotlight-card reveal-on-scroll" style="margin-top: 2.75rem; padding: 2.5rem;" id="localServicesOverview">
+        <div class="section-kicker" style="margin-bottom: 0.65rem;">
+          <span class="kicker-line"></span>
+          <span>GUWAHATI, ASSAM &bull; NEW DELHI &bull; PAN-INDIA</span>
+        </div>
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.6rem, 2.8vw, 2.25rem); font-weight: 700; margin-bottom: 0.9rem; color: var(--text-primary);">
+          Website Development, Branding &amp; Social Media Management
+        </h2>
+        <p style="color: var(--text-secondary); line-height: 1.75; font-size: 0.98rem; max-width: 920px; margin-bottom: 1rem;">
+          <strong>Blue Hour Creative Studios</strong> (The Blue Hour Studios) provides end-to-end <strong>website development services in Guwahati</strong>, <strong>e-commerce website development for small businesses</strong>, <strong>social media management for businesses in Assam</strong>, and <strong>branding and digital marketing services for local businesses</strong> as well as scaling national enterprises. We serve emerging founders, retail boutiques, D2C labels, hospitality brands, clinics, educational institutions, and logistics companies across Guwahati, Assam, and New Delhi.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.75; font-size: 0.95rem; max-width: 920px; margin-bottom: 1.75rem;">
+          Whether you are launching your first business website or scaling an online store with Meta and Google Ads, you can reach our founders directly via <a href="/contact/" style="color: var(--accent-champagne); text-decoration: underline;">our Contact page</a>, email at <a href="mailto:hello@bluehourcreativestudios.com" style="color: var(--accent-champagne);">hello@bluehourcreativestudios.com</a>, or on WhatsApp at <a href="https://wa.me/917002201534" target="_blank" rel="noopener noreferrer" style="color: var(--accent-champagne);">+91 7002201534</a>.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+          <a href="/website-development/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
+            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+              <i class="fa-solid fa-laptop-code" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> Website Development
+            </h3>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              Custom website development services in Guwahati, Assam &amp; India with CMS and payment gateways.
+            </p>
+          </a>
+
+          <a href="/ecommerce-development/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
+            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+              <i class="fa-solid fa-bag-shopping" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> E-Commerce Development
+            </h3>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              E-commerce website development for small businesses, D2C fashion labels, and retail stores.
+            </p>
+          </a>
+
+          <a href="/social-media-management/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
+            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+              <i class="fa-brands fa-instagram" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> Social Media Management
+            </h3>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              Social media management for businesses in Assam — Instagram, Facebook, Reels &amp; content strategy.
+            </p>
+          </a>
+
+          <a href="/branding-design/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
+            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+              <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> Branding &amp; Graphic Design
+            </h3>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              Logo systems, luxury packaging, brand guidelines, and graphic design for local businesses.
+            </p>
+          </a>
+
+          <a href="/seo-digital-marketing/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
+            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+              <i class="fa-solid fa-magnifying-glass-chart" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> SEO &amp; Digital Marketing
+            </h3>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              Local SEO in Guwahati &amp; Assam, Google Business Profile optimization, Meta Ads &amp; Google Ads.
+            </p>
+          </a>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+          <a href="/portfolio/" class="btn btn-ghost-editorial btn-sm">View Portfolio (/portfolio/)</a>
+          <a href="/contact/" class="btn btn-ghost-editorial btn-sm">Contact Us (/contact/)</a>
+          <a href="services.php" class="btn btn-secondary btn-sm magnetic-btn">
+            <span>Explore All Engineering &amp; Creative Capabilities</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
 
     </div>
