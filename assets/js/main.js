@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCreativePreloader();
   initAcousticSound();
   initAtmosphericTheme();
+  initLiveInteractiveBackground();
   initCursorSpotlight();
   initScrollReveal();
   initNavbar();
@@ -146,6 +147,7 @@ function initAtmosphericTheme() {
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
     localStorage.setItem('blue_hour_theme', theme);
+    window.dispatchEvent(new CustomEvent('bh_theme_change', { detail: { theme } }));
 
     if (themeIcon && themeToggleBtn) {
       if (theme === 'dark') {
@@ -160,6 +162,344 @@ function initAtmosphericTheme() {
       }
     }
   }
+}
+
+/* -------------------------------------------------------------------------
+   2.5 LIVE INTERACTIVE BACKGROUND ENGINE (Retina Canvas, Fluid Dynamic Mesh & Parallax Orbs)
+   ------------------------------------------------------------------------- */
+function initLiveInteractiveBackground() {
+  const canvas = document.getElementById('ambientInteractiveCanvas');
+  const orb1 = document.getElementById('auroraOrb1');
+  const orb2 = document.getElementById('auroraOrb2');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let animationFrameId = null;
+  let isTabVisible = true;
+
+  const mouse = {
+    x: -9999,
+    y: -9999,
+    targetX: -9999,
+    targetY: -9999,
+    radius: 175,
+    active: false
+  };
+
+  const shockwaves = [];
+
+  function getThemePalette() {
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
+    if (theme === 'light') {
+      return {
+        particleColors: [
+          'rgba(195, 155, 95, ',   // Warm luxury champagne
+          'rgba(90, 105, 130, ',   // Slate graphite
+          'rgba(170, 135, 80, ',   // Architectural bronze
+          'rgba(130, 145, 165, '   // Soft platinum
+        ],
+        lineColor: '185, 150, 95',
+        mouseLineColor: '205, 165, 100',
+        lineMaxDist: 115,
+        baseParticleAlpha: 0.38,
+        maxLineAlpha: 0.22,
+        mouseLineAlpha: 0.35,
+        shockwaveColor: '195, 155, 95'
+      };
+    } else if (theme === 'twilight') {
+      return {
+        particleColors: [
+          'rgba(129, 140, 248, ',  // Indigo
+          'rgba(192, 132, 252, ',  // Twilight violet
+          'rgba(96, 165, 250, ',   // Celestial cyan
+          'rgba(244, 244, 246, '   // Starlight white
+        ],
+        lineColor: '129, 140, 248',
+        mouseLineColor: '168, 85, 247',
+        lineMaxDist: 120,
+        baseParticleAlpha: 0.45,
+        maxLineAlpha: 0.24,
+        mouseLineAlpha: 0.38,
+        shockwaveColor: '129, 140, 248'
+      };
+    } else {
+      return {
+        particleColors: [
+          'rgba(226, 210, 180, ',  // Champagne gold
+          'rgba(255, 255, 255, ',  // Mercury silver
+          'rgba(212, 212, 216, ',  // Titanium
+          'rgba(190, 170, 135, '   // Deep gold
+        ],
+        lineColor: '226, 210, 180',
+        mouseLineColor: '247, 241, 230',
+        lineMaxDist: 120,
+        baseParticleAlpha: 0.42,
+        maxLineAlpha: 0.20,
+        mouseLineAlpha: 0.35,
+        shockwaveColor: '226, 210, 180'
+      };
+    }
+  }
+
+  let palette = getThemePalette();
+
+  window.addEventListener('bh_theme_change', () => {
+    palette = getThemePalette();
+  });
+
+  class Particle {
+    constructor() {
+      this.reset(true);
+    }
+
+    reset(initial = false) {
+      this.x = initial ? Math.random() * width : (Math.random() > 0.5 ? 0 : width);
+      this.y = initial ? Math.random() * height : Math.random() * height;
+      this.vx = (Math.random() - 0.5) * 0.45;
+      this.vy = (Math.random() - 0.5) * 0.45;
+      this.baseRadius = 1.2 + Math.random() * 1.8;
+      this.radius = this.baseRadius;
+      this.colorIdx = Math.floor(Math.random() * 4);
+      this.pulseSpeed = 0.02 + Math.random() * 0.03;
+      this.pulseVal = Math.random() * Math.PI * 2;
+      this.alpha = 0.25 + Math.random() * 0.45;
+      this.friction = 0.95;
+      this.pushX = 0;
+      this.pushY = 0;
+    }
+
+    update() {
+      this.pulseVal += this.pulseSpeed;
+
+      this.x += this.vx + this.pushX;
+      this.y += this.vy + this.pushY;
+      this.pushX *= this.friction;
+      this.pushY *= this.friction;
+
+      if (mouse.active) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < mouse.radius && dist > 1) {
+          const force = (1 - dist / mouse.radius) * 1.8;
+          const angle = Math.atan2(dy, dx);
+          this.pushX -= Math.cos(angle) * force * 0.5;
+          this.pushY -= Math.sin(angle) * force * 0.5;
+        }
+      }
+
+      for (let i = 0; i < shockwaves.length; i++) {
+        const sw = shockwaves[i];
+        const dx = this.x - sw.x;
+        const dy = this.y - sw.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const diff = Math.abs(dist - sw.currentRadius);
+        if (diff < 35) {
+          const pushForce = ((35 - diff) / 35) * sw.intensity * 2.8;
+          const angle = Math.atan2(dy, dx);
+          this.pushX += Math.cos(angle) * pushForce;
+          this.pushY += Math.sin(angle) * pushForce;
+        }
+      }
+
+      if (this.x < -25) this.x = width + 25;
+      if (this.x > width + 25) this.x = -25;
+      if (this.y < -25) this.y = height + 25;
+      if (this.y > height + 25) this.y = -25;
+    }
+
+    draw() {
+      const alpha = Math.min(1, Math.max(0.06, this.alpha * palette.baseParticleAlpha * (0.8 + Math.sin(this.pulseVal) * 0.28)));
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = palette.particleColors[this.colorIdx] + alpha + ')';
+      ctx.fill();
+    }
+  }
+
+  class Shockwave {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.currentRadius = 12;
+      this.maxRadius = 260;
+      this.speed = 5;
+      this.intensity = 1.0;
+      this.life = 1.0;
+    }
+
+    update() {
+      this.currentRadius += this.speed;
+      this.life = Math.max(0, 1 - (this.currentRadius / this.maxRadius));
+      this.intensity = this.life;
+      return this.currentRadius < this.maxRadius;
+    }
+
+    draw() {
+      if (this.life <= 0) return;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.currentRadius, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${palette.shockwaveColor}, ${this.life * 0.26})`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+  }
+
+  let particles = [];
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
+
+    const targetCount = width < 768 ? 32 : Math.min(75, Math.max(45, Math.floor((width * height) / 22000)));
+
+    if (particles.length !== targetCount) {
+      particles = [];
+      for (let i = 0; i < targetCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+  }
+
+  resize();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resize, 120);
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.targetX = e.clientX;
+    mouse.targetY = e.clientY;
+    mouse.active = true;
+  });
+
+  window.addEventListener('mouseleave', () => {
+    mouse.active = false;
+  });
+
+  window.addEventListener('click', (e) => {
+    if (shockwaves.length < 5) {
+      shockwaves.push(new Shockwave(e.clientX, e.clientY));
+    }
+  });
+
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches[0]) {
+      mouse.targetX = e.touches[0].clientX;
+      mouse.targetY = e.touches[0].clientY;
+      mouse.active = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
+    mouse.active = false;
+  });
+
+  let orb1X = 0, orb1Y = 0;
+  let orb2X = 0, orb2Y = 0;
+
+  function render() {
+    if (!isTabVisible) {
+      animationFrameId = requestAnimationFrame(render);
+      return;
+    }
+
+    ctx.clearRect(0, 0, width, height);
+
+    if (mouse.active) {
+      mouse.x += (mouse.targetX - mouse.x) * 0.16;
+      mouse.y += (mouse.targetY - mouse.y) * 0.16;
+    } else {
+      mouse.x = -9999;
+      mouse.y = -9999;
+    }
+
+    if (orb1 && orb2 && mouse.active) {
+      const offsetX1 = (mouse.x - width / 2) * 0.045;
+      const offsetY1 = (mouse.y - height / 2) * 0.045;
+      orb1X += (offsetX1 - orb1X) * 0.05;
+      orb1Y += (offsetY1 - orb1Y) * 0.05;
+      orb1.style.transform = `translate3d(${orb1X}px, ${orb1Y}px, 0)`;
+
+      const offsetX2 = -(mouse.x - width / 2) * 0.035;
+      const offsetY2 = -(mouse.y - height / 2) * 0.035;
+      orb2X += (offsetX2 - orb2X) * 0.05;
+      orb2Y += (offsetY2 - orb2Y) * 0.05;
+      orb2.style.transform = `translate3d(${orb2X}px, ${orb2Y}px, 0)`;
+    }
+
+    for (let i = shockwaves.length - 1; i >= 0; i--) {
+      const alive = shockwaves[i].update();
+      shockwaves[i].draw();
+      if (!alive) shockwaves.splice(i, 1);
+    }
+
+    const pCount = particles.length;
+    for (let i = 0; i < pCount; i++) {
+      particles[i].update();
+      particles[i].draw();
+    }
+
+    ctx.lineWidth = 0.75;
+    for (let i = 0; i < pCount; i++) {
+      const p1 = particles[i];
+      for (let j = i + 1; j < pCount; j++) {
+        const p2 = particles[j];
+        const dx = p1.x - p2.x;
+        const dy = p1.y - p2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < palette.lineMaxDist) {
+          const alpha = (1 - dist / palette.lineMaxDist) * palette.maxLineAlpha;
+          ctx.strokeStyle = `rgba(${palette.lineColor}, ${alpha})`;
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      }
+
+      if (mouse.active) {
+        const mdx = p1.x - mouse.x;
+        const mdy = p1.y - mouse.y;
+        const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+
+        if (mDist < mouse.radius) {
+          const mAlpha = (1 - mDist / mouse.radius) * palette.mouseLineAlpha;
+          ctx.strokeStyle = `rgba(${palette.mouseLineColor}, ${mAlpha})`;
+          ctx.beginPath();
+          ctx.moveTo(mouse.x, mouse.y);
+          ctx.lineTo(p1.x, p1.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    animationFrameId = requestAnimationFrame(render);
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    isTabVisible = !document.hidden;
+  });
+
+  render();
 }
 
 /* -------------------------------------------------------------------------

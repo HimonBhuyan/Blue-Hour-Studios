@@ -123,10 +123,13 @@ $currentPage = $activePage ?? 'home';
   <!-- Cursor Spotlight Ambient Glow -->
   <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>
 
-  <!-- Editorial Atmospheric Canvas & Geometric Grid -->
+  <!-- Editorial Atmospheric Canvas & Live Interactive Dynamic Mesh -->
   <div class="editorial-ambient-canvas" aria-hidden="true">
     <div class="ambient-glow-top"></div>
+    <div class="ambient-aurora-orb ambient-orb-1" id="auroraOrb1"></div>
+    <div class="ambient-aurora-orb ambient-orb-2" id="auroraOrb2"></div>
     <div class="ambient-grid-lines"></div>
+    <canvas id="ambientInteractiveCanvas" class="ambient-interactive-canvas"></canvas>
   </div>
 
   <!-- ========================================================================
