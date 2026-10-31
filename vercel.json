@@ -7,6 +7,10 @@
   },
   "routes": [
     {
+      "src": "/googlefb1d7f6a60216a85.html",
+      "dest": "/assets/googlefb1d7f6a60216a85.html"
+    },
+    {
       "src": "/og-image.jpg",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"

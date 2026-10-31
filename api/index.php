@@ -10,6 +10,13 @@ $requestUri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = parse_url($requestUri, PHP_URL_PATH);
 $path = trim($path, '/');
 
+// Serve Google Search Console verification file directly
+if ($path === 'googlefb1d7f6a60216a85.html') {
+    header('Content-Type: text/html; charset=utf-8');
+    echo 'google-site-verification: googlefb1d7f6a60216a85.html';
+    exit;
+}
+
 // Serve og-image.jpg directly if requested through front controller
 if ($path === 'og-image.jpg' || $path === 'public/og-image.jpg') {
     $ogFile = dirname(__DIR__) . '/assets/images/og-image.jpg';
