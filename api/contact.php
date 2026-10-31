@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'POST') {
     http_response_code(405);
     echo json_encode(['success' => false, 'error' => 'Method not allowed.']);
     exit;
@@ -53,24 +53,39 @@ $inquiry = [
     'created_at' => date('c')
 ];
 
+// In serverless environments (e.g. Vercel), the project filesystem is read-only.
+// We write to standard storage locally, or fallback gracefully to sys_get_temp_dir().
 $storageDir = __DIR__ . '/../storage/messages';
-if (!is_dir($storageDir)) {
-    mkdir($storageDir, 0755, true);
+$targetPath = null;
+
+if (!@is_dir($storageDir)) {
+    @mkdir($storageDir, 0755, true);
 }
 
-$filePath = $storageDir . '/inquiries.json';
-$existing = [];
-
-if (file_exists($filePath)) {
-    $content = file_get_contents($filePath);
-    $decoded = json_decode($content, true);
-    if (is_array($decoded)) {
-        $existing = $decoded;
+if (@is_dir($storageDir) && @is_writable($storageDir)) {
+    $targetPath = $storageDir . '/inquiries.json';
+} else {
+    $tempDir = sys_get_temp_dir() . '/bh_storage';
+    if (!@is_dir($tempDir)) {
+        @mkdir($tempDir, 0755, true);
+    }
+    if (@is_dir($tempDir) && @is_writable($tempDir)) {
+        $targetPath = $tempDir . '/inquiries.json';
     }
 }
 
-array_unshift($existing, $inquiry);
-file_put_contents($filePath, json_encode($existing, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+if ($targetPath) {
+    $existing = [];
+    if (@file_exists($targetPath)) {
+        $content = @file_get_contents($targetPath);
+        $decoded = json_decode($content, true);
+        if (is_array($decoded)) {
+            $existing = $decoded;
+        }
+    }
+    array_unshift($existing, $inquiry);
+    @file_put_contents($targetPath, json_encode($existing, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+}
 
 http_response_code(200);
 echo json_encode([

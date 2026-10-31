@@ -229,16 +229,18 @@ require_once __DIR__ . '/includes/header.php';
         <?php foreach ($pillars as $idx => $pillar): ?>
           <div class="growth-pillar-card spotlight-card reveal-on-scroll delay-<?= $idx + 1 ?>">
             <div class="pillar-num-header">
-              <span class="pillar-num"><?= sprintf('%02d', $idx + 1) ?> //</span>
+              <span class="pillar-num"><?= htmlspecialchars($pillar['step'] ?? sprintf('%02d', $idx + 1)) ?> //</span>
               <i class="fa-solid fa-bolt" style="color: var(--accent-champagne); font-size: 0.8rem;"></i>
             </div>
-            <h3 class="pillar-title"><?= htmlspecialchars($pillar['title']) ?></h3>
-            <p class="pillar-desc"><?= htmlspecialchars($pillar['desc']) ?></p>
+            <h3 class="pillar-title"><?= htmlspecialchars($pillar['title'] ?? '') ?></h3>
+            <p class="pillar-desc"><?= htmlspecialchars($pillar['desc'] ?? '') ?></p>
 
+            <?php if (!empty($pillar['stat'])): ?>
             <div class="pillar-stat-pill">
               <span class="stat-highlight"><?= htmlspecialchars($pillar['stat']) ?></span>
-              <span class="stat-caption"><?= htmlspecialchars($pillar['stat_label']) ?></span>
+              <span class="stat-caption"><?= htmlspecialchars($pillar['stat_label'] ?? '') ?></span>
             </div>
+            <?php endif; ?>
           </div>
         <?php endforeach; ?>
       </div>
