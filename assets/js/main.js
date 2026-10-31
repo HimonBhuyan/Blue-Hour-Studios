@@ -127,8 +127,8 @@ function initAtmosphericTheme() {
   const html = document.documentElement;
 
   // Cycles: dark -> twilight -> light -> dark
-  const themes = ['dark', 'twilight', 'light'];
-  const savedTheme = localStorage.getItem('blue_hour_theme') || 'dark';
+  const themes = ['light', 'dark', 'twilight'];
+  const savedTheme = localStorage.getItem('blue_hour_theme') || 'light';
 
   let currentIdx = themes.indexOf(savedTheme);
   if (currentIdx === -1) currentIdx = 0;
@@ -148,15 +148,15 @@ function initAtmosphericTheme() {
     localStorage.setItem('blue_hour_theme', theme);
 
     if (themeIcon && themeToggleBtn) {
-      if (theme === 'twilight') {
-        themeIcon.className = 'fa-solid fa-cloud-moon';
-        themeToggleBtn.setAttribute('title', 'Atmosphere: Blue Hour Twilight (Click for Porcelain)');
-      } else if (theme === 'light') {
-        themeIcon.className = 'fa-solid fa-sun';
-        themeToggleBtn.setAttribute('title', 'Atmosphere: Porcelain Light (Click for Obsidian)');
-      } else {
+      if (theme === 'dark') {
         themeIcon.className = 'fa-solid fa-moon';
         themeToggleBtn.setAttribute('title', 'Atmosphere: Dark Obsidian (Click for Twilight)');
+      } else if (theme === 'twilight') {
+        themeIcon.className = 'fa-solid fa-cloud-moon';
+        themeToggleBtn.setAttribute('title', 'Atmosphere: Blue Hour Twilight (Click for Porcelain Light)');
+      } else {
+        themeIcon.className = 'fa-solid fa-sun';
+        themeToggleBtn.setAttribute('title', 'Atmosphere: Porcelain Light (Click for Dark Obsidian)');
       }
     }
   }

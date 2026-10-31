@@ -20,11 +20,22 @@ $description = !empty($pageDesc)
 $currentPage = $activePage ?? 'home';
 ?>
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($title) ?></title>
+
+  <!-- Immediate Theme Initializer (Default: White / Porcelain Light Mode) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('blue_hour_theme');
+        var theme = saved ? saved : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="<?= htmlspecialchars($description) ?>">
@@ -156,9 +167,9 @@ $currentPage = $activePage ?? 'home';
           <i class="fa-solid fa-volume-high" id="soundIcon"></i>
         </button>
 
-        <!-- 3-Atmosphere Theme Switcher (Dark Obsidian -> Blue Hour Twilight -> Porcelain Light) -->
-        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Atmosphere Mode" title="Switch Atmosphere">
-          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        <!-- 3-Atmosphere Theme Switcher (Porcelain Light -> Dark Obsidian -> Blue Hour Twilight) -->
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Atmosphere Mode" title="Atmosphere: Porcelain Light (Click for Dark Obsidian)">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
         </button>
 
         <a href="contact.php" class="btn btn-primary btn-pill-compact magnetic-btn" id="headerCtaBtn">
