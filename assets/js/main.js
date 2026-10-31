@@ -171,6 +171,7 @@ function initLiveInteractiveBackground() {
   const canvas = document.getElementById('ambientInteractiveCanvas');
   const orb1 = document.getElementById('auroraOrb1');
   const orb2 = document.getElementById('auroraOrb2');
+  const orb3 = document.getElementById('auroraOrb3');
   if (!canvas) return;
 
   const ctx = canvas.getContext('2d');
@@ -182,34 +183,45 @@ function initLiveInteractiveBackground() {
   let animationFrameId = null;
   let isTabVisible = true;
 
+  // Real-time mouse & interactive pointer state
   const mouse = {
     x: -9999,
     y: -9999,
     targetX: -9999,
     targetY: -9999,
-    radius: 175,
-    active: false
+    radius: 240,
+    active: false,
+    userInteracted: false
   };
 
+  // Autonomous floating focus point (keeps background gracefully alive before user mousemove)
+  let autoTime = 0;
+
+  // Luminous cursor dust trail
+  const cursorTrail = [];
+
+  // Expanding click shockwaves and spark bursts
   const shockwaves = [];
+  const sparkBursts = [];
 
   function getThemePalette() {
     const theme = document.documentElement.getAttribute('data-theme') || 'light';
     if (theme === 'light') {
       return {
         particleColors: [
-          'rgba(195, 155, 95, ',   // Warm luxury champagne
-          'rgba(90, 105, 130, ',   // Slate graphite
-          'rgba(170, 135, 80, ',   // Architectural bronze
-          'rgba(130, 145, 165, '   // Soft platinum
+          'rgba(180, 130, 45, ',   // Deep luxury warm champagne gold
+          'rgba(37, 99, 235, ',    // Electric Blue Hour sapphire
+          'rgba(51, 65, 85, ',     // Polished slate obsidian
+          'rgba(217, 119, 6, '     // Radiant amber
         ],
-        lineColor: '185, 150, 95',
-        mouseLineColor: '205, 165, 100',
-        lineMaxDist: 115,
-        baseParticleAlpha: 0.38,
-        maxLineAlpha: 0.22,
-        mouseLineAlpha: 0.35,
-        shockwaveColor: '195, 155, 95'
+        lineColor: '160, 120, 50',
+        mouseLineColor: '37, 99, 235',
+        lineMaxDist: 140,
+        baseParticleAlpha: 0.78,
+        maxLineAlpha: 0.38,
+        mouseLineAlpha: 0.65,
+        shockwaveColor: '180, 130, 45',
+        sparkColor: '195, 145, 55'
       };
     } else if (theme === 'twilight') {
       return {
@@ -221,27 +233,30 @@ function initLiveInteractiveBackground() {
         ],
         lineColor: '129, 140, 248',
         mouseLineColor: '168, 85, 247',
-        lineMaxDist: 120,
-        baseParticleAlpha: 0.45,
-        maxLineAlpha: 0.24,
-        mouseLineAlpha: 0.38,
-        shockwaveColor: '129, 140, 248'
+        lineMaxDist: 145,
+        baseParticleAlpha: 0.82,
+        maxLineAlpha: 0.35,
+        mouseLineAlpha: 0.60,
+        shockwaveColor: '129, 140, 248',
+        sparkColor: '168, 85, 247'
       };
     } else {
+      // Dark Obsidian
       return {
         particleColors: [
           'rgba(226, 210, 180, ',  // Champagne gold
           'rgba(255, 255, 255, ',  // Mercury silver
           'rgba(212, 212, 216, ',  // Titanium
-          'rgba(190, 170, 135, '   // Deep gold
+          'rgba(245, 158, 11, '    // Golden starlight
         ],
         lineColor: '226, 210, 180',
         mouseLineColor: '247, 241, 230',
-        lineMaxDist: 120,
-        baseParticleAlpha: 0.42,
-        maxLineAlpha: 0.20,
-        mouseLineAlpha: 0.35,
-        shockwaveColor: '226, 210, 180'
+        lineMaxDist: 145,
+        baseParticleAlpha: 0.80,
+        maxLineAlpha: 0.32,
+        mouseLineAlpha: 0.55,
+        shockwaveColor: '226, 210, 180',
+        sparkColor: '226, 210, 180'
       };
     }
   }
@@ -252,6 +267,7 @@ function initLiveInteractiveBackground() {
     palette = getThemePalette();
   });
 
+  // Dynamic Particle Node Class
   class Particle {
     constructor() {
       this.reset(true);
@@ -260,20 +276,21 @@ function initLiveInteractiveBackground() {
     reset(initial = false) {
       this.x = initial ? Math.random() * width : (Math.random() > 0.5 ? 0 : width);
       this.y = initial ? Math.random() * height : Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.45;
-      this.vy = (Math.random() - 0.5) * 0.45;
-      this.baseRadius = 1.2 + Math.random() * 1.8;
+      this.vx = (Math.random() - 0.5) * 0.65;
+      this.vy = (Math.random() - 0.5) * 0.65;
+      this.baseRadius = 2.2 + Math.random() * 2.6;
       this.radius = this.baseRadius;
       this.colorIdx = Math.floor(Math.random() * 4);
-      this.pulseSpeed = 0.02 + Math.random() * 0.03;
+      this.pulseSpeed = 0.025 + Math.random() * 0.035;
       this.pulseVal = Math.random() * Math.PI * 2;
-      this.alpha = 0.25 + Math.random() * 0.45;
-      this.friction = 0.95;
+      this.alpha = 0.35 + Math.random() * 0.65;
+      this.isMajorNode = Math.random() < 0.25;
+      this.friction = 0.94;
       this.pushX = 0;
       this.pushY = 0;
     }
 
-    update() {
+    update(activePointerX, activePointerY, isPointerNear) {
       this.pulseVal += this.pulseSpeed;
 
       this.x += this.vx + this.pushX;
@@ -281,55 +298,72 @@ function initLiveInteractiveBackground() {
       this.pushX *= this.friction;
       this.pushY *= this.friction;
 
-      if (mouse.active) {
-        const dx = mouse.x - this.x;
-        const dy = mouse.y - this.y;
+      // Pointer interactive gravitational pull and fluid repulsion
+      if (isPointerNear) {
+        const dx = activePointerX - this.x;
+        const dy = activePointerY - this.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < mouse.radius && dist > 1) {
-          const force = (1 - dist / mouse.radius) * 1.8;
+          const force = (1 - dist / mouse.radius);
           const angle = Math.atan2(dy, dx);
-          this.pushX -= Math.cos(angle) * force * 0.5;
-          this.pushY -= Math.sin(angle) * force * 0.5;
+          // Magnetic orbit & repulsion
+          this.pushX -= Math.cos(angle) * force * 1.2;
+          this.pushY -= Math.sin(angle) * force * 1.2;
         }
       }
 
+      // React to click shockwaves
       for (let i = 0; i < shockwaves.length; i++) {
         const sw = shockwaves[i];
         const dx = this.x - sw.x;
         const dy = this.y - sw.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         const diff = Math.abs(dist - sw.currentRadius);
-        if (diff < 35) {
-          const pushForce = ((35 - diff) / 35) * sw.intensity * 2.8;
+        if (diff < 40) {
+          const pushForce = ((40 - diff) / 40) * sw.intensity * 4.2;
           const angle = Math.atan2(dy, dx);
           this.pushX += Math.cos(angle) * pushForce;
           this.pushY += Math.sin(angle) * pushForce;
         }
       }
 
-      if (this.x < -25) this.x = width + 25;
-      if (this.x > width + 25) this.x = -25;
-      if (this.y < -25) this.y = height + 25;
-      if (this.y > height + 25) this.y = -25;
+      // Edge wrapping with soft border tolerance
+      if (this.x < -30) this.x = width + 30;
+      if (this.x > width + 30) this.x = -30;
+      if (this.y < -30) this.y = height + 30;
+      if (this.y > height + 30) this.y = -30;
     }
 
     draw() {
-      const alpha = Math.min(1, Math.max(0.06, this.alpha * palette.baseParticleAlpha * (0.8 + Math.sin(this.pulseVal) * 0.28)));
+      const pulse = 0.8 + Math.sin(this.pulseVal) * 0.25;
+      const alpha = Math.min(1, Math.max(0.2, this.alpha * palette.baseParticleAlpha * pulse));
+
+      // Draw primary node
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
       ctx.fillStyle = palette.particleColors[this.colorIdx] + alpha + ')';
       ctx.fill();
+
+      // Major constellation nodes get an ambient glowing halo ring
+      if (this.isMajorNode) {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius + 3.8, 0, Math.PI * 2);
+        ctx.strokeStyle = palette.particleColors[this.colorIdx] + (alpha * 0.32) + ')';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
     }
   }
 
+  // Double Shockwave class for click effects
   class Shockwave {
     constructor(x, y) {
       this.x = x;
       this.y = y;
-      this.currentRadius = 12;
-      this.maxRadius = 260;
-      this.speed = 5;
+      this.currentRadius = 10;
+      this.maxRadius = 280;
+      this.speed = 6.5;
       this.intensity = 1.0;
       this.life = 1.0;
     }
@@ -345,9 +379,50 @@ function initLiveInteractiveBackground() {
       if (this.life <= 0) return;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.currentRadius, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(${palette.shockwaveColor}, ${this.life * 0.26})`;
-      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = `rgba(${palette.shockwaveColor}, ${this.life * 0.35})`;
+      ctx.lineWidth = 2;
       ctx.stroke();
+
+      // Secondary echo ring
+      if (this.currentRadius > 35) {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.currentRadius - 25, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(${palette.shockwaveColor}, ${this.life * 0.18})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    }
+  }
+
+  // Spark burst particles generated on click
+  class Spark {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      const angle = Math.random() * Math.PI * 2;
+      const speed = 2 + Math.random() * 5.5;
+      this.vx = Math.cos(angle) * speed;
+      this.vy = Math.sin(angle) * speed;
+      this.radius = 1.5 + Math.random() * 2.2;
+      this.alpha = 0.9;
+      this.decay = 0.02 + Math.random() * 0.025;
+      this.color = palette.sparkColor;
+    }
+
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      this.vx *= 0.96;
+      this.vy *= 0.96;
+      this.alpha -= this.decay;
+      return this.alpha > 0;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${this.color}, ${Math.max(0, this.alpha)})`;
+      ctx.fill();
     }
   }
 
@@ -366,7 +441,8 @@ function initLiveInteractiveBackground() {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.scale(dpr, dpr);
 
-    const targetCount = width < 768 ? 32 : Math.min(75, Math.max(45, Math.floor((width * height) / 22000)));
+    // Dynamic density: ~100 particles on desktop, ~45 on mobile
+    const targetCount = width < 768 ? 45 : Math.min(105, Math.max(65, Math.floor((width * height) / 16000)));
 
     if (particles.length !== targetCount) {
       particles = [];
@@ -384,27 +460,52 @@ function initLiveInteractiveBackground() {
     resizeTimer = setTimeout(resize, 120);
   });
 
+  // Track user mouse movement & spawn luminous cursor wake
+  let lastSpawn = 0;
   window.addEventListener('mousemove', (e) => {
     mouse.targetX = e.clientX;
     mouse.targetY = e.clientY;
     mouse.active = true;
+    mouse.userInteracted = true;
+
+    // Spawn trailing glowing dust particle every 45ms
+    const now = performance.now();
+    if (now - lastSpawn > 45 && cursorTrail.length < 24) {
+      lastSpawn = now;
+      cursorTrail.push({
+        x: e.clientX,
+        y: e.clientY,
+        vx: (Math.random() - 0.5) * 1.2,
+        vy: (Math.random() - 0.5) * 1.2,
+        radius: 1.6 + Math.random() * 2.2,
+        alpha: 0.75,
+        color: palette.mouseLineColor
+      });
+    }
   });
 
   window.addEventListener('mouseleave', () => {
     mouse.active = false;
   });
 
+  // Interactive click bursts
   window.addEventListener('click', (e) => {
     if (shockwaves.length < 5) {
       shockwaves.push(new Shockwave(e.clientX, e.clientY));
+      // Emit vibrant sparks on click
+      for (let s = 0; s < 12; s++) {
+        sparkBursts.push(new Spark(e.clientX, e.clientY));
+      }
     }
   });
 
+  // Touch support for mobile / tablets
   window.addEventListener('touchmove', (e) => {
     if (e.touches && e.touches[0]) {
       mouse.targetX = e.touches[0].clientX;
       mouse.targetY = e.touches[0].clientY;
       mouse.active = true;
+      mouse.userInteracted = true;
     }
   }, { passive: true });
 
@@ -412,9 +513,12 @@ function initLiveInteractiveBackground() {
     mouse.active = false;
   });
 
+  // Parallax Orbs interpolation positions
   let orb1X = 0, orb1Y = 0;
   let orb2X = 0, orb2Y = 0;
+  let orb3X = 0, orb3Y = 0;
 
+  // Master Render Loop
   function render() {
     if (!isTabVisible) {
       animationFrameId = requestAnimationFrame(render);
@@ -423,41 +527,93 @@ function initLiveInteractiveBackground() {
 
     ctx.clearRect(0, 0, width, height);
 
+    autoTime += 0.015;
+
+    // Determine current active pointer (user cursor OR autonomous breathing center)
+    let pointerX, pointerY, isNear;
     if (mouse.active) {
       mouse.x += (mouse.targetX - mouse.x) * 0.16;
       mouse.y += (mouse.targetY - mouse.y) * 0.16;
+      pointerX = mouse.x;
+      pointerY = mouse.y;
+      isNear = true;
     } else {
-      mouse.x = -9999;
-      mouse.y = -9999;
+      // Natural autonomous floating focus in center of viewport
+      pointerX = (width * 0.5) + Math.cos(autoTime * 0.8) * (width * 0.22);
+      pointerY = (height * 0.45) + Math.sin(autoTime * 1.1) * (height * 0.18);
+      isNear = !mouse.userInteracted;
     }
 
-    if (orb1 && orb2 && mouse.active) {
-      const offsetX1 = (mouse.x - width / 2) * 0.045;
-      const offsetY1 = (mouse.y - height / 2) * 0.045;
+    // Parallax background orbs smoothly follow pointer motion
+    const targetOrbX = isNear ? pointerX : width / 2;
+    const targetOrbY = isNear ? pointerY : height / 2;
+
+    if (orb1) {
+      const offsetX1 = (targetOrbX - width / 2) * 0.065;
+      const offsetY1 = (targetOrbY - height / 2) * 0.065;
       orb1X += (offsetX1 - orb1X) * 0.05;
       orb1Y += (offsetY1 - orb1Y) * 0.05;
       orb1.style.transform = `translate3d(${orb1X}px, ${orb1Y}px, 0)`;
+    }
 
-      const offsetX2 = -(mouse.x - width / 2) * 0.035;
-      const offsetY2 = -(mouse.y - height / 2) * 0.035;
+    if (orb2) {
+      const offsetX2 = -(targetOrbX - width / 2) * 0.055;
+      const offsetY2 = -(targetOrbY - height / 2) * 0.055;
       orb2X += (offsetX2 - orb2X) * 0.05;
       orb2Y += (offsetY2 - orb2Y) * 0.05;
       orb2.style.transform = `translate3d(${orb2X}px, ${orb2Y}px, 0)`;
     }
 
+    if (orb3) {
+      const offsetX3 = (targetOrbY - height / 2) * 0.045;
+      const offsetY3 = -(targetOrbX - width / 2) * 0.045;
+      orb3X += (offsetX3 - orb3X) * 0.05;
+      orb3Y += (offsetY3 - orb3Y) * 0.05;
+      orb3.style.transform = `translate3d(${orb3X}px, ${orb3Y}px, 0)`;
+    }
+
+    // Update & draw shockwaves
     for (let i = shockwaves.length - 1; i >= 0; i--) {
       const alive = shockwaves[i].update();
       shockwaves[i].draw();
       if (!alive) shockwaves.splice(i, 1);
     }
 
+    // Update & draw spark bursts
+    for (let i = sparkBursts.length - 1; i >= 0; i--) {
+      const alive = sparkBursts[i].update();
+      if (alive) {
+        sparkBursts[i].draw();
+      } else {
+        sparkBursts.splice(i, 1);
+      }
+    }
+
+    // Update & draw cursor trail dust
+    for (let i = cursorTrail.length - 1; i >= 0; i--) {
+      const tp = cursorTrail[i];
+      tp.x += tp.vx;
+      tp.y += tp.vy;
+      tp.alpha -= 0.022;
+      if (tp.alpha <= 0) {
+        cursorTrail.splice(i, 1);
+        continue;
+      }
+      ctx.beginPath();
+      ctx.arc(tp.x, tp.y, tp.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${tp.color}, ${Math.max(0, tp.alpha * 0.85)})`;
+      ctx.fill();
+    }
+
+    // Update & draw particles
     const pCount = particles.length;
     for (let i = 0; i < pCount; i++) {
-      particles[i].update();
+      particles[i].update(pointerX, pointerY, isNear);
       particles[i].draw();
     }
 
-    ctx.lineWidth = 0.75;
+    // Draw constellation connection lines between nodes
+    ctx.lineWidth = 1.1;
     for (let i = 0; i < pCount; i++) {
       const p1 = particles[i];
       for (let j = i + 1; j < pCount; j++) {
@@ -476,18 +632,21 @@ function initLiveInteractiveBackground() {
         }
       }
 
-      if (mouse.active) {
-        const mdx = p1.x - mouse.x;
-        const mdy = p1.y - mouse.y;
+      // Draw interactive radiant threads from cursor/pointer to nearby constellation nodes
+      if (isNear) {
+        const mdx = p1.x - pointerX;
+        const mdy = p1.y - pointerY;
         const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
 
         if (mDist < mouse.radius) {
           const mAlpha = (1 - mDist / mouse.radius) * palette.mouseLineAlpha;
           ctx.strokeStyle = `rgba(${palette.mouseLineColor}, ${mAlpha})`;
+          ctx.lineWidth = 1.4;
           ctx.beginPath();
-          ctx.moveTo(mouse.x, mouse.y);
+          ctx.moveTo(pointerX, pointerY);
           ctx.lineTo(p1.x, p1.y);
           ctx.stroke();
+          ctx.lineWidth = 1.1;
         }
       }
     }

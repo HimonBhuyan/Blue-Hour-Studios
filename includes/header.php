@@ -128,6 +128,7 @@ $currentPage = $activePage ?? 'home';
     <div class="ambient-glow-top"></div>
     <div class="ambient-aurora-orb ambient-orb-1" id="auroraOrb1"></div>
     <div class="ambient-aurora-orb ambient-orb-2" id="auroraOrb2"></div>
+    <div class="ambient-aurora-orb ambient-orb-3" id="auroraOrb3"></div>
     <div class="ambient-grid-lines"></div>
     <canvas id="ambientInteractiveCanvas" class="ambient-interactive-canvas"></canvas>
   </div>

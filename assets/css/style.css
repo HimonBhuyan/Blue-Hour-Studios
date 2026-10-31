@@ -236,48 +236,79 @@ button, input, select, textarea {
 .ambient-aurora-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(110px);
+  filter: blur(85px);
   pointer-events: none;
-  opacity: 0.38;
+  opacity: 0.60;
   will-change: transform;
   z-index: 1;
   transition: opacity var(--transition-smooth);
+  animation: auroraFloat 18s ease-in-out infinite alternate;
 }
 
 .ambient-orb-1 {
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(226, 210, 180, 0.22) 0%, rgba(226, 210, 180, 0) 70%);
-  top: -120px;
-  left: 15%;
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(226, 210, 180, 0.32) 0%, rgba(226, 210, 180, 0) 70%);
+  top: -140px;
+  left: 12%;
 }
 
 .ambient-orb-2 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.16) 0%, rgba(99, 102, 241, 0) 70%);
-  bottom: 5%;
-  right: 10%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(99, 102, 241, 0) 70%);
+  bottom: 0%;
+  right: 8%;
+  animation-duration: 22s;
+  animation-direction: alternate-reverse;
+}
+
+.ambient-orb-3 {
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.20) 0%, rgba(244, 114, 182, 0) 70%);
+  top: 35%;
+  left: 38%;
+  animation-duration: 26s;
 }
 
 [data-theme="light"] .ambient-orb-1 {
-  background: radial-gradient(circle, rgba(200, 160, 100, 0.18) 0%, rgba(200, 160, 100, 0) 70%);
-  filter: blur(130px);
-  opacity: 0.5;
+  background: radial-gradient(circle, rgba(212, 168, 83, 0.38) 0%, rgba(212, 168, 83, 0) 70%);
+  filter: blur(95px);
+  opacity: 0.72;
 }
 
 [data-theme="light"] .ambient-orb-2 {
-  background: radial-gradient(circle, rgba(135, 155, 205, 0.2) 0%, rgba(135, 155, 205, 0) 70%);
-  filter: blur(130px);
-  opacity: 0.45;
+  background: radial-gradient(circle, rgba(99, 135, 241, 0.32) 0%, rgba(99, 135, 241, 0) 70%);
+  filter: blur(95px);
+  opacity: 0.65;
+}
+
+[data-theme="light"] .ambient-orb-3 {
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.26) 0%, rgba(244, 114, 182, 0) 70%);
+  filter: blur(95px);
+  opacity: 0.60;
 }
 
 [data-theme="twilight"] .ambient-orb-1 {
-  background: radial-gradient(circle, rgba(129, 140, 248, 0.28) 0%, rgba(129, 140, 248, 0) 70%);
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.38) 0%, rgba(129, 140, 248, 0) 70%);
+  opacity: 0.75;
 }
 
 [data-theme="twilight"] .ambient-orb-2 {
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.22) 0%, rgba(192, 132, 252, 0) 70%);
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.32) 0%, rgba(192, 132, 252, 0) 70%);
+  opacity: 0.70;
+}
+
+[data-theme="twilight"] .ambient-orb-3 {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(56, 189, 248, 0) 70%);
+  opacity: 0.65;
+}
+
+@keyframes auroraFloat {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(50px, 35px) scale(1.06); }
+  100% { transform: translate(-35px, 60px) scale(0.96); }
 }
 
 .ambient-glow-top {
