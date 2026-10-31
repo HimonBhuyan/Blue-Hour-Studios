@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selected Work Portfolio - Himon Bhuyan</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm 14mm 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #2D3748;
+      background-color: #F0F4F8;
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    .page {
+      background: #FFFFFF;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 24px 28px;
+      margin: 20px auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      border: 1px solid #E2E8F0;
+    }
+
+    @media print {
+      body { background: transparent; }
+      .page {
+        margin: 0;
+        border: none;
+        padding: 0;
+        min-height: auto;
+        height: 100%;
+        page-break-after: always;
+        box-shadow: none;
+      }
+    }
+
+    /* Header & Branding */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2.5px solid #7B1113;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+
+    .developer-tag {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      color: #7B1113;
+      text-transform: uppercase;
+    }
+
+    .doc-subtitle {
+      font-size: 11px;
+      font-weight: 600;
+      color: #718096;
+      letter-spacing: 0.5px;
+    }
+
+    .footer {
+      border-top: 1px solid #E2E8F0;
+      padding-top: 10px;
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10.5px;
+      color: #718096;
+    }
+
+    .footer strong {
+      color: #1A202C;
+    }
+
+    /* Headings & Badges */
+    .section-badge {
+      display: inline-block;
+      background-color: #FFF5F5;
+      color: #7B1113;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2.5px 8px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border: 1px solid #FED7D7;
+    }
+
+    h2 {
+      margin: 0 0 4px 0;
+      color: #1A202C;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .subheading {
+      color: #4A5568;
+      font-size: 12.5px;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    /* 4-Screen Mobile Grids */
+    .mobile-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .screen-card {
+      background: #F8FAFC;
+      border: 1px solid #EDF2F7;
+      border-radius: 10px;
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone-frame {
+      width: 100%;
+      height: 290px;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    .phone-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .screen-caption {
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 8px;
+      color: #2D3748;
+    }
+
+    .screen-desc {
+      font-size: 9.5px;
+      color: #718096;
+      text-align: center;
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    /* Web Desktop Showcase Grid (Ziago Technologies) */
+    .desktop-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .desktop-card {
+      background: #F8FAFC;
+      border: 1px solid #EDF2F7;
+      border-radius: 10px;
+      padding: 8px;
+    }
+
+    .browser-frame {
+      width: 100%;
+      height: 185px;
+      background: #1A202C;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border: 1px solid #CBD5E0;
+    }
+
+    .browser-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    /* Specifications Table */
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 11.5px;
+    }
+
+    .specs-table th {
+      background-color: #F8FAFC;
+      color: #4A5568;
+      font-weight: 700;
+      text-align: left;
+      padding: 6.5px 10px;
+      border-bottom: 2px solid #E2E8F0;
+    }
+
+    .specs-table td {
+      padding: 6.5px 10px;
+      border-bottom: 1px solid #EDF2F7;
+      vertical-align: top;
+    }
+
+    .specs-table td strong {
+      color: #2D3748;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= PAGE 1: AGRI LEAF APP ================= -->
+  <div class="page">
+    <div>
+      <div class="header">
+        <div>
+          <div class="developer-tag">Himon Bhuyan | Freelance Software Developer</div>
+          <div style="font-size: 13px; font-weight: 700; color: #1A202C;">GHAR KA ZAIKA &ndash; DESIGN CONCEPTS</div>
+        </div>
+        <div class="doc-subtitle">SECTION 8: SELECTED CLIENT WORK</div>
+      </div>
+
+      <span class="section-badge">Case Study 1 &bull; Mobile App</span>
+      <h2>Agri Leaf AI &ndash; Smart Farm Advisory App</h2>
+      <div class="subheading">
+        An agronomy mobile application engineered for tea growers and farmers, featuring on-device leaf disease diagnosis, weather safety windows, field calendars, and multi-language voice accessibility.
+      </div>
+
+      <div class="mobile-grid">
+        <!-- Agri Screen 1 -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="agri_home.jpg" onerror="this.onerror=null; this.src='agri_home.jpeg'; this.onerror=function(){this.src='agri_home.jpg.jpeg'; this.onerror=function(){this.src='WhatsApp Image 2026-10-06 at 9.52.54 PM.jpeg';};};" alt="Advisory Dashboard">
+          </div>
+          <div class="screen-caption">Advisory & Weather</div>
+          <div class="screen-desc">Hyperlocal rainfall safe-window and infection warnings.</div>
+        </div>
+
+        <!-- Agri Screen 2 -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="agri_disease.jpg" onerror="this.onerror=null; this.src='agri_disease.jpeg'; this.onerror=function(){this.src='agri_disease.jpg.jpeg'; this.onerror=function(){this.src='WhatsApp Image 2026-10-06 at 9.52.54 PM (1).jpeg';};};" alt="Disease Diagnosis">
+          </div>
+          <div class="screen-caption">AI Leaf Diagnostics</div>
+          <div class="screen-desc">Instant disease identification with DIY bio-remedies.</div>
+        </div>
+
+        <!-- Agri Screen 3 -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="agri_calendar.jpg" onerror="this.onerror=null; this.src='agri_calendar.jpeg'; this.onerror=function(){this.src='agri_calendar.jpg.jpeg'; this.onerror=function(){this.src='WhatsApp Image 2026-10-06 at 9.52.55 PM.jpeg';};};" alt="Farm Calendar">
+          </div>
+          <div class="screen-caption">Field Task Calendar</div>
+          <div class="screen-desc">Bi-weekly task planner and harvest logging console.</div>
+        </div>
+
+        <!-- Agri Screen 4 -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="agri_settings.jpg" onerror="this.onerror=null; this.src='agri_settings.jpeg'; this.onerror=function(){this.src='agri_settings.jpg.jpeg'; this.onerror=function(){this.src='WhatsApp Image 2026-10-06 at 9.52.54 PM (2).jpeg';};};" alt="Settings & Vernacular">
+          </div>
+          <div class="screen-caption">Regional Accessibility</div>
+          <div class="screen-desc">Voice assistant support with Assamese, Hindi, and English.</div>
+        </div>
+      </div>
+
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Core Capability</th>
+            <th>Engineering Implementation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Computer Vision AI</strong></td>
+            <td>Instant classification of tea leaf diseases and recommendation of organic treatments.</td>
+          </tr>
+          <tr>
+            <td><strong>Localized Alerts</strong></td>
+            <td>Weather API integration calculating rainfall safe windows to prevent harvest crop spoilage.</td>
+          </tr>
+          <tr>
+            <td><strong>Farmer-First UI</strong></td>
+            <td>Large high-contrast touch targets, dark theme sync, and full vernacular translation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      <span>Ghar Ka Zaika &ndash; Website & App Design Concepts</span>
+      <span>Himon Bhuyan | <strong>+91 7002201534</strong> | himonbhuyan@gmail.com</span>
+      <span>Page 7</span>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 2: ZIAGO MOBILE CRM ================= -->
+  <div class="page">
+    <div>
+      <div class="header">
+        <div>
+          <div class="developer-tag">Himon Bhuyan | Freelance Software Developer</div>
+          <div style="font-size: 13px; font-weight: 700; color: #1A202C;">GHAR KA ZAIKA &ndash; DESIGN CONCEPTS</div>
+        </div>
+        <div class="doc-subtitle">SECTION 8: SELECTED CLIENT WORK</div>
+      </div>
+
+      <span class="section-badge">Case Study 2 &bull; Enterprise CRM</span>
+      <h2>Ziago Enterprise &ndash; Mobile CRM & Workforce Portal</h2>
+      <div class="subheading">
+        An end-to-end operational CRM and staff productivity suite unifying real-time attendance clock-in, team task assignment, lead pipelines, and monthly analytics.
+      </div>
+
+      <div class="mobile-grid">
+        <!-- Ziago Screen 1 -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="ziago_login.jpg" onerror="this.onerror=null; this.src='ziago_login.jpeg'; this.onerror=function(){this.src='ziago_login.jpg.jpeg'; this.onerror=function(){this.src='WhatsApp Image 2026-10-06 at 9.52.52 PM.jpeg';};};" alt="Ziago Secure Login">
+          </div>
+          <div class="screen-caption">Branded Authentication</div>
+          <div class="screen-desc">Role-based sign-in with secured session token handling.</div>
+        </div>
+
+        <!-- Ziago Screen 2 -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="ziago_dashboard.jpg" onerror="this.onerror=null; this.src='ziago_dashboard.jpeg'; this.onerror=function(){this.src='ziago_dashboard.jpg.jpeg'; this.onerror=function(){this.src='WhatsApp Image 2026-10-06 at 9.52.52 PM (1).jpeg';};};" alt="Ziago Operational Dashboard">
+          </div>
+          <div class="screen-caption">Unified Dashboard</div>
+          <div class="screen-desc">Quick tiles for Attendance, Tasks, Expenses, and Leads.</div>
+        </div>
+
+        <!-- Ziago Screen 3 -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="ziago_clockin.jpg" onerror="this.onerror=null; this.src='ziago_clockin.jpeg'; this.onerror=function(){this.src='ziago_clockin.jpg.jpeg'; this.onerror=function(){this.src='WhatsApp Image 2026-10-06 at 9.52.53 PM.jpeg';};};" alt="Ziago Punch Attendance">
+          </div>
+          <div class="screen-caption">Shift Punch In/Out</div>
+          <div class="screen-desc">Single-tap presence marking with monthly performance indicators.</div>
+        </div>
+
+        <!-- Ziago Screen 4 -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="ziago_history.jpg" onerror="this.onerror=null; this.src='ziago_history.jpeg'; this.onerror=function(){this.src='ziago_history.jpg.jpeg'; this.onerror=function(){this.src='WhatsApp Image 2026-10-06 at 9.52.53 PM (1).jpeg';};};" alt="Ziago Attendance Logs">
+          </div>
+          <div class="screen-caption">Visual Analytics & Logs</div>
+          <div class="screen-desc">Monthly trend graphs and precise punch-time audit logs.</div>
+        </div>
+      </div>
+
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Core Capability</th>
+            <th>Engineering Implementation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Workforce Logging</strong></td>
+            <td>Timestamped check-in and check-out logs calculated into monthly attendance rates and KPIs.</td>
+          </tr>
+          <tr>
+            <td><strong>Pipeline Management</strong></td>
+            <td>Centralized module for tracking incoming leads, field operations, and employee expense claims.</td>
+          </tr>
+          <tr>
+            <td><strong>Executive UI</strong></td>
+            <td>Modern dark-mode aesthetic with card-based modular grids for swift one-hand mobile navigation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      <span>Ghar Ka Zaika &ndash; Website & App Design Concepts</span>
+      <span>Himon Bhuyan | <strong>+91 7002201534</strong> | himonbhuyan@gmail.com</span>
+      <span>Page 8</span>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 3: PRAGJYOTISHPUR UNIVERSITY CRM ================= -->
+  <div class="page">
+    <div>
+      <div class="header">
+        <div>
+          <div class="developer-tag">Himon Bhuyan | Freelance Software Developer</div>
+          <div style="font-size: 13px; font-weight: 700; color: #1A202C;">GHAR KA ZAIKA &ndash; DESIGN CONCEPTS</div>
+        </div>
+        <div class="doc-subtitle">SECTION 8: SELECTED CLIENT WORK</div>
+      </div>
+
+      <span class="section-badge">Case Study 3 &bull; Higher-Ed Portal</span>
+      <h2>Pragjyotishpur University &ndash; Staff & Student CRM</h2>
+      <div class="subheading">
+        A custom dual-portal campus ERP and CRM platform engineered for Pragjyotishpur University, integrating geofenced staff attendance, exam management, student fee clearance, and grade results.
+      </div>
+
+      <div class="mobile-grid">
+        <!-- PJU Screen 1: Dual Role Login -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="WhatsApp Image 2026-10-06 at 11.44.50 PM.jpeg" alt="PJU Unified ERP Login">
+          </div>
+          <div class="screen-caption">Unified Access Portal</div>
+          <div class="screen-desc">Dual role switch (Student vs Teacher/Staff) with biometric sign-in.</div>
+        </div>
+
+        <!-- PJU Screen 2: Staff / Teacher Portal -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="WhatsApp Image 2026-10-01 at 11.11.15 PM.jpeg" alt="PJU Teacher & Staff Hub">
+          </div>
+          <div class="screen-caption">Faculty Attendance Hub</div>
+          <div class="screen-desc">Campus Geofence verification, exam marking, and class schedule.</div>
+        </div>
+
+        <!-- PJU Screen 3: Student Academic Dashboard -->
+        <div class="screen-card">
+          <div class="phone-frame">
+            <img src="WhatsApp Image 2026-10-03 at 4.43.01 PM.jpeg" alt="Student Academics & Accounts">
+          </div>
+          <div class="screen-caption">Student Academic Hub</div>
+          <div class="screen-desc">Live semester SGPA, paid fee ledgers, circulars, and course enrollment.</div>
+        </div>
+
+        <!-- PJU Screen 4: Notice Desk -->
+        <div class="screen-card">
+          <div class="phone-frame" style="background: linear-gradient(180deg, #0b1a30 0%, #152642 100%);">
+            <div style="text-align: center; color: #E2E8F0; padding: 16px;">
+              <div style="font-size: 32px; margin-bottom: 8px;">📢</div>
+              <div style="font-weight: 700; font-size: 12px; color: #FFF;">Campus Circulars</div>
+              <div style="font-size: 9.5px; color: #A0AEC0; margin-top: 6px; line-height: 1.4;">
+                Instant push broadcasts for hackathons, fee deadlines, and exam notifications.
+              </div>
+            </div>
+          </div>
+          <div class="screen-caption">Notice Desk & Alerts</div>
+          <div class="screen-desc">University-wide administrative broadcasts with instant push sync.</div>
+        </div>
+      </div>
+
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Core Capability</th>
+            <th>Engineering Implementation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Role-Based Access</strong></td>
+            <td>Strictly partitioned authentication logic directing faculty to administrative APIs and students to self-service portals.</td>
+          </tr>
+          <tr>
+            <td><strong>Campus Geofencing</strong></td>
+            <td>Location-verified faculty daily attendance ensuring staff check-ins take place strictly on university grounds.</td>
+          </tr>
+          <tr>
+            <td><strong>Academic ERP Records</strong></td>
+            <td>Instant semester SGPA results retrieval, clearance dues tracking, and enrollment rosters.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      <span>Ghar Ka Zaika &ndash; Website & App Design Concepts</span>
+      <span>Himon Bhuyan | <strong>+91 7002201534</strong> | himonbhuyan@gmail.com</span>
+      <span>Page 9</span>
+    </div>
+  </div>
+
+
+  <!-- ================= PAGE 4: ZIAGO TECHNOLOGIES WEBSITE & CMS ================= -->
+  <div class="page">
+    <div>
+      <div class="header">
+        <div>
+          <div class="developer-tag">Himon Bhuyan | Freelance Software Developer</div>
+          <div style="font-size: 13px; font-weight: 700; color: #1A202C;">GHAR KA ZAIKA &ndash; DESIGN CONCEPTS</div>
+        </div>
+        <div class="doc-subtitle">SECTION 8: SELECTED CLIENT WORK</div>
+      </div>
+
+      <span class="section-badge">Case Study 4 &bull; Web Platform & CMS</span>
+      <h2>Ziago Technologies &ndash; Enterprise Website & Custom CMS</h2>
+      <div class="subheading">
+        A multi-tier corporate web presence and internal Content Management System (CMS) featuring real-time telemetry metrics, interactive AI consulting assistance, quote requests, and an administrative control suite.
+      </div>
+
+      <div class="desktop-grid">
+        <!-- Web Screen 1: Hero Storefront -->
+        <div class="desktop-card">
+          <div class="browser-frame">
+            <img src="WhatsApp Image 2026-09-28 at 4.54.43 PM.jpeg" alt="Ziago Corporate Hero">
+          </div>
+          <div class="screen-caption">Corporate Web Platform</div>
+          <div class="screen-desc">Live latency metrics, cloud architecture services, and lead capture funnels.</div>
+        </div>
+
+        <!-- Web Screen 2: Zia AI Assistant -->
+        <div class="desktop-card">
+          <div class="browser-frame">
+            <img src="WhatsApp Image 2026-09-28 at 3.11.59 PM.jpeg" alt="Zia AI Assistant & Solutions">
+          </div>
+          <div class="screen-caption">Zia AI Solutions Architect</div>
+          <div class="screen-desc">Interactive 24/7 AI lead qualification widget and solution selector.</div>
+        </div>
+
+        <!-- Web Screen 3: CMS Lead & Operations Console -->
+        <div class="desktop-card">
+          <div class="browser-frame">
+            <img src="WhatsApp Image 2026-09-28 at 5.38.13 PM.jpeg" onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-28 at 3.50.08 PM.jpeg';" alt="Ziago CMS Dashboard">
+          </div>
+          <div class="screen-caption">Central CMS Dashboard</div>
+          <div class="screen-desc">Real-time incoming customer inquiries, quotes log, and active IT service monitors.</div>
+        </div>
+
+        <!-- Web Screen 4: CMS Management Desk -->
+        <div class="desktop-card">
+          <div class="browser-frame">
+            <img src="WhatsApp Image 2026-09-28 at 3.50.08 PM.jpeg" onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-28 at 5.38.13 PM.jpeg';" alt="CMS Quick Actions">
+          </div>
+          <div class="screen-caption">Operations & SEO Engine</div>
+          <div class="screen-desc">Quick CMS actions for service management, article publishing, and SEO configuration.</div>
+        </div>
+
+          <!-- Web Screen 4: CMS Management Desk -->
+        <div class="desktop-card">
+          <div class="browser-frame">
+            <img src="WhatsApp Image 2026-09-28 at 1.27.47 PM.jpeg" onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-28 at 5.38.13 PM.jpeg';" alt="CMS Quick Actions">
+          </div>
+          <div class="screen-caption">Company Major Client</div>
+          <div class="screen-desc">Animated and directly controlled by Admin CMS to the right </div>
+        </div>
+
+         <div class="desktop-card">
+          <div class="browser-frame">
+            <img src="WhatsApp Image 2026-09-28 at 4.07.59 PM (1).jpeg" onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-28 at 5.38.13 PM.jpeg';" alt="CMS Quick Actions">
+          </div>
+          <div class="screen-caption">Company Major Client - CMS Management</div>
+          <div class="screen-desc">Cms - add clients , edit clients and all can be done just by one click </div>
+        </div>
+      </div>
+
+
+    
+  
+
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Core Capability</th>
+            <th>Engineering Implementation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Lead & Quote Pipeline</strong></td>
+            <td>Automated parsing of potential enterprise quotes directly into the administrative back-office queue.</td>
+          </tr>
+          <tr>
+            <td><strong>Conversational AI Integration</strong></td>
+            <td>Integrated web chatbot ("Zia") providing interactive, personalized scoping conversations for prospects.</td>
+          </tr>
+          <tr>
+            <td><strong>Full Content Management</strong></td>
+            <td>Custom administrative panels allowing instant updates to board members, client testimonials, and blog articles.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      <span>Ghar Ka Zaika &ndash; Website & App Design Concepts</span>
+      <span>Himon Bhuyan | <strong>+91 7002201534</strong> | himonbhuyan@gmail.com</span>
+      <span>Page 10</span>
+    </div>
+  </div>
+
+</body>
+</html>

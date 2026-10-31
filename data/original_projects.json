@@ -1,0 +1,273 @@
+﻿[
+    {
+        "title":  "Gulbani - A Gifting Shop",
+        "category":  "ecommerce web",
+        "category_label":  "Web Platforms (E-Commerce)",
+        "image":  "assets/images/upload_1792598927_Gulbani_G.png",
+        "description":  "Your private luxury gifting concierge in New Delhi. Bespoke wedding favors, heirloom brass caskets, and artisanal hampers crafted to be treasured forever.",
+        "highlights":  [
+                           "Project Architecture \u0026 Highlights",
+                           "- Frontend Architecture: Responsive, luxury editorial UI designed for seamless gifting browsing across desktop, tablet, and mobile.",
+                           "- Product Catalogue: Structured gifting collections with brassware, gourmet confectioneries, bespoke hampers, and filter search.",
+                           "- Shopping \u0026 Concierge Experience: Curated bridal gifting builder, customized gift hampers, and streamlined checkout.",
+                           "- Admin \u0026 CMS: Centralized inventory, order fulfillment, bespoke enquiry parsing, and collection management.",
+                           "- Backend Architecture: High-speed modular Laravel \u0026 PHP architecture for reliable order routing and security.",
+                           "- Deployment \u0026 Performance: Optimized imagery, Vercel edge deployment, responsive typography, and sub-second page loads."
+                       ],
+        "tags":  [
+                     "PHP",
+                     "Laravel",
+                     "MySQL",
+                     "E-Commerce",
+                     "Luxury Gifting",
+                     "Blade Engine"
+                 ],
+        "github":  "https://github.com/HimonBhuyan/Gulbani",
+        "live":  "https://gulbani.vercel.app/"
+    },
+    {
+        "title":  "CHAUDHARY ASSOCIATES",
+        "category":  "web ecommerce",
+        "category_label":  "Web Platforms",
+        "image":  "assets/images/upload_1792599796_Screenshot_2026-10-21_215046.png",
+        "description":  "Chaudhary Associates is an architecture, interiors, planning and design-and-build practice with 261 posts and 6,190 followers.",
+        "highlights":  [
+                           "Project Architecture \u0026 Highlights",
+                           "- Frontend Architecture: Responsive, modern UI designed for architectural portfolio showcases.",
+                           "- Project Portfolio: Filterable architectural projects with high-resolution imagery and blueprint specs.",
+                           "- Inquiry Management: Direct client consultation booking and RFP enquiry intake system.",
+                           "- Backend Architecture: Clean MVC modular PHP backend with rapid response caching."
+                       ],
+        "tags":  [
+                     "PHP",
+                     "Laravel",
+                     "MySQL",
+                     "Architecture Web",
+                     "Responsive UI"
+                 ],
+        "github":  "https://github.com/HimonBhuyan/Chaudhary-Associates",
+        "live":  "https://chaudhary-associates.vercel.app/"
+    },
+    {
+        "title":  "PRASUNA-INSPIRED-BY-YOU",
+        "category":  "ecommerce web",
+        "category_label":  "Web Platforms (E-Commerce)",
+        "image":  "assets/images/upload_1792781095_Screenshot_2026-10-23_210246.png",
+        "description":  "Prasuna began with a simple sketch and a deep respect for Nepali craftsmanship. In a world saturated with mass industrial clothing, we craft intimate, limited drops that honor the artisan behind the thread.",
+        "highlights":  [
+                           "A modern, high-converting boutique e-commerce demo website crafted for Prasuna (@prasuna.clo / Prasuna.np).",
+                           "Built with PHP 8.3 \u0026 Laravel Blade Engine (illuminate/view), featuring editorial luxury aesthetics, limited drop mechanics, multi-currency switching, interactive story highlights, made-to-measure customization, slide-out shopping bag, and express checkout."
+                       ],
+        "tags":  [
+                     "PHP 8.3",
+                     "Laravel Blade",
+                     "E-Commerce",
+                     "Luxury Fashion",
+                     "Cart System"
+                 ],
+        "github":  "https://github.com/HimonBhuyan/PRASUNA-INSPIRED-BY-YOU-",
+        "live":  "https://prasunaclothing.vercel.app/"
+    },
+    {
+        "title":  "Omkaar Logistics ERP - System Login \u0026 Fleet Suite",
+        "category":  "enterprise web",
+        "category_label":  "Enterprise Logistics ERP",
+        "image":  "assets/images/project_omkaar_erp.png",
+        "description":  "A mission-critical enterprise logistics resource planning suite featuring high-speed consignment note (C.N) billing, multi-tier access control, and real-time fleet ledger auditing.",
+        "highlights":  [
+                           "Engineered high-speed Consignment Note (C.N) generation and automated freight billing calculation pipelines.",
+                           "Implemented enterprise access control and partitioned credentials for fleet dispatchers, branch managers, and ledger accountants.",
+                           "Architected real-time fleet ledger accounting, consignment manifests, and route transit auditing.",
+                           "Designed high-contrast, distraction-free operations UI optimized for rapid keyboard data entry in transport hubs."
+                       ],
+        "tags":  [
+                     "PHP",
+                     "Laravel",
+                     "MySQL",
+                     "Enterprise ERP",
+                     "Role-Based Access",
+                     "Fleet Ledger"
+                 ],
+        "github":  "https://github.com/HimonBhuyan",
+        "live":  "#"
+    },
+    {
+        "title":  "Agri Leaf AI - Smart Farm Advisory App",
+        "category":  "mobile_ai",
+        "category_label":  "Mobile \u0026 Edge AI",
+        "image":  "assets/images/project_agri_ai.jpg",
+        "description":  "An agronomy mobile application engineered for tea growers and farmers, featuring on-device leaf disease diagnosis, weather safety windows, field calendars, and multi-language voice accessibility.",
+        "highlights":  [
+                           "Trained on-device Computer Vision AI for instant classification of tea leaf diseases and DIY bio-remedy recommendations.",
+                           "Integrated hyperlocal weather APIs calculating rainfall safe windows to prevent harvest crop spoilage.",
+                           "Engineered bi-weekly field task calendar and harvest logging console for tea growers.",
+                           "Built voice assistant support with multi-language accessibility in Assamese, Hindi, and English."
+                       ],
+        "tags":  [
+                     "Flutter",
+                     "Dart",
+                     "TensorFlow Lite",
+                     "Computer Vision",
+                     "Weather API",
+                     "Voice AI"
+                 ],
+        "github":  "https://github.com/HimonBhuyan",
+        "live":  "#"
+    },
+    {
+        "title":  "Pragjyotishpur University - Staff \u0026 Student CRM",
+        "category":  "enterprise web",
+        "category_label":  "Higher-Ed Campus ERP",
+        "image":  "assets/images/project_pragjyotishpur_crm.jpg",
+        "description":  "A custom dual-portal campus ERP and CRM platform engineered for Pragjyotishpur University, integrating geofenced staff attendance, exam management, student fee clearance, and grade results.",
+        "highlights":  [
+                           "Architected strictly partitioned role-based authentication directing faculty to administrative tools and students to self-service portals.",
+                           "Implemented GPS campus geofencing for location-verified faculty attendance, ensuring on-campus presence validation.",
+                           "Built instant semester SGPA results retrieval, clearance dues tracking, and student fee ledger management.",
+                           "Engineered university-wide push broadcast notification desk for circulars, exam dates, and hackathons."
+                       ],
+        "tags":  [
+                     "PHP",
+                     "Laravel",
+                     "MySQL",
+                     "Campus Geofencing",
+                     "REST APIs",
+                     "Blade"
+                 ],
+        "github":  "https://github.com/HimonBhuyan",
+        "live":  "#"
+    },
+    {
+        "title":  "Ziago Enterprise - Mobile CRM \u0026 Workforce Portal",
+        "category":  "enterprise mobile_ai",
+        "category_label":  "Enterprise CRM \u0026 Workforce",
+        "image":  "assets/images/project_ziago_crm.jpg",
+        "description":  "An end-to-end operational CRM and staff productivity suite unifying real-time attendance clock-in, team task assignment, lead pipelines, and monthly analytics.",
+        "highlights":  [
+                           "Developed timestamped check-in and check-out presence marking calculated into monthly attendance rates and KPIs.",
+                           "Constructed centralized pipeline module for tracking incoming corporate leads, field operations, and employee expense claims.",
+                           "Built visual analytics dashboard with monthly trend graphs and precise punch-time audit logs.",
+                           "Crafted modern dark-mode executive UI with modular card grids optimized for one-hand mobile navigation."
+                       ],
+        "tags":  [
+                     "Flutter",
+                     "React Native",
+                     "Node.js",
+                     "REST APIs",
+                     "JWT Auth",
+                     "Analytics"
+                 ],
+        "github":  "https://github.com/HimonBhuyan",
+        "live":  "#"
+    },
+    {
+        "title":  "Ziago Technologies - Enterprise Platform \u0026 Zia AI Suite",
+        "category":  "web enterprise",
+        "category_label":  "Corporate Web \u0026 AI Platform",
+        "image":  "assets/images/project_ziago_website.jpg",
+        "secondary_image":  "assets/images/project_ziago_solutions.jpg",
+        "description":  "A multi-tier corporate web presence and interactive digital solutions platform featuring real-time infrastructure telemetry (14ms latency, 2.44 TB/day), 24/7 Zia AI Solutions Architect assistant, interactive engineering specialist cards, and custom administrative CMS.",
+        "highlights":  [
+                           "Architected cloud-native corporate platform featuring real-time network latency (14ms), daily data flow (2.44 TB/day), and 99.999% SLA telemetry monitors.",
+                           "Integrated 24/7 conversational AI assistant (\"Zia AI Solutions Architect\") with personalized scoping dialogue and enterprise lead qualification.",
+                           "Constructed interactive engineering crew cards with hover micro-animations for Technology Consulting, System Integration, and Bespoke Software Development.",
+                           "Engineered administrative CMS control suite for one-click service updates, client logo showcases, and quote request parsing queues.",
+                           "Integrated dual theme support with SFX audio toggling and responsive multi-hub operational status (Guwahati HQ \u0026 Delhi)."
+                       ],
+        "tags":  [
+                     "PHP",
+                     "Laravel",
+                     "Blade",
+                     "Conversational AI",
+                     "Real-Time Telemetry",
+                     "Cloud-Native",
+                     "CMS Suite"
+                 ],
+        "github":  "https://github.com/HimonBhuyan",
+        "live":  "https://ziagotechnologies.com"
+    },
+    {
+        "title":  "Otto Taxi - Real-Time Ride Booking Platform",
+        "category":  "web mobile_ai",
+        "category_label":  "Real-Time \u0026 Telemetry",
+        "image":  "assets/images/project_otto_taxi.jpg",
+        "description":  "Full-scale taxi booking platform engineered with real-time driver-passenger matching, live location tracking, fare calculations, and seamless cross-platform mobile UI.",
+        "highlights":  [
+                           "Implemented real-time bidirectional WebSocket communication for instant driver dispatch and live GPS coordinates.",
+                           "Integrated Google Maps Directions \u0026 Distance Matrix APIs for dynamic fare estimation and optimal routing.",
+                           "Engineered dual-sided mobile interface for both passengers and drivers with push notifications and status badges.",
+                           "Built resilient backend state management ensuring zero booking dropouts during temporary network disruptions."
+                       ],
+        "tags":  [
+                     "React Native",
+                     "WebSockets",
+                     "Google Maps API",
+                     "Node.js",
+                     "Redis",
+                     "Express"
+                 ],
+        "github":  "https://github.com/HimonBhuyan",
+        "live":  "#"
+    },
+    {
+        "title":  "Bhuyan Plaza - Rental Management System",
+        "category":  "web enterprise",
+        "category_label":  "Full-Stack MERN SaaS",
+        "image":  "assets/images/project_bhuyan_plaza.jpg",
+        "description":  "Comprehensive property rental management platform for tracking tenants, lease agreements, payment schedules, and maintenance requests with financial reporting and automated reminders.",
+        "highlights":  [
+                           "Architected an end-to-end MERN stack solution featuring secure JWT \u0026 OAuth authentication.",
+                           "Built automated rent reminder workflows and recurring payment schedules with Razorpay and Stripe.",
+                           "Constructed interactive financial reporting dashboard with occupancy gauges and revenue analytics.",
+                           "Optimized MongoDB aggregation pipelines for instant retrieval of lease statuses and tenant records."
+                       ],
+        "tags":  [
+                     "MongoDB",
+                     "Express.js",
+                     "React.js",
+                     "Node.js",
+                     "Redux",
+                     "Razorpay",
+                     "JWT"
+                 ],
+        "github":  "https://github.com/HimonBhuyan",
+        "live":  "#"
+    },
+    {
+        "title":  "AI Assistant | FRIDAY-Inspired",
+        "category":  "web",
+        "category_label":  "AI Assistant",
+        "image":  "assets/images/upload_1791974795_Screenshot__11_.png",
+        "description":  "FRIDAY is a Tony Starkâ€“inspired AI personal assistant designed to make everyday tasks smarter through voice interaction, intelligent automation, real-time information, and personalized assistance.",
+        "highlights":  [
+                           "Architecture Highlights",
+                           "- Voice-enabled interaction with speech-to-text and text-to-speech.",
+                           "- LLM-powered conversational intelligence and contextual memory.",
+                           "- Real-time web search and information retrieval.",
+                           "- Task automation and intelligent workflow management.",
+                           "- Modular backend architecture for integrating AI tools and APIs.",
+                           "- Responsive dashboard for monitoring and controlling assistant features.",
+                           "- Secure API integrations with configurable permissions.",
+                           "- Extensible architecture for future smart-home and IoT integrations."
+                       ],
+        "tags":  [
+                     "Python",
+                     "FastAPI",
+                     "JavaScript",
+                     "React",
+                     "Node.js",
+                     "REST APIs",
+                     "LLMs",
+                     "OpenAI API",
+                     "Speech Recognition",
+                     "Text-to-Speech",
+                     "WebSockets",
+                     "MongoDB",
+                     "MySQL",
+                     "Git",
+                     "Docker"
+                 ],
+        "github":  "https://github.com/HimonBhuyan/Friday-AI",
+        "live":  "#"
+    }
+]

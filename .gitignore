@@ -1,0 +1,12 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary test scripts
+.test_*.php
+.scratch_*.php
+
+# Environment & log files
+*.log
+.env
