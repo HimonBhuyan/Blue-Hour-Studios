@@ -48,12 +48,13 @@ function getPackageWhatsAppUrl($plan) {
         $text .= "• Includes 1 Year Free Maintenance & Bug Solving Support\n\n";
         $text .= "Please share the project onboarding timeline!";
     } elseif ($planId === 'social_mgmt') {
-        $text .= "• Scope: Social Media Channel Management (12 Posts + 4 Cinematic Reels/mo)\n";
-        $text .= "• Strategy & Content Direction\n\n";
+        $text .= "• Scope: Complete Social Media Account Handling, Content Planning, Posts & Reels, Captions & Copywriting\n";
+        $text .= "• Includes Google Reviews Management & Digital Ads Management (Ad spend paid separately)\n\n";
         $text .= "Let's schedule a kickoff call to review our channels!";
     } elseif ($planId === 'digital_growth') {
-        $text .= "• Scope: Complete Digital Growth Retainer (Content, Paid Ads & SEO)\n\n";
-        $text .= "Please let me know how we can initiate the growth campaign!";
+        $text .= "• Scope: Complete Digital Growth Retainer with Professional Brand Shoots & Videography\n";
+        $text .= "• Includes Social Media Handling, Cinematic Reels, Google Reviews, Local SEO & Paid Ads Management\n\n";
+        $text .= "Please let me know how we can schedule our brand shoot and initiate the growth campaign!";
     } elseif ($planId === 'mobile_app') {
         $text .= "• Scope: Cross-Platform Native Mobile App (Android + iOS)\n\n";
         $text .= "Let's discuss our mobile app roadmap and timeline!";

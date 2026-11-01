@@ -55,16 +55,16 @@ $servicePage = [
     ],
     'faqs' => [
         [
-            'q' => 'What is the monthly cost for social media management?',
-            'a' => 'Our Social Media Management retainer starts at ₹5,000 per month, which includes Instagram & Facebook management, 12 high-impact feed posts, 4 cinematic reels, content calendar planning, and profile optimization.'
+            'q' => 'What is the monthly fee for Social Media Management?',
+            'a' => 'Our Social Media Management monthly retainer is ₹10,000 per month. It covers complete social media account handling, content planning & strategy, creative posts & reels, captions & copywriting, basic engagement, Google reviews management, and digital ads management (ad spend paid separately by the client).'
         ],
         [
-            'q' => 'Do I need a website to start social media management?',
-            'a' => 'No — our Social Media Management package works seamlessly with or without a website by routing inquiries directly to your WhatsApp Business desk or Instagram DMs.'
+            'q' => 'What is included in the ₹20,000/month Complete Digital Growth package?',
+            'a' => 'Our Complete Digital Growth package (₹20,000 per month) includes everything in Social Media Management plus on-site professional brand shoots and videography, high-production cinematic reels, Local SEO, and full-funnel growth management.'
         ],
         [
-            'q' => 'Can you combine social media management with local SEO and Google Business Profile?',
-            'a' => 'Yes! Our Complete Digital Growth plan (₹8,000+/month) combines full social media management with Google Business Profile setup and Local SEO for "near me" searches.'
+            'q' => 'Is advertising/media spend included in the monthly fee?',
+            'a' => 'Advertising/media spend is not included in the monthly service fee and is paid separately by the client directly to the ad platforms with 100% transparency.'
         ]
     ],
     'related_project_ids' => ['prasuna', 'gulbani', 'chaudhary_associates']

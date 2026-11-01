@@ -32,7 +32,7 @@ require_once __DIR__ . '/includes/header.php';
           <span class="subpage-stat-lbl">Starter Website</span>
         </div>
         <div class="subpage-stat-item">
-          <span class="subpage-stat-num">₹5K/mo</span>
+          <span class="subpage-stat-num">₹10K/mo</span>
           <span class="subpage-stat-lbl">Social Media Growth</span>
         </div>
         <div class="subpage-stat-item">

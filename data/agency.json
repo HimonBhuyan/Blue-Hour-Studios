@@ -455,21 +455,21 @@
             "name": "Social Media Management",
             "badge": "Essential Authority",
             "highlight": false,
-            "price": "₹5,000",
+            "price": "₹10,000",
             "billing": "per month",
-            "tagline": "Works with or without a website.",
+            "tagline": "Complete social media handling, Google reviews & ads management.",
             "timeline": "Ongoing monthly retainer",
             "features": [
-              "Instagram & Facebook end-to-end channel management",
-              "12 high-impact feed posts + 4 cinematic reels per month",
-              "Strategic monthly content calendar & editorial direction",
-              "Bespoke product, festive occasion & promotional offer creatives",
-              "Complete profile bio, highlight covers & bio link optimization"
+              "Complete Social Media Account Handling (Instagram & Facebook)",
+              "Content Planning, Editorial Strategy & Regular Posting",
+              "Creative Posts, Reels, Captions & Copywriting",
+              "Basic Community Engagement & Page Maintenance",
+              "Google Reviews Management, Monitoring & Reputation Building",
+              "Ads Management: Planning, Setup, Monitoring & Campaign Optimization"
             ],
             "not_included": [
-              "Google Business Profile & local map rank optimization",
-              "Paid ad campaigns & ad spend budget",
-              "Influencer collaboration retainers"
+              "Advertising / media spend budget (paid separately by the client)",
+              "On-site professional brand shoots & videography"
             ]
           },
           {
@@ -477,19 +477,20 @@
             "name": "Complete Digital Growth",
             "badge": "Dominance Engine",
             "highlight": true,
-            "price": "₹8,000+",
+            "price": "₹20,000",
             "billing": "per month",
-            "tagline": "Social media dominance plus local discovery.",
+            "tagline": "Full social dominance with professional brand shoots & videography.",
             "timeline": "3-month minimum recommended",
             "features": [
               "Everything in Social Media Management included",
-              "Google Business Profile setup, claim & verification",
-              "Local SEO optimization for 'near me' organic search rankings",
-              "Targeted festive, seasonal & milestone event campaigns",
-              "Higher creative content volume & monthly ROI performance report"
+              "Professional Brand Shoots & Videography (On-Location Photography & Video)",
+              "High-Production Cinematic Reels & Commercial Video Editing",
+              "Google Business Profile Setup, Local SEO & Google Reviews Management",
+              "Full-Funnel Paid Ads Management & Monthly ROI Performance Reports",
+              "Targeted Festive, Seasonal & Milestone Brand Campaigns"
             ],
             "not_included": [
-              "Ad spend budget (paid directly to Meta / Google)",
+              "Advertising / media spend budget (paid separately by the client)",
               "Influencer fees (final scope confirmed in briefing)"
             ]
           }

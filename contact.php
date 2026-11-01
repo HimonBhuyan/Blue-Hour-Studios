@@ -218,8 +218,8 @@ require_once __DIR__ . '/includes/header.php';
                   <select id="clientBudget" name="budget" class="input-editorial">
                     <option value="Website Starter — ₹8,000 – ₹10,000" <?= stripos($prefillPackage, 'Starter') !== false ? 'selected' : '' ?>>Website Starter (₹8,000 – ₹10,000 one-time)</option>
                     <option value="Website + CMS & Payments — ₹16,000" <?= stripos($prefillPackage, 'CMS') !== false || empty($prefillPackage) ? 'selected' : '' ?>>Website + CMS & Payments (₹16,000 one-time)</option>
-                    <option value="Social Media Management — ₹5,000/mo" <?= stripos($prefillPackage, 'Social Media') !== false ? 'selected' : '' ?>>Social Media Management (₹5,000 / month)</option>
-                    <option value="Complete Digital Growth — ₹8,000+/mo" <?= stripos($prefillPackage, 'Growth') !== false ? 'selected' : '' ?>>Complete Digital Growth (₹8,000+ / month)</option>
+                    <option value="Social Media Management — ₹10,000/mo" <?= stripos($prefillPackage, 'Social Media') !== false ? 'selected' : '' ?>>Social Media Management (₹10,000 / month)</option>
+                    <option value="Complete Digital Growth — ₹20,000/mo" <?= stripos($prefillPackage, 'Growth') !== false ? 'selected' : '' ?>>Complete Digital Growth + Brand Shoots (₹20,000 / month)</option>
                     <option value="Mobile App (Android + iOS) — From ₹25,000" <?= stripos($prefillPackage, 'Mobile') !== false ? 'selected' : '' ?>>Mobile App (Android + iOS) (From ₹25,000)</option>
                     <option value="Custom Enterprise / Retainer" <?= stripos($prefillPackage, 'Enterprise') !== false ? 'selected' : '' ?>>Custom Enterprise / Multi-Service Retainer</option>
                   </select>

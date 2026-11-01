@@ -63,8 +63,8 @@ $servicePage = [
             'a' => 'Paid ad budgets are 100% transparent and paid directly to Meta or Google with zero agency markup. We manage the strategy, targeting, creatives, and optimization.'
         ],
         [
-            'q' => 'What package includes both Social Media and Local SEO?',
-            'a' => 'Our Complete Digital Growth package (₹8,000+/month) includes full Instagram & Facebook management, Google Business Profile setup & verification, Local SEO optimization, and monthly ROI reporting.'
+            'q' => 'What packages include Ads Management, Google Reviews, and Brand Shoots?',
+            'a' => 'Our Social Media Management package (₹10,000/month) includes social media handling, Google Reviews monitoring, and Ads Management. Our Complete Digital Growth package (₹20,000/month) adds professional brand shoots & videography, Local SEO, and full-funnel growth.'
         ]
     ],
     'related_project_ids' => ['gulbani', 'chaudhary_associates', 'prasuna']
