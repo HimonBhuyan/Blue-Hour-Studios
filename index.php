@@ -265,77 +265,30 @@ require_once __DIR__ . '/includes/header.php';
         <?php endforeach; ?>
       </div>
 
-      <!-- Step 7 & Step 8: Core Services & Local Guwahati / Assam Discovery Block -->
-      <div class="service-card-editorial spotlight-card reveal-on-scroll" style="margin-top: 2.75rem; padding: 2.5rem;" id="localServicesOverview">
-        <div class="section-kicker" style="margin-bottom: 0.65rem;">
-          <span class="kicker-line"></span>
-          <span>GUWAHATI, ASSAM &bull; NEW DELHI &bull; PAN-INDIA</span>
-        </div>
-        <h2 style="font-family: var(--font-display); font-size: clamp(1.6rem, 2.8vw, 2.25rem); font-weight: 700; margin-bottom: 0.9rem; color: var(--text-primary);">
-          Website Development, Branding &amp; Social Media Management
-        </h2>
-        <p style="color: var(--text-secondary); line-height: 1.75; font-size: 0.98rem; max-width: 920px; margin-bottom: 1rem;">
-          <strong>Blue Hour Creative Studios</strong> (The Blue Hour Studios) provides end-to-end <strong>website development services in Guwahati</strong>, <strong>e-commerce website development for small businesses</strong>, <strong>social media management for businesses in Assam</strong>, and <strong>branding and digital marketing services for local businesses</strong> as well as scaling national enterprises. We serve emerging founders, retail boutiques, D2C labels, hospitality brands, clinics, educational institutions, and logistics companies across Guwahati, Assam, and New Delhi.
-        </p>
-        <p style="color: var(--text-secondary); line-height: 1.75; font-size: 0.95rem; max-width: 920px; margin-bottom: 1.75rem;">
-          Whether you are launching your first business website or scaling an online store with Meta and Google Ads, you can reach our founders directly via <a href="/contact/" style="color: var(--accent-champagne); text-decoration: underline;">our Contact page</a>, email at <a href="mailto:bluehourcreativestudio8@gmail.com" style="color: var(--accent-champagne);">bluehourcreativestudio8@gmail.com</a>, or on WhatsApp at <a href="https://wa.me/917002201534" target="_blank" rel="noopener noreferrer" style="color: var(--accent-champagne);">+91 7002201534</a>.
-        </p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-          <a href="/website-development/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
-            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
-              <i class="fa-solid fa-laptop-code" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> Website Development
-            </h3>
-            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-              Custom website development services in Guwahati, Assam &amp; India with CMS and payment gateways.
-            </p>
+      <!-- Compact Quick-Explore Bar & Dedicated Service Links -->
+      <div class="reveal-on-scroll" style="margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center;" id="localServicesOverview">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.65rem;">
+          <a href="/website-development/" class="filter-pill-btn" style="text-decoration: none;">
+            <i class="fa-solid fa-laptop-code" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> Website Development
           </a>
-
-          <a href="/ecommerce-development/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
-            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
-              <i class="fa-solid fa-bag-shopping" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> E-Commerce Development
-            </h3>
-            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-              E-commerce website development for small businesses, D2C fashion labels, and retail stores.
-            </p>
+          <a href="/ecommerce-development/" class="filter-pill-btn" style="text-decoration: none;">
+            <i class="fa-solid fa-bag-shopping" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> E-Commerce Stores
           </a>
-
-          <a href="/social-media-management/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
-            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
-              <i class="fa-brands fa-instagram" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> Social Media Management
-            </h3>
-            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-              Social media management for businesses in Assam — Instagram, Facebook, Reels &amp; content strategy.
-            </p>
+          <a href="/social-media-management/" class="filter-pill-btn" style="text-decoration: none;">
+            <i class="fa-brands fa-instagram" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> Social Media Management
           </a>
-
-          <a href="/branding-design/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
-            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
-              <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> Branding &amp; Graphic Design
-            </h3>
-            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-              Logo systems, luxury packaging, brand guidelines, and graphic design for local businesses.
-            </p>
+          <a href="/branding-design/" class="filter-pill-btn" style="text-decoration: none;">
+            <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> Branding &amp; Design
           </a>
-
-          <a href="/seo-digital-marketing/" class="service-card-editorial" style="padding: 1.25rem; text-decoration: none; display: block;">
-            <h3 style="font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
-              <i class="fa-solid fa-magnifying-glass-chart" style="color: var(--accent-champagne); margin-right: 0.4rem;"></i> SEO &amp; Digital Marketing
-            </h3>
-            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-              Local SEO in Guwahati &amp; Assam, Google Business Profile optimization, Meta Ads &amp; Google Ads.
-            </p>
+          <a href="/seo-digital-marketing/" class="filter-pill-btn" style="text-decoration: none;">
+            <i class="fa-solid fa-magnifying-glass-chart" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> SEO &amp; Paid Ads
           </a>
         </div>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-          <a href="/portfolio/" class="btn btn-ghost-editorial btn-sm">View Portfolio (/portfolio/)</a>
-          <a href="/contact/" class="btn btn-ghost-editorial btn-sm">Contact Us (/contact/)</a>
-          <a href="services.php" class="btn btn-secondary btn-sm magnetic-btn">
-            <span>Explore All Engineering &amp; Creative Capabilities</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
+        <a href="services.php" class="btn btn-secondary magnetic-btn">
+          <span>Explore Detailed Capabilities &amp; Architecture</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
 
     </div>
