@@ -255,3 +255,4 @@ if (empty($relatedProjects)) {
   </section>
 
 <?php require_once __DIR__ . '/footer.php'; ?>
+

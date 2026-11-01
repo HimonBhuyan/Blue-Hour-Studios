@@ -5,3 +5,4 @@ Disallow: /storage/
 Disallow: /includes/
 
 Sitemap: https://theblue-hour-studios.vercel.app/sitemap.xml
+

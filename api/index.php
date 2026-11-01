@@ -40,6 +40,33 @@ if ($path === 'og-image.jpg' || $path === 'public/og-image.jpg') {
     }
 }
 
+// Serve static assets (CSS, JS, Images, Fonts) with proper MIME types if routed through front controller
+if (strpos($path, 'assets/') === 0) {
+    $assetFile = dirname(__DIR__) . '/' . $path;
+    if (is_file($assetFile)) {
+        $ext = strtolower(pathinfo($assetFile, PATHINFO_EXTENSION));
+        $mimeTypes = [
+            'css'   => 'text/css; charset=utf-8',
+            'js'    => 'application/javascript; charset=utf-8',
+            'json'  => 'application/json; charset=utf-8',
+            'png'   => 'image/png',
+            'jpg'   => 'image/jpeg',
+            'jpeg'  => 'image/jpeg',
+            'gif'   => 'image/gif',
+            'svg'   => 'image/svg+xml',
+            'ico'   => 'image/x-icon',
+            'webp'  => 'image/webp',
+            'woff'  => 'font/woff',
+            'woff2' => 'font/woff2',
+            'ttf'   => 'font/ttf',
+        ];
+        header('Content-Type: ' . ($mimeTypes[$ext] ?? 'application/octet-stream'));
+        header('Cache-Control: public, max-age=31536000, immutable');
+        readfile($assetFile);
+        exit;
+    }
+}
+
 // Explicitly send text/html header so browser never treats output as a downloadable binary
 if (!headers_sent() && strpos($path, 'api/') !== 0) {
     header('Content-Type: text/html; charset=utf-8');
