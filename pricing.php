@@ -26,6 +26,13 @@ require_once __DIR__ . '/includes/header.php';
         deliverables, full intellectual property transfer, and zero bloated agency retainers.
       </p>
 
+      <div style="margin-top: 1.35rem; margin-bottom: 0.5rem;">
+        <a href="brochure.php" class="btn btn-secondary magnetic-btn">
+          <i class="fa-regular fa-file-pdf" style="color: var(--accent-champagne);"></i>
+          <span>View / Download Official Rate Card (PDF)</span>
+        </a>
+      </div>
+
       <div class="subpage-quick-stats">
         <div class="subpage-stat-item">
           <span class="subpage-stat-num">₹8K–₹10K</span>

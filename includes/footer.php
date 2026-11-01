@@ -99,8 +99,9 @@
             <li><a href="index.php">Overview</a></li>
             <li><a href="services.php">Capabilities</a></li>
             <li><a href="works.php">Selected Works</a></li>
-            <li><a href="pricing.php">Pricing & Packages</a></li>
-            <li><a href="team.php">Leadership & Team</a></li>
+            <li><a href="pricing.php">Pricing &amp; Packages</a></li>
+            <li><a href="brochure.php"><i class="fa-regular fa-file-pdf" style="font-size: 0.72rem; color: var(--accent-champagne);"></i> Rate Card (PDF)</a></li>
+            <li><a href="team.php">Leadership &amp; Team</a></li>
             <li><a href="contact.php">Strategic Desk</a></li>
             <li><a href="../aura-crm/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-chart-line" style="font-size: 0.72rem; color: var(--accent-champagne);"></i> Leads CRM</a></li>
           </ul>
@@ -140,10 +141,82 @@
     </div>
   </footer>
 
+  <!-- ========================================================================
+       FLOATING WHATSAPP CONCIERGE & RATE CARD WIDGET
+       ======================================================================== -->
+  <div class="floating-wa-concierge" id="floatingWaConcierge">
+    <div class="wa-concierge-panel" role="dialog" aria-label="Direct Founder WhatsApp Desk">
+      <div class="wa-panel-header">
+        <div class="wa-panel-title">
+          <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.1rem;"></i>
+          <span>Instant Studio Desk</span>
+        </div>
+        <button type="button" class="wa-panel-close" id="waCloseBtn" aria-label="Close WhatsApp Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="wa-founder-list">
+        <a href="https://wa.me/917002201534?text=Hi%20Himon,%20I%20would%20like%20to%20discuss%20a%20Web%20/%20Software%20project%20with%20Blue%20Hour%20Creative%20Studios" target="_blank" rel="noopener noreferrer" class="wa-founder-link">
+          <div class="wa-founder-info">
+            <strong>Himon Bhuyan</strong>
+            <span>Web, E-Commerce, ERP &amp; Apps</span>
+            <small>+91 7002201534</small>
+          </div>
+          <div class="wa-founder-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </a>
+
+        <a href="https://wa.me/918473891457?text=Hi%20Darshana,%20I%20would%20like%20to%20discuss%20Social%20Media%20/%20Branding%20with%20Blue%20Hour%20Creative%20Studios" target="_blank" rel="noopener noreferrer" class="wa-founder-link">
+          <div class="wa-founder-info">
+            <strong>Darshana Das</strong>
+            <span>Social Media, Shoots &amp; Ads</span>
+            <small>+91 84738 91457</small>
+          </div>
+          <div class="wa-founder-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </a>
+      </div>
+
+      <a href="brochure.php" class="wa-brochure-link">
+        <i class="fa-regular fa-file-pdf" style="color: var(--accent-champagne);"></i>
+        <span>View / Download Rate Card (PDF)</span>
+      </a>
+    </div>
+
+    <button type="button" class="wa-floating-trigger" id="waTriggerBtn" aria-label="Open WhatsApp Quick Chat">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Chat with Founders</span>
+    </button>
+  </div>
+
   <!-- Pass In-Memory Projects Data for Zero-Latency Modal Interaction -->
   <script>
     window.BLUE_HOUR_PROJECTS = <?= json_encode($projects, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
     window.AURA_PROJECTS = window.BLUE_HOUR_PROJECTS;
+    (function() {
+      var wrap = document.getElementById('floatingWaConcierge');
+      var trigger = document.getElementById('waTriggerBtn');
+      var closeBtn = document.getElementById('waCloseBtn');
+      if (wrap && trigger) {
+        trigger.addEventListener('click', function(e) {
+          e.stopPropagation();
+          wrap.classList.toggle('is-open');
+        });
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            wrap.classList.remove('is-open');
+          });
+        }
+        document.addEventListener('click', function(e) {
+          if (!wrap.contains(e.target)) {
+            wrap.classList.remove('is-open');
+          }
+        });
+      }
+    })();
   </script>
 
   <!-- Client Script Engine with Cache-Busting -->
