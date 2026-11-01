@@ -67,7 +67,7 @@ $servicePage = [
             'a' => 'Yes. You retain 100% legal ownership of your domain, source code, database, and creative assets upon project completion.'
         ]
     ],
-    'related_project_ids' => ['chaudhary_associates', 'ziago_website', 'pragjyotishpur_crm']
+    'related_project_ids' => ['chaudhary_associates', 'omkaar_erp', 'pragjyotishpur_crm']
 ];
 
 require __DIR__ . '/includes/service-page-template.php';

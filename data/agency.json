@@ -261,46 +261,6 @@
       "live": "#"
     },
     {
-      "id": "ziago_enterprise",
-      "title": "Ziago Enterprise - Mobile CRM & Portal",
-      "category": "enterprise mobile_ai",
-      "filter_tag": "enterprise",
-      "category_label": "Enterprise CRM & Workforce Suite",
-      "image": "assets/images/project_ziago_crm.jpg",
-      "client": "Ziago Technologies",
-      "duration": "4 Months",
-      "description": "An end-to-end operational CRM and staff productivity suite unifying real-time attendance clock-in, team task assignment, lead pipelines, and monthly analytics.",
-      "highlights": [
-        "Timestamped check-in and check-out presence logging calculated into monthly KPIs",
-        "Centralized pipeline module for incoming corporate leads, field tasks, and expense claims",
-        "Visual analytics dashboard with monthly trend graphs and punch-time audit logs",
-        "Modern dark-mode executive UI with modular card grids optimized for one-hand mobile use"
-      ],
-      "tags": ["Flutter", "React Native", "Node.js", "REST APIs", "JWT Auth", "Analytics"],
-      "github": "https://github.com/HimonBhuyan",
-      "live": "#"
-    },
-    {
-      "id": "ziago_website",
-      "title": "Ziago Technologies - Corporate AI Platform",
-      "category": "web enterprise",
-      "filter_tag": "web",
-      "category_label": "Corporate Web & AI Platform",
-      "image": "assets/images/project_ziago_website.jpg",
-      "client": "Ziago Technologies Inc.",
-      "duration": "3 Months",
-      "description": "Multi-tier corporate web presence and interactive digital solutions platform featuring real-time infrastructure telemetry, 24/7 Zia AI Solutions Architect assistant, and custom administrative CMS.",
-      "highlights": [
-        "Cloud-native corporate platform with real-time network latency and daily data flow monitors",
-        "Integrated conversational Zia AI Solutions Architect assistant for client qualification",
-        "Interactive engineering specialist cards with dynamic hover micro-animations",
-        "Full administrative CMS suite for real-time service updates and client showcase management"
-      ],
-      "tags": ["PHP", "Laravel", "Blade", "Conversational AI", "Cloud-Native", "CMS Suite"],
-      "github": "https://github.com/HimonBhuyan",
-      "live": "https://ziagotechnologies.com"
-    },
-    {
       "id": "otto_taxi",
       "title": "Otto Taxi - Real-Time Ride Platform",
       "category": "web mobile_ai",

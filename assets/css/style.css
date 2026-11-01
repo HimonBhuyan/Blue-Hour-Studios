@@ -4446,12 +4446,14 @@ textarea.input-editorial {
 }
 
 /* ==========================================================================
-   TRUSTED CLIENT LOGOS BAR (ABOVE THE FOLD CREDIBILITY STRIP)
+   OUR CLIENTS LIVE INFINITE CAROUSEL (FOOTER / BOTTOM SECTION)
    ========================================================================== */
-.trusted-clients-section {
-  padding: 2.5rem 0 1.25rem;
+.footer-clients-carousel-section {
+  padding: 2rem 0 1.75rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
   position: relative;
-  z-index: 2;
+  overflow: hidden;
 }
 
 .trusted-clients-header {
@@ -4459,7 +4461,7 @@ textarea.input-editorial {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.25rem;
   flex-wrap: wrap;
 }
 
@@ -4483,21 +4485,47 @@ textarea.input-editorial {
   box-shadow: 0 0 8px rgba(16, 185, 129, 0.65);
 }
 
-.trusted-clients-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-  gap: 0.85rem;
+.clients-carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0.25rem 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.clients-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  width: max-content;
+  will-change: transform;
+  animation: clientsCarouselScroll 30s linear infinite;
+}
+
+.clients-carousel-viewport:hover .clients-carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes clientsCarouselScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .trusted-client-card {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.85rem 1.05rem;
+  gap: 0.9rem;
+  padding: 0.85rem 1.25rem;
   border-radius: var(--radius-md);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   text-decoration: none;
+  flex-shrink: 0;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -4550,12 +4578,10 @@ textarea.input-editorial {
 .trusted-client-name {
   display: block;
   font-family: var(--font-display);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-primary);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .trusted-client-sector {
@@ -4566,6 +4592,7 @@ textarea.input-editorial {
   color: var(--text-muted);
   text-transform: uppercase;
   margin-top: 0.12rem;
+  white-space: nowrap;
 }
 
 /* ==========================================================================
