@@ -530,6 +530,12 @@ require_once __DIR__ . '/includes/header.php';
               <div class="team-details-wrap">
                 <div class="team-role-pill"><?= htmlspecialchars($member['role']) ?></div>
                 <h3 class="team-name-title"><?= htmlspecialchars($member['name']) ?></h3>
+                <?php if (!empty($member['socials']['phone'])): ?>
+                  <div style="margin-bottom: 0.65rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-champagne);">
+                    <i class="fa-solid fa-phone" style="font-size: 0.7rem; margin-right: 0.35rem;"></i>
+                    <a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $member['socials']['phone'])) ?>" style="color: inherit; text-decoration: none;"><?= htmlspecialchars($member['socials']['phone']) ?></a>
+                  </div>
+                <?php endif; ?>
                 <p class="team-bio-text"><?= htmlspecialchars($member['bio']) ?></p>
 
                 <!-- Skill Chips -->
@@ -556,6 +562,9 @@ require_once __DIR__ . '/includes/header.php';
                     <?php endif; ?>
                     <?php if (!empty($member['socials']['email'])): ?>
                       <a href="mailto:<?= htmlspecialchars($member['socials']['email']) ?>" class="team-social-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <?php endif; ?>
+                    <?php if (!empty($member['socials']['phone'])): ?>
+                      <a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $member['socials']['phone'])) ?>" class="team-social-btn" title="Call <?= htmlspecialchars($member['socials']['phone']) ?>"><i class="fa-solid fa-phone"></i></a>
                     <?php endif; ?>
                   </div>
 
