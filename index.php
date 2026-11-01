@@ -597,10 +597,91 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================================
-       TESTIMONIALS SECTION
+       OUR CLIENTS LIVE CAROUSEL & TESTIMONIALS SECTION
        ======================================================================== -->
   <section class="testimonials-section" id="testimonials">
     <div class="container">
+
+      <!-- OUR CLIENTS LIVE CAROUSEL (LARGE LOGOS) -->
+      <div class="our-clients-showcase reveal-on-scroll" id="ourClients">
+        <div class="trusted-clients-header">
+          <div class="trusted-clients-kicker">
+            <span class="pulse-dot"></span>
+            <span>OUR CLIENTS &amp; PARTNER BRANDS</span>
+          </div>
+          <a href="works.php" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-champagne); text-decoration: none;">
+            VIEW ALL CASE STUDIES &rarr;
+          </a>
+        </div>
+
+        <div class="clients-carousel-viewport">
+          <div class="clients-carousel-track">
+            <?php for ($loop = 0; $loop < 2; $loop++): ?>
+              <a href="works.php" class="trusted-client-card">
+                <div class="trusted-logo-box">
+                  <img src="assets/images/client_pragjyotishpur.png?v=20261101e" alt="Pragjyotishpur University" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Pragjyotishpur University</span>
+                  <span class="trusted-client-sector">Campus ERP &amp; Portal</span>
+                </div>
+              </a>
+
+              <a href="works.php" class="trusted-client-card">
+                <div class="trusted-logo-box">
+                  <img src="assets/images/client_omkaar.jpg?v=20261101e" alt="Omkaar Trans Logistics" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Omkaar Trans Logistics</span>
+                  <span class="trusted-client-sector">Enterprise Fleet ERP</span>
+                </div>
+              </a>
+
+              <a href="works.php" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #0a0a0a;">
+                  <img src="assets/images/client_kharidlo.jpg?v=20261101e" alt="Kharidlo.in Assam" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Kharidlo.in (Assam)</span>
+                  <span class="trusted-client-sector">E-Commerce &amp; Retail</span>
+                </div>
+              </a>
+
+              <a href="https://gulbani.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-monogram">GULBANI</div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Gulbani Luxury Concierge</span>
+                  <span class="trusted-client-sector">Luxury Gifting &amp; Social Ads</span>
+                </div>
+              </a>
+
+              <a href="https://chaudhary-associates.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-monogram">CA</div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Chaudhary Associates</span>
+                  <span class="trusted-client-sector">Architecture Web &amp; Growth</span>
+                </div>
+              </a>
+
+              <a href="https://prasunaclothing.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-monogram">PRASUNA</div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Prasuna Clothing</span>
+                  <span class="trusted-client-sector">D2C Fashion &amp; Viral Reels</span>
+                </div>
+              </a>
+
+              <a href="works.php" class="trusted-client-card">
+                <div class="trusted-logo-monogram">BHUYAN</div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Bhuyan Commercial Group</span>
+                  <span class="trusted-client-sector">Commercial Property SaaS</span>
+                </div>
+              </a>
+            <?php endfor; ?>
+          </div>
+        </div>
+      </div>
       
       <div class="section-header-editorial reveal-on-scroll">
         <div class="section-kicker">
