@@ -124,7 +124,7 @@ $ogImage = $baseUrl . '/og-image.jpg';
     "image": "https://theblue-hour-studios.vercel.app/og-image.jpg",
     "description": "Discover The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India — delivering custom web & SaaS development, enterprise ERP/CRM systems, mobile apps, high-ROAS paid ads, and social media marketing.",
     "telephone": "+91-7002201534",
-    "email": "hello@bluehourcreativestudios.com",
+    "email": "bluehourcreativestudio8@gmail.com",
     "areaServed": [
       { "@type": "City", "name": "Guwahati" },
       { "@type": "City", "name": "New Delhi" },

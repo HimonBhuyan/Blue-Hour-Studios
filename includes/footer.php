@@ -122,7 +122,7 @@
           <h4 class="footer-col-title">Studio Presence</h4>
           <ul class="footer-contact-info">
             <li><i class="fa-solid fa-location-dot"></i> <span><?= htmlspecialchars($agency['location'] ?? 'Guwahati & New Delhi') ?></span></li>
-            <li><i class="fa-solid fa-envelope"></i> <span><?= htmlspecialchars($agency['email'] ?? 'hello@bluehourcreativestudios.com') ?></span></li>
+            <li><i class="fa-solid fa-envelope"></i> <span><?= htmlspecialchars($agency['email'] ?? 'bluehourcreativestudio8@gmail.com') ?></span></li>
             <li><i class="fa-solid fa-phone"></i> <span><?= htmlspecialchars($agency['phone'] ?? '+91 7002201534') ?></span></li>
           </ul>
         </div>

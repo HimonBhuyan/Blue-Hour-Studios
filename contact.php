@@ -76,7 +76,7 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
                 <div class="contact-item-data">
                   <strong>Direct Inquiries</strong>
-                  <span><?= htmlspecialchars($agency['email'] ?? 'hello@bluehourcreativestudios.com') ?></span>
+                  <span><?= htmlspecialchars($agency['email'] ?? 'bluehourcreativestudio8@gmail.com') ?></span>
                 </div>
               </div>
 

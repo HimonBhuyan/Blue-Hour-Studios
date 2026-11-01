@@ -184,7 +184,7 @@ vercel --prod
 *Guwahati & New Delhi, India*
 
 - **Website**: [bluehourcreativestudios.com](https://github.com/HimonBhuyan/Blue-Hour-Studios)
-- **General Inquiries**: [hello@bluehourcreativestudios.com](mailto:hello@bluehourcreativestudios.com)
+- **General Inquiries**: [bluehourcreativestudio8@gmail.com](mailto:bluehourcreativestudio8@gmail.com)
 - **Direct Desk / WhatsApp**: [+91 7002201534](https://wa.me/917002201534)
 - **GitHub**: [@HimonBhuyan](https://github.com/HimonBhuyan)
 
