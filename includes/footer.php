@@ -76,7 +76,7 @@
         <div class="footer-brand">
           <div class="brand-identity" style="margin-bottom: 0.8rem;">
             <div class="brand-logo-wrap">
-              <img src="assets/images/blue_hour_symbol.png" alt="Blue Hour Creative Studios" class="brand-logo-img">
+              <img src="assets/images/blue_hour_symbol.png?v=20261101c" alt="Blue Hour Creative Studios" class="brand-logo-img">
             </div>
             <div class="brand-title-wrap">
               <span class="brand-wordmark">BLUE HOUR<span>.</span></span>
@@ -147,6 +147,6 @@
   </script>
 
   <!-- Client Script Engine with Cache-Busting -->
-  <script src="assets/js/main.js?v=<?= file_exists(__DIR__ . '/../assets/js/main.js') ? filemtime(__DIR__ . '/../assets/js/main.js') : time() ?>"></script>
+  <script src="assets/js/main.js?v=<?= file_exists(__DIR__ . '/../assets/js/main.js') ? substr(md5_file(__DIR__ . '/../assets/js/main.js'), 0, 10) : '20261101c' ?>"></script>
 </body>
 </html>

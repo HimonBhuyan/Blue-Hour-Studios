@@ -159,13 +159,13 @@ $ogImage = $baseUrl . '/og-image.jpg';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Favicons and Touch Icons -->
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48x48.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico?v=20261101c">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png?v=20261101c">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48x48.png?v=20261101c">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png?v=20261101c">
 
   <!-- Master Architectural Stylesheet with Cache-Busting -->
-  <link rel="stylesheet" href="assets/css/style.css?v=<?= file_exists(__DIR__ . '/../assets/css/style.css') ? filemtime(__DIR__ . '/../assets/css/style.css') : time() ?>">
+  <link rel="stylesheet" href="assets/css/style.css?v=<?= file_exists(__DIR__ . '/../assets/css/style.css') ? substr(md5_file(__DIR__ . '/../assets/css/style.css'), 0, 10) : '20261101c' ?>">
 </head>
 <body>
 
@@ -189,7 +189,7 @@ $ogImage = $baseUrl . '/og-image.jpg';
       <div class="preloader-symbol-wrap">
         <div class="preloader-halo-ring"></div>
         <div class="preloader-halo-ring-outer"></div>
-        <img src="assets/images/blue_hour_symbol.png" alt="Blue Hour Creative Studios" class="preloader-symbol-img">
+        <img src="assets/images/blue_hour_symbol.png?v=20261101c" alt="Blue Hour Creative Studios" class="preloader-symbol-img">
       </div>
 
       <!-- Typography Wordmark -->
@@ -245,7 +245,7 @@ $ogImage = $baseUrl . '/og-image.jpg';
     <div class="nav-capsule">
       <a href="index.php" class="brand-identity" id="brandLogo">
         <div class="brand-logo-wrap">
-          <img src="assets/images/blue_hour_symbol.png" alt="Blue Hour Creative Studios" class="brand-logo-img">
+          <img src="assets/images/blue_hour_symbol.png?v=20261101c" alt="Blue Hour Creative Studios" class="brand-logo-img">
         </div>
         <div class="brand-title-wrap">
           <span class="brand-wordmark">BLUE HOUR<span>.</span></span>

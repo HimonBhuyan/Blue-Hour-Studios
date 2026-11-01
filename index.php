@@ -95,7 +95,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- View 1: GUI Preview -->
             <div class="frame-viewport" id="heroGuiView">
-              <img src="assets/images/upload_1792598927_Gulbani_G.png" alt="Blue Hour Creative Studios Featured Project Showcase" id="heroFeaturedImg">
+              <img src="assets/images/upload_1792598927_Gulbani_G.png?v=20261101c" alt="Blue Hour Creative Studios Featured Project Showcase" id="heroFeaturedImg">
             </div>
 
             <!-- View 2: Architecture Blueprint Code Terminal with Live Simulation Bar -->
@@ -379,7 +379,7 @@ require_once __DIR__ . '/includes/header.php';
                id="projCard_<?= htmlspecialchars($proj['id']) ?>">
             
             <div class="project-preview-frame">
-              <img src="<?= htmlspecialchars($proj['image']) ?>" alt="<?= htmlspecialchars($proj['title']) ?>" loading="lazy">
+              <img src="<?= htmlspecialchars($proj['image']) ?>?v=20261101c" alt="<?= htmlspecialchars($proj['title']) ?>" loading="lazy">
               <span class="project-index-pill">PRJ // <?= sprintf('%02d', $idx + 1) ?></span>
               <span class="project-category-badge"><?= htmlspecialchars($proj['category_label'] ?? 'Solution') ?></span>
             </div>
@@ -562,7 +562,7 @@ require_once __DIR__ . '/includes/header.php';
               
               <!-- Portrait Image Container -->
               <div class="team-photo-wrap">
-                <img src="<?= htmlspecialchars($member['image']) ?>?v=<?= file_exists($member['image']) ? filemtime($member['image']) : time() ?>" alt="<?= htmlspecialchars($member['name']) ?>" class="team-photo-img" loading="lazy">
+                <img src="<?= htmlspecialchars($member['image']) ?>?v=20261101c" alt="<?= htmlspecialchars($member['name']) ?>" class="team-photo-img" loading="lazy">
                 <div class="team-photo-vignette"></div>
                 <div class="team-status-chip">
                   <span class="status-dot-pulse"></span>
