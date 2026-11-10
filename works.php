@@ -87,7 +87,7 @@ require_once __DIR__ . '/includes/header.php';
           data-project-card="<?= htmlspecialchars($proj['id']) ?>" id="projCard_<?= htmlspecialchars($proj['id']) ?>">
 
           <div class="project-preview-frame">
-            <img src="<?= htmlspecialchars($proj['image']) ?>" alt="<?= htmlspecialchars($proj['title']) ?>"
+            <img src="<?= htmlspecialchars($proj['image']) ?>?v=<?= file_exists($proj['image']) ? filemtime($proj['image']) : time() ?>" alt="<?= htmlspecialchars($proj['title']) ?>"
               loading="lazy">
             <span class="project-index-pill">PRJ // <?= sprintf('%02d', $idx + 1) ?></span>
             <span class="project-category-badge"><?= htmlspecialchars($proj['category_label'] ?? 'Solution') ?></span>
