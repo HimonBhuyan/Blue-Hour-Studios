@@ -319,7 +319,7 @@ require_once __DIR__ . '/includes/header.php';
 
       <!-- Flagship Preview Bar -->
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;" class="reveal-on-scroll">
-        <span class="filter-pill-btn active" style="pointer-events: none; cursor: default;">[ Top 3 Flagship Builds ]</span>
+        <span class="filter-pill-btn active" style="pointer-events: none; cursor: default;">[ Top Flagship Builds ]</span>
         <a href="works.php" class="btn btn-ghost-editorial btn-sm magnetic-btn">
           <span>Browse Complete Archive</span>
           <i class="fa-solid fa-arrow-right" style="font-size: 0.72rem;"></i>
@@ -328,7 +328,7 @@ require_once __DIR__ . '/includes/header.php';
 
       <!-- Projects Grid with Spotlight Shaders (First 3 Only) -->
       <div class="projects-editorial-grid" id="projectsContainer">
-        <?php foreach (array_slice($projects, 0, 3) as $idx => $proj): ?>
+        <?php foreach (array_slice($projects, 0, 6) as $idx => $proj): ?>
           <div class="project-card-editorial project-card spotlight-card tilt-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>" 
                data-category="<?= htmlspecialchars($proj['category']) ?>"
                data-filter-tag="<?= htmlspecialchars($proj['filter_tag'] ?? '') ?>"
@@ -624,6 +624,16 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="trusted-client-meta">
                   <span class="trusted-client-name">Knots &amp; Facets</span>
                   <span class="trusted-client-sector">Handmade Crafts &amp; Jewellery</span>
+                </div>
+              </a>
+
+              <a href="https://rinahazarika-clothing.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #1E0C0E;">
+                  <img src="assets/images/client_rina_hazarika_sq.svg?v=20261110" alt="Rina Hazarika" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Rina Hazarika</span>
+                  <span class="trusted-client-sector">Axomiya Bastra &amp; Alonkar</span>
                 </div>
               </a>
 

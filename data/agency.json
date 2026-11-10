@@ -212,6 +212,35 @@
             "live": "https://knots-facets.vercel.app/"
         },
         {
+            "id": "rina_hazarika",
+            "title": "Rina Hazarika — Axomiya Bastra & Alonkar",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Heritage Luxury D2C & Silk Handloom",
+            "image": "assets/images/project_rina_hazarika.jpg",
+            "client": "Rina Hazarika (@rinahazarika_clothing)",
+            "duration": "3 Months",
+            "description": "Bespoke digital atelier and luxury Assamese heritage handloom e-commerce platform crafted for Rina Hazarika. Honoring hereditary master artisans from Sualkuchi and Ranthali with authentic GI-tagged Muga Silk, Mulberry Paat Mekhela Sador, organic Eri handlooms, and 24K gold-washed Jonbiri, Gamkharu, and Dholbiri ornaments.",
+            "highlights": [
+                "High-performance bespoke e-commerce architecture engineered with Laravel & Tailwind CSS with sub-second edge response times",
+                "Interactive Assamese Heritage Anatomy Hotspot Explorer showcasing royal Jonbiri, Dholbiri, Gamkharu, and Kingkhap motifs",
+                "Complete shopping catalog featuring 100% Silk Mark certified verification, custom bridal booking, and dynamic shopping cart",
+                "Direct-to-artisan WhatsApp consultation pipeline for bespoke wedding trousseau and heirloom jewelry customization",
+                "Targeted seasonal Rongali Bihu promotional mechanics and multi-channel Meta performance advertising funnels"
+            ],
+            "tags": [
+                "Laravel",
+                "PHP 8.x",
+                "E-Commerce",
+                "Tailwind CSS",
+                "Heritage Luxury",
+                "Silk Mark",
+                "Meta Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://rinahazarika-clothing.vercel.app/"
+        },
+        {
             "id": "chaudhary_associates",
             "title": "Chaudhary Associates",
             "category": "web marketing",
