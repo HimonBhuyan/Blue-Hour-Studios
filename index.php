@@ -374,7 +374,7 @@ require_once __DIR__ . '/includes/header.php';
       <div style="text-align: center; margin-top: 2.75rem; padding-top: 1.75rem; border-top: 1px solid var(--border-subtle);" class="reveal-on-scroll">
         <a href="works.php" class="btn btn-primary magnetic-btn" id="btnViewAllWorks" style="padding: 0.9rem 2.4rem; font-size: 0.96rem; font-weight: 700; display: inline-flex; gap: 0.75rem; align-items: center; border-radius: var(--radius-pill); box-shadow: 0 4px 20px rgba(255, 255, 255, 0.18);">
           <span>Go to Works Page to View All</span>
-          <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.2rem 0.55rem; border-radius: var(--radius-pill); background: rgba(0, 0, 0, 0.18); font-weight: 600;">6 Blueprints</span>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.2rem 0.55rem; border-radius: var(--radius-pill); background: rgba(0, 0, 0, 0.18); font-weight: 600;"><?= count($projects) ?> Blueprints</span>
           <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i>
         </a>
       </div>
@@ -617,6 +617,16 @@ require_once __DIR__ . '/includes/header.php';
         <div class="clients-carousel-viewport">
           <div class="clients-carousel-track">
             <?php for ($loop = 0; $loop < 2; $loop++): ?>
+              <a href="https://knots-facets.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #FBF6EE;">
+                  <img src="assets/images/client_knots_facets_sq.jpg?v=20261110" alt="Knots &amp; Facets" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Knots &amp; Facets</span>
+                  <span class="trusted-client-sector">Handmade Crafts &amp; Jewellery</span>
+                </div>
+              </a>
+
               <a href="works.php" class="trusted-client-card">
                 <div class="trusted-logo-box">
                   <img src="assets/images/client_pragjyotishpur.png?v=20261101e" alt="Pragjyotishpur University" loading="lazy">

@@ -67,7 +67,7 @@ $servicePage = [
             'a' => 'Absolutely. We pair our e-commerce builds with social media management, product reels, and high-ROAS Meta & Google shopping ads.'
         ]
     ],
-    'related_project_ids' => ['gulbani', 'prasuna', 'bhuyan_plaza']
+    'related_project_ids' => ['knots_facets', 'gulbani', 'prasuna']
 ];
 
 require __DIR__ . '/includes/service-page-template.php';

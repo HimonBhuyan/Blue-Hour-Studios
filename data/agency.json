@@ -1,541 +1,696 @@
 {
-  "agency": {
-    "name": "Blue Hour Creative Studios",
-    "short_name": "Blue Hour Creative Studios",
-    "logo": "assets/images/blue_hour_symbol.png",
-    "logo_full": "assets/images/blue_hour_full.png",
-    "slogan": "Engineering Excellence. Creative Dominance.",
-    "tagline": "We architect high-performance software, modern web ecosystems, and hyper-growth social media campaigns.",
-    "description": "Blue Hour Creative Studios is a hybrid creative and technology powerhouse. We bridge the gap between deep software engineering and viral brand marketing — delivering scalable enterprise web applications, mobile platforms, and high-converting social campaigns that dominate modern digital markets.",
-    "email": "bluehourcreativestudio8@gmail.com",
-    "phone": "+91 7002201534 / +91 84738 91457",
-    "location": "Guwahati & New Delhi, India",
-    "socials": {
-      "instagram": "https://instagram.com/bluehourcreativestudios",
-      "linkedin": "https://linkedin.com/company/blue-hour-creative-studios",
-      "twitter": "https://twitter.com/bluehour_studio",
-      "github": "https://github.com/HimonBhuyan"
-    },
-    "stats": [
-      { "value": "50+", "label": "Digital Projects Shipped", "suffix": "" },
-      { "value": "10M+", "label": "Social Reach Generated", "suffix": "" },
-      { "value": "4.8x", "label": "Average Client Ad ROAS", "suffix": "" },
-      { "value": "99.9%", "label": "System Uptime & SLA", "suffix": "" }
-    ]
-  },
-  "services": [
-    {
-      "id": "web_software",
-      "icon": "fa-solid fa-code",
-      "title": "Custom Web & SaaS Development",
-      "category": "Engineering",
-      "badge": "Core Tech",
-      "short_desc": "Bespoke web applications, SaaS platforms, and digital portals built with Laravel, React, Node.js, and modern cloud stacks.",
-      "deliverables": [
-        "Full-Stack Web App Architecture",
-        "E-Commerce & High-Conversion Portals",
-        "Custom APIs & Microservices",
-        "Database Architecture & Optimization",
-        "Sub-second Edge Deployment"
-      ]
-    },
-    {
-      "id": "enterprise_crm",
-      "icon": "fa-solid fa-network-wired",
-      "title": "Enterprise ERP, CRM & Logistics",
-      "category": "Engineering",
-      "badge": "Enterprise",
-      "short_desc": "Mission-critical enterprise software, campus management ERPs, logistics dispatch systems, and role-based staff portals.",
-      "deliverables": [
-        "Consignment & Fleet Management Systems",
-        "Campus & University CRM Suites",
-        "Real-Time Telemetry & Tracking",
-        "Granular Role-Based Access Control",
-        "Audit Logging & Financial Reporting"
-      ]
-    },
-    {
-      "id": "mobile_ai",
-      "icon": "fa-solid fa-mobile-screen-button",
-      "title": "Mobile Apps & Edge AI Systems",
-      "category": "Engineering",
-      "badge": "Innovation",
-      "short_desc": "Cross-platform mobile apps for iOS and Android powered by Flutter, React Native, and on-device machine learning models.",
-      "deliverables": [
-        "Cross-Platform Native Apps (Flutter/React Native)",
-        "Edge Machine Learning & Computer Vision",
-        "Offline-First Data Synchronization",
-        "Live Geofencing & GPS Telemetry",
-        "In-App Payment & Push Notification Desks"
-      ]
-    },
-    {
-      "id": "social_media_marketing",
-      "icon": "fa-solid fa-chart-line",
-      "title": "Social Media Marketing & Growth",
-      "category": "Creative Marketing",
-      "badge": "Viral Growth",
-      "short_desc": "End-to-end social media management across Instagram, LinkedIn, and Meta that builds passionate communities and brand authority.",
-      "deliverables": [
-        "Strategic Content Calendars & Editorial Direction",
-        "Short-Form Video Production (Reels & Shorts)",
-        "Community Management & Active Engagement",
-        "Viral Growth Hacking & Trend Capitalization",
-        "Multi-Platform Brand Positioning"
-      ]
-    },
-    {
-      "id": "performance_ads",
-      "icon": "fa-solid fa-bullseye",
-      "title": "Paid Ads & Performance Marketing",
-      "category": "Creative Marketing",
-      "badge": "ROI Focused",
-      "short_desc": "Data-backed paid advertising across Meta Ads, Google Search & Display, driving qualified leads, high ROAS, and customer acquisition.",
-      "deliverables": [
-        "Meta Ads (Instagram & Facebook Lead & Sales Funnels)",
-        "Google Ads & Intent-Driven Search Campaigns",
-        "Custom Retargeting & Lookalike Audiences",
-        "Ad Creative A/B Testing & Optimization",
-        "Real-Time Attribution & ROAS Dashboards"
-      ]
-    },
-    {
-      "id": "brand_creative",
-      "icon": "fa-solid fa-wand-magic-sparkles",
-      "title": "Brand Identity & Visual Storytelling",
-      "category": "Creative Marketing",
-      "badge": "Creative Direction",
-      "short_desc": "Crafting iconic visual identities, luxury packaging, brand guidelines, and high-impact digital graphics that leave lasting impressions.",
-      "deliverables": [
-        "Logo Design & Visual Identity Systems",
-        "Design Guidelines & Typography Kits",
-        "Packaging, Merchandise & Print Assets",
-        "Motion Graphics & Dynamic Social Assets",
-        "Luxury & Editorial Aesthetic Direction"
-      ]
-    }
-  ],
-  "marketing_pillars": [
-    {
-      "step": "01",
-      "title": "Market Resonance & Persona Mapping",
-      "desc": "We deep-dive into your target demographics, analyzing user psychology, competitor friction points, and industry gaps to build an unstoppable go-to-market playbook."
-    },
-    {
-      "step": "02",
-      "title": "High-Fidelity Content & Creative Production",
-      "desc": "Our in-house creative team designs jaw-dropping visuals, cinematic reels, and conversion-optimized ad copy tailored specifically to arrest scroll momentum."
-    },
-    {
-      "step": "03",
-      "title": "Algorithmic Distribution & Performance Ads",
-      "desc": "We deploy multi-stage acquisition funnels combining organic viral tactics with precision-targeted Meta and Google campaigns for maximum ROI."
-    },
-    {
-      "step": "04",
-      "title": "Continuous Optimization & Scaling",
-      "desc": "Every campaign and digital asset is tracked with granular conversion telemetry. We double down on winning hooks, refine ad creatives, and scale your brand revenue."
-    }
-  ],
-  "projects": [
-    {
-      "id": "gulbani",
-      "title": "Gulbani - A Gifting Shop",
-      "category": "ecommerce web marketing",
-      "filter_tag": "ecommerce",
-      "category_label": "Luxury E-Commerce & Brand Strategy",
-      "image": "assets/images/upload_1792598927_Gulbani_G.png",
-      "client": "Gulbani Luxury Concierge",
-      "duration": "4 Months",
-      "description": "Your private luxury gifting concierge in New Delhi. Bespoke wedding favors, heirloom brass caskets, and artisanal hampers crafted to be treasured forever. Complete brand strategy, e-commerce storefront, and social marketing launch.",
-      "highlights": [
-        "Bespoke Bridal Gifting Builder with real-time hamper customization",
-        "Full-Stack modular Laravel & PHP architecture for reliable order routing",
-        "Editorial luxury visual direction, bespoke typography, and sub-second page loads",
-        "Centralized inventory management and custom VIP bespoke inquiry parser",
-        "Integrated social media lookbook campaign driving high-ticket wedding enquiries"
-      ],
-      "tags": ["PHP 8.x", "Laravel", "E-Commerce", "Luxury Branding", "Blade Engine", "Social Ads"],
-      "github": "https://github.com/HimonBhuyan/Gulbani",
-      "live": "https://gulbani.vercel.app/"
-    },
-    {
-      "id": "chaudhary_associates",
-      "title": "Chaudhary Associates",
-      "category": "web marketing",
-      "filter_tag": "web",
-      "category_label": "Architecture Web & Social Authority",
-      "image": "assets/images/upload_1792599796_Screenshot_2026-10-21_215046.png",
-      "client": "Chaudhary Associates Practice",
-      "duration": "3 Months",
-      "description": "Comprehensive digital platform and social authority strategy for an architecture, interiors, and design-and-build practice with 260+ published projects and an engaged community of 6,200+ followers.",
-      "highlights": [
-        "Filterable high-resolution architectural portfolio with blueprint view and project blueprints",
-        "Direct client consultation booking and turnkey RFP proposal submission system",
-        "Clean MVC modular PHP backend with rapid caching and image lazy loading",
-        "Organic architectural social media content strategy showcasing live construction milestones"
-      ],
-      "tags": ["PHP", "Laravel", "MySQL", "Architecture Web", "Responsive UI", "Content Strategy"],
-      "github": "https://github.com/HimonBhuyan/Chaudhary-Associates",
-      "live": "https://chaudhary-associates.vercel.app/"
-    },
-    {
-      "id": "prasuna",
-      "title": "Prasuna - Inspired by You",
-      "category": "ecommerce web marketing",
-      "filter_tag": "ecommerce",
-      "category_label": "Artisanal Fashion & Limited Drops",
-      "image": "assets/images/upload_1792781095_Screenshot_2026-10-23_210246.png",
-      "client": "Prasuna Clothing (@prasuna.clo)",
-      "duration": "2 Months",
-      "description": "High-converting boutique e-commerce web platform and visual campaign crafted for Prasuna. Honoring Nepali craftsmanship with limited drops, made-to-measure personalization, and slide-out shopping experience.",
-      "highlights": [
-        "Engineered with PHP 8.3 & Laravel Blade Engine for seamless checkout transitions",
-        "Limited-drop countdown mechanics driving FOMO and rapid product sell-outs",
-        "Interactive story highlights and artisanal behind-the-scenes video integration",
-        "Multi-currency switching with location-based currency formatting",
-        "High-aesthetic Instagram creative assets that boosted organic engagement by 320%"
-      ],
-      "tags": ["PHP 8.3", "Laravel Blade", "E-Commerce", "D2C Fashion", "Cart System", "Meta Ads"],
-      "github": "https://github.com/HimonBhuyan/PRASUNA-INSPIRED-BY-YOU-",
-      "live": "https://prasunaclothing.vercel.app/"
-    },
-    {
-      "id": "omkaar_erp",
-      "title": "Omkaar Logistics ERP - Fleet Suite",
-      "category": "enterprise web",
-      "filter_tag": "enterprise",
-      "category_label": "Enterprise Logistics & Fleet ERP",
-      "image": "assets/images/project_omkaar_erp.png",
-      "client": "Omkaar Trans Logistics",
-      "duration": "6 Months",
-      "description": "Mission-critical enterprise logistics resource planning suite featuring high-speed consignment note (C.N) billing, multi-tier access control, and real-time fleet ledger auditing across regional transport hubs.",
-      "highlights": [
-        "High-speed Consignment Note (C.N) generation & automated freight tariff calculation",
-        "Enterprise access control partitioned for dispatchers, branch managers, and ledger accountants",
-        "Real-time fleet ledger accounting, consignment manifests, and route transit auditing",
-        "High-contrast, distraction-free operations UI optimized for rapid keyboard data entry in busy transport hubs"
-      ],
-      "tags": ["PHP", "Laravel", "MySQL", "Enterprise ERP", "Role-Based Access", "Fleet Ledger"],
-      "github": "https://github.com/HimonBhuyan",
-      "live": "#"
-    },
-    {
-      "id": "agri_ai",
-      "title": "Agri Leaf AI - Smart Farm Advisory",
-      "category": "mobile_ai",
-      "filter_tag": "mobile_ai",
-      "category_label": "Mobile App & Edge Vision AI",
-      "image": "assets/images/project_agri_ai.jpg",
-      "client": "AgriTech Innovations",
-      "duration": "5 Months",
-      "description": "Cross-platform agronomy mobile application engineered for tea growers and farmers, featuring on-device leaf disease diagnosis, weather safety windows, field calendars, and multi-language voice accessibility.",
-      "highlights": [
-        "Trained on-device Computer Vision AI for instant diagnosis of tea leaf spot and blight pathology",
-        "Hyperlocal weather APIs computing safe spray windows to eliminate crop harvest spoilage",
-        "Field task planner and harvest logging console functioning with zero network connectivity",
-        "Voice assistant support in Assamese, Hindi, and English for inclusive grower adoption"
-      ],
-      "tags": ["Flutter", "Dart", "TensorFlow Lite", "Computer Vision", "Weather API", "Voice AI"],
-      "github": "https://github.com/HimonBhuyan",
-      "live": "#"
-    },
-    {
-      "id": "pragjyotishpur_crm",
-      "title": "Pragjyotishpur University - Campus ERP",
-      "category": "enterprise web",
-      "filter_tag": "enterprise",
-      "category_label": "Higher-Ed Campus ERP & CRM",
-      "image": "assets/images/project_pragjyotishpur_crm.jpg",
-      "client": "Pragjyotishpur University",
-      "duration": "6 Months",
-      "description": "Comprehensive dual-portal campus ERP and CRM platform integrating geofenced faculty attendance, exam administration, student fee clearance ledger, and instant semester SGPA result processing.",
-      "highlights": [
-        "Partitioned role-based architecture separating faculty management from student self-service",
-        "GPS campus geofencing for location-verified faculty attendance validation",
-        "Instant semester SGPA results retrieval and student financial clearance ledger",
-        "University-wide push broadcast notification desk for circulars, exam alerts, and announcements"
-      ],
-      "tags": ["PHP", "Laravel", "MySQL", "Campus Geofencing", "REST APIs", "Blade"],
-      "github": "https://github.com/HimonBhuyan",
-      "live": "#"
-    },
-    {
-      "id": "otto_taxi",
-      "title": "Otto Taxi - Real-Time Ride Platform",
-      "category": "web mobile_ai",
-      "filter_tag": "mobile_ai",
-      "category_label": "Real-Time Telemetry & Geospatial",
-      "image": "assets/images/project_otto_taxi.jpg",
-      "client": "Otto Mobility",
-      "duration": "5 Months",
-      "description": "Full-scale taxi booking platform engineered with real-time driver-passenger matching, live location telemetry, dynamic distance fare estimation, and seamless mobile UI.",
-      "highlights": [
-        "Bidirectional WebSocket transport delivering sub-25ms driver coordinate telemetry",
-        "Integrated Google Maps Directions and Distance Matrix APIs for dynamic fare estimation",
-        "Resilient backend state management ensuring zero booking dropouts during network transitions",
-        "Dual-sided mobile UI for passenger request flow and driver dispatch acceptance"
-      ],
-      "tags": ["React Native", "WebSockets", "Google Maps API", "Node.js", "Redis", "Express"],
-      "github": "https://github.com/HimonBhuyan",
-      "live": "#"
-    },
-    {
-      "id": "bhuyan_plaza",
-      "title": "Bhuyan Plaza - Rental Management SaaS",
-      "category": "web enterprise",
-      "filter_tag": "web",
-      "category_label": "Full-Stack Commercial Property SaaS",
-      "image": "assets/images/project_bhuyan_plaza.jpg",
-      "client": "Bhuyan Commercial Real Estate",
-      "duration": "3 Months",
-      "description": "Comprehensive property rental management platform for tracking commercial tenants, lease agreements, recurring billing schedules, and automated rent reminder notifications.",
-      "highlights": [
-        "End-to-end MERN stack architecture with secure JWT and role-based authentication",
-        "Automated rent reminder workflows and recurring payment schedules with Razorpay & Stripe",
-        "Interactive financial reporting dashboard with occupancy gauges and revenue analytics",
-        "Optimized MongoDB aggregation pipelines for instant lease status and tenant queries"
-      ],
-      "tags": ["MongoDB", "Express.js", "React.js", "Node.js", "Redux", "Razorpay", "JWT"],
-      "github": "https://github.com/HimonBhuyan",
-      "live": "#"
-    },
-    {
-      "id": "friday_ai",
-      "title": "FRIDAY - Tony Stark-Inspired AI Assistant",
-      "category": "web mobile_ai",
-      "filter_tag": "mobile_ai",
-      "category_label": "Voice AI & Workflow Automation",
-      "image": "assets/images/upload_1791974795_Screenshot__11_.png",
-      "client": "Blue Hour Labs",
-      "duration": "3 Months",
-      "description": "A voice-enabled personal AI assistant designed to streamline complex digital workflows through natural voice commands, LLM-powered conversational intelligence, and automated system actions.",
-      "highlights": [
-        "Voice-enabled interaction with high-precision speech-to-text and low-latency TTS synthesis",
-        "LLM conversational intelligence with contextual long-term memory retrieval",
-        "Real-time web search integration and automated task execution pipelines",
-        "Modular backend architecture ready for smart-home and IoT expansion"
-      ],
-      "tags": ["Python", "FastAPI", "React", "Node.js", "LLMs", "Speech Recognition", "WebSockets"],
-      "github": "https://github.com/HimonBhuyan/Friday-AI",
-      "live": "#"
-    }
-  ],
-  "testimonials": [
-    {
-      "name": "Lachit Bhuyan",
-      "role": "Managing Director",
-      "company": "Bhuyan Commercial Group",
-      "avatar_color": "linear-gradient(135deg, #ec4899, #8b5cf6)",
-      "text": "Blue Hour Creative Studios delivered an exceptional end-to-end platform for our commercial portfolio. Not only was the software architecture bulletproof, but their creative direction and social presence elevated our brand visibility across the region."
-    },
-    {
-      "name": "Prasuna Shrestha",
-      "role": "Creative Founder",
-      "company": "Prasuna Clothing",
-      "avatar_color": "linear-gradient(135deg, #06b6d4, #3b82f6)",
-      "text": "Working with Blue Hour Creative Studios was a game changer for our fashion label. The e-commerce boutique they built handled our drop spikes effortlessly, and their social media creative direction led to an immediate sell-out within 48 hours."
-    },
-    {
-      "name": "A. K. Chaudhary",
-      "role": "Principal Architect",
-      "company": "Chaudhary Associates",
-      "avatar_color": "linear-gradient(135deg, #10b981, #06b6d4)",
-      "text": "They understand how to present high-end design work. Blue Hour Creative Studios transformed our architectural portfolio into an interactive showcase that consistently generates high-value commercial enquiries."
-    }
-  ],
-  "pricing_packages": {
-    "categories": [
-      {
-        "id": "website",
-        "name": "Website",
-        "subtitle": "One-time investment",
-        "tag": "Architecture & Web",
-        "icon": "fa-solid fa-laptop-code",
-        "plans": [
-          {
-            "id": "website_starter",
-            "name": "Website Starter",
-            "badge": "Fast Launch",
-            "highlight": false,
-            "price": "₹8,000 – ₹10,000",
-            "billing": "one-time",
-            "tagline": "A credible online home. No monthly fee.",
-            "timeline": "7–10 working days",
-            "features": [
-              "1 Year Domain charges included (.com / .in)",
-              "1 Year Free Maintenance & Bug Solving Support",
-              "Up to 5 custom-designed responsive pages",
-              "Interactive gallery & product/catalogue section",
-              "Direct WhatsApp button & lead enquiry form",
-              "Google Maps integration, contact details & social links",
-              "Mobile responsive architecture & foundational SEO setup"
-            ],
-            "not_included": [
-              "CMS or lead dashboard",
-              "Payment gateway integration",
-              "E-commerce cart, checkout, inventory & shipping"
-            ]
-          },
-          {
-            "id": "website_cms",
-            "name": "Website + CMS & Payments",
-            "badge": "Most Popular",
-            "highlight": true,
-            "price": "₹16,000",
-            "billing": "one-time",
-            "tagline": "Manage the site yourself and accept customer payments.",
-            "timeline": "3–4 weeks",
-            "features": [
-              "1 Year Domain charges included (.com / .in)",
-              "1 Year Free Maintenance & Bug Solving Support",
-              "Everything in Website Starter included",
-              "Custom CMS: edit products, banners & testimonials yourself",
-              "Centralized Lead Dashboard: status, notes & follow-up dates",
-              "One Payment Gateway integration (UPI, Cards & Net Banking)",
-              "Secure authentication login for 1 admin user"
-            ],
-            "not_included": [
-              "Automated refund workflows & GST invoice generation",
-              "Multiple admin roles or multi-gateway failover",
-              "Automated WhatsApp / email / SMS dispatch webhooks"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "growth",
-        "name": "Social Media & Growth",
-        "subtitle": "Monthly, billed in advance",
-        "tag": "Viral Marketing",
-        "icon": "fa-solid fa-arrow-trend-up",
-        "plans": [
-          {
-            "id": "social_mgmt",
-            "name": "Social Media Management",
-            "badge": "Essential Authority",
-            "highlight": false,
-            "price": "₹10,000",
-            "billing": "per month",
-            "tagline": "Complete social media handling, Google reviews & ads management.",
-            "timeline": "Ongoing monthly retainer",
-            "features": [
-              "Complete Social Media Account Handling (Instagram & Facebook)",
-              "Content Planning, Editorial Strategy & Regular Posting",
-              "Creative Posts, Reels, Captions & Copywriting",
-              "Basic Community Engagement & Page Maintenance",
-              "Google Reviews Management, Monitoring & Reputation Building",
-              "Ads Management: Planning, Setup, Monitoring & Campaign Optimization"
-            ],
-            "not_included": [
-              "Advertising / media spend budget (paid separately by the client)",
-              "On-site professional brand shoots & videography"
-            ]
-          },
-          {
-            "id": "digital_growth",
-            "name": "Complete Digital Growth",
-            "badge": "Dominance Engine",
-            "highlight": true,
-            "price": "₹20,000",
-            "billing": "per month",
-            "tagline": "Full social dominance with professional brand shoots & videography.",
-            "timeline": "3-month minimum recommended",
-            "features": [
-              "Everything in Social Media Management included",
-              "Professional Brand Shoots & Videography (On-Location Photography & Video)",
-              "High-Production Cinematic Reels & Commercial Video Editing",
-              "Google Business Profile Setup, Local SEO & Google Reviews Management",
-              "Full-Funnel Paid Ads Management & Monthly ROI Performance Reports",
-              "Targeted Festive, Seasonal & Milestone Brand Campaigns"
-            ],
-            "not_included": [
-              "Advertising / media spend budget (paid separately by the client)",
-              "Influencer fees (final scope confirmed in briefing)"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "mobile",
-        "name": "Mobile Application",
-        "subtitle": "One-time, indicative",
-        "tag": "Native Engineering",
-        "icon": "fa-solid fa-mobile-screen-button",
-        "plans": [
-          {
-            "id": "mobile_app",
-            "name": "Mobile App (Android + iOS)",
-            "badge": "Mobile Ecosystem",
-            "highlight": true,
-            "price": "From ₹25,000",
-            "billing": "indicative / discovery",
-            "tagline": "Can be taken after your website goes live.",
-            "timeline": "4–6 weeks after content received",
-            "features": [
-              "Fully branded native app with interactive catalogue & live offers",
-              "Instant one-tap WhatsApp enquiry & direct order request engine",
-              "Push notification console to announce flash sales & updates",
-              "Google Play Store & Apple App Store submission management",
-              "Cross-platform Flutter / React Native architecture"
-            ],
-            "not_included": [
-              "Third-party store developer accounts (paid directly to Google / Apple)",
-              "Complex multi-vendor microservices backend (quoted separately)"
-            ]
-          }
-        ]
-      }
-    ],
-    "transparent_costs": [
-      { "item": "Domain Charges (1st Year Included)", "note": "1st year domain registration included free for website packages; renewal at actual registrar cost" },
-      { "item": "Payment Gateway Fee", "note": "Standard per-transaction rate (UPI / Cards)" },
-      { "item": "Developer Store Accounts", "note": "$25 Google Play (one-time) / $99 Apple (yearly)" },
-      { "item": "Paid Ads & Influencer Budgets", "note": "100% client-approved and billed directly to platforms" },
-      { "item": "Corporate Business Email", "note": "Google Workspace or Zoho at actual user seat cost" },
-      { "item": "Applicable Statutory Taxes", "note": "Billed at standard government rates if applicable" }
-    ],
-    "key_terms": [
-      { "title": "Milestone Structure", "desc": "50% advance mobilization to initiate, 50% upon final client sign-off before go-live." },
-      { "title": "Retainer Cadence", "desc": "Monthly growth retainers billed in advance; 3-month initial commitment recommended for peak momentum." },
-      { "title": "100% Client Ownership", "desc": "You retain 100% unencumbered legal ownership of your domain, codebase, accounts, and creative assets." },
-      { "title": "1-Year Free Maintenance", "desc": "1 full year of free technical maintenance, bug solving, and security health checks included with website packages." },
-      { "title": "Production Timelines", "desc": "Starter Web: 7–10 working days; CMS: 3–4 weeks; Mobile App: 4–6 weeks (following content delivery)." }
-    ]
-  },
-  "team": [
-    {
-      "id": "himon",
-      "name": "Himon Bhuyan",
-      "role": "Founder & Principal Software Architect",
-      "badge": "Engineering & Technology",
-      "bio": "Full-stack software architect specializing in mission-critical web applications, enterprise ERP architectures, scalable microservices, and high-performance cloud infrastructure.",
-      "image": "assets/images/himon_portrait.jpg",
-      "avatar": "assets/images/himon_avatar.jpg",
-      "skills": ["Full-Stack Architecture", "Laravel & PHP 8.x", "React & Node.js", "Enterprise Cloud", "REST APIs"],
-      "socials": {
-        "github": "https://github.com/HimonBhuyan",
-        "linkedin": "https://linkedin.com/company/blue-hour-creative-studios",
-        "email": "himonbhuyan@gmail.com",
-        "phone": "+91 7002201534"
-      }
-    },
-    {
-      "id": "darshana",
-      "name": "Darshana Das",
-      "role": "Partner — Head of Client Growth & Social Media Strategy",
-      "badge": "Sales & Social Media",
-      "bio": "Growth strategist and brand authority lead directing client partnerships, social content funnels, creative brand positioning, and algorithmic distribution campaigns that scale commercial revenue.",
-      "image": "assets/images/darshana_portrait.jpg",
-      "avatar": "assets/images/darshana_avatar.jpg",
-      "skills": ["Social Media Strategy", "Sales & Partnerships", "Viral Content Funnels", "Brand Positioning", "Campaign Production"],
-      "socials": {
-        "instagram": "https://instagram.com/bluehourcreativestudios",
-        "linkedin": "https://linkedin.com/company/blue-hour-creative-studios",
+    "agency": {
+        "name": "Blue Hour Creative Studios",
+        "short_name": "Blue Hour Creative Studios",
+        "logo": "assets/images/blue_hour_symbol.png",
+        "logo_full": "assets/images/blue_hour_full.png",
+        "slogan": "Engineering Excellence. Creative Dominance.",
+        "tagline": "We architect high-performance software, modern web ecosystems, and hyper-growth social media campaigns.",
+        "description": "Blue Hour Creative Studios is a hybrid creative and technology powerhouse. We bridge the gap between deep software engineering and viral brand marketing — delivering scalable enterprise web applications, mobile platforms, and high-converting social campaigns that dominate modern digital markets.",
         "email": "bluehourcreativestudio8@gmail.com",
-        "whatsapp": "https://wa.me/918473891457",
-        "phone": "+91 84738 91457"
-      }
-    }
-  ]
+        "phone": "+91 7002201534 / +91 84738 91457",
+        "location": "Guwahati & New Delhi, India",
+        "socials": {
+            "instagram": "https://instagram.com/bluehourcreativestudios",
+            "linkedin": "https://linkedin.com/company/blue-hour-creative-studios",
+            "twitter": "https://twitter.com/bluehour_studio",
+            "github": "https://github.com/HimonBhuyan"
+        },
+        "stats": [
+            {
+                "value": "50+",
+                "label": "Digital Projects Shipped",
+                "suffix": ""
+            },
+            {
+                "value": "10M+",
+                "label": "Social Reach Generated",
+                "suffix": ""
+            },
+            {
+                "value": "4.8x",
+                "label": "Average Client Ad ROAS",
+                "suffix": ""
+            },
+            {
+                "value": "99.9%",
+                "label": "System Uptime & SLA",
+                "suffix": ""
+            }
+        ]
+    },
+    "services": [
+        {
+            "id": "web_software",
+            "icon": "fa-solid fa-code",
+            "title": "Custom Web & SaaS Development",
+            "category": "Engineering",
+            "badge": "Core Tech",
+            "short_desc": "Bespoke web applications, SaaS platforms, and digital portals built with Laravel, React, Node.js, and modern cloud stacks.",
+            "deliverables": [
+                "Full-Stack Web App Architecture",
+                "E-Commerce & High-Conversion Portals",
+                "Custom APIs & Microservices",
+                "Database Architecture & Optimization",
+                "Sub-second Edge Deployment"
+            ]
+        },
+        {
+            "id": "enterprise_crm",
+            "icon": "fa-solid fa-network-wired",
+            "title": "Enterprise ERP, CRM & Logistics",
+            "category": "Engineering",
+            "badge": "Enterprise",
+            "short_desc": "Mission-critical enterprise software, campus management ERPs, logistics dispatch systems, and role-based staff portals.",
+            "deliverables": [
+                "Consignment & Fleet Management Systems",
+                "Campus & University CRM Suites",
+                "Real-Time Telemetry & Tracking",
+                "Granular Role-Based Access Control",
+                "Audit Logging & Financial Reporting"
+            ]
+        },
+        {
+            "id": "mobile_ai",
+            "icon": "fa-solid fa-mobile-screen-button",
+            "title": "Mobile Apps & Edge AI Systems",
+            "category": "Engineering",
+            "badge": "Innovation",
+            "short_desc": "Cross-platform mobile apps for iOS and Android powered by Flutter, React Native, and on-device machine learning models.",
+            "deliverables": [
+                "Cross-Platform Native Apps (Flutter/React Native)",
+                "Edge Machine Learning & Computer Vision",
+                "Offline-First Data Synchronization",
+                "Live Geofencing & GPS Telemetry",
+                "In-App Payment & Push Notification Desks"
+            ]
+        },
+        {
+            "id": "social_media_marketing",
+            "icon": "fa-solid fa-chart-line",
+            "title": "Social Media Marketing & Growth",
+            "category": "Creative Marketing",
+            "badge": "Viral Growth",
+            "short_desc": "End-to-end social media management across Instagram, LinkedIn, and Meta that builds passionate communities and brand authority.",
+            "deliverables": [
+                "Strategic Content Calendars & Editorial Direction",
+                "Short-Form Video Production (Reels & Shorts)",
+                "Community Management & Active Engagement",
+                "Viral Growth Hacking & Trend Capitalization",
+                "Multi-Platform Brand Positioning"
+            ]
+        },
+        {
+            "id": "performance_ads",
+            "icon": "fa-solid fa-bullseye",
+            "title": "Paid Ads & Performance Marketing",
+            "category": "Creative Marketing",
+            "badge": "ROI Focused",
+            "short_desc": "Data-backed paid advertising across Meta Ads, Google Search & Display, driving qualified leads, high ROAS, and customer acquisition.",
+            "deliverables": [
+                "Meta Ads (Instagram & Facebook Lead & Sales Funnels)",
+                "Google Ads & Intent-Driven Search Campaigns",
+                "Custom Retargeting & Lookalike Audiences",
+                "Ad Creative A/B Testing & Optimization",
+                "Real-Time Attribution & ROAS Dashboards"
+            ]
+        },
+        {
+            "id": "brand_creative",
+            "icon": "fa-solid fa-wand-magic-sparkles",
+            "title": "Brand Identity & Visual Storytelling",
+            "category": "Creative Marketing",
+            "badge": "Creative Direction",
+            "short_desc": "Crafting iconic visual identities, luxury packaging, brand guidelines, and high-impact digital graphics that leave lasting impressions.",
+            "deliverables": [
+                "Logo Design & Visual Identity Systems",
+                "Design Guidelines & Typography Kits",
+                "Packaging, Merchandise & Print Assets",
+                "Motion Graphics & Dynamic Social Assets",
+                "Luxury & Editorial Aesthetic Direction"
+            ]
+        }
+    ],
+    "marketing_pillars": [
+        {
+            "step": "01",
+            "title": "Market Resonance & Persona Mapping",
+            "desc": "We deep-dive into your target demographics, analyzing user psychology, competitor friction points, and industry gaps to build an unstoppable go-to-market playbook."
+        },
+        {
+            "step": "02",
+            "title": "High-Fidelity Content & Creative Production",
+            "desc": "Our in-house creative team designs jaw-dropping visuals, cinematic reels, and conversion-optimized ad copy tailored specifically to arrest scroll momentum."
+        },
+        {
+            "step": "03",
+            "title": "Algorithmic Distribution & Performance Ads",
+            "desc": "We deploy multi-stage acquisition funnels combining organic viral tactics with precision-targeted Meta and Google campaigns for maximum ROI."
+        },
+        {
+            "step": "04",
+            "title": "Continuous Optimization & Scaling",
+            "desc": "Every campaign and digital asset is tracked with granular conversion telemetry. We double down on winning hooks, refine ad creatives, and scale your brand revenue."
+        }
+    ],
+    "projects": [
+        {
+            "id": "gulbani",
+            "title": "Gulbani - A Gifting Shop",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Luxury E-Commerce & Brand Strategy",
+            "image": "assets/images/upload_1792598927_Gulbani_G.png",
+            "client": "Gulbani Luxury Concierge",
+            "duration": "4 Months",
+            "description": "Your private luxury gifting concierge in New Delhi. Bespoke wedding favors, heirloom brass caskets, and artisanal hampers crafted to be treasured forever. Complete brand strategy, e-commerce storefront, and social marketing launch.",
+            "highlights": [
+                "Bespoke Bridal Gifting Builder with real-time hamper customization",
+                "Full-Stack modular Laravel & PHP architecture for reliable order routing",
+                "Editorial luxury visual direction, bespoke typography, and sub-second page loads",
+                "Centralized inventory management and custom VIP bespoke inquiry parser",
+                "Integrated social media lookbook campaign driving high-ticket wedding enquiries"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "Laravel",
+                "E-Commerce",
+                "Luxury Branding",
+                "Blade Engine",
+                "Social Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan/Gulbani",
+            "live": "https://gulbani.vercel.app/"
+        },
+        {
+            "id": "knots_facets",
+            "title": "Knots & Facets — Handmade Crafts & Jewellery",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Handcrafted Luxury D2C Atelier",
+            "image": "assets/images/project_knots_facets.jpg",
+            "client": "Knots & Facets (@knotsandfacets)",
+            "duration": "3 Months",
+            "description": "Bespoke digital atelier and luxury e-commerce experience crafted for Knots & Facets in Guwahati. Handcrafted glass & crystal jewellery, slow cotton crochet accessories, seamless interactive lookbook, and slide-out cart drawer with currency switching.",
+            "highlights": [
+                "Editorial luxury digital storefront engineered with React, Vite & Tailwind CSS for sub-second edge performance",
+                "Interactive Slide-Out Atelier Cart with collector promo engine, multi-currency switching, and express checkout",
+                "Curated Collections & Lookbook showcase honoring slow, mindful craftsmanship and bespoke atelier gifts",
+                "Direct WhatsApp ordering integration and custom wax-stamp gift packaging options",
+                "Integrated Meta Pixel & Conversions API tracking for high-ROAS social drops and Instagram Reels"
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "E-Commerce",
+                "D2C Luxury",
+                "Tailwind CSS",
+                "Cart Drawer",
+                "Meta Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://knots-facets.vercel.app/"
+        },
+        {
+            "id": "chaudhary_associates",
+            "title": "Chaudhary Associates",
+            "category": "web marketing",
+            "filter_tag": "web",
+            "category_label": "Architecture Web & Social Authority",
+            "image": "assets/images/upload_1792599796_Screenshot_2026-10-21_215046.png",
+            "client": "Chaudhary Associates Practice",
+            "duration": "3 Months",
+            "description": "Comprehensive digital platform and social authority strategy for an architecture, interiors, and design-and-build practice with 260+ published projects and an engaged community of 6,200+ followers.",
+            "highlights": [
+                "Filterable high-resolution architectural portfolio with blueprint view and project blueprints",
+                "Direct client consultation booking and turnkey RFP proposal submission system",
+                "Clean MVC modular PHP backend with rapid caching and image lazy loading",
+                "Organic architectural social media content strategy showcasing live construction milestones"
+            ],
+            "tags": [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "Architecture Web",
+                "Responsive UI",
+                "Content Strategy"
+            ],
+            "github": "https://github.com/HimonBhuyan/Chaudhary-Associates",
+            "live": "https://chaudhary-associates.vercel.app/"
+        },
+        {
+            "id": "prasuna",
+            "title": "Prasuna - Inspired by You",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Artisanal Fashion & Limited Drops",
+            "image": "assets/images/upload_1792781095_Screenshot_2026-10-23_210246.png",
+            "client": "Prasuna Clothing (@prasuna.clo)",
+            "duration": "2 Months",
+            "description": "High-converting boutique e-commerce web platform and visual campaign crafted for Prasuna. Honoring Nepali craftsmanship with limited drops, made-to-measure personalization, and slide-out shopping experience.",
+            "highlights": [
+                "Engineered with PHP 8.3 & Laravel Blade Engine for seamless checkout transitions",
+                "Limited-drop countdown mechanics driving FOMO and rapid product sell-outs",
+                "Interactive story highlights and artisanal behind-the-scenes video integration",
+                "Multi-currency switching with location-based currency formatting",
+                "High-aesthetic Instagram creative assets that boosted organic engagement by 320%"
+            ],
+            "tags": [
+                "PHP 8.3",
+                "Laravel Blade",
+                "E-Commerce",
+                "D2C Fashion",
+                "Cart System",
+                "Meta Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan/PRASUNA-INSPIRED-BY-YOU-",
+            "live": "https://prasunaclothing.vercel.app/"
+        },
+        {
+            "id": "omkaar_erp",
+            "title": "Omkaar Logistics ERP - Fleet Suite",
+            "category": "enterprise web",
+            "filter_tag": "enterprise",
+            "category_label": "Enterprise Logistics & Fleet ERP",
+            "image": "assets/images/project_omkaar_erp.png",
+            "client": "Omkaar Trans Logistics",
+            "duration": "6 Months",
+            "description": "Mission-critical enterprise logistics resource planning suite featuring high-speed consignment note (C.N) billing, multi-tier access control, and real-time fleet ledger auditing across regional transport hubs.",
+            "highlights": [
+                "High-speed Consignment Note (C.N) generation & automated freight tariff calculation",
+                "Enterprise access control partitioned for dispatchers, branch managers, and ledger accountants",
+                "Real-time fleet ledger accounting, consignment manifests, and route transit auditing",
+                "High-contrast, distraction-free operations UI optimized for rapid keyboard data entry in busy transport hubs"
+            ],
+            "tags": [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "Enterprise ERP",
+                "Role-Based Access",
+                "Fleet Ledger"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "#"
+        },
+        {
+            "id": "agri_ai",
+            "title": "Agri Leaf AI - Smart Farm Advisory",
+            "category": "mobile_ai",
+            "filter_tag": "mobile_ai",
+            "category_label": "Mobile App & Edge Vision AI",
+            "image": "assets/images/project_agri_ai.jpg",
+            "client": "AgriTech Innovations",
+            "duration": "5 Months",
+            "description": "Cross-platform agronomy mobile application engineered for tea growers and farmers, featuring on-device leaf disease diagnosis, weather safety windows, field calendars, and multi-language voice accessibility.",
+            "highlights": [
+                "Trained on-device Computer Vision AI for instant diagnosis of tea leaf spot and blight pathology",
+                "Hyperlocal weather APIs computing safe spray windows to eliminate crop harvest spoilage",
+                "Field task planner and harvest logging console functioning with zero network connectivity",
+                "Voice assistant support in Assamese, Hindi, and English for inclusive grower adoption"
+            ],
+            "tags": [
+                "Flutter",
+                "Dart",
+                "TensorFlow Lite",
+                "Computer Vision",
+                "Weather API",
+                "Voice AI"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "#"
+        },
+        {
+            "id": "pragjyotishpur_crm",
+            "title": "Pragjyotishpur University - Campus ERP",
+            "category": "enterprise web",
+            "filter_tag": "enterprise",
+            "category_label": "Higher-Ed Campus ERP & CRM",
+            "image": "assets/images/project_pragjyotishpur_crm.jpg",
+            "client": "Pragjyotishpur University",
+            "duration": "6 Months",
+            "description": "Comprehensive dual-portal campus ERP and CRM platform integrating geofenced faculty attendance, exam administration, student fee clearance ledger, and instant semester SGPA result processing.",
+            "highlights": [
+                "Partitioned role-based architecture separating faculty management from student self-service",
+                "GPS campus geofencing for location-verified faculty attendance validation",
+                "Instant semester SGPA results retrieval and student financial clearance ledger",
+                "University-wide push broadcast notification desk for circulars, exam alerts, and announcements"
+            ],
+            "tags": [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "Campus Geofencing",
+                "REST APIs",
+                "Blade"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "#"
+        },
+        {
+            "id": "otto_taxi",
+            "title": "Otto Taxi - Real-Time Ride Platform",
+            "category": "web mobile_ai",
+            "filter_tag": "mobile_ai",
+            "category_label": "Real-Time Telemetry & Geospatial",
+            "image": "assets/images/project_otto_taxi.jpg",
+            "client": "Otto Mobility",
+            "duration": "5 Months",
+            "description": "Full-scale taxi booking platform engineered with real-time driver-passenger matching, live location telemetry, dynamic distance fare estimation, and seamless mobile UI.",
+            "highlights": [
+                "Bidirectional WebSocket transport delivering sub-25ms driver coordinate telemetry",
+                "Integrated Google Maps Directions and Distance Matrix APIs for dynamic fare estimation",
+                "Resilient backend state management ensuring zero booking dropouts during network transitions",
+                "Dual-sided mobile UI for passenger request flow and driver dispatch acceptance"
+            ],
+            "tags": [
+                "React Native",
+                "WebSockets",
+                "Google Maps API",
+                "Node.js",
+                "Redis",
+                "Express"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "#"
+        },
+        {
+            "id": "bhuyan_plaza",
+            "title": "Bhuyan Plaza - Rental Management SaaS",
+            "category": "web enterprise",
+            "filter_tag": "web",
+            "category_label": "Full-Stack Commercial Property SaaS",
+            "image": "assets/images/project_bhuyan_plaza.jpg",
+            "client": "Bhuyan Commercial Real Estate",
+            "duration": "3 Months",
+            "description": "Comprehensive property rental management platform for tracking commercial tenants, lease agreements, recurring billing schedules, and automated rent reminder notifications.",
+            "highlights": [
+                "End-to-end MERN stack architecture with secure JWT and role-based authentication",
+                "Automated rent reminder workflows and recurring payment schedules with Razorpay & Stripe",
+                "Interactive financial reporting dashboard with occupancy gauges and revenue analytics",
+                "Optimized MongoDB aggregation pipelines for instant lease status and tenant queries"
+            ],
+            "tags": [
+                "MongoDB",
+                "Express.js",
+                "React.js",
+                "Node.js",
+                "Redux",
+                "Razorpay",
+                "JWT"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "#"
+        },
+        {
+            "id": "friday_ai",
+            "title": "FRIDAY - Tony Stark-Inspired AI Assistant",
+            "category": "web mobile_ai",
+            "filter_tag": "mobile_ai",
+            "category_label": "Voice AI & Workflow Automation",
+            "image": "assets/images/upload_1791974795_Screenshot__11_.png",
+            "client": "Blue Hour Labs",
+            "duration": "3 Months",
+            "description": "A voice-enabled personal AI assistant designed to streamline complex digital workflows through natural voice commands, LLM-powered conversational intelligence, and automated system actions.",
+            "highlights": [
+                "Voice-enabled interaction with high-precision speech-to-text and low-latency TTS synthesis",
+                "LLM conversational intelligence with contextual long-term memory retrieval",
+                "Real-time web search integration and automated task execution pipelines",
+                "Modular backend architecture ready for smart-home and IoT expansion"
+            ],
+            "tags": [
+                "Python",
+                "FastAPI",
+                "React",
+                "Node.js",
+                "LLMs",
+                "Speech Recognition",
+                "WebSockets"
+            ],
+            "github": "https://github.com/HimonBhuyan/Friday-AI",
+            "live": "#"
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Lachit Bhuyan",
+            "role": "Managing Director",
+            "company": "Bhuyan Commercial Group",
+            "avatar_color": "linear-gradient(135deg, #ec4899, #8b5cf6)",
+            "text": "Blue Hour Creative Studios delivered an exceptional end-to-end platform for our commercial portfolio. Not only was the software architecture bulletproof, but their creative direction and social presence elevated our brand visibility across the region."
+        },
+        {
+            "name": "Prasuna Shrestha",
+            "role": "Creative Founder",
+            "company": "Prasuna Clothing",
+            "avatar_color": "linear-gradient(135deg, #06b6d4, #3b82f6)",
+            "text": "Working with Blue Hour Creative Studios was a game changer for our fashion label. The e-commerce boutique they built handled our drop spikes effortlessly, and their social media creative direction led to an immediate sell-out within 48 hours."
+        },
+        {
+            "name": "A. K. Chaudhary",
+            "role": "Principal Architect",
+            "company": "Chaudhary Associates",
+            "avatar_color": "linear-gradient(135deg, #10b981, #06b6d4)",
+            "text": "They understand how to present high-end design work. Blue Hour Creative Studios transformed our architectural portfolio into an interactive showcase that consistently generates high-value commercial enquiries."
+        }
+    ],
+    "pricing_packages": {
+        "categories": [
+            {
+                "id": "website",
+                "name": "Website",
+                "subtitle": "One-time investment",
+                "tag": "Architecture & Web",
+                "icon": "fa-solid fa-laptop-code",
+                "plans": [
+                    {
+                        "id": "website_starter",
+                        "name": "Website Starter",
+                        "badge": "Fast Launch",
+                        "highlight": false,
+                        "price": "₹8,000 – ₹10,000",
+                        "billing": "one-time",
+                        "tagline": "A credible online home. No monthly fee.",
+                        "timeline": "7–10 working days",
+                        "features": [
+                            "1 Year Domain charges included (.com / .in)",
+                            "1 Year Free Maintenance & Bug Solving Support",
+                            "Up to 5 custom-designed responsive pages",
+                            "Interactive gallery & product/catalogue section",
+                            "Direct WhatsApp button & lead enquiry form",
+                            "Google Maps integration, contact details & social links",
+                            "Mobile responsive architecture & foundational SEO setup"
+                        ],
+                        "not_included": [
+                            "CMS or lead dashboard",
+                            "Payment gateway integration",
+                            "E-commerce cart, checkout, inventory & shipping"
+                        ]
+                    },
+                    {
+                        "id": "website_cms",
+                        "name": "Website + CMS & Payments",
+                        "badge": "Most Popular",
+                        "highlight": true,
+                        "price": "₹16,000",
+                        "billing": "one-time",
+                        "tagline": "Manage the site yourself and accept customer payments.",
+                        "timeline": "3–4 weeks",
+                        "features": [
+                            "1 Year Domain charges included (.com / .in)",
+                            "1 Year Free Maintenance & Bug Solving Support",
+                            "Everything in Website Starter included",
+                            "Custom CMS: edit products, banners & testimonials yourself",
+                            "Centralized Lead Dashboard: status, notes & follow-up dates",
+                            "One Payment Gateway integration (UPI, Cards & Net Banking)",
+                            "Secure authentication login for 1 admin user"
+                        ],
+                        "not_included": [
+                            "Automated refund workflows & GST invoice generation",
+                            "Multiple admin roles or multi-gateway failover",
+                            "Automated WhatsApp / email / SMS dispatch webhooks"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "growth",
+                "name": "Social Media & Growth",
+                "subtitle": "Monthly, billed in advance",
+                "tag": "Viral Marketing",
+                "icon": "fa-solid fa-arrow-trend-up",
+                "plans": [
+                    {
+                        "id": "social_mgmt",
+                        "name": "Social Media Management",
+                        "badge": "Essential Authority",
+                        "highlight": false,
+                        "price": "₹10,000",
+                        "billing": "per month",
+                        "tagline": "Complete social media handling, Google reviews & ads management.",
+                        "timeline": "Ongoing monthly retainer",
+                        "features": [
+                            "Complete Social Media Account Handling (Instagram & Facebook)",
+                            "Content Planning, Editorial Strategy & Regular Posting",
+                            "Creative Posts, Reels, Captions & Copywriting",
+                            "Basic Community Engagement & Page Maintenance",
+                            "Google Reviews Management, Monitoring & Reputation Building",
+                            "Ads Management: Planning, Setup, Monitoring & Campaign Optimization"
+                        ],
+                        "not_included": [
+                            "Advertising / media spend budget (paid separately by the client)",
+                            "On-site professional brand shoots & videography"
+                        ]
+                    },
+                    {
+                        "id": "digital_growth",
+                        "name": "Complete Digital Growth",
+                        "badge": "Dominance Engine",
+                        "highlight": true,
+                        "price": "₹20,000",
+                        "billing": "per month",
+                        "tagline": "Full social dominance with professional brand shoots & videography.",
+                        "timeline": "3-month minimum recommended",
+                        "features": [
+                            "Everything in Social Media Management included",
+                            "Professional Brand Shoots & Videography (On-Location Photography & Video)",
+                            "High-Production Cinematic Reels & Commercial Video Editing",
+                            "Google Business Profile Setup, Local SEO & Google Reviews Management",
+                            "Full-Funnel Paid Ads Management & Monthly ROI Performance Reports",
+                            "Targeted Festive, Seasonal & Milestone Brand Campaigns"
+                        ],
+                        "not_included": [
+                            "Advertising / media spend budget (paid separately by the client)",
+                            "Influencer fees (final scope confirmed in briefing)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "mobile",
+                "name": "Mobile Application",
+                "subtitle": "One-time, indicative",
+                "tag": "Native Engineering",
+                "icon": "fa-solid fa-mobile-screen-button",
+                "plans": [
+                    {
+                        "id": "mobile_app",
+                        "name": "Mobile App (Android + iOS)",
+                        "badge": "Mobile Ecosystem",
+                        "highlight": true,
+                        "price": "From ₹25,000",
+                        "billing": "indicative / discovery",
+                        "tagline": "Can be taken after your website goes live.",
+                        "timeline": "4–6 weeks after content received",
+                        "features": [
+                            "Fully branded native app with interactive catalogue & live offers",
+                            "Instant one-tap WhatsApp enquiry & direct order request engine",
+                            "Push notification console to announce flash sales & updates",
+                            "Google Play Store & Apple App Store submission management",
+                            "Cross-platform Flutter / React Native architecture"
+                        ],
+                        "not_included": [
+                            "Third-party store developer accounts (paid directly to Google / Apple)",
+                            "Complex multi-vendor microservices backend (quoted separately)"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "transparent_costs": [
+            {
+                "item": "Domain Charges (1st Year Included)",
+                "note": "1st year domain registration included free for website packages; renewal at actual registrar cost"
+            },
+            {
+                "item": "Payment Gateway Fee",
+                "note": "Standard per-transaction rate (UPI / Cards)"
+            },
+            {
+                "item": "Developer Store Accounts",
+                "note": "$25 Google Play (one-time) / $99 Apple (yearly)"
+            },
+            {
+                "item": "Paid Ads & Influencer Budgets",
+                "note": "100% client-approved and billed directly to platforms"
+            },
+            {
+                "item": "Corporate Business Email",
+                "note": "Google Workspace or Zoho at actual user seat cost"
+            },
+            {
+                "item": "Applicable Statutory Taxes",
+                "note": "Billed at standard government rates if applicable"
+            }
+        ],
+        "key_terms": [
+            {
+                "title": "Milestone Structure",
+                "desc": "50% advance mobilization to initiate, 50% upon final client sign-off before go-live."
+            },
+            {
+                "title": "Retainer Cadence",
+                "desc": "Monthly growth retainers billed in advance; 3-month initial commitment recommended for peak momentum."
+            },
+            {
+                "title": "100% Client Ownership",
+                "desc": "You retain 100% unencumbered legal ownership of your domain, codebase, accounts, and creative assets."
+            },
+            {
+                "title": "1-Year Free Maintenance",
+                "desc": "1 full year of free technical maintenance, bug solving, and security health checks included with website packages."
+            },
+            {
+                "title": "Production Timelines",
+                "desc": "Starter Web: 7–10 working days; CMS: 3–4 weeks; Mobile App: 4–6 weeks (following content delivery)."
+            }
+        ]
+    },
+    "team": [
+        {
+            "id": "himon",
+            "name": "Himon Bhuyan",
+            "role": "Founder & Principal Software Architect",
+            "badge": "Engineering & Technology",
+            "bio": "Full-stack software architect specializing in mission-critical web applications, enterprise ERP architectures, scalable microservices, and high-performance cloud infrastructure.",
+            "image": "assets/images/himon_portrait.jpg",
+            "avatar": "assets/images/himon_avatar.jpg",
+            "skills": [
+                "Full-Stack Architecture",
+                "Laravel & PHP 8.x",
+                "React & Node.js",
+                "Enterprise Cloud",
+                "REST APIs"
+            ],
+            "socials": {
+                "github": "https://github.com/HimonBhuyan",
+                "linkedin": "https://linkedin.com/company/blue-hour-creative-studios",
+                "email": "himonbhuyan@gmail.com",
+                "phone": "+91 7002201534"
+            }
+        },
+        {
+            "id": "darshana",
+            "name": "Darshana Das",
+            "role": "Partner — Head of Client Growth & Social Media Strategy",
+            "badge": "Sales & Social Media",
+            "bio": "Growth strategist and brand authority lead directing client partnerships, social content funnels, creative brand positioning, and algorithmic distribution campaigns that scale commercial revenue.",
+            "image": "assets/images/darshana_portrait.jpg",
+            "avatar": "assets/images/darshana_avatar.jpg",
+            "skills": [
+                "Social Media Strategy",
+                "Sales & Partnerships",
+                "Viral Content Funnels",
+                "Brand Positioning",
+                "Campaign Production"
+            ],
+            "socials": {
+                "instagram": "https://instagram.com/bluehourcreativestudios",
+                "linkedin": "https://linkedin.com/company/blue-hour-creative-studios",
+                "email": "bluehourcreativestudio8@gmail.com",
+                "whatsapp": "https://wa.me/918473891457",
+                "phone": "+91 84738 91457"
+            }
+        }
+    ]
 }
