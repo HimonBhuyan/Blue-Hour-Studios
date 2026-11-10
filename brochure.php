@@ -161,9 +161,9 @@ foreach ($pricingCategories as $cat) {
       justify-content: space-between;
       align-items: flex-start;
       gap: 1.25rem;
-      padding-bottom: 1rem;
+      padding-bottom: 0.95rem;
       border-bottom: 2px solid var(--ink);
-      margin-bottom: 1rem;
+      margin-bottom: 0.95rem;
       flex-wrap: wrap;
     }
 
@@ -182,7 +182,7 @@ foreach ($pricingCategories as $cat) {
 
     .brand-titles h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.48rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: var(--ink);
@@ -277,7 +277,7 @@ foreach ($pricingCategories as $cat) {
 
     .section-headline {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       font-weight: 800;
       color: var(--ink);
       margin-bottom: 0.75rem;
@@ -289,7 +289,7 @@ foreach ($pricingCategories as $cat) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0.85rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.95rem;
     }
 
     .grid-two-col {
@@ -419,114 +419,137 @@ foreach ($pricingCategories as $cat) {
     }
 
     /* ========================================================================
-       PAGE 1 LOWER SECTION: ADD-ONS & 4-STEP SHIPMENT PROTOCOL
+       EXPANDED TIMELINE PIPELINE (REPLACES ADD-ONS COMPLETELY)
        ======================================================================== */
-    .addons-section-wrap {
-      margin-top: 0.65rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--border);
+    .pipeline-section-wrap {
+      margin-top: 0.75rem;
+      padding-top: 0.85rem;
+      border-top: 1.5px solid var(--border);
     }
 
-    .addons-grid {
+    .pipeline-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pipeline-meta-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: var(--surface);
+      border: 1px solid var(--border-dark);
+      color: var(--ink-soft);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .pipeline-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.65rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.8rem;
       margin-bottom: 0.85rem;
     }
 
-    .addon-card {
+    .pipeline-card {
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.6rem 0.75rem;
-      background: #fafbfc;
+      border-radius: 10px;
+      padding: 0.85rem 0.9rem;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       position: relative;
     }
 
-    .addon-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 0.5rem;
-      margin-bottom: 0.2rem;
+    .pipeline-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--border-dark);
+      border-radius: 10px 10px 0 0;
     }
 
-    .addon-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.82rem;
+    .pipeline-card.active-phase::before {
+      background: linear-gradient(90deg, #d4af37, #b48a3e);
+    }
+
+    .pipeline-card-top {
+      margin-bottom: 0.5rem;
+    }
+
+    .pipeline-phase-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.25rem;
+    }
+
+    .pipeline-phase-days {
+      font-size: 0.59rem;
+      background: rgba(180, 138, 62, 0.12);
+      color: var(--gold-dark);
+      padding: 0.12rem 0.4rem;
+      border-radius: 4px;
       font-weight: 700;
+    }
+
+    .pipeline-phase-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 800;
       color: var(--ink);
       line-height: 1.2;
     }
 
-    .addon-price {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 800;
-      color: var(--gold-dark);
-      white-space: nowrap;
-    }
-
-    .addon-desc {
-      font-size: 0.67rem;
+    .pipeline-focus {
+      font-size: 0.68rem;
+      font-weight: 600;
       color: var(--muted);
+      margin-top: 0.15rem;
       line-height: 1.3;
     }
 
-    /* 4-Step Process Timeline */
-    .process-timeline-wrap {
-      margin-top: 0.5rem;
-      padding: 0.7rem 0.9rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-    }
-
-    .process-timeline-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.45rem;
-    }
-
-    .process-steps-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.65rem;
-      position: relative;
-    }
-
-    .process-step-item {
+    .pipeline-checklist {
+      list-style: none;
+      font-size: 0.67rem;
+      color: var(--ink-soft);
       display: flex;
       flex-direction: column;
-      gap: 0.15rem;
+      gap: 0.35rem;
+      margin-top: 0.45rem;
+      padding-top: 0.45rem;
+      border-top: 1px dashed var(--border);
     }
 
-    .step-num-pill {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.6rem;
-      font-weight: 800;
-      color: var(--gold-dark);
-      letter-spacing: 0.06em;
+    .pipeline-checklist li {
       display: flex;
-      align-items: center;
-      gap: 0.25rem;
+      align-items: flex-start;
+      gap: 0.35rem;
+      line-height: 1.32;
     }
 
-    .step-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.15;
-    }
-
-    .step-desc {
-      font-size: 0.64rem;
-      color: var(--muted);
-      line-height: 1.25;
+    .pipeline-checklist li i {
+      color: var(--gold);
+      font-size: 0.62rem;
+      margin-top: 0.18rem;
+      flex-shrink: 0;
     }
 
     /* Page 1 Bottom Guarantee Bar */
@@ -534,7 +557,7 @@ foreach ($pricingCategories as $cat) {
       background: #f1f5f9;
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 0.6rem 0.9rem;
+      padding: 0.65rem 0.95rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -740,7 +763,7 @@ foreach ($pricingCategories as $cat) {
         break-after: auto !important;
       }
 
-      .pkg-card, .terms-box, .founders-strip, .addon-card, .process-step-item, .page-header, .mini-header {
+      .pkg-card, .terms-box, .founders-strip, .pipeline-card, .page-header, .mini-header {
         page-break-inside: avoid !important;
         break-inside: avoid !important;
       }
@@ -780,28 +803,21 @@ foreach ($pricingCategories as $cat) {
         gap: 0.2rem !important;
       }
 
-      .addon-card {
-        padding: 1.8mm 2.2mm !important;
+      .pipeline-card {
+        padding: 2.2mm 2.6mm !important;
       }
 
-      .addon-title {
-        font-size: 7.2pt !important;
-      }
-
-      .addon-price {
+      .pipeline-phase-title {
         font-size: 7.8pt !important;
       }
 
-      .addon-desc {
+      .pipeline-focus {
+        font-size: 6.4pt !important;
+      }
+
+      .pipeline-checklist {
         font-size: 6.2pt !important;
-      }
-
-      .step-title {
-        font-size: 7.2pt !important;
-      }
-
-      .step-desc {
-        font-size: 6.1pt !important;
+        gap: 0.18rem !important;
       }
 
       .terms-box {
@@ -849,7 +865,7 @@ foreach ($pricingCategories as $cat) {
   <main class="document-wrapper">
 
     <!-- ====================================================================
-         PAGE 1: CORE SOFTWARE & PLATFORM ARCHITECTURE + ADD-ONS + WORKFLOW
+         PAGE 1: CORE SOFTWARE & PLATFORM ARCHITECTURE + TIME PIPELINE
          ==================================================================== -->
     <article class="rate-card-page" id="rateCardPage1">
       <div>
@@ -967,94 +983,96 @@ foreach ($pricingCategories as $cat) {
 
         </div>
 
-        <!-- Section 02: Popular Modular Add-Ons & Expansions -->
-        <div class="addons-section-wrap">
-          <div class="section-kicker">02 // MODULAR ADD-ONS &amp; BESPOKE UPGRADES</div>
-          <h2 class="section-headline" style="font-size: 1.05rem; margin-bottom: 0.55rem;">
-            Custom Engineering Expansions &bull; Transparent À La Carte Pricing
-          </h2>
-
-          <div class="addons-grid">
-            <div class="addon-card">
-              <div class="addon-header">
-                <span class="addon-title"><i class="fa-regular fa-file-lines" style="color: var(--gold); margin-right: 0.25rem;"></i> Extra Custom Page</span>
-                <span class="addon-price">₹1,200</span>
-              </div>
-              <p class="addon-desc">Additional landing page, specialized team roster, service offering, or photo lookbook with responsive mobile layout.</p>
+        <!-- Section 02: Expanded Production & Shipment Time Pipeline -->
+        <div class="pipeline-section-wrap">
+          <div class="pipeline-header-row">
+            <div>
+              <div class="section-kicker">02 // PRODUCTION &amp; SHIPMENT TIME PIPELINE</div>
+              <h2 class="section-headline" style="margin-bottom: 0;">
+                Our Structured 10-Day Engineering &amp; Deployment Roadmap
+              </h2>
             </div>
-
-            <div class="addon-card">
-              <div class="addon-header">
-                <span class="addon-title"><i class="fa-solid fa-credit-card" style="color: var(--gold); margin-right: 0.25rem;"></i> Payment Gateway</span>
-                <span class="addon-price">₹3,000</span>
-              </div>
-              <p class="addon-desc">Razorpay / Cashfree / Stripe instant gateway integration with UPI, cards, net banking, and automatic payout webhooks.</p>
-            </div>
-
-            <div class="addon-card">
-              <div class="addon-header">
-                <span class="addon-title"><i class="fa-solid fa-bag-shopping" style="color: var(--gold); margin-right: 0.25rem;"></i> E-Commerce Drawer</span>
-                <span class="addon-price">₹6,000+</span>
-              </div>
-              <p class="addon-desc">Slide-out AJAX mini-cart, coupon promo codes, inventory tracker, and automated customer order notification emails.</p>
-            </div>
-
-            <div class="addon-card">
-              <div class="addon-header">
-                <span class="addon-title"><i class="fa-brands fa-whatsapp" style="color: #25d366; margin-right: 0.25rem;"></i> WhatsApp Lead Bot</span>
-                <span class="addon-price">₹2,500</span>
-              </div>
-              <p class="addon-desc">1-tap WhatsApp consultation button with pre-filled product/service details routing inquiries straight to founder chat.</p>
-            </div>
-
-            <div class="addon-card">
-              <div class="addon-header">
-                <span class="addon-title"><i class="fa-solid fa-language" style="color: var(--gold); margin-right: 0.25rem;"></i> Multi-Language Switch</span>
-                <span class="addon-price">₹3,500</span>
-              </div>
-              <p class="addon-desc">Bilingual/trilingual toggle (Assamese, Hindi &amp; English) with native cultural typography and localized interface.</p>
-            </div>
-
-            <div class="addon-card">
-              <div class="addon-header">
-                <span class="addon-title"><i class="fa-solid fa-feather" style="color: var(--gold); margin-right: 0.25rem;"></i> Blog / Article CMS</span>
-                <span class="addon-price">₹3,500</span>
-              </div>
-              <p class="addon-desc">Publish articles and press releases independently with categories, social media share cards, and automated Google sitemaps.</p>
+            <div class="pipeline-meta-pill">
+              <i class="fa-solid fa-bolt" style="color: var(--gold);"></i>
+              <span>Milestone-Verified Checkpoints &bull; 100% IP Handover</span>
             </div>
           </div>
-        </div>
 
-        <!-- Section 03: 4-Step Production & Shipment Protocol -->
-        <div class="process-timeline-wrap">
-          <div class="process-timeline-header">
-            <div class="section-kicker" style="margin-bottom: 0;">03 // SHIPMENT PROTOCOL &bull; FROM BRIEF TO GO-LIVE</div>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; font-weight: 700; color: var(--gold-dark);">
-              Sub-Second Speed &bull; 100% IP Transferred
-            </span>
-          </div>
+          <!-- 4-Card Detailed Pipeline Grid -->
+          <div class="pipeline-grid">
 
-          <div class="process-steps-grid">
-            <div class="process-step-item">
-              <span class="step-num-pill">PHASE 01 &bull; DAYS 1–2</span>
-              <span class="step-title">Discovery &amp; Wireframe</span>
-              <p class="step-desc">Competitor research, sitemap blueprint, and brand asset onboarding.</p>
+            <!-- Phase 1 -->
+            <div class="pipeline-card active-phase">
+              <div class="pipeline-card-top">
+                <div class="pipeline-phase-badge">
+                  <span>Phase 01</span>
+                  <span class="pipeline-phase-days">Days 1–2</span>
+                </div>
+                <h3 class="pipeline-phase-title">Discovery &amp; Wireframing</h3>
+                <p class="pipeline-focus">Information architecture &amp; scope alignment.</p>
+              </div>
+              <ul class="pipeline-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Direct founder discovery session</li>
+                <li><i class="fa-solid fa-circle-check"></i> Sitemap &amp; user journey blueprint</li>
+                <li><i class="fa-solid fa-circle-check"></i> Brand asset &amp; content onboarding</li>
+                <li><i class="fa-solid fa-circle-check"></i> Competitor &amp; market positioning</li>
+              </ul>
             </div>
-            <div class="process-step-item">
-              <span class="step-num-pill">PHASE 02 &bull; DAYS 3–5</span>
-              <span class="step-title">Bespoke UI/UX Design</span>
-              <p class="step-desc">Editorial typography, responsive mobile grids, and interactive prototypes.</p>
+
+            <!-- Phase 2 -->
+            <div class="pipeline-card active-phase">
+              <div class="pipeline-card-top">
+                <div class="pipeline-phase-badge">
+                  <span>Phase 02</span>
+                  <span class="pipeline-phase-days">Days 3–5</span>
+                </div>
+                <h3 class="pipeline-phase-title">Bespoke UI/UX Design</h3>
+                <p class="pipeline-focus">Editorial aesthetics &amp; interactive layouts.</p>
+              </div>
+              <ul class="pipeline-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Custom responsive mobile/desktop UI</li>
+                <li><i class="fa-solid fa-circle-check"></i> Curated typography &amp; color system</li>
+                <li><i class="fa-solid fa-circle-check"></i> Interactive prototype walkthrough</li>
+                <li><i class="fa-solid fa-circle-check"></i> Client review &amp; design milestone lock</li>
+              </ul>
             </div>
-            <div class="process-step-item">
-              <span class="step-num-pill">PHASE 03 &bull; DAYS 6–8</span>
-              <span class="step-title">Full-Stack Engineering</span>
-              <p class="step-desc">Bespoke PHP 8 / Laravel / React codebase, zero page-builder bloat.</p>
+
+            <!-- Phase 3 -->
+            <div class="pipeline-card active-phase">
+              <div class="pipeline-card-top">
+                <div class="pipeline-phase-badge">
+                  <span>Phase 03</span>
+                  <span class="pipeline-phase-days">Days 6–8</span>
+                </div>
+                <h3 class="pipeline-phase-title">Full-Stack Engineering</h3>
+                <p class="pipeline-focus">100% custom code &amp; sub-second performance.</p>
+              </div>
+              <ul class="pipeline-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Handcrafted PHP 8 / Laravel / React</li>
+                <li><i class="fa-solid fa-circle-check"></i> Zero page-builder dependencies</li>
+                <li><i class="fa-solid fa-circle-check"></i> Database, APIs &amp; payment webhooks</li>
+                <li><i class="fa-solid fa-circle-check"></i> WhatsApp routing &amp; lead capture desk</li>
+              </ul>
             </div>
-            <div class="process-step-item">
-              <span class="step-num-pill">PHASE 04 &bull; DAYS 9–10</span>
-              <span class="step-title">Domain, SSL &amp; Launch</span>
-              <p class="step-desc">Free domain linking, SSL security, foundational SEO audit &amp; handover.</p>
+
+            <!-- Phase 4 -->
+            <div class="pipeline-card active-phase">
+              <div class="pipeline-card-top">
+                <div class="pipeline-phase-badge">
+                  <span>Phase 04</span>
+                  <span class="pipeline-phase-days">Days 9–10</span>
+                </div>
+                <h3 class="pipeline-phase-title">Domain, SSL &amp; Launch</h3>
+                <p class="pipeline-focus">Final QA, security audit &amp; complete handoff.</p>
+              </div>
+              <ul class="pipeline-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Free domain (.com / .in) DNS routing</li>
+                <li><i class="fa-solid fa-circle-check"></i> Free SSL security certificate active</li>
+                <li><i class="fa-solid fa-circle-check"></i> Technical SEO audit &amp; XML sitemap</li>
+                <li><i class="fa-solid fa-circle-check"></i> 100% legal codebase ownership handoff</li>
+              </ul>
             </div>
+
           </div>
         </div>
 
@@ -1094,7 +1112,7 @@ foreach ($pricingCategories as $cat) {
         </div>
 
         <!-- Section 02 Heading -->
-        <div class="section-kicker">04 // VIRAL MARKETING &amp; HYPER-GROWTH RETAINERS</div>
+        <div class="section-kicker">03 // VIRAL MARKETING &amp; HYPER-GROWTH RETAINERS</div>
         <h2 class="section-headline">Social Media Management &amp; Full-Funnel Digital Growth Retainers</h2>
 
         <!-- 2-Column Social Media Grid -->
@@ -1166,7 +1184,7 @@ foreach ($pricingCategories as $cat) {
 
           <!-- Box 1: Third-Party Costs -->
           <div class="terms-box">
-            <div class="section-kicker">05 // TRANSPARENT THIRD-PARTY COSTS</div>
+            <div class="section-kicker">04 // TRANSPARENT THIRD-PARTY COSTS</div>
             <h3>Direct Infrastructure at Actual Cost</h3>
             <ul class="terms-list">
               <?php foreach ($transparentCosts as $cost): ?>
@@ -1177,7 +1195,7 @@ foreach ($pricingCategories as $cat) {
 
           <!-- Box 2: Engagement Terms & SLA -->
           <div class="terms-box">
-            <div class="section-kicker">06 // ENGAGEMENT TERMS &amp; SLA</div>
+            <div class="section-kicker">05 // ENGAGEMENT TERMS &amp; SLA</div>
             <h3>100% Client Ownership &amp; Guarantees</h3>
             <ul class="terms-list">
               <?php foreach ($keyTerms as $term): ?>
