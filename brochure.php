@@ -40,6 +40,7 @@ foreach ($pricingCategories as $cat) {
       --gold-light: #fef9ee;
       --gold-border: #d4af37;
       --border: #e2e8f0;
+      --border-dark: #cbd5e1;
       --surface: #f8fafc;
       --surface-card: #ffffff;
       --green: #15803d;
@@ -52,7 +53,7 @@ foreach ($pricingCategories as $cat) {
       font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       background: #0f172a;
       color: var(--ink);
-      line-height: 1.45;
+      line-height: 1.4;
       padding: 1.5rem 1rem 4rem;
       -webkit-font-smoothing: antialiased;
     }
@@ -120,7 +121,7 @@ foreach ($pricingCategories as $cat) {
       box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
     }
 
-    /* Screen Document Container */
+    /* Document Container */
     .document-wrapper {
       max-width: 1040px;
       margin: 0 auto;
@@ -129,7 +130,7 @@ foreach ($pricingCategories as $cat) {
       gap: 2rem;
     }
 
-    /* Individual A4 Page Containers */
+    /* Individual A4 Page Container */
     .rate-card-page {
       background: #ffffff;
       border-radius: 16px;
@@ -159,29 +160,29 @@ foreach ($pricingCategories as $cat) {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 1.5rem;
-      padding-bottom: 1.25rem;
+      gap: 1.25rem;
+      padding-bottom: 1rem;
       border-bottom: 2px solid var(--ink);
-      margin-bottom: 1.35rem;
+      margin-bottom: 1rem;
       flex-wrap: wrap;
     }
 
     .brand-identity {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.9rem;
     }
 
     .brand-identity img {
-      width: 54px;
-      height: 54px;
+      width: 50px;
+      height: 50px;
       object-fit: contain;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
 
     .brand-titles h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.55rem;
+      font-size: 1.5rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: var(--ink);
@@ -190,33 +191,33 @@ foreach ($pricingCategories as $cat) {
 
     .brand-titles p {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: var(--gold-dark);
       font-weight: 700;
-      margin-top: 0.25rem;
+      margin-top: 0.2rem;
     }
 
     .header-contacts {
       text-align: right;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       color: var(--muted);
-      line-height: 1.45;
+      line-height: 1.4;
     }
 
     .header-badge {
       display: inline-block;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       background: var(--ink);
       color: #ffffff;
-      padding: 0.25rem 0.65rem;
+      padding: 0.2rem 0.6rem;
       border-radius: 4px;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.35rem;
     }
 
     .header-contacts a {
@@ -225,29 +226,29 @@ foreach ($pricingCategories as $cat) {
       font-weight: 600;
     }
 
-    /* Page 2 Mini Header */
+    /* Mini Header for Page 2 */
     .mini-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 0.85rem;
+      padding-bottom: 0.75rem;
       border-bottom: 1.5px solid var(--border);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.1rem;
     }
 
     .mini-header-title {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--ink);
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
     .mini-header-meta {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: var(--muted);
       font-weight: 600;
     }
@@ -255,7 +256,7 @@ foreach ($pricingCategories as $cat) {
     /* Section Headings */
     .section-kicker {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: var(--gold-dark);
@@ -263,23 +264,23 @@ foreach ($pricingCategories as $cat) {
       margin-bottom: 0.2rem;
       display: flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.4rem;
     }
 
     .section-kicker::before {
       content: '';
       display: inline-block;
-      width: 14px;
+      width: 12px;
       height: 2px;
       background: var(--gold);
     }
 
     .section-headline {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.22rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: var(--ink);
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       letter-spacing: -0.01em;
     }
 
@@ -287,22 +288,22 @@ foreach ($pricingCategories as $cat) {
     .grid-three-col {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-bottom: 1.25rem;
+      gap: 0.85rem;
+      margin-bottom: 1rem;
     }
 
     .grid-two-col {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.15rem;
-      margin-bottom: 1.25rem;
+      gap: 1.1rem;
+      margin-bottom: 1.1rem;
     }
 
     /* Package Cards */
     .pkg-card {
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.15rem 1.1rem;
+      border-radius: 10px;
+      padding: 0.95rem 0.95rem;
       background: var(--surface);
       display: flex;
       flex-direction: column;
@@ -313,28 +314,28 @@ foreach ($pricingCategories as $cat) {
     .pkg-card.is-flagship {
       border: 2px solid var(--gold-border);
       background: var(--gold-light);
-      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.12);
     }
 
     .pkg-flagship-pill {
       position: absolute;
-      top: -10px;
-      right: 12px;
+      top: -9px;
+      right: 10px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem;
+      font-size: 0.56rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       background: linear-gradient(135deg, #d4af37, #926c27);
       color: #ffffff;
-      padding: 0.2rem 0.55rem;
+      padding: 0.18rem 0.5rem;
       border-radius: 999px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     .pkg-badge-strip {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--gold-dark);
@@ -343,10 +344,10 @@ foreach ($pricingCategories as $cat) {
 
     .pkg-name {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.02rem;
       font-weight: 800;
       color: var(--ink);
-      margin: 0.15rem 0 0.35rem;
+      margin: 0.15rem 0 0.3rem;
       line-height: 1.2;
     }
 
@@ -354,28 +355,28 @@ foreach ($pricingCategories as $cat) {
       display: flex;
       align-items: baseline;
       gap: 0.35rem;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
 
     .pkg-price {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       font-weight: 800;
       color: var(--ink);
       line-height: 1;
     }
 
     .pkg-billing {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 600;
       color: var(--muted);
     }
 
     .pkg-timeline {
-      font-size: 0.72rem;
+      font-size: 0.69rem;
       color: var(--muted);
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.6rem;
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.5rem;
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -384,89 +385,201 @@ foreach ($pricingCategories as $cat) {
 
     .pkg-features {
       list-style: none;
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       color: var(--ink-soft);
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 0.32rem;
       flex-grow: 1;
     }
 
     .pkg-features li {
       display: flex;
       align-items: flex-start;
-      gap: 0.45rem;
-      line-height: 1.35;
+      gap: 0.4rem;
+      line-height: 1.3;
     }
 
     .pkg-features li i {
       color: var(--green);
-      font-size: 0.7rem;
-      margin-top: 0.2rem;
+      font-size: 0.68rem;
+      margin-top: 0.18rem;
       flex-shrink: 0;
     }
 
     .pkg-note {
-      margin-top: 0.75rem;
-      padding: 0.5rem 0.65rem;
+      margin-top: 0.65rem;
+      padding: 0.45rem 0.55rem;
       border-radius: 6px;
       background: rgba(0, 0, 0, 0.03);
       border-left: 2px solid var(--muted-light);
-      font-size: 0.69rem;
+      font-size: 0.66rem;
       color: var(--muted);
-      line-height: 1.35;
+      line-height: 1.3;
     }
 
-    /* Page 1 Bottom Banner */
+    /* ========================================================================
+       PAGE 1 LOWER SECTION: ADD-ONS & 4-STEP SHIPMENT PROTOCOL
+       ======================================================================== */
+    .addons-section-wrap {
+      margin-top: 0.65rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .addon-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 0.75rem;
+      background: #fafbfc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .addon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .addon-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .addon-price {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--gold-dark);
+      white-space: nowrap;
+    }
+
+    .addon-desc {
+      font-size: 0.67rem;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    /* 4-Step Process Timeline */
+    .process-timeline-wrap {
+      margin-top: 0.5rem;
+      padding: 0.7rem 0.9rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .process-timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.45rem;
+    }
+
+    .process-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+      position: relative;
+    }
+
+    .process-step-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .step-num-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 800;
+      color: var(--gold-dark);
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .step-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.15;
+    }
+
+    .step-desc {
+      font-size: 0.64rem;
+      color: var(--muted);
+      line-height: 1.25;
+    }
+
+    /* Page 1 Bottom Guarantee Bar */
     .page-guarantee-banner {
       background: #f1f5f9;
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 0.75rem 1rem;
+      padding: 0.6rem 0.9rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-      margin-top: 0.5rem;
+      gap: 0.85rem;
+      margin-top: 0.65rem;
     }
 
     .page-guarantee-banner p {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--ink-soft);
+      line-height: 1.35;
     }
 
     .page-guarantee-banner strong {
       color: var(--green);
     }
 
-    /* Terms Section */
+    /* Terms Section on Page 2 */
     .terms-box {
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 1.05rem 1.15rem;
+      padding: 0.95rem 1.05rem;
       background: var(--surface);
     }
 
     .terms-box h3 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.96rem;
+      font-size: 0.94rem;
       font-weight: 700;
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.55rem;
       color: var(--ink);
     }
 
     .terms-list {
       list-style: none;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       color: var(--muted);
       display: flex;
       flex-direction: column;
-      gap: 0.45rem;
+      gap: 0.4rem;
     }
 
     .terms-list li {
-      line-height: 1.38;
-      padding-left: 0.85rem;
+      line-height: 1.35;
+      padding-left: 0.8rem;
       position: relative;
     }
 
@@ -490,8 +603,8 @@ foreach ($pricingCategories as $cat) {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1.25rem;
-      padding: 1.15rem 1.45rem;
+      gap: 1.2rem;
+      padding: 1rem 1.35rem;
       border-radius: 10px;
       background: #0b1120;
       color: #ffffff;
@@ -500,10 +613,10 @@ foreach ($pricingCategories as $cat) {
 
     .founders-strip h4 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.02rem;
+      font-size: 0.98rem;
       font-weight: 800;
       color: #ffffff;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -511,19 +624,19 @@ foreach ($pricingCategories as $cat) {
 
     .founders-strip h4 span {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       background: rgba(212, 175, 55, 0.2);
       color: #fde68a;
-      padding: 0.15rem 0.5rem;
+      padding: 0.12rem 0.45rem;
       border-radius: 4px;
       border: 1px solid rgba(212, 175, 55, 0.4);
     }
 
     .founder-contacts-grid {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.35rem;
       flex-wrap: wrap;
-      font-size: 0.77rem;
+      font-size: 0.75rem;
       color: #cbd5e1;
     }
 
@@ -533,7 +646,7 @@ foreach ($pricingCategories as $cat) {
     }
 
     .founder-item span.role {
-      font-size: 0.66rem;
+      font-size: 0.64rem;
       color: #94a3b8;
       font-family: 'JetBrains Mono', monospace;
       text-transform: uppercase;
@@ -556,7 +669,7 @@ foreach ($pricingCategories as $cat) {
     .studio-url-box {
       text-align: right;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       color: #fde68a;
     }
 
@@ -565,22 +678,22 @@ foreach ($pricingCategories as $cat) {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 0.75rem;
+      padding-top: 0.65rem;
       border-top: 1px solid var(--border);
-      margin-top: 1rem;
+      margin-top: 0.85rem;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.66rem;
+      font-size: 0.64rem;
       color: var(--muted-light);
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
 
     /* ========================================================================
-       PRINT MEDIA SPECIFIC RULES (A4 - EXACTLY 2 PAGES, ZERO SLICING)
+       PRINT MEDIA RULES (LOCKED 2 A4 PAGES, ZERO VERTICAL SPILLOVER)
        ======================================================================== */
     @page {
       size: A4 portrait;
-      margin: 8mm 9mm 8mm 9mm;
+      margin: 7mm 8mm 7mm 8mm;
     }
 
     @media print {
@@ -590,7 +703,7 @@ foreach ($pricingCategories as $cat) {
         padding: 0 !important;
         background: #ffffff !important;
         color: #0b1120 !important;
-        font-size: 9pt !important;
+        font-size: 8.8pt !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }
@@ -610,10 +723,10 @@ foreach ($pricingCategories as $cat) {
         border-radius: 0 !important;
         border: none !important;
         box-shadow: none !important;
-        padding: 6mm 8mm 6mm 8mm !important;
+        padding: 5mm 6mm 5mm 6mm !important;
         min-height: auto !important;
-        height: 280mm !important; /* Locks exact single A4 sheet height */
-        max-height: 280mm !important;
+        height: 283mm !important; /* Exact A4 locked height */
+        max-height: 283mm !important;
         box-sizing: border-box !important;
         overflow: hidden !important;
         page-break-after: always !important;
@@ -627,7 +740,7 @@ foreach ($pricingCategories as $cat) {
         break-after: auto !important;
       }
 
-      .pkg-card, .terms-box, .founders-strip, .page-header, .mini-header {
+      .pkg-card, .terms-box, .founders-strip, .addon-card, .process-step-item, .page-header, .mini-header {
         page-break-inside: avoid !important;
         break-inside: avoid !important;
       }
@@ -650,35 +763,58 @@ foreach ($pricingCategories as $cat) {
         color: #fde68a !important;
       }
 
-      /* Tweak padding for print density */
       .pkg-card {
-        padding: 3mm 3mm !important;
+        padding: 2.5mm 3mm !important;
       }
 
       .pkg-price {
-        font-size: 1.25rem !important;
+        font-size: 1.2rem !important;
       }
 
       .pkg-name {
-        font-size: 0.95rem !important;
+        font-size: 0.92rem !important;
       }
 
       .pkg-features {
-        font-size: 6.8pt !important;
-        gap: 0.25rem !important;
+        font-size: 6.5pt !important;
+        gap: 0.2rem !important;
+      }
+
+      .addon-card {
+        padding: 1.8mm 2.2mm !important;
+      }
+
+      .addon-title {
+        font-size: 7.2pt !important;
+      }
+
+      .addon-price {
+        font-size: 7.8pt !important;
+      }
+
+      .addon-desc {
+        font-size: 6.2pt !important;
+      }
+
+      .step-title {
+        font-size: 7.2pt !important;
+      }
+
+      .step-desc {
+        font-size: 6.1pt !important;
       }
 
       .terms-box {
-        padding: 3mm 3.5mm !important;
+        padding: 2.8mm 3.2mm !important;
       }
 
       .terms-list {
-        font-size: 6.7pt !important;
-        gap: 0.25rem !important;
+        font-size: 6.6pt !important;
+        gap: 0.22rem !important;
       }
 
       .founders-strip {
-        padding: 3.5mm 4.5mm !important;
+        padding: 3mm 4mm !important;
       }
     }
   </style>
@@ -693,7 +829,7 @@ foreach ($pricingCategories as $cat) {
         <span>Back to Website</span>
       </a>
       <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #94a3b8;">
-        2-Page Executive Rate Card (2026)
+        2-Page Executive Rate Card &amp; Capabilities (2026)
       </span>
     </div>
 
@@ -713,7 +849,7 @@ foreach ($pricingCategories as $cat) {
   <main class="document-wrapper">
 
     <!-- ====================================================================
-         PAGE 1: CORE SOFTWARE & PLATFORM ARCHITECTURE
+         PAGE 1: CORE SOFTWARE & PLATFORM ARCHITECTURE + ADD-ONS + WORKFLOW
          ==================================================================== -->
     <article class="rate-card-page" id="rateCardPage1">
       <div>
@@ -831,14 +967,105 @@ foreach ($pricingCategories as $cat) {
 
         </div>
 
+        <!-- Section 02: Popular Modular Add-Ons & Expansions -->
+        <div class="addons-section-wrap">
+          <div class="section-kicker">02 // MODULAR ADD-ONS &amp; BESPOKE UPGRADES</div>
+          <h2 class="section-headline" style="font-size: 1.05rem; margin-bottom: 0.55rem;">
+            Custom Engineering Expansions &bull; Transparent À La Carte Pricing
+          </h2>
+
+          <div class="addons-grid">
+            <div class="addon-card">
+              <div class="addon-header">
+                <span class="addon-title"><i class="fa-regular fa-file-lines" style="color: var(--gold); margin-right: 0.25rem;"></i> Extra Custom Page</span>
+                <span class="addon-price">₹1,200</span>
+              </div>
+              <p class="addon-desc">Additional landing page, specialized team roster, service offering, or photo lookbook with responsive mobile layout.</p>
+            </div>
+
+            <div class="addon-card">
+              <div class="addon-header">
+                <span class="addon-title"><i class="fa-solid fa-credit-card" style="color: var(--gold); margin-right: 0.25rem;"></i> Payment Gateway</span>
+                <span class="addon-price">₹3,000</span>
+              </div>
+              <p class="addon-desc">Razorpay / Cashfree / Stripe instant gateway integration with UPI, cards, net banking, and automatic payout webhooks.</p>
+            </div>
+
+            <div class="addon-card">
+              <div class="addon-header">
+                <span class="addon-title"><i class="fa-solid fa-bag-shopping" style="color: var(--gold); margin-right: 0.25rem;"></i> E-Commerce Drawer</span>
+                <span class="addon-price">₹6,000+</span>
+              </div>
+              <p class="addon-desc">Slide-out AJAX mini-cart, coupon promo codes, inventory tracker, and automated customer order notification emails.</p>
+            </div>
+
+            <div class="addon-card">
+              <div class="addon-header">
+                <span class="addon-title"><i class="fa-brands fa-whatsapp" style="color: #25d366; margin-right: 0.25rem;"></i> WhatsApp Lead Bot</span>
+                <span class="addon-price">₹2,500</span>
+              </div>
+              <p class="addon-desc">1-tap WhatsApp consultation button with pre-filled product/service details routing inquiries straight to founder chat.</p>
+            </div>
+
+            <div class="addon-card">
+              <div class="addon-header">
+                <span class="addon-title"><i class="fa-solid fa-language" style="color: var(--gold); margin-right: 0.25rem;"></i> Multi-Language Switch</span>
+                <span class="addon-price">₹3,500</span>
+              </div>
+              <p class="addon-desc">Bilingual/trilingual toggle (Assamese, Hindi &amp; English) with native cultural typography and localized interface.</p>
+            </div>
+
+            <div class="addon-card">
+              <div class="addon-header">
+                <span class="addon-title"><i class="fa-solid fa-feather" style="color: var(--gold); margin-right: 0.25rem;"></i> Blog / Article CMS</span>
+                <span class="addon-price">₹3,500</span>
+              </div>
+              <p class="addon-desc">Publish articles and press releases independently with categories, social media share cards, and automated Google sitemaps.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 03: 4-Step Production & Shipment Protocol -->
+        <div class="process-timeline-wrap">
+          <div class="process-timeline-header">
+            <div class="section-kicker" style="margin-bottom: 0;">03 // SHIPMENT PROTOCOL &bull; FROM BRIEF TO GO-LIVE</div>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; font-weight: 700; color: var(--gold-dark);">
+              Sub-Second Speed &bull; 100% IP Transferred
+            </span>
+          </div>
+
+          <div class="process-steps-grid">
+            <div class="process-step-item">
+              <span class="step-num-pill">PHASE 01 &bull; DAYS 1–2</span>
+              <span class="step-title">Discovery &amp; Wireframe</span>
+              <p class="step-desc">Competitor research, sitemap blueprint, and brand asset onboarding.</p>
+            </div>
+            <div class="process-step-item">
+              <span class="step-num-pill">PHASE 02 &bull; DAYS 3–5</span>
+              <span class="step-title">Bespoke UI/UX Design</span>
+              <p class="step-desc">Editorial typography, responsive mobile grids, and interactive prototypes.</p>
+            </div>
+            <div class="process-step-item">
+              <span class="step-num-pill">PHASE 03 &bull; DAYS 6–8</span>
+              <span class="step-title">Full-Stack Engineering</span>
+              <p class="step-desc">Bespoke PHP 8 / Laravel / React codebase, zero page-builder bloat.</p>
+            </div>
+            <div class="process-step-item">
+              <span class="step-num-pill">PHASE 04 &bull; DAYS 9–10</span>
+              <span class="step-title">Domain, SSL &amp; Launch</span>
+              <p class="step-desc">Free domain linking, SSL security, foundational SEO audit &amp; handover.</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Inclusive Value Banner -->
         <div class="page-guarantee-banner">
           <p>
             <i class="fa-solid fa-shield-halved" style="color: var(--gold); margin-right: 0.35rem;"></i>
-            <strong>All Website Builds Include:</strong> 1 Year Domain (.com / .in) + 1 Year Free Bug Solving, Server Monitoring &amp; Security Maintenance.
+            <strong>All Website Builds Include:</strong> 1 Year Free Domain (.com / .in) + 1 Year Free Bug Solving, Server Monitoring &amp; Security Maintenance.
           </p>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: var(--ink);">
-            100% Bespoke Code &bull; Zero Page-Builder Bloat
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.69rem; font-weight: 700; color: var(--ink); white-space: nowrap;">
+            100% Client Codebase Ownership
           </span>
         </div>
       </div>
@@ -867,7 +1094,7 @@ foreach ($pricingCategories as $cat) {
         </div>
 
         <!-- Section 02 Heading -->
-        <div class="section-kicker">02 // VIRAL MARKETING &amp; HYPER-GROWTH RETAINERS</div>
+        <div class="section-kicker">04 // VIRAL MARKETING &amp; HYPER-GROWTH RETAINERS</div>
         <h2 class="section-headline">Social Media Management &amp; Full-Funnel Digital Growth Retainers</h2>
 
         <!-- 2-Column Social Media Grid -->
@@ -939,7 +1166,7 @@ foreach ($pricingCategories as $cat) {
 
           <!-- Box 1: Third-Party Costs -->
           <div class="terms-box">
-            <div class="section-kicker">03 // TRANSPARENT THIRD-PARTY COSTS</div>
+            <div class="section-kicker">05 // TRANSPARENT THIRD-PARTY COSTS</div>
             <h3>Direct Infrastructure at Actual Cost</h3>
             <ul class="terms-list">
               <?php foreach ($transparentCosts as $cost): ?>
@@ -950,7 +1177,7 @@ foreach ($pricingCategories as $cat) {
 
           <!-- Box 2: Engagement Terms & SLA -->
           <div class="terms-box">
-            <div class="section-kicker">04 // ENGAGEMENT TERMS &amp; SLA</div>
+            <div class="section-kicker">06 // ENGAGEMENT TERMS &amp; SLA</div>
             <h3>100% Client Ownership &amp; Guarantees</h3>
             <ul class="terms-list">
               <?php foreach ($keyTerms as $term): ?>
