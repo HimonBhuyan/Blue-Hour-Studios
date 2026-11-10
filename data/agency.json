@@ -241,6 +241,62 @@
             "live": "https://rinahazarika-clothing.vercel.app/"
         },
         {
+            "id": "moh_studios",
+            "title": "MOH Atelier — The Poetry of Gujarati Handcraft",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Haute Couture & Heritage Trousseaus",
+            "image": "assets/images/project_moh_studios.jpg",
+            "client": "MOH Atelier (@moh_studios)",
+            "duration": "4 Months",
+            "description": "Bespoke digital atelier and luxury couture storefront crafted for MOH Atelier in Ahmedabad. Showcasing bespoke heirloom Gujarati handcraft drapes, pure mulberry & hand-spun tissue bridal ensembles, multi-currency purchasing, and VIP private salon reservation at Sindhu Bhavan Road.",
+            "highlights": [
+                "High-conversion luxury digital maison with sub-second Edge delivery on Vercel",
+                "Curated bridal trousseau anthology and bespoke silhouette personalization suite",
+                "Seamless multi-currency switching (INR ₹ / USD $) and international express checkout",
+                "Private salon appointment reservation engine and direct WhatsApp VIP concierge desk",
+                "Integrated Meta Pixel and editorial lookbook campaigns targeting global South Asian diaspora"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "Laravel",
+                "E-Commerce",
+                "Haute Couture",
+                "Luxury D2C",
+                "Meta Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://mohstudios.vercel.app/"
+        },
+        {
+            "id": "raahat",
+            "title": "Raahat by Paritha — Bespoke Groom Couture",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Savile Row Groom Haute Couture",
+            "image": "assets/images/project_raahat.jpg",
+            "client": "Raahat by Paritha (@raahatbyparitha)",
+            "duration": "3 Months",
+            "description": "Bespoke digital maison and luxury groomswear platform for Raahat by Paritha across Chennai and Bangalore. Handcrafting bespoke wedding sherwanis, embellished black-tie tuxedos, and South Indian pure silk ensembles with Savile Row tailoring precision.",
+            "highlights": [
+                "Editorial dark luxury aesthetic with gold accents and sub-second page performance",
+                "Private atelier groom consultation booking system with date/time selection",
+                "Curated Haute Couture collections gallery with interactive fabric & embellishment inspect",
+                "Direct 1-tap bespoke concierge desk and VIP bridal groom inquiry pipeline",
+                "High-ROAS seasonal wedding campaign architecture driving private salon reservations"
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Tailwind CSS",
+                "Menswear Couture",
+                "E-Commerce",
+                "Booking Engine"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://raahatbyparitha-two.vercel.app/"
+        },
+        {
             "id": "chaudhary_associates",
             "title": "Chaudhary Associates",
             "category": "web marketing",

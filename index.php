@@ -637,6 +637,26 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
               </a>
 
+              <a href="https://mohstudios.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #120e0d;">
+                  <img src="assets/images/client_moh_sq.svg?v=20261110" alt="MOH Atelier Ahmedabad" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">MOH Atelier</span>
+                  <span class="trusted-client-sector">Heritage Gujarati Trousseaus</span>
+                </div>
+              </a>
+
+              <a href="https://raahatbyparitha-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #0d0c0b;">
+                  <img src="assets/images/client_raahat_sq.png?v=20261110" alt="Raahat by Paritha" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Raahat by Paritha</span>
+                  <span class="trusted-client-sector">Bespoke Groom Haute Couture</span>
+                </div>
+              </a>
+
               <a href="works.php" class="trusted-client-card">
                 <div class="trusted-logo-box">
                   <img src="assets/images/client_pragjyotishpur.png?v=20261101e" alt="Pragjyotishpur University" loading="lazy">
