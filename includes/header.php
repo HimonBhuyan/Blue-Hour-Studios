@@ -219,11 +219,7 @@ $ogImage = $baseUrl . '/og-image.jpg';
   <!-- Cinematic Film Grain Overlay Texture -->
   <div class="cinematic-grain-overlay" aria-hidden="true"></div>
 
-  <!-- Dynamic Cursor Badge Follower for Project Cards -->
-  <div class="cursor-badge-follower" id="cursorFollower" aria-hidden="true">
-    <span>VIEW BLUEPRINT</span>
-    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.6rem;"></i>
-  </div>
+  
 
   <!-- Cursor Spotlight Ambient Glow -->
   <div class="cursor-spotlight" id="cursorSpotlight" aria-hidden="true"></div>

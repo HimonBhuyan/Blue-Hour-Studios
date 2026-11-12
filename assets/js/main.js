@@ -1286,23 +1286,8 @@ function initHeroShowcaseTabs() {
    17. DYNAMIC CURSOR BADGE FOLLOWER
    ------------------------------------------------------------------------- */
 function initCursorFollower() {
-  const follower = document.getElementById('cursorFollower');
-  const projectCards = document.querySelectorAll('.project-card-editorial');
-  if (!follower || window.innerWidth < 1024) return;
-
-  window.addEventListener('mousemove', (e) => {
-    follower.style.left = `${e.clientX}px`;
-    follower.style.top = `${e.clientY}px`;
-  });
-
-  projectCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      follower.classList.add('active');
-    });
-    card.addEventListener('mouseleave', () => {
-      follower.classList.remove('active');
-    });
-  });
+  // Disabled: Cursor follower removed per user request
+  return;
 }
 
 /* -------------------------------------------------------------------------

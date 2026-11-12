@@ -2749,27 +2749,7 @@ textarea.input-editorial {
    B. DYNAMIC CURSOR BADGE FOLLOWER
    -------------------------------------------------------------------------- */
 .cursor-badge-follower {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 2500;
-  padding: 0.45rem 0.95rem;
-  border-radius: var(--radius-pill);
-  background: #ffffff;
-  color: #09090b;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  display: none !important;
 }
 
 [data-theme="light"] .cursor-badge-follower {
