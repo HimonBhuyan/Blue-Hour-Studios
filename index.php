@@ -657,6 +657,36 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
               </a>
 
+              <a href="https://cup-2-eat-ochre.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #0B2B1B;">
+                  <img src="assets/images/client_cup2eat_sq.jpg?v=20261112" alt="Cup2Eat" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Cup2Eat</span>
+                  <span class="trusted-client-sector">Edible Cups &amp; Zero Waste</span>
+                </div>
+              </a>
+
+              <a href="https://wisharico.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #FAF8F5;">
+                  <img src="assets/images/client_wishari_sq.png?v=20261112" alt="Wishari" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Wishari</span>
+                  <span class="trusted-client-sector">Artisanal &amp; Corporate Gifting</span>
+                </div>
+              </a>
+
+              <a href="https://junuclothing.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #0a0a0a;">
+                  <img src="assets/images/client_junu_sq.jpg?v=20261112" alt="JUNU by Roselyn Magar" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">JUNU (Roselyn Magar)</span>
+                  <span class="trusted-client-sector">Avant-Garde Couture &amp; Drops</span>
+                </div>
+              </a>
+
               <a href="works.php" class="trusted-client-card">
                 <div class="trusted-logo-box">
                   <img src="assets/images/client_pragjyotishpur.png?v=20261101e" alt="Pragjyotishpur University" loading="lazy">

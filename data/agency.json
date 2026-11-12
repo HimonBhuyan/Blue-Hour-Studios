@@ -297,6 +297,90 @@
             "live": "https://raahatbyparitha-two.vercel.app/"
         },
         {
+            "id": "cup2eat",
+            "title": "Cup2Eat — 100% Edible Wafer Cups & Zero Waste",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Sustainable D2C & B2B F&B Tech",
+            "image": "assets/images/project_cup2eat.jpg",
+            "client": "Cup2Eat Technologies (@cup2eat)",
+            "duration": "3 Months",
+            "description": "Revolutionary sustainable F&B e-commerce platform and B2B cafe sample distribution portal crafted for Cup2Eat. 100% edible, crispy, leak-proof chocolate & elaichi wafer cups eliminating plastic and paper waste across Pan-India cafes and retail buyers.",
+            "highlights": [
+                "High-speed D2C storefront with custom B2B wholesale order builder and cafe sample box distribution desk",
+                "Interactive Flavor & Menu showcase featuring 40+ minute hot beverage leak-proof testing data",
+                "Direct 1-tap WhatsApp ordering gateway with automated order payload generation for instant fulfillment",
+                "Pan-India dispatch tracking and commercial cafe inquiry pipeline with FSSAI verification badges",
+                "Meta ad acquisition funnels and viral short-form Reel campaigns driving 150,000+ cup dispatches"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "Laravel",
+                "E-Commerce",
+                "Zero Waste",
+                "D2C & B2B",
+                "Meta Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://cup-2-eat-ochre.vercel.app/"
+        },
+        {
+            "id": "wishari",
+            "title": "Wishari — The Art of Thoughtful Gifting",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Artisanal & Corporate Gifting Concierge",
+            "image": "assets/images/project_wishari.jpg",
+            "client": "Wishari Gifting Co. (@wishari.in)",
+            "duration": "3 Months",
+            "description": "Luxury corporate and festive gifting digital concierge engineered for Wishari. Featuring authentic Jaipur blue pottery, full-grain executive leather goods, auspicious silver keepsakes, and an interactive real-time Gifting Brief Estimator.",
+            "highlights": [
+                "Proprietary Interactive Gifting Brief Estimator calculating instant budget tiers and custom hamper allocations",
+                "Curated artisanal collections showcase highlighting Jaipur Blue Pottery master artisans and leather goods",
+                "White-glove corporate RFP dispatch engine with automated WhatsApp consultation booking desk",
+                "Sub-second edge performance with modular PHP backend and dynamic inquiry validation pipelines",
+                "High-conversion Meta & LinkedIn B2B acquisition campaigns for high-ticket corporate festival gifting"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "Laravel",
+                "Corporate Gifting",
+                "Brief Estimator",
+                "E-Commerce",
+                "B2B Concierge"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://wisharico.vercel.app/"
+        },
+        {
+            "id": "junu",
+            "title": "JUNU — Roselyn Magar Haute Couture",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Avant-Garde Couture & Limited Drops",
+            "image": "assets/images/project_junu.jpg",
+            "client": "JUNU by Roselyn Magar (@junu.clo)",
+            "duration": "4 Months",
+            "description": "High-fashion digital maison and limited-drop ordering platform engineered for Kathmandu couture label JUNU. Showcasing anatomical steel corsetry, sculptural liquid lamé eveningwear, live drop countdown mechanics, and international multi-currency checkout.",
+            "highlights": [
+                "Editorial dark luxury aesthetic with restricted numbered batch drops and live FOMO countdown mechanics",
+                "Interactive Salon Nocturne lookbook gallery with fluid motion design and monograph story chapters",
+                "Multi-currency support (NPR, USD, INR) with integrated bespoke consultation reservation desk",
+                "Sub-second edge delivery on Vercel with zero page-builder bloat and optimized image compression",
+                "High-fashion social media strategy and editorial campaign direction generating global collector waitlists"
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Tailwind CSS",
+                "Haute Couture",
+                "Limited Drops",
+                "Multi-Currency"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://junuclothing.vercel.app/"
+        },
+        {
             "id": "chaudhary_associates",
             "title": "Chaudhary Associates",
             "category": "web marketing",
