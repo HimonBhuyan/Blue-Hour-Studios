@@ -9,7 +9,7 @@
   <!-- ========================================================================
        CASE STUDY DETAIL MODAL - LUXURY LIGHTBOX
        ======================================================================== -->
-  <div class="project-modal-backdrop" id="projectModal" aria-hidden="true">
+  <div class="project-modal-backdrop" id="projectModal" aria-hidden="true" style="display: none;">
     <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close-btn" aria-label="Close Case Study Modal">
         <i class="fa-solid fa-xmark"></i>

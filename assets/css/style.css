@@ -396,7 +396,18 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   z-index: 1000;
   padding: 0 1.5rem;
+  pointer-events: none;
   transition: all var(--transition-smooth);
+}
+
+.site-header .nav-capsule,
+.site-header .nav-links-list,
+.site-header .mobile-toggle,
+.site-header .brand-identity,
+.site-header .theme-toggle-btn,
+.site-header .sound-toggle-btn,
+.site-header #headerCtaBtn {
+  pointer-events: auto;
 }
 
 .nav-capsule {
@@ -1955,17 +1966,34 @@ textarea.input-editorial {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 2000;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 2rem;
   opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition-smooth);
+  visibility: hidden;
+  pointer-events: none !important;
+  transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+}
+
+.project-modal-backdrop:not(.active) {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.project-modal-backdrop:not(.active) * {
+  pointer-events: none !important;
 }
 
 .project-modal-backdrop.active {
+  display: flex !important;
+  visibility: visible !important;
   opacity: 1;
+  pointer-events: auto !important;
+}
+
+.project-modal-backdrop.active * {
   pointer-events: auto;
 }
 
@@ -4181,10 +4209,15 @@ textarea.input-editorial {
 }
 
 .creative-preloader.is-loaded {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-100%);
-  pointer-events: none;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-100%) !important;
+  pointer-events: none !important;
+  display: none !important;
+}
+
+.creative-preloader.is-loaded * {
+  pointer-events: none !important;
 }
 
 .preloader-backdrop-glow {
@@ -4591,6 +4624,19 @@ textarea.input-editorial {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.75rem;
+  pointer-events: none;
+}
+
+.wa-floating-trigger {
+  pointer-events: auto;
+}
+
+.wa-concierge-panel {
+  pointer-events: none;
+}
+
+.floating-wa-concierge.is-open .wa-concierge-panel {
+  pointer-events: auto;
 }
 
 .wa-concierge-panel {
@@ -4763,3 +4809,57 @@ textarea.input-editorial {
 }
 
 
+
+
+/* ==========================================================================
+   MOBILE TOUCH & INTERACTIVE EVENT OPTIMIZATION SUITE
+   Guarantees immediate zero-lag finger touch response on all mobile devices
+   ========================================================================== */
+button,
+.btn,
+a,
+input,
+select,
+textarea,
+.nav-link,
+.mobile-toggle,
+.filter-pill-btn,
+.service-filter-tab,
+.work-filter-btn,
+.pricing-tab-btn,
+.btn-select-package,
+.btn-team-consult,
+.btn-open-case-study,
+.project-external-btn,
+.project-direct-link,
+.wa-floating-trigger,
+.sound-toggle-btn,
+.theme-toggle-btn,
+.showcase-tab-btn,
+.terminal-action-btn,
+.matrix-toggle-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  pointer-events: auto !important;
+}
+
+/* Ensure ambient atmospheric layers NEVER capture touch or mouse events */
+.cinematic-grain-overlay,
+.cursor-spotlight,
+.editorial-ambient-canvas,
+.ambient-interactive-canvas,
+.ambient-aurora-orb,
+.ambient-glow-top,
+.ambient-grid-lines {
+  pointer-events: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Ensure all project cards and actions are cleanly touch-interactive */
+.project-card-editorial,
+.project-preview-frame,
+.project-actions-footer {
+  pointer-events: auto;
+}

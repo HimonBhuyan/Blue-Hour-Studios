@@ -759,6 +759,18 @@ function initNavbar() {
         }
       });
     });
+
+    // Close mobile drawer when tapping outside
+    document.addEventListener('click', (e) => {
+      if (header.classList.contains('mobile-open') && !header.contains(e.target)) {
+        header.classList.remove('mobile-open');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-xmark');
+        }
+      }
+    });
   }
 
   function highlightActiveNavLink() {
@@ -997,6 +1009,9 @@ function initProjectModal() {
 
   if (!modalBackdrop) return;
 
+  // Guarantee modal is completely hidden from hit-testing
+  modalBackdrop.style.display = 'none';
+
   document.addEventListener('click', e => {
     const trigger = e.target.closest('[data-project-open]');
     if (!trigger) return;
@@ -1074,16 +1089,30 @@ function initProjectModal() {
       }
     }
 
-    modalBackdrop.classList.add('active');
+    modalBackdrop.style.display = 'flex';
+    requestAnimationFrame(() => {
+      modalBackdrop.classList.add('active');
+    });
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
     modalBackdrop.classList.remove('active');
     document.body.style.overflow = '';
+    setTimeout(() => {
+      if (!modalBackdrop.classList.contains('active')) {
+        modalBackdrop.style.display = 'none';
+      }
+    }, 320);
   }
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      closeModal();
+    });
+  }
   modalBackdrop.addEventListener('click', e => {
     if (e.target === modalBackdrop) closeModal();
   });
@@ -1532,6 +1561,17 @@ function initCreativePreloader() {
   const preloader = document.getElementById('sitePreloader');
   if (!preloader) return;
 
+  function dismissPreloader() {
+    preloader.classList.add('is-loaded');
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 280);
+  }
+
+  // Allow instant tap or click anywhere on preloader to bypass immediately
+  preloader.addEventListener('click', dismissPreloader);
+  preloader.addEventListener('touchend', dismissPreloader);
+
   try {
     if (sessionStorage.getItem('bh_preloader_seen')) {
       preloader.style.display = 'none';
@@ -1540,6 +1580,9 @@ function initCreativePreloader() {
     }
     sessionStorage.setItem('bh_preloader_seen', 'true');
   } catch (e) {}
+
+  // Safety fallback: maximum 950ms on any device so it NEVER locks touch interactivity
+  const safetyTimer = setTimeout(dismissPreloader, 950);
 
   const progressBar = document.getElementById('preloaderProgressBar');
   const counter = document.getElementById('preloaderCounter');
@@ -1556,7 +1599,7 @@ function initCreativePreloader() {
   let msgIdx = 0;
 
   const interval = setInterval(() => {
-    progress += Math.floor(Math.random() * 12) + 6;
+    progress += Math.floor(Math.random() * 14) + 8;
     if (progress > 100) progress = 100;
 
     if (progressBar) progressBar.style.width = `${progress}%`;
@@ -1570,14 +1613,15 @@ function initCreativePreloader() {
 
     if (progress >= 100) {
       clearInterval(interval);
+      clearTimeout(safetyTimer);
       setTimeout(() => {
-        preloader.classList.add('is-loaded');
+        dismissPreloader();
         try {
           if (window.playLuxuryClick) {
             window.playLuxuryClick(1050, 'sine', 0.08);
           }
         } catch (e) {}
-      }, 240);
+      }, 160);
     }
-  }, 30);
+  }, 25);
 }
