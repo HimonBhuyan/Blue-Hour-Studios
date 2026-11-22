@@ -617,6 +617,46 @@ require_once __DIR__ . '/includes/header.php';
         <div class="clients-carousel-viewport">
           <div class="clients-carousel-track">
             <?php for ($loop = 0; $loop < 2; $loop++): ?>
+              <a href="https://paherveshbyakshree.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #FFF7F0;">
+                  <img src="assets/images/client_pahervesh_sq.jpg?v=20261122" alt="Pahervesh by Akshree" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Pahervesh by Akshree</span>
+                  <span class="trusted-client-sector">Pure Cotton Ethnic Wear</span>
+                </div>
+              </a>
+
+              <a href="https://sevipharmhealthcare.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #081424;">
+                  <img src="assets/images/client_servi_pharm_sq.svg?v=20261122" alt="Servi Pharm Healthcare" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">Servi Pharm Healthcare</span>
+                  <span class="trusted-client-sector">Online Pharmacy &amp; Medical Devices</span>
+                </div>
+              </a>
+
+              <a href="https://tmhotel.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #16080D;">
+                  <img src="assets/images/client_tm_hotel_sq.svg?v=20261122" alt="T.M. Hotel Madurai" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">T.M. Hotel Madurai</span>
+                  <span class="trusted-client-sector">Heritage Hospitality Stay</span>
+                </div>
+              </a>
+
+              <a href="https://tehnoorveils.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
+                <div class="trusted-logo-box" style="background: #0E090B;">
+                  <img src="assets/images/client_tehnoor_veils_sq.jpg?v=20261122" alt="TehNoor Veils" loading="lazy">
+                </div>
+                <div class="trusted-client-meta">
+                  <span class="trusted-client-name">TehNoor Veils</span>
+                  <span class="trusted-client-sector">UAE Imported Modest Couture</span>
+                </div>
+              </a>
+
               <a href="https://knots-facets.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
                 <div class="trusted-logo-box" style="background: #FBF6EE;">
                   <img src="assets/images/client_knots_facets_sq.jpg?v=20261110" alt="Knots &amp; Facets" loading="lazy">

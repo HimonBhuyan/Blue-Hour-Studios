@@ -155,6 +155,119 @@
     ],
     "projects": [
         {
+            "id": "pahervesh",
+            "title": "PAHERVESH by Akshree — Pure Cotton Ethnic & Indo-Western Wear",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Pure Cotton Ethnic & Indo-Western D2C Atelier",
+            "image": "assets/images/project_pahervesh.jpg",
+            "client": "Pahervesh by Akshree (@pahervesh_by_akshree)",
+            "duration": "3 Months",
+            "description": "Bespoke digital atelier and direct-to-consumer e-commerce storefront for Pahervesh by Akshree. Celebrating hand-block printed pure cotton Farshi sets, breezy Co-ord sets, office wear kurtis, and festive Angrakhas with seamless Razorpay checkout, WhatsApp order concierge, and automated discount coupons.",
+            "highlights": [
+                "Bespoke D2C e-commerce storefront with hand-block print curation, multi-category filters, and responsive mobile architecture",
+                "Interactive Slide-Out Quick Cart with instant coupon validation, order bump incentives, and pincode delivery lookup",
+                "Integrated Razorpay payment gateway supporting UPI, debit/credit cards, net banking, and automatic payout webhooks",
+                "1-Tap WhatsApp concierge consultation pre-filling product SKU, size, and custom measurement requirements",
+                "Targeted Meta Conversions API (CAPI) & Pixel tracking for festive drops and high-ROAS Instagram advertising"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "E-Commerce",
+                "D2C Ethnic Wear",
+                "Razorpay UPI",
+                "Cart Drawer",
+                "Meta Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan/Pahervesh-by-Akshree",
+            "live": "https://paherveshbyakshree.vercel.app/"
+        },
+        {
+            "id": "servi_pharm",
+            "title": "Servi Pharm Healthcare — Online Pharmacy & Medical Store",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Licensed Pharmacy & Medical Device E-Commerce Portal",
+            "image": "assets/images/project_servi_pharm.jpg",
+            "client": "Servi Pharm Healthcare Private Limited (Mumbai)",
+            "duration": "4 Months",
+            "description": "Enterprise medical e-commerce portal and online pharmacy platform for Servi Pharm Healthcare Private Limited (ROC Mumbai II). Facilitating retail and institutional distribution of prescription pharmaceuticals, chronic care therapeutics, digital BP monitors, glucometers, orthopedic braces, and clinical toilet essentials.",
+            "highlights": [
+                "Full-stack pharmaceutical and surgical care e-commerce platform with categorized prescription (Rx) and OTC inventory",
+                "Medical Device Specification Matrix featuring digital diagnostic telemetry, pulse oximetry, and orthopedic sizing guides",
+                "Dynamic prescription upload gateway with pharmacist verification workflow and scheduled chronic medication refills",
+                "PAN-India cold-chain and express dispatch tracker integrated with WhatsApp order support desk",
+                "Compliant healthcare data protection, SSL 256-bit encryption, and secure multi-tier digital payments"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "Blade Engine",
+                "E-Commerce",
+                "Healthcare Tech",
+                "Pharma Portal",
+                "Payment Gateway"
+            ],
+            "github": "https://github.com/HimonBhuyan/Sevi_pharm_healthcare",
+            "live": "https://sevipharmhealthcare.vercel.app/"
+        },
+        {
+            "id": "tm_hotel",
+            "title": "T.M. Hotel, Madurai — Boutique Heritage Stay & Temple Hospitality",
+            "category": "web marketing",
+            "filter_tag": "web",
+            "category_label": "Heritage Hospitality & Interactive Room Booking Engine",
+            "image": "assets/images/project_tm_hotel.jpg",
+            "client": "T.M. Hotel Madurai (Est. 1950)",
+            "duration": "3 Months",
+            "description": "Bespoke digital transformation and luxury heritage web platform for the iconic T.M. Hotel in Madurai (Est. 1950). Situated steps from the historic Arulmigu Meenakshi Sundareswarar Temple and Madurai Junction, featuring interactive room bookings, temple pilgrimage tour planners, terrace rooftop dining showcases, and GSAP kinetic animations.",
+            "highlights": [
+                "Editorial heritage redesign engineered with PHP, ES6, and GSAP 3 ScrollTrigger kinetic animations",
+                "Interactive Room Reservation Engine with real-time tariff calculation, amenity toggles, and direct instant booking desk",
+                "Madurai Pilgrimage & Sightseeing Guide with interactive maps of Meenakshi Temple, Thirumalai Nayakar Mahal, and Alagar Kovil",
+                "Terrace view banquet and rooftop dining showcase with panoramic vistas of the holy temple gopurams",
+                "Zero-friction WhatsApp concierge for 24/7 guest check-in queries, railway station pickups, and temple VIP darshan assistance"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "GSAP 3",
+                "Hospitality UX",
+                "ScrollTrigger",
+                "Booking Engine",
+                "Madurai Tourism"
+            ],
+            "github": "https://github.com/HimonBhuyan/T.M.-Hotel",
+            "live": "https://tmhotel.vercel.app/"
+        },
+        {
+            "id": "tehnoor_veils",
+            "title": "TehNoor Veils — Luxury UAE-Imported Abayas & Modest Couture",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Luxury Modest Fashion & UAE-Imported Abaya Maison",
+            "image": "assets/images/project_tehnoor_veils.jpg",
+            "client": "TehNoor Veils (@tehnoorveils)",
+            "duration": "3 Months",
+            "description": "High-fashion digital maison and luxury modest couture e-commerce storefront for TehNoor Veils. Showcasing UAE-imported hand-embroidered Abayas, flowing Farashas, authentic Korean Nida silk silhouettes, and artisanal satin stoles with express PAN-India delivery and bespoke VIP WhatsApp consultation.",
+            "highlights": [
+                "High-fashion editorial dark-luxury aesthetic optimized for sub-second edge performance on Vercel",
+                "Curated fabric and drape inspection engine highlighting premium Korean Nida, organza sleeves, and hand-beaded lace",
+                "Interactive Modest Style Lookbook featuring Sana Khan signature cuts, mocha Farashas, and floral festive capsules",
+                "Direct 1-tap WhatsApp couture consultation pre-filling custom length, bust sizing, and color preference",
+                "Integrated Meta Pixel & high-converting Instagram Reel video marketing funnels driving D2C national orders"
+            ],
+            "tags": [
+                "JavaScript",
+                "PHP 8.x",
+                "E-Commerce",
+                "Modest Fashion",
+                "D2C Luxury",
+                "Abaya Couture",
+                "Meta Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan/tehnoor_veils-",
+            "live": "https://tehnoorveils.vercel.app/"
+        },
+        {
             "id": "gulbani",
             "title": "Gulbani - A Gifting Shop",
             "category": "ecommerce web marketing",
