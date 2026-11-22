@@ -155,60 +155,88 @@
     ],
     "projects": [
         {
-            "id": "pahervesh",
-            "title": "PAHERVESH by Akshree — Pure Cotton Ethnic & Indo-Western Wear",
+            "id": "moh_studios",
+            "title": "MOH Atelier — The Poetry of Gujarati Handcraft",
             "category": "ecommerce web marketing",
             "filter_tag": "ecommerce",
-            "category_label": "Pure Cotton Ethnic & Indo-Western D2C Atelier",
-            "image": "assets/images/project_pahervesh.jpg",
-            "client": "Pahervesh by Akshree (@pahervesh_by_akshree)",
-            "duration": "3 Months",
-            "description": "Bespoke digital atelier and direct-to-consumer e-commerce storefront for Pahervesh by Akshree. Celebrating hand-block printed pure cotton Farshi sets, breezy Co-ord sets, office wear kurtis, and festive Angrakhas with seamless Razorpay checkout, WhatsApp order concierge, and automated discount coupons.",
+            "category_label": "Haute Couture & Heritage Trousseaus",
+            "image": "assets/images/project_moh_studios.jpg",
+            "client": "MOH Atelier (@moh_studios)",
+            "duration": "4 Months",
+            "description": "Bespoke digital atelier and luxury couture storefront crafted for MOH Atelier in Ahmedabad. Showcasing bespoke heirloom Gujarati handcraft drapes, pure mulberry & hand-spun tissue bridal ensembles, multi-currency purchasing, and VIP private salon reservation at Sindhu Bhavan Road.",
             "highlights": [
-                "Bespoke D2C e-commerce storefront with hand-block print curation, multi-category filters, and responsive mobile architecture",
-                "Interactive Slide-Out Quick Cart with instant coupon validation, order bump incentives, and pincode delivery lookup",
-                "Integrated Razorpay payment gateway supporting UPI, debit/credit cards, net banking, and automatic payout webhooks",
-                "1-Tap WhatsApp concierge consultation pre-filling product SKU, size, and custom measurement requirements",
-                "Targeted Meta Conversions API (CAPI) & Pixel tracking for festive drops and high-ROAS Instagram advertising"
+                "High-conversion luxury digital maison with sub-second Edge delivery on Vercel",
+                "Curated bridal trousseau anthology and bespoke silhouette personalization suite",
+                "Seamless multi-currency switching (INR ₹ / USD $) and international express checkout",
+                "Private salon appointment reservation engine and direct WhatsApp VIP concierge desk",
+                "Integrated Meta Pixel and editorial lookbook campaigns targeting global South Asian diaspora"
             ],
             "tags": [
                 "PHP 8.x",
+                "Laravel",
                 "E-Commerce",
-                "D2C Ethnic Wear",
-                "Razorpay UPI",
-                "Cart Drawer",
+                "Haute Couture",
+                "Luxury D2C",
                 "Meta Ads"
             ],
-            "github": "https://github.com/HimonBhuyan/Pahervesh-by-Akshree",
-            "live": "https://paherveshbyakshree.vercel.app/"
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://mohstudios.vercel.app/"
         },
         {
-            "id": "servi_pharm",
-            "title": "Servi Pharm Healthcare — Online Pharmacy & Medical Store",
+            "id": "junu",
+            "title": "JUNU — Roselyn Magar Haute Couture",
             "category": "ecommerce web marketing",
             "filter_tag": "ecommerce",
-            "category_label": "Licensed Pharmacy & Medical Device E-Commerce Portal",
-            "image": "assets/images/project_servi_pharm.jpg",
-            "client": "Servi Pharm Healthcare Private Limited (Mumbai)",
+            "category_label": "Avant-Garde Couture & Limited Drops",
+            "image": "assets/images/project_junu.jpg",
+            "client": "JUNU by Roselyn Magar (@junu.clo)",
             "duration": "4 Months",
-            "description": "Enterprise medical e-commerce portal and online pharmacy platform for Servi Pharm Healthcare Private Limited (ROC Mumbai II). Facilitating retail and institutional distribution of prescription pharmaceuticals, chronic care therapeutics, digital BP monitors, glucometers, orthopedic braces, and clinical toilet essentials.",
+            "description": "High-fashion digital maison and limited-drop ordering platform engineered for Kathmandu couture label JUNU. Showcasing anatomical steel corsetry, sculptural liquid lamé eveningwear, live drop countdown mechanics, and international multi-currency checkout.",
             "highlights": [
-                "Full-stack pharmaceutical and surgical care e-commerce platform with categorized prescription (Rx) and OTC inventory",
-                "Medical Device Specification Matrix featuring digital diagnostic telemetry, pulse oximetry, and orthopedic sizing guides",
-                "Dynamic prescription upload gateway with pharmacist verification workflow and scheduled chronic medication refills",
-                "PAN-India cold-chain and express dispatch tracker integrated with WhatsApp order support desk",
-                "Compliant healthcare data protection, SSL 256-bit encryption, and secure multi-tier digital payments"
+                "Editorial dark luxury aesthetic with restricted numbered batch drops and live FOMO countdown mechanics",
+                "Interactive Salon Nocturne lookbook gallery with fluid motion design and monograph story chapters",
+                "Multi-currency support (NPR, USD, INR) with integrated bespoke consultation reservation desk",
+                "Sub-second edge delivery on Vercel with zero page-builder bloat and optimized image compression",
+                "High-fashion social media strategy and editorial campaign direction generating global collector waitlists"
             ],
             "tags": [
-                "PHP 8.x",
-                "Blade Engine",
-                "E-Commerce",
-                "Healthcare Tech",
-                "Pharma Portal",
-                "Payment Gateway"
+                "React",
+                "Vite",
+                "Tailwind CSS",
+                "Haute Couture",
+                "Limited Drops",
+                "Multi-Currency"
             ],
-            "github": "https://github.com/HimonBhuyan/Sevi_pharm_healthcare",
-            "live": "https://sevipharmhealthcare.vercel.app/"
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://junuclothing.vercel.app/"
+        },
+        {
+            "id": "raahat",
+            "title": "Raahat by Paritha — Bespoke Groom Couture",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Savile Row Groom Haute Couture",
+            "image": "assets/images/project_raahat.jpg",
+            "client": "Raahat by Paritha (@raahatbyparitha)",
+            "duration": "3 Months",
+            "description": "Bespoke digital maison and luxury groomswear platform for Raahat by Paritha across Chennai and Bangalore. Handcrafting bespoke wedding sherwanis, embellished black-tie tuxedos, and South Indian pure silk ensembles with Savile Row tailoring precision.",
+            "highlights": [
+                "Editorial dark luxury aesthetic with gold accents and sub-second page performance",
+                "Private atelier groom consultation booking system with date/time selection",
+                "Curated Haute Couture collections gallery with interactive fabric & embellishment inspect",
+                "Direct 1-tap bespoke concierge desk and VIP bridal groom inquiry pipeline",
+                "High-ROAS seasonal wedding campaign architecture driving private salon reservations"
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Tailwind CSS",
+                "Menswear Couture",
+                "E-Commerce",
+                "Booking Engine"
+            ],
+            "github": "https://github.com/HimonBhuyan",
+            "live": "https://raahatbyparitha-two.vercel.app/"
         },
         {
             "id": "tm_hotel",
@@ -237,6 +265,34 @@
             ],
             "github": "https://github.com/HimonBhuyan/T.M.-Hotel",
             "live": "https://tmhotel.vercel.app/"
+        },
+        {
+            "id": "pahervesh",
+            "title": "PAHERVESH by Akshree — Pure Cotton Ethnic & Indo-Western Wear",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Pure Cotton Ethnic & Indo-Western D2C Atelier",
+            "image": "assets/images/project_pahervesh.jpg",
+            "client": "Pahervesh by Akshree (@pahervesh_by_akshree)",
+            "duration": "3 Months",
+            "description": "Bespoke digital atelier and direct-to-consumer e-commerce storefront for Pahervesh by Akshree. Celebrating hand-block printed pure cotton Farshi sets, breezy Co-ord sets, office wear kurtis, and festive Angrakhas with seamless Razorpay checkout, WhatsApp order concierge, and automated discount coupons.",
+            "highlights": [
+                "Bespoke D2C e-commerce storefront with hand-block print curation, multi-category filters, and responsive mobile architecture",
+                "Interactive Slide-Out Quick Cart with instant coupon validation, order bump incentives, and pincode delivery lookup",
+                "Integrated Razorpay payment gateway supporting UPI, debit/credit cards, net banking, and automatic payout webhooks",
+                "1-Tap WhatsApp concierge consultation pre-filling product SKU, size, and custom measurement requirements",
+                "Targeted Meta Conversions API (CAPI) & Pixel tracking for festive drops and high-ROAS Instagram advertising"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "E-Commerce",
+                "D2C Ethnic Wear",
+                "Razorpay UPI",
+                "Cart Drawer",
+                "Meta Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan/Pahervesh-by-Akshree",
+            "live": "https://paherveshbyakshree.vercel.app/"
         },
         {
             "id": "tehnoor_veils",
@@ -268,61 +324,32 @@
             "live": "https://tehnoorveils.vercel.app/"
         },
         {
-            "id": "gulbani",
-            "title": "Gulbani - A Gifting Shop",
+            "id": "cup2eat",
+            "title": "Cup2Eat — 100% Edible Wafer Cups & Zero Waste",
             "category": "ecommerce web marketing",
             "filter_tag": "ecommerce",
-            "category_label": "Luxury E-Commerce & Brand Strategy",
-            "image": "assets/images/upload_1792598927_Gulbani_G.png",
-            "client": "Gulbani Luxury Concierge",
-            "duration": "4 Months",
-            "description": "Your private luxury gifting concierge in New Delhi. Bespoke wedding favors, heirloom brass caskets, and artisanal hampers crafted to be treasured forever. Complete brand strategy, e-commerce storefront, and social marketing launch.",
+            "category_label": "Sustainable D2C & B2B F&B Tech",
+            "image": "assets/images/project_cup2eat.jpg",
+            "client": "Cup2Eat Technologies (@cup2eat)",
+            "duration": "3 Months",
+            "description": "Revolutionary sustainable F&B e-commerce platform and B2B cafe sample distribution portal crafted for Cup2Eat. 100% edible, crispy, leak-proof chocolate & elaichi wafer cups eliminating plastic and paper waste across Pan-India cafes and retail buyers.",
             "highlights": [
-                "Bespoke Bridal Gifting Builder with real-time hamper customization",
-                "Full-Stack modular Laravel & PHP architecture for reliable order routing",
-                "Editorial luxury visual direction, bespoke typography, and sub-second page loads",
-                "Centralized inventory management and custom VIP bespoke inquiry parser",
-                "Integrated social media lookbook campaign driving high-ticket wedding enquiries"
+                "High-speed D2C storefront with custom B2B wholesale order builder and cafe sample box distribution desk",
+                "Interactive Flavor & Menu showcase featuring 40+ minute hot beverage leak-proof testing data",
+                "Direct 1-tap WhatsApp ordering gateway with automated order payload generation for instant fulfillment",
+                "Pan-India dispatch tracking and commercial cafe inquiry pipeline with FSSAI verification badges",
+                "Meta ad acquisition funnels and viral short-form Reel campaigns driving 150,000+ cup dispatches"
             ],
             "tags": [
                 "PHP 8.x",
                 "Laravel",
                 "E-Commerce",
-                "Luxury Branding",
-                "Blade Engine",
-                "Social Ads"
-            ],
-            "github": "https://github.com/HimonBhuyan/Gulbani",
-            "live": "https://gulbani.vercel.app/"
-        },
-        {
-            "id": "knots_facets",
-            "title": "Knots & Facets — Handmade Crafts & Jewellery",
-            "category": "ecommerce web marketing",
-            "filter_tag": "ecommerce",
-            "category_label": "Handcrafted Luxury D2C Atelier",
-            "image": "assets/images/project_knots_facets.jpg",
-            "client": "Knots & Facets (@knotsandfacets)",
-            "duration": "3 Months",
-            "description": "Bespoke digital atelier and luxury e-commerce experience crafted for Knots & Facets in Guwahati. Handcrafted glass & crystal jewellery, slow cotton crochet accessories, seamless interactive lookbook, and slide-out cart drawer with currency switching.",
-            "highlights": [
-                "Editorial luxury digital storefront engineered with React, Vite & Tailwind CSS for sub-second edge performance",
-                "Interactive Slide-Out Atelier Cart with collector promo engine, multi-currency switching, and express checkout",
-                "Curated Collections & Lookbook showcase honoring slow, mindful craftsmanship and bespoke atelier gifts",
-                "Direct WhatsApp ordering integration and custom wax-stamp gift packaging options",
-                "Integrated Meta Pixel & Conversions API tracking for high-ROAS social drops and Instagram Reels"
-            ],
-            "tags": [
-                "React",
-                "Vite",
-                "E-Commerce",
-                "D2C Luxury",
-                "Tailwind CSS",
-                "Cart Drawer",
+                "Zero Waste",
+                "D2C & B2B",
                 "Meta Ads"
             ],
             "github": "https://github.com/HimonBhuyan",
-            "live": "https://knots-facets.vercel.app/"
+            "live": "https://cup-2-eat-ochre.vercel.app/"
         },
         {
             "id": "rina_hazarika",
@@ -354,90 +381,6 @@
             "live": "https://rinahazarika-clothing.vercel.app/"
         },
         {
-            "id": "moh_studios",
-            "title": "MOH Atelier — The Poetry of Gujarati Handcraft",
-            "category": "ecommerce web marketing",
-            "filter_tag": "ecommerce",
-            "category_label": "Haute Couture & Heritage Trousseaus",
-            "image": "assets/images/project_moh_studios.jpg",
-            "client": "MOH Atelier (@moh_studios)",
-            "duration": "4 Months",
-            "description": "Bespoke digital atelier and luxury couture storefront crafted for MOH Atelier in Ahmedabad. Showcasing bespoke heirloom Gujarati handcraft drapes, pure mulberry & hand-spun tissue bridal ensembles, multi-currency purchasing, and VIP private salon reservation at Sindhu Bhavan Road.",
-            "highlights": [
-                "High-conversion luxury digital maison with sub-second Edge delivery on Vercel",
-                "Curated bridal trousseau anthology and bespoke silhouette personalization suite",
-                "Seamless multi-currency switching (INR ₹ / USD $) and international express checkout",
-                "Private salon appointment reservation engine and direct WhatsApp VIP concierge desk",
-                "Integrated Meta Pixel and editorial lookbook campaigns targeting global South Asian diaspora"
-            ],
-            "tags": [
-                "PHP 8.x",
-                "Laravel",
-                "E-Commerce",
-                "Haute Couture",
-                "Luxury D2C",
-                "Meta Ads"
-            ],
-            "github": "https://github.com/HimonBhuyan",
-            "live": "https://mohstudios.vercel.app/"
-        },
-        {
-            "id": "raahat",
-            "title": "Raahat by Paritha — Bespoke Groom Couture",
-            "category": "ecommerce web marketing",
-            "filter_tag": "ecommerce",
-            "category_label": "Savile Row Groom Haute Couture",
-            "image": "assets/images/project_raahat.jpg",
-            "client": "Raahat by Paritha (@raahatbyparitha)",
-            "duration": "3 Months",
-            "description": "Bespoke digital maison and luxury groomswear platform for Raahat by Paritha across Chennai and Bangalore. Handcrafting bespoke wedding sherwanis, embellished black-tie tuxedos, and South Indian pure silk ensembles with Savile Row tailoring precision.",
-            "highlights": [
-                "Editorial dark luxury aesthetic with gold accents and sub-second page performance",
-                "Private atelier groom consultation booking system with date/time selection",
-                "Curated Haute Couture collections gallery with interactive fabric & embellishment inspect",
-                "Direct 1-tap bespoke concierge desk and VIP bridal groom inquiry pipeline",
-                "High-ROAS seasonal wedding campaign architecture driving private salon reservations"
-            ],
-            "tags": [
-                "React",
-                "Vite",
-                "Tailwind CSS",
-                "Menswear Couture",
-                "E-Commerce",
-                "Booking Engine"
-            ],
-            "github": "https://github.com/HimonBhuyan",
-            "live": "https://raahatbyparitha-two.vercel.app/"
-        },
-        {
-            "id": "cup2eat",
-            "title": "Cup2Eat — 100% Edible Wafer Cups & Zero Waste",
-            "category": "ecommerce web marketing",
-            "filter_tag": "ecommerce",
-            "category_label": "Sustainable D2C & B2B F&B Tech",
-            "image": "assets/images/project_cup2eat.jpg",
-            "client": "Cup2Eat Technologies (@cup2eat)",
-            "duration": "3 Months",
-            "description": "Revolutionary sustainable F&B e-commerce platform and B2B cafe sample distribution portal crafted for Cup2Eat. 100% edible, crispy, leak-proof chocolate & elaichi wafer cups eliminating plastic and paper waste across Pan-India cafes and retail buyers.",
-            "highlights": [
-                "High-speed D2C storefront with custom B2B wholesale order builder and cafe sample box distribution desk",
-                "Interactive Flavor & Menu showcase featuring 40+ minute hot beverage leak-proof testing data",
-                "Direct 1-tap WhatsApp ordering gateway with automated order payload generation for instant fulfillment",
-                "Pan-India dispatch tracking and commercial cafe inquiry pipeline with FSSAI verification badges",
-                "Meta ad acquisition funnels and viral short-form Reel campaigns driving 150,000+ cup dispatches"
-            ],
-            "tags": [
-                "PHP 8.x",
-                "Laravel",
-                "E-Commerce",
-                "Zero Waste",
-                "D2C & B2B",
-                "Meta Ads"
-            ],
-            "github": "https://github.com/HimonBhuyan",
-            "live": "https://cup-2-eat-ochre.vercel.app/"
-        },
-        {
             "id": "wishari",
             "title": "Wishari — The Art of Thoughtful Gifting",
             "category": "ecommerce web marketing",
@@ -466,32 +409,89 @@
             "live": "https://wisharico.vercel.app/"
         },
         {
-            "id": "junu",
-            "title": "JUNU — Roselyn Magar Haute Couture",
+            "id": "knots_facets",
+            "title": "Knots & Facets — Handmade Crafts & Jewellery",
             "category": "ecommerce web marketing",
             "filter_tag": "ecommerce",
-            "category_label": "Avant-Garde Couture & Limited Drops",
-            "image": "assets/images/project_junu.jpg",
-            "client": "JUNU by Roselyn Magar (@junu.clo)",
-            "duration": "4 Months",
-            "description": "High-fashion digital maison and limited-drop ordering platform engineered for Kathmandu couture label JUNU. Showcasing anatomical steel corsetry, sculptural liquid lamé eveningwear, live drop countdown mechanics, and international multi-currency checkout.",
+            "category_label": "Handcrafted Luxury D2C Atelier",
+            "image": "assets/images/project_knots_facets.jpg",
+            "client": "Knots & Facets (@knotsandfacets)",
+            "duration": "3 Months",
+            "description": "Bespoke digital atelier and luxury e-commerce experience crafted for Knots & Facets in Guwahati. Handcrafted glass & crystal jewellery, slow cotton crochet accessories, seamless interactive lookbook, and slide-out cart drawer with currency switching.",
             "highlights": [
-                "Editorial dark luxury aesthetic with restricted numbered batch drops and live FOMO countdown mechanics",
-                "Interactive Salon Nocturne lookbook gallery with fluid motion design and monograph story chapters",
-                "Multi-currency support (NPR, USD, INR) with integrated bespoke consultation reservation desk",
-                "Sub-second edge delivery on Vercel with zero page-builder bloat and optimized image compression",
-                "High-fashion social media strategy and editorial campaign direction generating global collector waitlists"
+                "Editorial luxury digital storefront engineered with React, Vite & Tailwind CSS for sub-second edge performance",
+                "Interactive Slide-Out Atelier Cart with collector promo engine, multi-currency switching, and express checkout",
+                "Curated Collections & Lookbook showcase honoring slow, mindful craftsmanship and bespoke atelier gifts",
+                "Direct WhatsApp ordering integration and custom wax-stamp gift packaging options",
+                "Integrated Meta Pixel & Conversions API tracking for high-ROAS social drops and Instagram Reels"
             ],
             "tags": [
                 "React",
                 "Vite",
+                "E-Commerce",
+                "D2C Luxury",
                 "Tailwind CSS",
-                "Haute Couture",
-                "Limited Drops",
-                "Multi-Currency"
+                "Cart Drawer",
+                "Meta Ads"
             ],
             "github": "https://github.com/HimonBhuyan",
-            "live": "https://junuclothing.vercel.app/"
+            "live": "https://knots-facets.vercel.app/"
+        },
+        {
+            "id": "servi_pharm",
+            "title": "Servi Pharm Healthcare — Online Pharmacy & Medical Store",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Licensed Pharmacy & Medical Device E-Commerce Portal",
+            "image": "assets/images/project_servi_pharm.jpg",
+            "client": "Servi Pharm Healthcare Private Limited (Mumbai)",
+            "duration": "4 Months",
+            "description": "Enterprise medical e-commerce portal and online pharmacy platform for Servi Pharm Healthcare Private Limited (ROC Mumbai II). Facilitating retail and institutional distribution of prescription pharmaceuticals, chronic care therapeutics, digital BP monitors, glucometers, orthopedic braces, and clinical toilet essentials.",
+            "highlights": [
+                "Full-stack pharmaceutical and surgical care e-commerce platform with categorized prescription (Rx) and OTC inventory",
+                "Medical Device Specification Matrix featuring digital diagnostic telemetry, pulse oximetry, and orthopedic sizing guides",
+                "Dynamic prescription upload gateway with pharmacist verification workflow and scheduled chronic medication refills",
+                "PAN-India cold-chain and express dispatch tracker integrated with WhatsApp order support desk",
+                "Compliant healthcare data protection, SSL 256-bit encryption, and secure multi-tier digital payments"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "Blade Engine",
+                "E-Commerce",
+                "Healthcare Tech",
+                "Pharma Portal",
+                "Payment Gateway"
+            ],
+            "github": "https://github.com/HimonBhuyan/Sevi_pharm_healthcare",
+            "live": "https://sevipharmhealthcare.vercel.app/"
+        },
+        {
+            "id": "gulbani",
+            "title": "Gulbani - A Gifting Shop",
+            "category": "ecommerce web marketing",
+            "filter_tag": "ecommerce",
+            "category_label": "Luxury E-Commerce & Brand Strategy",
+            "image": "assets/images/upload_1792598927_Gulbani_G.png",
+            "client": "Gulbani Luxury Concierge",
+            "duration": "4 Months",
+            "description": "Your private luxury gifting concierge in New Delhi. Bespoke wedding favors, heirloom brass caskets, and artisanal hampers crafted to be treasured forever. Complete brand strategy, e-commerce storefront, and social marketing launch.",
+            "highlights": [
+                "Bespoke Bridal Gifting Builder with real-time hamper customization",
+                "Full-Stack modular Laravel & PHP architecture for reliable order routing",
+                "Editorial luxury visual direction, bespoke typography, and sub-second page loads",
+                "Centralized inventory management and custom VIP bespoke inquiry parser",
+                "Integrated social media lookbook campaign driving high-ticket wedding enquiries"
+            ],
+            "tags": [
+                "PHP 8.x",
+                "Laravel",
+                "E-Commerce",
+                "Luxury Branding",
+                "Blade Engine",
+                "Social Ads"
+            ],
+            "github": "https://github.com/HimonBhuyan/Gulbani",
+            "live": "https://gulbani.vercel.app/"
         },
         {
             "id": "chaudhary_associates",
