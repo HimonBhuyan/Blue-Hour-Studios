@@ -618,8 +618,8 @@ require_once __DIR__ . '/includes/header.php';
           <div class="clients-carousel-track">
             <?php for ($loop = 0; $loop < 2; $loop++): ?>
               <a href="https://paherveshbyakshree.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #FFF7F0;">
-                  <img src="assets/images/client_pahervesh_sq.jpg?v=20261122" alt="Pahervesh by Akshree" loading="lazy">
+                <div class="trusted-logo-box" style="background: #FCE4E2;">
+                  <img src="assets/images/client_pahervesh_sq.jpg?v=20261122b" alt="Pahervesh by Akshree" loading="lazy">
                 </div>
                 <div class="trusted-client-meta">
                   <span class="trusted-client-name">Pahervesh by Akshree</span>
@@ -648,8 +648,8 @@ require_once __DIR__ . '/includes/header.php';
               </a>
 
               <a href="https://tehnoorveils.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #0E090B;">
-                  <img src="assets/images/client_tehnoor_veils_sq.jpg?v=20261122" alt="TehNoor Veils" loading="lazy">
+                <div class="trusted-logo-box" style="background: #F1E7DD;">
+                  <img src="assets/images/client_tehnoor_veils_sq.jpg?v=20261122b" alt="TehNoor Veils" loading="lazy">
                 </div>
                 <div class="trusted-client-meta">
                   <span class="trusted-client-name">TehNoor Veils</span>
