@@ -51,7 +51,10 @@ require_once __DIR__ . '/includes/header.php';
 <!-- ========================================================================
        SELECTED WORKS / PORTFOLIO - EDITORIAL GALLERY
        ======================================================================== -->
-<section class="works-section" id="works">
+<!-- Torn Paper Divider (Dark to Craft) -->
+<div class="torn-paper-edge torn-dark-bottom" aria-hidden="true"></div>
+
+<section class="works-section" id="works" style="background: var(--bg-espresso); position: relative; padding-top: 4rem;">
   <div class="container">
 
     <div class="section-header-editorial reveal-on-scroll">
@@ -78,42 +81,44 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <!-- Projects Grid with Spotlight Shaders & Dynamic Cursor Follower Tracking -->
-    <div class="projects-editorial-grid" id="projectsContainer">
+    <div class="polaroids-showcase-grid" id="projectsContainer">
       <?php foreach ($projects as $idx => $proj): ?>
-        <div
-          class="project-card-editorial project-card spotlight-card tilt-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>"
-          data-category="<?= htmlspecialchars($proj['category']) ?>"
-          data-filter-tag="<?= htmlspecialchars($proj['filter_tag'] ?? '') ?>"
-          data-project-card="<?= htmlspecialchars($proj['id']) ?>" id="projCard_<?= htmlspecialchars($proj['id']) ?>">
+        <div class="polaroid-card project-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>"
+             data-category="<?= htmlspecialchars($proj['category']) ?>"
+             data-filter-tag="<?= htmlspecialchars($proj['filter_tag'] ?? '') ?>"
+             data-project-card="<?= htmlspecialchars($proj['id']) ?>" 
+             id="projCard_<?= htmlspecialchars($proj['id']) ?>">
 
-          <div class="project-preview-frame">
-            <img src="<?= htmlspecialchars($proj['image']) ?>?v=<?= file_exists($proj['image']) ? filemtime($proj['image']) : time() ?>" alt="<?= htmlspecialchars($proj['title']) ?>"
-              loading="lazy">
-            <span class="project-index-pill">PRJ // <?= sprintf('%02d', $idx + 1) ?></span>
-            <span class="project-category-badge"><?= htmlspecialchars($proj['category_label'] ?? 'Solution') ?></span>
+          <!-- Translucent Masking Tape Strip at Top -->
+          <span class="washi-tape washi-tape-top"></span>
+
+          <!-- Polaroid Photo Frame -->
+          <div class="polaroid-photo-wrap">
+            <img src="<?= htmlspecialchars($proj['image']) ?>?v=<?= file_exists($proj['image']) ? filemtime($proj['image']) : time() ?>" alt="<?= htmlspecialchars($proj['title']) ?>" loading="lazy">
+            <span class="polaroid-badge-pill"><?= htmlspecialchars($proj['category_label'] ?? 'Flagship') ?></span>
+            <span class="polaroid-index-stamp">PRJ // <?= sprintf('%02d', $idx + 1) ?></span>
           </div>
 
-          <div class="project-body-editorial">
-            <span class="project-client-kicker"><?= htmlspecialchars($proj['client'] ?? 'Client Confidential') ?></span>
-            <h3 class="project-title-editorial"><?= htmlspecialchars($proj['title']) ?></h3>
-            <p class="project-desc-editorial"><?= htmlspecialchars($proj['description']) ?></p>
+          <!-- Polaroid Lower Chin (Handwritten Marker Labels & Details) -->
+          <div class="polaroid-chin">
+            <span class="polaroid-client-kicker"><?= htmlspecialchars($proj['client'] ?? 'Client Confidential') ?></span>
+            <h3 class="polaroid-title"><?= htmlspecialchars($proj['title']) ?></h3>
+            <p class="polaroid-desc"><?= htmlspecialchars($proj['description']) ?></p>
 
-            <div class="project-tags-wrap">
-              <?php foreach (array_slice($proj['tags'], 0, 4) as $tag): ?>
-                <span class="project-tag-pill"><?= htmlspecialchars($tag) ?></span>
+            <div class="polaroid-tags-row">
+              <?php foreach (array_slice($proj['tags'], 0, 3) as $tag): ?>
+                <span class="polaroid-tag-chip"><?= htmlspecialchars($tag) ?></span>
               <?php endforeach; ?>
             </div>
 
-            <div class="project-actions-footer">
-              <button type="button" class="btn-open-case-study" data-project-open="<?= htmlspecialchars($proj['id']) ?>"
-                id="openProj_<?= htmlspecialchars($proj['id']) ?>">
-                <span>Read Case Study</span>
-                <i class="fa-solid fa-arrow-right" style="font-size: 0.72rem;"></i>
+            <div class="polaroid-footer-actions">
+              <button type="button" class="polaroid-case-btn btn-open-case-study" data-project-open="<?= htmlspecialchars($proj['id']) ?>" id="openProj_<?= htmlspecialchars($proj['id']) ?>">
+                <span>Inspect Blueprint</span>
+                <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem; margin-left: 4px;"></i>
               </button>
 
               <?php if (!empty($proj['live']) && $proj['live'] !== '#'): ?>
-                <a href="<?= htmlspecialchars($proj['live']) ?>" target="_blank" rel="noopener noreferrer"
-                  class="project-direct-link" title="Open Live Site" aria-label="Open Live Site">
+                <a href="<?= htmlspecialchars($proj['live']) ?>" target="_blank" rel="noopener noreferrer" class="polaroid-live-link" title="Open Live Site" aria-label="Open Live Site">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               <?php endif; ?>

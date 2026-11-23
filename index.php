@@ -19,12 +19,19 @@ require_once __DIR__ . '/includes/header.php';
         <div class="hero-content reveal-on-scroll">
           <div class="hero-editorial-badge">
             <span class="index-num">01 //</span>
-            <span class="badge-text">Software Engineering & Brand Acceleration</span>
+            <span class="badge-text font-hand" style="font-size: 1.25rem; font-weight: 700; color: var(--accent-amber);">Artisanal Engineering &amp; Brand Acceleration</span>
           </div>
 
-          <h1 class="hero-title">
+          <h1 class="hero-title" style="margin-top: 0.25rem;">
+            <span class="script-kicker" style="font-size: 1.7rem; margin-bottom: 0.35rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span>More than an Agency</span>
+              <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon" style="width: 36px; height: 26px; vertical-align: middle;">
+            </span>
+            <br>
             Engineering <span class="text-gradient-mercury">Digital Supremacy.</span> <br>
-            Scaling <span class="text-gradient-champagne">Iconic Brands.</span>
+            <span style="position: relative; display: inline-block;">
+              Handcrafting <span class="script-highlight" style="color: var(--accent-amber); font-weight: 700;">Iconic Brands.</span>
+            </span>
           </h1>
 
           <p class="hero-description">
@@ -32,16 +39,16 @@ require_once __DIR__ . '/includes/header.php';
           </p>
 
           <div class="hero-cta-group">
-            <a href="works.php" class="btn btn-primary magnetic-btn" id="heroExploreWorksBtn">
+            <a href="works.php" class="btn btn-amber magnetic-btn" id="heroExploreWorksBtn" style="padding: 0.85rem 1.85rem;">
               <span>Explore Selected Works</span>
-              <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem;"></i>
+              <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem; margin-left: 6px;"></i>
             </a>
-            <a href="pricing.php" class="btn btn-secondary magnetic-btn" id="heroPricingBtn">
-              <i class="fa-solid fa-tags" style="color: var(--accent-champagne);"></i>
+            <a href="pricing.php" class="btn btn-craft-outline magnetic-btn" id="heroPricingBtn" style="padding: 0.85rem 1.6rem;">
+              <i class="fa-solid fa-tags" style="color: var(--accent-amber); margin-right: 6px;"></i>
               <span>Pricing &amp; Packages</span>
             </a>
-            <a href="brochure.php" class="btn btn-ghost-editorial magnetic-btn" id="heroBrochureBtn">
-              <i class="fa-regular fa-file-pdf" style="color: var(--accent-champagne);"></i>
+            <a href="brochure.php" class="btn btn-ghost-editorial magnetic-btn" id="heroBrochureBtn" style="padding: 0.85rem 1.5rem;">
+              <i class="fa-regular fa-file-pdf" style="color: var(--accent-amber); margin-right: 6px;"></i>
               <span>Rate Card (PDF)</span>
             </a>
           </div>
@@ -71,8 +78,23 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <!-- Architectural Visual Stage with Interactive Simulation Console -->
-        <div class="hero-stage reveal-on-scroll delay-2">
+        <div class="hero-stage reveal-on-scroll delay-2" style="position: relative;">
           
+          <!-- Pinned Kraft Studio Sticky Memo (Root Barrel Scrapbook Note) -->
+          <div class="hero-sticky-memo">
+            <span class="washi-tape washi-tape-top"></span>
+            <div class="hero-sticky-memo-title">
+              <span>Studio Highlights</span>
+              <img src="assets/images/doodle_starburst.svg" alt="Star" style="width: 18px; height: 18px;">
+            </div>
+            <ul class="hero-sticky-memo-list">
+              <li><i class="fa-solid fa-check"></i> 100% Bespoke Code</li>
+              <li><i class="fa-solid fa-check"></i> 0% Page-Builder Bloat</li>
+              <li><i class="fa-solid fa-check"></i> High-ROAS Commerce</li>
+              <li><i class="fa-solid fa-check"></i> 99.9% Production SLA</li>
+            </ul>
+          </div>
+
           <div class="architectural-frame spotlight-card tilt-card" id="heroHardwareFrame">
             <div class="frame-topbar">
               <div class="frame-window-controls">
@@ -99,7 +121,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- View 1: GUI Preview -->
             <div class="frame-viewport" id="heroGuiView">
-              <img src="assets/images/upload_1792598927_Gulbani_G.png?v=20261101c" alt="Blue Hour Creative Studios Featured Project Showcase" id="heroFeaturedImg">
+              <img src="assets/images/project_moh_studios.jpg?v=20261123" alt="Blue Hour Creative Studios Featured Project Showcase" id="heroFeaturedImg">
             </div>
 
             <!-- View 2: Architecture Blueprint Code Terminal with Live Simulation Bar -->
@@ -217,7 +239,10 @@ require_once __DIR__ . '/includes/header.php';
   <!-- ========================================================================
        SERVICES & CAPABILITIES PREVIEW
        ======================================================================== -->
-  <section class="services-section" id="services">
+  <!-- Torn Kraft Paper Divider Top (Dark to Kraft) -->
+  <div class="torn-paper-edge torn-kraft-top" aria-hidden="true"></div>
+
+  <section class="services-section kraft-paper-section" id="services">
     <div class="container">
       
       <div class="section-header-editorial reveal-on-scroll">
@@ -301,65 +326,77 @@ require_once __DIR__ . '/includes/header.php';
   <!-- ========================================================================
        SELECTED WORKS / PORTFOLIO PREVIEW
        ======================================================================== -->
-  <section class="works-section" id="works">
+  <section class="works-section" id="works" style="background: var(--bg-espresso); position: relative; padding-top: 5rem; padding-bottom: 5.5rem;">
     <div class="container">
       
       <div class="section-header-editorial reveal-on-scroll">
         <div class="section-kicker">
-          <span class="kicker-line"></span>
-          <span>03 // Selected Portfolio & Blueprints</span>
+          <span class="script-kicker" style="font-size: 1.55rem;">
+            <img src="assets/images/doodle_crown.svg" alt="Crown" style="width: 32px; height: 24px; vertical-align: middle;">
+            <span>Today's Flagship Blueprints</span>
+          </span>
         </div>
         <h2 class="section-headline">
-          Architected for Speed. <br><span class="text-gradient-champagne">Engineered for Scale.</span>
+          <span style="font-family: var(--font-hand); font-size: 1.35em; color: #FFF; display: block; font-weight: 700; line-height: 1.15;">
+            Curated Digital Blueprints.
+          </span>
+          Fresh builds, client favourites, and high-conversion creations.
         </h2>
-        <p class="section-lead">
-          Explore real-world software platforms, commerce systems, mobile applications, and enterprise ERPs built for market leaders.
+        <p class="section-lead" style="color: #BAAFA1; max-width: 680px;">
+          Handcrafted software platforms, luxury commerce engines, and mobile architectures built for ambitious market leaders.
         </p>
       </div>
 
       <!-- Flagship Preview Bar -->
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;" class="reveal-on-scroll">
-        <span class="filter-pill-btn active" style="pointer-events: none; cursor: default;">[ Top Flagship Builds ]</span>
-        <a href="works.php" class="btn btn-ghost-editorial btn-sm magnetic-btn">
-          <span>Browse Complete Archive</span>
-          <i class="fa-solid fa-arrow-right" style="font-size: 0.72rem;"></i>
+        <span class="script-kicker" style="font-size: 1.35rem; color: var(--accent-amber);">
+          <i class="fa-solid fa-camera-retro" style="font-size: 1.1rem; margin-right: 6px;"></i> [ Studio Polaroid Showcase ]
+        </span>
+        <a href="works.php" class="btn btn-craft-outline btn-sm magnetic-btn" style="padding: 0.55rem 1.25rem;">
+          <span>Browse Complete 20+ Archive</span>
+          <i class="fa-solid fa-arrow-right" style="font-size: 0.72rem; margin-left: 6px;"></i>
         </a>
       </div>
 
-      <!-- Projects Grid with Spotlight Shaders (First 3 Only) -->
-      <div class="projects-editorial-grid" id="projectsContainer">
+      <!-- Polaroid Showcase Grid (Root Barrel Scrapbook Film Prints) -->
+      <div class="polaroids-showcase-grid" id="projectsContainer">
         <?php foreach (array_slice($projects, 0, 6) as $idx => $proj): ?>
-          <div class="project-card-editorial project-card spotlight-card tilt-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>" 
+          <div class="polaroid-card project-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>" 
                data-category="<?= htmlspecialchars($proj['category']) ?>"
                data-filter-tag="<?= htmlspecialchars($proj['filter_tag'] ?? '') ?>"
                data-project-card="<?= htmlspecialchars($proj['id']) ?>"
                id="projCard_<?= htmlspecialchars($proj['id']) ?>">
             
-            <div class="project-preview-frame">
+            <!-- Translucent Masking Tape Strip at Top -->
+            <span class="washi-tape washi-tape-top"></span>
+
+            <!-- Polaroid Photo Frame -->
+            <div class="polaroid-photo-wrap">
               <img src="<?= htmlspecialchars($proj['image']) ?>?v=<?= file_exists($proj['image']) ? filemtime($proj['image']) : time() ?>" alt="<?= htmlspecialchars($proj['title']) ?>" loading="lazy">
-              <span class="project-index-pill">PRJ // <?= sprintf('%02d', $idx + 1) ?></span>
-              <span class="project-category-badge"><?= htmlspecialchars($proj['category_label'] ?? 'Solution') ?></span>
+              <span class="polaroid-badge-pill"><?= htmlspecialchars($proj['category_label'] ?? 'Flagship') ?></span>
+              <span class="polaroid-index-stamp">PRJ // <?= sprintf('%02d', $idx + 1) ?></span>
             </div>
 
-            <div class="project-body-editorial">
-              <span class="project-client-kicker"><?= htmlspecialchars($proj['client'] ?? 'Client Confidential') ?></span>
-              <h3 class="project-title-editorial"><?= htmlspecialchars($proj['title']) ?></h3>
-              <p class="project-desc-editorial"><?= htmlspecialchars($proj['description']) ?></p>
+            <!-- Polaroid Lower Chin (Handwritten Marker Labels & Details) -->
+            <div class="polaroid-chin">
+              <span class="polaroid-client-kicker"><?= htmlspecialchars($proj['client'] ?? 'Client Confidential') ?></span>
+              <h3 class="polaroid-title"><?= htmlspecialchars($proj['title']) ?></h3>
+              <p class="polaroid-desc"><?= htmlspecialchars($proj['description']) ?></p>
 
-              <div class="project-tags-wrap">
-                <?php foreach (array_slice($proj['tags'], 0, 4) as $tag): ?>
-                  <span class="project-tag-pill"><?= htmlspecialchars($tag) ?></span>
+              <div class="polaroid-tags-row">
+                <?php foreach (array_slice($proj['tags'], 0, 3) as $tag): ?>
+                  <span class="polaroid-tag-chip"><?= htmlspecialchars($tag) ?></span>
                 <?php endforeach; ?>
               </div>
 
-              <div class="project-actions-footer">
-                <button type="button" class="btn-open-case-study" data-project-open="<?= htmlspecialchars($proj['id']) ?>" id="openProj_<?= htmlspecialchars($proj['id']) ?>">
-                  <span>Read Case Study</span>
-                  <i class="fa-solid fa-arrow-right" style="font-size: 0.72rem;"></i>
+              <div class="polaroid-footer-actions">
+                <button type="button" class="polaroid-case-btn btn-open-case-study" data-project-open="<?= htmlspecialchars($proj['id']) ?>" id="openProj_<?= htmlspecialchars($proj['id']) ?>">
+                  <span>Inspect Blueprint</span>
+                  <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem; margin-left: 4px;"></i>
                 </button>
 
                 <?php if (!empty($proj['live']) && $proj['live'] !== '#'): ?>
-                  <a href="<?= htmlspecialchars($proj['live']) ?>" target="_blank" rel="noopener noreferrer" class="project-direct-link" title="Open Live Site" aria-label="Open Live Site">
+                  <a href="<?= htmlspecialchars($proj['live']) ?>" target="_blank" rel="noopener noreferrer" class="polaroid-live-link" title="Open Live Site" aria-label="Open Live Site">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 <?php endif; ?>
@@ -371,11 +408,11 @@ require_once __DIR__ . '/includes/header.php';
       </div>
 
       <!-- Prominent Button to Go to the Works Page to View All -->
-      <div style="text-align: center; margin-top: 2.75rem; padding-top: 1.75rem; border-top: 1px solid var(--border-subtle);" class="reveal-on-scroll">
-        <a href="works.php" class="btn btn-primary magnetic-btn" id="btnViewAllWorks" style="padding: 0.9rem 2.4rem; font-size: 0.96rem; font-weight: 700; display: inline-flex; gap: 0.75rem; align-items: center; border-radius: var(--radius-pill); box-shadow: 0 4px 20px rgba(255, 255, 255, 0.18);">
-          <span>Go to Works Page to View All</span>
-          <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.2rem 0.55rem; border-radius: var(--radius-pill); background: rgba(0, 0, 0, 0.18); font-weight: 600;"><?= count($projects) ?> Blueprints</span>
-          <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i>
+      <div style="text-align: center; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px dashed rgba(255, 255, 255, 0.14);" class="reveal-on-scroll">
+        <a href="works.php" class="btn btn-amber magnetic-btn" id="btnViewAllWorks" style="padding: 0.95rem 2.6rem; font-size: 1rem; font-weight: 700; display: inline-flex; gap: 0.75rem; align-items: center; border-radius: var(--radius-pill);">
+          <span>Go to Works Page to View All 20+ Blueprints</span>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.2rem 0.55rem; border-radius: var(--radius-pill); background: rgba(0, 0, 0, 0.25); font-weight: 600;"><?= count($projects) ?> Total</span>
+          <i class="fa-solid fa-arrow-right" style="font-size: 0.85rem;"></i>
         </a>
       </div>
 
@@ -795,11 +832,16 @@ require_once __DIR__ . '/includes/header.php';
       
       <div class="section-header-editorial reveal-on-scroll">
         <div class="section-kicker">
-          <span class="kicker-line"></span>
-          <span>06 // Verified Client Trust</span>
+          <span class="script-kicker" style="font-size: 1.5rem;">
+            <img src="assets/images/doodle_starburst.svg" alt="Star" style="width: 22px; height: 22px; vertical-align: middle;">
+            <span>06 // Verified Client Love</span>
+          </span>
         </div>
         <h2 class="section-headline">
-          Validated by Visionary <br><span class="text-gradient-champagne">Founders & Enterprises</span>
+          <span style="font-family: var(--font-hand); font-size: 1.35em; color: #FFF; display: block; font-weight: 700; line-height: 1.15;">
+            Validated by Visionary Founders &amp; Enterprises.
+          </span>
+          Real conversations, measured exponential impact.
         </h2>
         <p class="section-lead">
           See how our software architecture and viral marketing directly move the needle for client bottom lines.
@@ -840,22 +882,26 @@ require_once __DIR__ . '/includes/header.php';
        ======================================================================== -->
   <section class="contact-section" id="contact" style="padding-top: 20px;">
     <div class="container">
-      <div class="launchpad-card spotlight-card reveal-on-scroll" style="text-align: center; padding: 3rem 1.5rem;">
-        <span class="index-num" style="display: block; margin-bottom: 0.5rem;">07 // INITIATE YOUR INITIATIVE</span>
-        <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; margin-bottom: 0.85rem; color: var(--text-primary); line-height: 1.15;">
-          Ready to Build Something <span class="text-gradient-champagne">Truly Iconic?</span>
+      <div class="launchpad-card spotlight-card reveal-on-scroll" style="text-align: center; padding: 3.5rem 1.8rem; background: var(--bg-espresso-elevated); border: 1.5px dashed rgba(232, 141, 56, 0.4); position: relative; border-radius: 12px;">
+        <span class="washi-tape washi-tape-top"></span>
+        <span class="script-kicker" style="display: block; margin-bottom: 0.6rem; font-size: 1.45rem;">
+          <img src="assets/images/doodle_crown.svg" alt="Crown" style="width: 28px; height: 22px; vertical-align: middle;">
+          <span>Reserve a Founder Strategy Session</span>
+        </span>
+        <h2 style="font-family: var(--font-display); font-size: clamp(2.1rem, 3.8vw, 2.9rem); font-weight: 700; margin-bottom: 0.85rem; color: #FFF; line-height: 1.15;">
+          Ready to Build Something <span class="script-highlight" style="color: var(--accent-amber); font-weight: 700;">Truly Iconic?</span>
         </h2>
-        <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 1.8rem auto; font-size: 1rem; line-height: 1.6;">
+        <p style="color: #C0B5A7; max-width: 620px; margin: 0 auto 2rem auto; font-size: 1.05rem; line-height: 1.6; font-family: var(--font-body);">
           Submit your brief directly to our founders or connect instantly on WhatsApp. We respond within 4 hours with an actionable roadmap.
         </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="https://wa.me/917002201534?text=Hi%20Blue%20Hour%20Studios,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
-            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
-            <span>Instant WhatsApp Desk</span>
+        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wa.me/917002201534?text=Hi%20Blue%20Hour%20Studios,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="btn btn-craft-outline magnetic-btn" style="padding: 0.95rem 2rem; font-size: 1rem;">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.15rem; margin-right: 6px;"></i>
+            <span>Instant Founder Desk</span>
           </a>
-          <a href="contact.php" class="btn btn-primary magnetic-btn">
+          <a href="contact.php" class="btn btn-amber magnetic-btn" style="padding: 0.95rem 2.25rem; font-size: 1rem;">
             <span>Open Strategic Intake Desk</span>
-            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right" style="margin-left: 6px;"></i>
           </a>
         </div>
       </div>
