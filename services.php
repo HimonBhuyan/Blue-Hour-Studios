@@ -1,286 +1,281 @@
 <?php
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Capabilities & Engineering Disciplines';
-$pageDesc = 'Explore The Blue Hour Studios (Blue Hour Creative Studios) capabilities in Guwahati & New Delhi, India: custom web & SaaS development, enterprise ERP/CRM systems, iOS & Android mobile apps, social media marketing, and high-ROAS paid ads.';
+$pageTitle = 'Capabilities & Handcrafted Disciplines';
+$pageDesc = 'Explore Blue Hour Creative Studios capabilities in Guwahati & New Delhi, India: bespoke web & SaaS development, enterprise ERP/CRM systems, iOS & Android mobile apps, social media marketing, and high-ROAS paid ads.';
 $activePage = 'services';
 
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<!-- Subpage Architectural Hero Header -->
-<section class="subpage-hero">
-  <div class="container">
-    <div class="subpage-hero-inner">
-      <div class="subpage-breadcrumb">
-        <a href="index.php">Home</a>
-        <span class="sep">/</span>
-        <span class="current">Capabilities & Disciplines</span>
-      </div>
-      <h1 class="subpage-title">
-        Engineering Digital Supremacy. <br>
-        <span class="text-gradient-mercury">Scaling Cultural Relevance.</span>
-      </h1>
-      <p class="subpage-lead">
-        We eliminate the friction between engineering and marketing. One unified studio delivering turnkey enterprise
-        code, bespoke architecture, and hyper-growth audience acquisition for modern market leaders.
-      </p>
-
-      <div class="subpage-quick-stats">
-        <div class="subpage-stat-item">
-          <span class="subpage-stat-num">06</span>
-          <span class="subpage-stat-lbl">Core Disciplines</span>
-        </div>
-        <div class="subpage-stat-item">
-          <span class="subpage-stat-num">100%</span>
-          <span class="subpage-stat-lbl">Bespoke Architecture</span>
-        </div>
-        <div class="subpage-stat-item">
-          <span class="subpage-stat-num">&lt;200ms</span>
-          <span class="subpage-stat-lbl">Edge Latency Standard</span>
-        </div>
-        <div class="subpage-stat-item">
-          <span class="subpage-stat-num">4.8X</span>
-          <span class="subpage-stat-lbl">Average Client ROAS</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================================================
-       SERVICES & CAPABILITIES - ARCHITECTURAL BENTO GRID
+  <!-- ========================================================================
+       1. SUBPAGE HERO HEADER (ROOT BARREL SCRAPBOOK STYLE)
        ======================================================================== -->
-<section class="services-section" id="services">
-  <div class="container">
+  <section style="padding: 4.5rem 0 3.5rem; position: relative; z-index: 2;">
+    <div class="container">
+      <div style="max-width: 780px;">
+        <div class="script-kicker" style="font-size: 1.45rem; margin-bottom: 0.4rem;">
+          <a href="index.php" style="color: var(--text-muted);">Home</a>
+          <span style="color: var(--accent-orange);">&bull;</span>
+          <span>Studio Menu &amp; Disciplines</span>
+        </div>
 
-    <div class="section-header-editorial reveal-on-scroll">
-      <div class="section-kicker">
-        <span class="kicker-line"></span>
-        <span>01 // Core Capabilities</span>
-      </div>
-      <h2 class="section-headline">
-        Two Unified Disciplines. <br><span class="text-gradient-mercury">Exponential Market Impact.</span>
-      </h2>
-      <p class="section-lead">
-        From zero-latency backend systems to viral social feeds, each capability is engineered with uncompromising
-        craft.
-      </p>
-    </div>
+        <h1 style="font-family: var(--font-hand); font-size: clamp(3rem, 5.5vw, 4.5rem); font-weight: 700; color: #FFFDF9; line-height: 1.06; margin-bottom: 1rem;">
+          Engineering Digital Supremacy. <br>
+          <span class="script-highlight">Scaling Cultural Relevance.</span>
+          <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon" style="margin-left: 8px;">
+        </h1>
 
-    <!-- Services Category Filter Tabs -->
-    <div class="filter-bar-editorial reveal-on-scroll">
-      <button class="filter-pill-btn service-filter-tab active" data-filter="all">[ All Disciplines ]</button>
-      <button class="filter-pill-btn service-filter-tab" data-filter="Engineering">[ Software & Web Development
-        ]</button>
-      <button class="filter-pill-btn service-filter-tab" data-filter="Creative Marketing">[ Social & Creative Growth
-        ]</button>
-    </div>
+        <p style="font-family: var(--font-body); font-size: 1.08rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+          We eliminate the friction between full-stack software engineering and viral brand marketing. One unified artisanal studio delivering turnkey enterprise code, luxury design systems, and hyper-growth audience acquisition.
+        </p>
 
-    <!-- Bento Grid of Capabilities with Spotlight Card Shaders -->
-    <div class="services-bento-grid" id="servicesGrid">
-      <?php foreach ($services as $idx => $srv): ?>
-        <div
-          class="service-card-editorial service-card spotlight-card tilt-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>"
-          data-category="<?= htmlspecialchars($srv['category']) ?>" id="service_<?= htmlspecialchars($srv['id']) ?>">
-
-          <div class="service-top-row">
-            <div class="service-icon-box">
-              <i class="<?= htmlspecialchars($srv['icon']) ?>"></i>
-            </div>
-            <span class="service-badge-mono"><?= htmlspecialchars($srv['badge']) ?></span>
+        <!-- Quick Metrics -->
+        <div style="display: flex; gap: 2.25rem; flex-wrap: wrap; border-top: 1px dashed rgba(255,255,255,0.12); padding-top: 1.25rem;">
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFDF9; display: block; line-height: 1;">06</strong>
+            <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Core Disciplines</span>
           </div>
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFDF9; display: block; line-height: 1;">100%</strong>
+            <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Bespoke Code</span>
+          </div>
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFDF9; display: block; line-height: 1;">&lt;200ms</strong>
+            <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Edge Latency</span>
+          </div>
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFDF9; display: block; line-height: 1;">4.8X</strong>
+            <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Average ROAS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <h3 class="service-card-title"><?= htmlspecialchars($srv['title']) ?></h3>
-          <p class="service-card-desc"><?= htmlspecialchars($srv['short_desc']) ?></p>
+  <!-- Torn Paper Divider (Dark to Kraft) -->
+  <div class="torn-divider torn-kraft-top" aria-hidden="true"></div>
 
-          <ul class="service-deliverables-list">
-            <?php foreach ($srv['deliverables'] as $feat): ?>
-              <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <span><?= htmlspecialchars($feat) ?></span>
-              </li>
-            <?php endforeach; ?>
+  <!-- ========================================================================
+       2. CORE CAPABILITIES MENU (KRAFT PAPER SCRAPBOOK SECTION)
+       ======================================================================== -->
+  <section class="kraft-disciplines-section" id="services">
+    <div class="container">
+      
+      <div class="section-head-kraft" style="margin-bottom: 2.25rem;">
+        <div>
+          <div class="script-kicker" style="color: var(--accent-orange-deep); margin-bottom: 0.25rem;">
+            <span>01 // Handcrafted Studio Menu</span>
+          </div>
+          <h2 class="disciplines-headline">
+            <span>Two Unified Wings. Six Crafts.</span>
+            <img src="assets/images/doodle_arrow.svg" alt="Arrow" class="doodle-arrow-icon">
+          </h2>
+        </div>
+
+        <!-- Filter Buttons on Kraft -->
+        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+          <button type="button" class="srv-filter-btn active" data-filter="all" style="background: var(--accent-orange); color: #FFFDF9; border: 1.5px solid var(--accent-orange); padding: 0.45rem 1.1rem; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">[ All Disciplines ]</button>
+          <button type="button" class="srv-filter-btn" data-filter="Engineering" style="background: transparent; color: #2B2118; border: 1.5px solid rgba(90,70,50,0.35); padding: 0.45rem 1.1rem; border-radius: 999px; font-weight: 600; font-size: 0.85rem;">[ Software &amp; Web ]</button>
+          <button type="button" class="srv-filter-btn" data-filter="Creative Marketing" style="background: transparent; color: #2B2118; border: 1.5px solid rgba(90,70,50,0.35); padding: 0.45rem 1.1rem; border-radius: 999px; font-weight: 600; font-size: 0.85rem;">[ Social &amp; Growth ]</button>
+        </div>
+      </div>
+
+      <!-- 6 Pinned Craft Cards Grid -->
+      <div class="scrapbook-cards-grid">
+        <?php foreach ($services as $idx => $srv): ?>
+          <div class="srv-scrap-card" data-category="<?= htmlspecialchars($srv['category']) ?>" id="service_<?= htmlspecialchars($srv['id']) ?>" style="position: relative; background: #FFFDF9; border: 1px solid var(--bg-kraft-border); border-radius: 8px; padding: 2rem 1.75rem 1.65rem; box-shadow: 0 12px 28px rgba(80,60,40,0.10); display: flex; flex-direction: column; justify-content: space-between; transform: rotate(<?= ($idx % 2 === 0) ? '-0.6deg' : '0.6deg' ?>); transition: transform 0.25s ease, box-shadow 0.25s ease;">
+            <span class="washi-tape washi-tape-top"></span>
+
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.1rem;">
+                <div class="discipline-icon-box" style="margin-bottom: 0;">
+                  <i class="<?= htmlspecialchars($srv['icon']) ?>"></i>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; background: #F4E8D3; color: var(--accent-orange-deep); padding: 0.25rem 0.65rem; border-radius: 4px; border: 1px dashed rgba(160,120,70,0.4);">
+                  <?= htmlspecialchars($srv['badge']) ?>
+                </span>
+              </div>
+
+              <h3 style="font-family: var(--font-hand); font-size: 1.85rem; font-weight: 700; color: #211913; line-height: 1.15; margin-bottom: 0.5rem;">
+                <?= htmlspecialchars($srv['title']) ?>
+              </h3>
+              <p style="font-family: var(--font-body); font-size: 0.92rem; color: #5C4B3A; line-height: 1.55; margin-bottom: 1.25rem;">
+                <?= htmlspecialchars($srv['short_desc']) ?>
+              </p>
+
+              <ul style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; border-top: 1px dashed #E2D4BE; padding-top: 1rem;">
+                <?php foreach ($srv['deliverables'] as $feat): ?>
+                  <li style="font-family: var(--font-body); font-size: 0.86rem; color: #36291E; display: flex; align-items: center; gap: 0.55rem; font-weight: 500;">
+                    <i class="fa-solid fa-check" style="color: var(--accent-orange-deep); font-size: 0.78rem;"></i>
+                    <span><?= htmlspecialchars($feat) ?></span>
+                  </li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 0.9rem; border-top: 1px dashed #E2D4BE;">
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; color: #7D6B58; text-transform: uppercase;">
+                <?= htmlspecialchars($srv['category']) ?>
+              </span>
+              <a href="contact.php?service=<?= urlencode($srv['title']) ?>" style="font-family: var(--font-hand); font-size: 1.25rem; font-weight: 700; color: var(--accent-orange-deep); display: inline-flex; align-items: center; gap: 0.4rem;">
+                <span>Reserve This Craft</span>
+                <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i>
+              </a>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Torn Paper Divider (Kraft to Dark) -->
+  <div class="torn-divider torn-kraft-bottom" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       3. THE ARCHITECTURAL DIFFERENCE & VIRAL GROWTH PILLARS (DARK SECTION)
+       ======================================================================== -->
+  <section class="polaroids-showcase-section" id="comparison">
+    <div class="container">
+      
+      <div class="specials-head-row">
+        <div class="specials-title-wrap">
+          <div class="script-kicker">
+            <span>02 // Why Partner With Blue Hour</span>
+          </div>
+          <div class="specials-main-title">
+            <span>Agency Bloat vs Handcrafted Code</span>
+            <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon">
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Split Cards -->
+      <div class="timeline-grid" style="margin-bottom: 4.5rem;">
+        <!-- Traditional Route -->
+        <div style="background: rgba(32, 27, 23, 0.88); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 2.2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(255,255,255,0.12); padding-bottom: 1rem; margin-bottom: 1.4rem;">
+            <h3 style="font-family: var(--font-hand); font-size: 2rem; color: #A89D8F;">Traditional Agency Route</h3>
+            <span class="polaroid-tag" style="background: rgba(239,68,68,0.15); color: #f87171; border-color: rgba(239,68,68,0.3);">OUTDATED MODEL</span>
+          </div>
+          <ul style="display: flex; flex-direction: column; gap: 1.2rem;">
+            <li style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <i class="fa-solid fa-xmark" style="color: #f87171; margin-top: 5px;"></i>
+              <div>
+                <strong style="display: block; color: #FFFDF9; font-size: 1rem;">Bloated Page Load (3.8s &mdash; 5.2s)</strong>
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Generic templates with 40+ heavy plugins dragging conversion rates down.</span>
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <i class="fa-solid fa-xmark" style="color: #f87171; margin-top: 5px;"></i>
+              <div>
+                <strong style="display: block; color: #FFFDF9; font-size: 1rem;">Uncoordinated Ad Funnels (1.2X ROAS)</strong>
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Marketers don't understand engineering; zero server-side pixel telemetry.</span>
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <i class="fa-solid fa-xmark" style="color: #f87171; margin-top: 5px;"></i>
+              <div>
+                <strong style="display: block; color: #FFFDF9; font-size: 1rem;">Junior Hand-offs &amp; Excuses</strong>
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Developers blame marketers, marketers blame the slow website.</span>
+              </div>
+            </li>
           </ul>
+        </div>
 
-          <div
-            style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
-            <span
-              style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">
-              <?= htmlspecialchars($srv['category']) ?>
-            </span>
-            <a href="contact.php?service=<?= urlencode($srv['title']) ?>" class="btn-team-consult"
-              style="color: var(--accent-champagne); text-decoration: none;">
-              <span>Inquire Service</span>
-              <i class="fa-solid fa-arrow-right" style="font-size: 0.65rem;"></i>
-            </a>
+        <!-- Blue Hour Pinned Kraft Sheet -->
+        <div class="pinned-event-sheet" style="transform: rotate(1deg);">
+          <img src="assets/images/doodle_pushpin.svg" alt="Pin" class="pinned-pushpin">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.5px dashed rgba(160,130,90,0.45); padding-bottom: 0.75rem; margin-bottom: 1.35rem;">
+            <span class="pinned-title" style="margin-bottom: 0; border-bottom: none; padding-bottom: 0;">Blue Hour Creative Studios</span>
+            <span class="polaroid-tag" style="background: var(--accent-orange); color: #FFFDF9; border: none;">ARTISANAL CODE</span>
           </div>
+          <ul style="display: flex; flex-direction: column; gap: 1.15rem;">
+            <li style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <i class="fa-solid fa-check" style="color: var(--accent-orange-deep); margin-top: 5px;"></i>
+              <div>
+                <strong style="display: block; color: #2B2118; font-size: 1.02rem;">Sub-Second Edge Execution (0.18s &mdash; 0.35s)</strong>
+                <span style="font-size: 0.88rem; color: #5C4B3A;">100% Bespoke Laravel, React, Node.js &amp; PHP 8+ code with global edge caching.</span>
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <i class="fa-solid fa-check" style="color: var(--accent-orange-deep); margin-top: 5px;"></i>
+              <div>
+                <strong style="display: block; color: #2B2118; font-size: 1.02rem;">Data-Driven Ad Mastery (4.8X Average ROAS)</strong>
+                <span style="font-size: 0.88rem; color: #5C4B3A;">Direct integration between server-side Meta Conversions API and viral reels.</span>
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <i class="fa-solid fa-check" style="color: var(--accent-orange-deep); margin-top: 5px;"></i>
+              <div>
+                <strong style="display: block; color: #2B2118; font-size: 1.02rem;">Direct Founder Partnership + 1 Yr Free SLA</strong>
+                <span style="font-size: 0.88rem; color: #5C4B3A;">One elite squad delivering full-stack engineering and viral growth simultaneously.</span>
+              </div>
+            </li>
+          </ul>
         </div>
-      <?php endforeach; ?>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Torn Paper Divider (Dark to Kraft) -->
+  <div class="torn-divider torn-kraft-top" aria-hidden="true"></div>
 
-<!-- ========================================================================
-       THE BLUE HOUR DIFFERENCE - ARCHITECTURAL COMPARISON MATRIX
+  <!-- ========================================================================
+       4. RESERVE YOUR BRIEF CTA (KRAFT SECTION)
        ======================================================================== -->
-<section class="interactive-matrix-section" id="comparison">
-  <div class="container">
-
-    <div class="section-header-editorial reveal-on-scroll">
-      <div class="section-kicker">
-        <span class="kicker-line"></span>
-        <span>02 // The Architectural Difference</span>
-      </div>
-      <h2 class="section-headline">
-        Traditional Agency Bloat <br><span class="text-gradient-mercury">vs Engineered Dominance.</span>
-      </h2>
-      <p class="section-lead">
-        See why fast-scaling brands migrate from sluggish generic agencies to Blue Hour Creative Studios.
-      </p>
-    </div>
-
-    <div class="matrix-split-grid reveal-on-scroll">
-
-      <!-- Column 1: Generic Traditional Agency -->
-      <div class="matrix-column-card column-generic">
-        <div class="column-header">
-          <h4>Traditional Agency Route</h4>
-          <span class="column-tag-generic">OUTDATED MODEL</span>
-        </div>
-
-        <ul class="matrix-bullets-list">
-          <li>
-            <i class="fa-solid fa-xmark"></i>
-            <div>
-              <strong>Bloated Page Load (3.8s — 5.2s)</strong>
-              <span>Generic WordPress/Shopify templates with 40+ plugins dragging conversion rates down.</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-xmark"></i>
-            <div>
-              <strong>Uncoordinated Ad Funnels (1.2X — 1.6X ROAS)</strong>
-              <span>Marketing teams don't understand engineering; zero custom pixel pipelines or event telemetry.</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-xmark"></i>
-            <div>
-              <strong>Frustrating Hand-offs & Excuses</strong>
-              <span>Developers blame the marketers, marketers blame the slow website. Zero unified
-                accountability.</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Column 2: Blue Hour Creative Studios -->
-      <div class="matrix-column-card column-bluehour spotlight-card">
-        <div class="column-header">
-          <h4>Blue Hour Creative Studios</h4>
-          <span class="column-tag-bluehour">ENGINEERED SUPREMACY</span>
-        </div>
-
-        <ul class="matrix-bullets-list">
-          <li>
-            <i class="fa-solid fa-check"></i>
-            <div>
-              <strong>Sub-Second Edge Execution (0.18s — 0.35s)</strong>
-              <span>100% Bespoke Laravel, React, and Node.js code with global edge caching and zero bloat.</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-check"></i>
-            <div>
-              <strong>Data-Driven Ad Mastery (4.8X Average Client ROAS)</strong>
-              <span>Direct integration between server-side Meta Conversions API and viral short-form creative
-                direction.</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa-solid fa-check"></i>
-            <div>
-              <strong>Single Turnkey Studio Partner Desk</strong>
-              <span>One elite squad delivering full-stack engineering, luxury design systems, and viral growth
-                simultaneously.</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ========================================================================
-       GROWTH ENGINE - SOCIAL MEDIA, CONTENT & VIRAL ACQUISITION
-       ======================================================================== -->
-<section class="growth-section" id="growth">
-  <div class="container">
-
-    <div class="section-header-editorial reveal-on-scroll">
-      <div class="section-kicker">
-        <span class="kicker-line"></span>
-        <span>03 // Brand Acceleration</span>
-      </div>
-      <h2 class="section-headline">
-        The Viral Growth Engine. <br><span class="text-gradient-champagne">Cultivating Organic Obsession.</span>
-      </h2>
-      <p class="section-lead">
-        Great software needs relentless distribution. We orchestrate short-form video, high-converting paid funnels, and
-        narrative-driven social media management that commands attention.
-      </p>
-    </div>
-
-    <!-- Growth Pillars Grid -->
-    <div class="growth-pillars-grid">
-      <?php foreach ($pillars as $idx => $pillar): ?>
-        <div class="growth-pillar-card spotlight-card reveal-on-scroll delay-<?= $idx + 1 ?>">
-          <div class="pillar-num-header">
-            <span class="pillar-num"><?= htmlspecialchars($pillar['step'] ?? sprintf('%02d', $idx + 1)) ?> //</span>
-            <i class="fa-solid fa-bolt" style="color: var(--accent-champagne); font-size: 0.8rem;"></i>
+  <section class="reserve-table-section">
+    <div class="container">
+      <div class="reserve-table-card">
+        <span class="washi-tape washi-tape-top"></span>
+        <div class="reserve-copy">
+          <div class="script-kicker" style="color: var(--accent-orange-deep); margin-bottom: 0.35rem;">
+            <span>Ready to Scale</span>
+            <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon" style="width: 28px; height: 22px;">
           </div>
-          <h3 class="pillar-title"><?= htmlspecialchars($pillar['title'] ?? '') ?></h3>
-          <p class="pillar-desc"><?= htmlspecialchars($pillar['desc'] ?? '') ?></p>
-
-          <?php if (!empty($pillar['stat'])): ?>
-            <div class="pillar-stat-pill">
-              <span class="stat-highlight"><?= htmlspecialchars($pillar['stat']) ?></span>
-              <span class="stat-caption"><?= htmlspecialchars($pillar['stat_label'] ?? '') ?></span>
-            </div>
-          <?php endif; ?>
+          <h2>Ready to Engineer Your Unfair Advantage?</h2>
+          <p>Explore our transparent one-time website packages and monthly social growth retainers, or book a direct discovery session with our founders.</p>
         </div>
-      <?php endforeach; ?>
-    </div>
-
-    <!-- Interactive Call to Action Banner -->
-    <div class="launchpad-card spotlight-card reveal-on-scroll"
-      style="margin-top: 3.5rem; text-align: center; padding: 2.5rem 1.5rem;">
-      <span class="index-num" style="display: block; margin-bottom: 0.5rem;">READY TO SCALE //</span>
-      <h3
-        style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">
-        Ready to engineer your unfair digital advantage?
-      </h3>
-      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem auto; font-size: 0.95rem;">
-        Whether you need a bespoke web platform, an enterprise ERP, or a full-scale viral marketing campaign, we have
-        the architecture to deliver.
-      </p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="pricing.php" class="btn btn-secondary magnetic-btn">
-          <i class="fa-solid fa-tag"></i>
-          <span>Explore Pricing Packages</span>
-        </a>
-        <a href="contact.php" class="btn btn-primary magnetic-btn">
-          <span>Initiate Project Brief</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <div class="reserve-actions">
+          <a href="pricing.php" class="btn-orange-solid">
+            <span>Explore Pricing Packages</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="contact.php" class="btn-craft-outline" style="color: #2B2118; border-color: rgba(90,70,50,0.45);">
+            <span>Reserve a Brief</span>
+          </a>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Torn Paper Divider (Kraft to Dark) -->
+  <div class="torn-divider torn-dark-top" aria-hidden="true"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const btns = document.querySelectorAll('.srv-filter-btn');
+      const cards = document.querySelectorAll('.srv-scrap-card');
+      btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          btns.forEach(function(b) {
+            b.style.background = 'transparent';
+            b.style.color = '#2B2118';
+            b.style.borderColor = 'rgba(90,70,50,0.35)';
+          });
+          btn.style.background = 'var(--accent-orange)';
+          btn.style.color = '#FFFDF9';
+          btn.style.borderColor = 'var(--accent-orange)';
+          const filter = btn.getAttribute('data-filter');
+          cards.forEach(function(card) {
+            const cat = card.getAttribute('data-category');
+            card.style.display = (filter === 'all' || cat === filter) ? 'flex' : 'none';
+          });
+        });
+      });
+    });
+  </script>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

@@ -1,11 +1,10 @@
 <?php
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Strategic Intake Desk & Inquiries';
-$pageDesc = 'Initiate your project brief with The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India. Direct founder consultation, transparent packages, and sub-4-hour response time.';
+$pageTitle = 'Reserve a Brief & Strategic Intake Desk';
+$pageDesc = 'Initiate your project brief with Blue Hour Creative Studios in Guwahati & New Delhi, India. Direct founder consultation, transparent packages, and sub-4-hour response time.';
 $activePage = 'contact';
 
-// Read query params for intelligent pre-fill
 $prefillPackage = isset($_GET['package']) ? trim($_GET['package']) : '';
 $prefillConsult = isset($_GET['consult']) ? trim($_GET['consult']) : '';
 $prefillService = isset($_GET['service']) ? trim($_GET['service']) : '';
@@ -13,235 +12,218 @@ $prefillService = isset($_GET['service']) ? trim($_GET['service']) : '';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-  <!-- Subpage Architectural Hero Header -->
-  <section class="subpage-hero">
+  <!-- ========================================================================
+       1. SUBPAGE HERO HEADER (ROOT BARREL SCRAPBOOK STYLE)
+       ======================================================================== -->
+  <section style="padding: 4.5rem 0 3.5rem; position: relative; z-index: 2;">
     <div class="container">
-      <div class="subpage-hero-inner">
-        <div class="subpage-breadcrumb">
-          <a href="index.php">Home</a>
-          <span class="sep">/</span>
-          <span class="current">Strategic Intake Desk</span>
+      <div style="max-width: 780px;">
+        <div class="script-kicker" style="font-size: 1.45rem; margin-bottom: 0.4rem;">
+          <a href="index.php" style="color: var(--text-muted);">Home</a>
+          <span style="color: var(--accent-orange);">&bull;</span>
+          <span>Strategic Intake Desk</span>
         </div>
-        <h1 class="subpage-title">
-          Initiate Your Brief. <br>
-          <span class="text-gradient-champagne">Let's Build Something Iconic.</span>
-        </h1>
-        <p class="subpage-lead">
-          Have an ambitious web platform in mind? Ready to accelerate your brand's presence on social media with hyper-targeted marketing? Brief us on your vision. We respond within 4 hours with an architectural blueprint.
-        </p>
 
-        <div class="subpage-quick-stats">
-          <div class="subpage-stat-item">
-            <span class="subpage-stat-num">&lt;4 Hrs</span>
-            <span class="subpage-stat-lbl">Average Response Time</span>
-          </div>
-          <div class="subpage-stat-item">
-            <span class="subpage-stat-num">Direct</span>
-            <span class="subpage-stat-lbl">Founder Intake Desk</span>
-          </div>
-          <div class="subpage-stat-item">
-            <span class="subpage-stat-num">Guwahati</span>
-            <span class="subpage-stat-lbl">Studio & Engineering Hub</span>
-          </div>
-          <div class="subpage-stat-item">
-            <span class="subpage-stat-num">New Delhi</span>
-            <span class="subpage-stat-lbl">Strategic Growth Desk</span>
-          </div>
-        </div>
+        <h1 style="font-family: var(--font-hand); font-size: clamp(3rem, 5.5vw, 4.5rem); font-weight: 700; color: #FFFDF9; line-height: 1.06; margin-bottom: 1rem;">
+          Reserve Your Digital Brief. <br>
+          <span class="script-highlight">Let's Build Something Iconic.</span>
+          <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon" style="margin-left: 8px;">
+        </h1>
+
+        <p style="font-family: var(--font-body); font-size: 1.08rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+          Have an ambitious web platform, luxury e-commerce storefront, or high-ROAS social campaign in mind? Brief us on your vision. Our founders respond within 4 hours with a tailored architectural roadmap.
+        </p>
       </div>
     </div>
   </section>
+
+  <!-- Torn Paper Divider (Dark to Kraft) -->
+  <div class="torn-divider torn-kraft-top" aria-hidden="true"></div>
 
   <!-- ========================================================================
-       CONTACT & STRATEGIC INTAKE DESK
+       2. RESERVATION DESK & BRIEF FORM (KRAFT PAPER SCRAPBOOK SECTION)
        ======================================================================== -->
-  <section class="contact-section" id="contact" style="padding-top: 40px;">
+  <section class="kraft-disciplines-section" id="contact">
     <div class="container">
       
-      <div class="contact-card-editorial spotlight-card reveal-on-scroll">
-        <div class="contact-editorial-grid">
-          
-          <div class="contact-left-editorial">
-            <div class="section-kicker">
-              <span class="kicker-line"></span>
-              <span>Direct Studio Channels</span>
-            </div>
-            <h2>Turn Vision Into <br><span class="text-gradient-champagne">Engineered Reality.</span></h2>
-            <p class="contact-intro">
-              Whether you need turnkey software delivery or an aggressive social media growth campaign, you communicate directly with our principals.
-            </p>
+      <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: start;" class="timeline-grid">
+        
+        <!-- Left: Pinned Studio Channels & Guarantee Memo -->
+        <div>
+          <div class="pinned-event-sheet" style="transform: rotate(-1deg); margin-bottom: 2rem;">
+            <img src="assets/images/doodle_pushpin.svg" alt="Pin" class="pinned-pushpin">
+            <div class="pinned-title">Direct Studio Channels</div>
 
-            <div class="editorial-contact-rows">
-              <div class="contact-item-row">
-                <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
-                <div class="contact-item-data">
-                  <strong>Direct Inquiries</strong>
-                  <span><?= htmlspecialchars($agency['email'] ?? 'bluehourcreativestudio8@gmail.com') ?></span>
+            <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.75rem;">
+              <div style="display: flex; gap: 1rem; align-items: center;">
+                <div class="discipline-icon-box" style="margin-bottom: 0; width: 46px; height: 46px; font-size: 1.1rem;">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <strong style="display: block; font-size: 0.75rem; font-family: var(--font-mono); color: #7D6B58; text-transform: uppercase;">Direct Email Desk</strong>
+                  <a href="mailto:<?= htmlspecialchars($agency['email'] ?? 'bluehourcreativestudio8@gmail.com') ?>" style="font-weight: 700; color: #211913; font-size: 0.95rem;">
+                    <?= htmlspecialchars($agency['email'] ?? 'bluehourcreativestudio8@gmail.com') ?>
+                  </a>
                 </div>
               </div>
 
-              <div class="contact-item-row">
-                <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
-                <div class="contact-item-data">
-                  <strong>Consultation & WhatsApp</strong>
-                  <span><?= htmlspecialchars($agency['phone'] ?? '+91 7002201534') ?></span>
+              <div style="display: flex; gap: 1rem; align-items: center;">
+                <div class="discipline-icon-box" style="margin-bottom: 0; width: 46px; height: 46px; font-size: 1.1rem;">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <strong style="display: block; font-size: 0.75rem; font-family: var(--font-mono); color: #7D6B58; text-transform: uppercase;">Founder Hotline &amp; WhatsApp</strong>
+                  <a href="https://wa.me/917002201534" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #211913; font-size: 1.02rem;">
+                    <?= htmlspecialchars($agency['phone'] ?? '+91 7002201534') ?>
+                  </a>
                 </div>
               </div>
 
-              <div class="contact-item-row">
-                <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
-                <div class="contact-item-data">
-                  <strong>Studio Hubs</strong>
-                  <span><?= htmlspecialchars($agency['location'] ?? 'Guwahati & New Delhi, India') ?></span>
+              <div style="display: flex; gap: 1rem; align-items: center;">
+                <div class="discipline-icon-box" style="margin-bottom: 0; width: 46px; height: 46px; font-size: 1.1rem;">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <strong style="display: block; font-size: 0.75rem; font-family: var(--font-mono); color: #7D6B58; text-transform: uppercase;">Studio Hubs</strong>
+                  <span style="font-weight: 700; color: #211913; font-size: 0.95rem;">
+                    <?= htmlspecialchars($agency['location'] ?? 'Guwahati & New Delhi, India') ?>
+                  </span>
                 </div>
               </div>
             </div>
 
-            <div class="social-pills-row">
-              <a href="<?= htmlspecialchars($agency['socials']['instagram'] ?? '#') ?>" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="<?= htmlspecialchars($agency['socials']['linkedin'] ?? '#') ?>" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="<?= htmlspecialchars($agency['socials']['github'] ?? '#') ?>" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://wa.me/917002201534" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-              </a>
-            </div>
-
-            <div style="margin-top: 2rem; padding: 1.25rem; border-radius: var(--radius-md); background: rgba(59, 130, 246, 0.06); border: 1px solid var(--border-subtle);">
-              <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; color: var(--accent-champagne); font-size: 0.85rem; font-weight: 600;">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span>Need Instant Answers?</span>
-              </div>
-              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.8rem;">
-                Connect directly with our team on WhatsApp for immediate feedback on project availability, timelines, and scope.
-              </p>
-              <a href="https://wa.me/917002201534?text=Hi%20Blue%20Hour%20Studios,%20I%20have%20a%20project%20inquiry" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="font-size: 0.78rem; padding: 0.45rem 0.9rem;">
-                <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
-                <span>Chat on WhatsApp</span>
+            <div style="padding-top: 1.1rem; border-top: 1px dashed rgba(160,130,90,0.45);">
+              <a href="https://wa.me/917002201534?text=Hi%20Blue%20Hour%20Studios,%20I%20have%20a%20project%20inquiry" target="_blank" rel="noopener noreferrer" class="btn-orange-solid" style="width: 100%; justify-content: center;">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem;"></i>
+                <span>Instant WhatsApp Connect</span>
               </a>
             </div>
           </div>
-
-          <!-- Sleek Interactive Inquiry Form with Scope & Sprint Estimator -->
-          <div class="contact-right-form">
-            <form id="agencyInquiryForm" class="inquiry-form-editorial" method="POST">
-              
-              <div class="form-feedback-alert" id="formAlert"></div>
-
-              <!-- Interactive Project Scope & Timeline Estimator Widget -->
-              <div class="scope-estimator-wrap" id="scopeEstimatorWrap">
-                <div class="estimator-header-row">
-                  <span class="estimator-title"><i class="fa-solid fa-sliders"></i> Interactive Sprint & Timeline Calculator</span>
-                </div>
-
-                <div class="scope-chips-cluster">
-                  <label class="scope-checkbox-label is-checked">
-                    <input type="checkbox" name="scope_items[]" value="Custom Web App" data-weeks="3" checked>
-                    <span>Full-Stack Web App (+3w)</span>
-                  </label>
-                  <label class="scope-checkbox-label">
-                    <input type="checkbox" name="scope_items[]" value="Luxury E-Commerce" data-weeks="2">
-                    <span>E-Commerce Portal (+2w)</span>
-                  </label>
-                  <label class="scope-checkbox-label is-checked">
-                    <input type="checkbox" name="scope_items[]" value="Social Media Engine" data-weeks="2" checked>
-                    <span>Social Media Engine (+2w)</span>
-                  </label>
-                  <label class="scope-checkbox-label">
-                    <input type="checkbox" name="scope_items[]" value="Enterprise ERP" data-weeks="4">
-                    <span>Enterprise ERP / CRM (+4w)</span>
-                  </label>
-                  <label class="scope-checkbox-label">
-                    <input type="checkbox" name="scope_items[]" value="Paid Ads Funnel" data-weeks="1">
-                    <span>Paid Meta Ads (+1w)</span>
-                  </label>
-                  <label class="scope-checkbox-label">
-                    <input type="checkbox" name="scope_items[]" value="Mobile App" data-weeks="4">
-                    <span>Mobile App Native (+4w)</span>
-                  </label>
-                </div>
-
-                <div class="estimator-calc-bar">
-                  <div class="calc-timeline-data">
-                    <strong id="estimatedTimelineText">4 — 5 WEEKS SPRINT</strong>
-                    <span id="estimatedTierText">EXPEDITED TURNKEY DELIVERY // ACTIVE ONBOARDING</span>
-                  </div>
-                  <span class="calc-badge-sprint" id="sprintBadgeStatus">FAST-TRACK</span>
-                </div>
-              </div>
-
-              <div class="form-group-editorial">
-                <label class="form-label-editorial">Select Primary Discipline</label>
-                <div class="chips-editorial-grid">
-                  <label class="chip-editorial-option">
-                    <input type="radio" name="service" value="Custom Web & SaaS Development" <?= empty($prefillService) || stripos($prefillService, 'web') !== false ? 'checked' : '' ?>>
-                    <span class="chip-editorial-box"><i class="fa-solid fa-code"></i> Web & SaaS Dev</span>
-                  </label>
-                  <label class="chip-editorial-option">
-                    <input type="radio" name="service" value="Social Media & Performance Marketing" <?= stripos($prefillService, 'social') !== false ? 'checked' : '' ?>>
-                    <span class="chip-editorial-box"><i class="fa-solid fa-chart-line"></i> Social Marketing</span>
-                  </label>
-                  <label class="chip-editorial-option">
-                    <input type="radio" name="service" value="Enterprise ERP & CRM Suite" <?= stripos($prefillService, 'erp') !== false ? 'checked' : '' ?>>
-                    <span class="chip-editorial-box"><i class="fa-solid fa-network-wired"></i> Enterprise ERP</span>
-                  </label>
-                  <label class="chip-editorial-option">
-                    <input type="radio" name="service" value="Brand Identity & Creative Direction" <?= stripos($prefillService, 'brand') !== false ? 'checked' : '' ?>>
-                    <span class="chip-editorial-box"><i class="fa-solid fa-wand-magic-sparkles"></i> Brand Identity</span>
-                  </label>
-                </div>
-              </div>
-
-              <div class="form-row-2-editorial">
-                <div class="form-group-editorial">
-                  <label for="clientName" class="form-label-editorial">Your Name *</label>
-                  <input type="text" id="clientName" name="name" class="input-editorial" placeholder="e.g. Rahul Sharma" required>
-                </div>
-                <div class="form-group-editorial">
-                  <label for="clientEmail" class="form-label-editorial">Corporate Email *</label>
-                  <input type="email" id="clientEmail" name="email" class="input-editorial" placeholder="rahul@company.com" required>
-                </div>
-              </div>
-
-              <div class="form-row-2-editorial">
-                <div class="form-group-editorial">
-                  <label for="clientPhone" class="form-label-editorial">Phone / WhatsApp</label>
-                  <input type="tel" id="clientPhone" name="phone" class="input-editorial" placeholder="+91 98765 43210">
-                </div>
-                <div class="form-group-editorial">
-                  <label for="clientBudget" class="form-label-editorial">Selected Package / Scope Tier</label>
-                  <select id="clientBudget" name="budget" class="input-editorial">
-                    <option value="Website Starter — ₹8,000 – ₹10,000" <?= stripos($prefillPackage, 'Starter') !== false ? 'selected' : '' ?>>Website Starter (₹8,000 – ₹10,000 one-time)</option>
-                    <option value="Website + CMS & Payments — ₹16,000" <?= stripos($prefillPackage, 'CMS') !== false || empty($prefillPackage) ? 'selected' : '' ?>>Website + CMS & Payments (₹16,000 one-time)</option>
-                    <option value="Social Media Management — ₹10,000/mo" <?= stripos($prefillPackage, 'Social Media') !== false ? 'selected' : '' ?>>Social Media Management (₹10,000 / month)</option>
-                    <option value="Complete Digital Growth — ₹20,000/mo" <?= stripos($prefillPackage, 'Growth') !== false ? 'selected' : '' ?>>Complete Digital Growth + Brand Shoots (₹20,000 / month)</option>
-                    <option value="Mobile App (Android + iOS) — From ₹25,000" <?= stripos($prefillPackage, 'Mobile') !== false ? 'selected' : '' ?>>Mobile App (Android + iOS) (From ₹25,000)</option>
-                    <option value="Custom Enterprise / Retainer" <?= stripos($prefillPackage, 'Enterprise') !== false ? 'selected' : '' ?>>Custom Enterprise / Multi-Service Retainer</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group-editorial">
-                <label for="clientMessage" class="form-label-editorial">Project Scope & Objectives *</label>
-                <textarea id="clientMessage" name="message" class="input-editorial" placeholder="Detail your target launch date, software architecture needs, or social marketing goals..." required><?= !empty($prefillConsult) ? "Hi, I would like to schedule an architectural consultation with " . htmlspecialchars($prefillConsult) . ". " : '' ?></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary submit-btn-monolith magnetic-btn" id="submitBtn">
-                <span>Submit Strategic Brief</span>
-                <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem;"></i>
-              </button>
-            </form>
-          </div>
-
         </div>
+
+        <!-- Right: Pinned Kraft Brief Reservation Form -->
+        <div style="position: relative; background: #FFFDF9; border: 1px solid var(--bg-kraft-border); border-radius: 10px; padding: 2.5rem 2.25rem; box-shadow: 0 18px 42px rgba(70,50,30,0.14);">
+          <span class="washi-tape washi-tape-top"></span>
+
+          <div class="script-kicker" style="color: var(--accent-orange-deep);">
+            <span>Project Intake Clipboard</span>
+          </div>
+          <h2 style="font-family: var(--font-hand); font-size: 2.3rem; font-weight: 700; color: #211913; margin-bottom: 1.25rem;">
+            Tell Us About Your Build
+          </h2>
+
+          <div id="formAlert" style="display: none; padding: 0.9rem 1rem; border-radius: 6px; margin-bottom: 1.25rem; font-size: 0.9rem; font-weight: 600;"></div>
+
+          <form id="scrapbookInquiryForm" method="POST" action="api/contact.php">
+            <div class="contact-form-row-2">
+              <div>
+                <label for="clientName" style="display: block; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: #5C4B3A; text-transform: uppercase; margin-bottom: 0.35rem;">Your Name *</label>
+                <input type="text" id="clientName" name="name" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 0.75rem 0.9rem; border-radius: 6px; border: 1.5px solid #D8C6AA; background: #FAF5EC; font-family: var(--font-body); font-size: 0.92rem; color: #211913;">
+              </div>
+              <div>
+                <label for="clientEmail" style="display: block; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: #5C4B3A; text-transform: uppercase; margin-bottom: 0.35rem;">Email Address *</label>
+                <input type="email" id="clientEmail" name="email" required placeholder="rahul@company.com" style="width: 100%; padding: 0.75rem 0.9rem; border-radius: 6px; border: 1.5px solid #D8C6AA; background: #FAF5EC; font-family: var(--font-body); font-size: 0.92rem; color: #211913;">
+              </div>
+            </div>
+
+            <div class="contact-form-row-2">
+              <div>
+                <label for="clientPhone" style="display: block; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: #5C4B3A; text-transform: uppercase; margin-bottom: 0.35rem;">Phone / WhatsApp</label>
+                <input type="tel" id="clientPhone" name="phone" placeholder="+91 98765 43210" style="width: 100%; padding: 0.75rem 0.9rem; border-radius: 6px; border: 1.5px solid #D8C6AA; background: #FAF5EC; font-family: var(--font-body); font-size: 0.92rem; color: #211913;">
+              </div>
+              <div>
+                <label for="clientService" style="display: block; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: #5C4B3A; text-transform: uppercase; margin-bottom: 0.35rem;">Primary Discipline</label>
+                <select id="clientService" name="service" style="width: 100%; padding: 0.75rem 0.9rem; border-radius: 6px; border: 1.5px solid #D8C6AA; background: #FAF5EC; font-family: var(--font-body); font-size: 0.92rem; color: #211913;">
+                  <option value="Custom Web & SaaS Development" <?= stripos($prefillService, 'web') !== false ? 'selected' : '' ?>>Custom Web &amp; SaaS Development</option>
+                  <option value="Luxury E-Commerce Storefront" <?= stripos($prefillService, 'commerce') !== false ? 'selected' : '' ?>>Luxury E-Commerce Storefront</option>
+                  <option value="Social Media & Performance Marketing" <?= stripos($prefillService, 'social') !== false ? 'selected' : '' ?>>Social Media &amp; Performance Ads</option>
+                  <option value="Enterprise ERP & CRM Suite" <?= stripos($prefillService, 'erp') !== false ? 'selected' : '' ?>>Enterprise ERP &amp; CRM Suite</option>
+                  <option value="Mobile App (iOS & Android)" <?= stripos($prefillService, 'mobile') !== false ? 'selected' : '' ?>>Mobile App (iOS &amp; Android)</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1.1rem;">
+              <label for="clientBudget" style="display: block; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: #5C4B3A; text-transform: uppercase; margin-bottom: 0.35rem;">Selected Package / Scope Tier</label>
+              <select id="clientBudget" name="budget" style="width: 100%; padding: 0.75rem 0.9rem; border-radius: 6px; border: 1.5px solid #D8C6AA; background: #FAF5EC; font-family: var(--font-body); font-size: 0.92rem; color: #211913;">
+                <option value="Website Starter — ₹8,000 – ₹10,000" <?= stripos($prefillPackage, 'Starter') !== false ? 'selected' : '' ?>>Website Starter (₹8,000 – ₹10,000 one-time)</option>
+                <option value="Website + CMS & Payments — ₹16,000" <?= stripos($prefillPackage, 'CMS') !== false || empty($prefillPackage) ? 'selected' : '' ?>>Website + CMS &amp; Payments (₹16,000 one-time)</option>
+                <option value="Social Media Management — ₹10,000/mo" <?= stripos($prefillPackage, 'Social Media') !== false ? 'selected' : '' ?>>Social Media Management (₹10,000 / month)</option>
+                <option value="Complete Digital Growth — ₹20,000/mo" <?= stripos($prefillPackage, 'Growth') !== false ? 'selected' : '' ?>>Complete Digital Growth + Brand Shoots (₹20,000 / month)</option>
+                <option value="Mobile App (Android + iOS) — From ₹25,000" <?= stripos($prefillPackage, 'Mobile') !== false ? 'selected' : '' ?>>Mobile App (Android + iOS) (From ₹25,000)</option>
+                <option value="Custom Enterprise / Retainer" <?= stripos($prefillPackage, 'Enterprise') !== false ? 'selected' : '' ?>>Custom Enterprise / Multi-Service Retainer</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 1.4rem;">
+              <label for="clientMessage" style="display: block; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: #5C4B3A; text-transform: uppercase; margin-bottom: 0.35rem;">Project Scope &amp; Objectives *</label>
+              <textarea id="clientMessage" name="message" rows="4" required placeholder="Detail your target launch date, website requirements, or social marketing goals..." style="width: 100%; padding: 0.8rem 0.9rem; border-radius: 6px; border: 1.5px solid #D8C6AA; background: #FAF5EC; font-family: var(--font-body); font-size: 0.92rem; color: #211913; resize: vertical;"><?= !empty($prefillConsult) ? "Hi, I would like to schedule a consultation with " . htmlspecialchars($prefillConsult) . ". " : '' ?></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-orange-solid" style="width: 100%; justify-content: center; padding: 1rem; font-size: 1.02rem;">
+              <span>Submit Strategic Brief</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+
       </div>
 
     </div>
   </section>
+
+  <!-- Torn Paper Divider (Kraft to Dark) -->
+  <div class="torn-divider torn-dark-top" aria-hidden="true"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('scrapbookInquiryForm');
+      const alertBox = document.getElementById('formAlert');
+      const submitBtn = document.getElementById('submitBtn');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span>Dispatching Brief...</span>';
+          const formData = new FormData(form);
+          fetch('api/contact.php', {
+            method: 'POST',
+            body: formData
+          })
+          .then(function(r) { return r.json(); })
+          .then(function(res) {
+            alertBox.style.display = 'block';
+            if (res.success) {
+              alertBox.style.background = '#DCFCE7';
+              alertBox.style.color = '#166534';
+              alertBox.style.border = '1px solid #86EFAC';
+              alertBox.textContent = res.message || 'Brief received! Redirecting to WhatsApp desk...';
+              if (res.whatsapp_url) {
+                setTimeout(function() { window.open(res.whatsapp_url, '_blank'); }, 900);
+              }
+              form.reset();
+            } else {
+              alertBox.style.background = '#FEE2E2';
+              alertBox.style.color = '#991B1B';
+              alertBox.textContent = res.message || 'Please check your inputs and try again.';
+            }
+          })
+          .catch(function() {
+            alertBox.style.display = 'block';
+            alertBox.style.background = '#DCFCE7';
+            alertBox.style.color = '#166534';
+            alertBox.textContent = 'Opening direct WhatsApp founder desk...';
+            const name = document.getElementById('clientName').value;
+            const msg = document.getElementById('clientMessage').value;
+            window.open('https://wa.me/917002201534?text=' + encodeURIComponent('Hi Blue Hour Studios! I am ' + name + '. ' + msg), '_blank');
+          })
+          .finally(function() {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>Submit Strategic Brief</span> <i class="fa-solid fa-arrow-right"></i>';
+          });
+        });
+      }
+    });
+  </script>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

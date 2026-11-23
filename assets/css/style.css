@@ -57,7 +57,9 @@
 /* --------------------------------------------------------------------------
    2. GLOBAL RESETS & BASE STYLES
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -68,6 +70,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -76,6 +80,8 @@ body {
   color: var(--text-light);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -299,22 +305,356 @@ ul {
 @media (max-width: 900px) {
   .nav-links {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.15rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 17, 14, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 1.75rem 1.5rem 2rem;
+    border-bottom: 2px solid rgba(232, 141, 56, 0.35);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+    z-index: 320;
   }
+
+  .nav-links.mobile-menu-open {
+    display: flex;
+  }
+
+  html[data-theme="light"] .nav-links {
+    background: rgba(247, 241, 229, 0.98);
+    border-bottom: 2px solid rgba(180, 120, 50, 0.35);
+    box-shadow: 0 18px 40px rgba(80, 60, 40, 0.22);
+  }
+
+  html[data-theme="light"] .nav-links .nav-link {
+    color: #5C4B3A;
+  }
+
+  html[data-theme="light"] .nav-links .nav-link.active,
+  html[data-theme="light"] .nav-links .nav-link:hover {
+    color: #231A12;
+  }
+
   .menu-toggle-btn {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(232, 141, 56, 0.35);
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-reserve-table {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 }
 
 /* --------------------------------------------------------------------------
-   5. HERO SECTION (ROOT BARREL "MORE THAN A CAFE" AESTHETIC)
+   5. GLOBAL ARTISANAL STUDIO ATMOSPHERE & HERO SECTION
    -------------------------------------------------------------------------- */
+.studio-ambient-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Warm Dark Roasted Espresso Wood / Chalkboard Texture */
+.studio-board-texture {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(232, 141, 56, 0.14) 0%, transparent 70%),
+    radial-gradient(circle at 15% 35%, rgba(185, 95, 30, 0.10) 0%, transparent 55%),
+    radial-gradient(circle at 85% 65%, rgba(232, 141, 56, 0.10) 0%, transparent 55%),
+    repeating-linear-gradient(90deg,
+      rgba(255, 245, 230, 0.012) 0px,
+      rgba(255, 245, 230, 0.012) 1px,
+      transparent 1px,
+      transparent 96px),
+    repeating-linear-gradient(0deg,
+      rgba(255, 245, 230, 0.012) 0px,
+      rgba(255, 245, 230, 0.012) 1px,
+      transparent 1px,
+      transparent 96px);
+}
+
+/* Subtle Architectural Dot Matrix & Blueprint Grid */
+.studio-blueprint-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(232, 141, 56, 0.22) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, #000 35%, transparent 100%);
+  opacity: 0.55;
+}
+
+/* Warm Edison & Amber Parallax Aurora Orbs */
+.studio-aurora-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  pointer-events: none;
+  will-change: transform;
+  transition: transform 0.15s ease-out;
+}
+
+.orb-amber-1 {
+  width: 520px;
+  height: 520px;
+  top: -120px;
+  right: 8%;
+  background: radial-gradient(circle, rgba(232, 141, 56, 0.25) 0%, rgba(217, 119, 36, 0.08) 55%, transparent 75%);
+}
+
+.orb-copper-2 {
+  width: 480px;
+  height: 480px;
+  bottom: 10%;
+  left: -80px;
+  background: radial-gradient(circle, rgba(205, 105, 35, 0.20) 0%, rgba(160, 75, 20, 0.06) 60%, transparent 75%);
+}
+
+.orb-gold-3 {
+  width: 380px;
+  height: 380px;
+  top: 38%;
+  left: 42%;
+  background: radial-gradient(circle, rgba(244, 195, 110, 0.14) 0%, transparent 70%);
+}
+
+/* Interactive Firefly & Constellation Canvas */
+.studio-firefly-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Organic Analog Film & Paper Grain Overlay */
+.studio-film-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  opacity: 0.045;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Hero Section with Layered Studio Backdrop */
 .hero-craft-section {
   position: relative;
-  padding: 5.5rem 0 4.5rem;
-  background: radial-gradient(circle at 75% 25%, rgba(232, 141, 56, 0.12) 0%, transparent 60%),
-              radial-gradient(circle at 20% 70%, rgba(200, 110, 30, 0.08) 0%, transparent 50%),
-              var(--bg-dark);
+  padding: 6rem 0 5.5rem;
+  background: transparent;
   overflow: hidden;
+  z-index: 2;
+}
+
+.hero-studio-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Clean Warm Architectural Drafting Backdrop (No Blurry Ghost Text) */
+.hero-architectural-canvas {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 75% 42%, rgba(232, 141, 56, 0.22) 0%, rgba(185, 95, 25, 0.08) 40%, transparent 70%),
+    radial-gradient(circle at 22% 35%, rgba(232, 141, 56, 0.10) 0%, transparent 55%),
+    repeating-linear-gradient(-45deg,
+      rgba(255, 245, 230, 0.012) 0px,
+      rgba(255, 245, 230, 0.012) 1px,
+      transparent 1px,
+      transparent 18px);
+}
+
+/* Hanging Warm Edison String Lights Across Top */
+.hero-edison-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.92;
+  animation: swayLights 7s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+
+@keyframes swayLights {
+  0% {
+    transform: rotate(-0.3deg) translateY(0px);
+  }
+
+  100% {
+    transform: rotate(0.3deg) translateY(2px);
+  }
+}
+
+/* Rich Warm Roasted Espresso Vignette */
+.hero-backdrop-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 72% 45%, rgba(232, 141, 56, 0.16) 0%, rgba(16, 14, 12, 0.65) 55%, rgba(16, 14, 12, 0.94) 92%),
+    linear-gradient(180deg, rgba(16, 14, 12, 0.45) 0%, rgba(22, 17, 13, 0.35) 50%, rgba(16, 14, 12, 0.92) 100%);
+}
+
+/* Warm Diagonal Edison Window Light Rays */
+.hero-light-beams {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(125deg, transparent 20%, rgba(232, 141, 56, 0.07) 35%, transparent 50%),
+    linear-gradient(125deg, transparent 50%, rgba(255, 220, 170, 0.05) 62%, transparent 78%);
+  mix-blend-mode: screen;
+}
+
+/* Floating Hand-Drawn Chalk & Orange Studio Sketches */
+.studio-sketch {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+}
+
+.sketch-top-left {
+  top: 38px;
+  left: 3%;
+  width: 245px;
+  opacity: 0.9;
+  animation: floatSketch 8s ease-in-out infinite;
+}
+
+.sketch-bottom-left {
+  bottom: 18px;
+  left: 34%;
+  width: 295px;
+  opacity: 0.85;
+  animation: floatSketch 10s ease-in-out infinite reverse;
+}
+
+.sketch-top-right {
+  top: 32px;
+  right: 3%;
+  width: 245px;
+  opacity: 0.9;
+  animation: floatSketch 9s ease-in-out infinite;
+}
+
+/* Live Studio Status & Q4 Availability Pill */
+.hero-live-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 253, 249, 0.045);
+  border: 1px solid rgba(232, 141, 56, 0.35);
+  border-radius: var(--radius-pill);
+  padding: 0.38rem 0.95rem;
+  margin-bottom: 1.15rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  flex-wrap: wrap;
+}
+
+.live-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulseGreenDot 2s infinite;
+}
+
+@keyframes pulseGreenDot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.live-status-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #FFFDF9;
+}
+
+.live-status-sep {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+}
+
+.live-status-loc {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent-orange);
+  letter-spacing: 0.04em;
+}
+
+.studio-watermark-text {
+  position: absolute;
+  bottom: 18px;
+  right: 3%;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 253, 249, 0.035);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+@keyframes floatSketch {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(1.5deg);
+  }
+}
+
+@media (max-width: 960px) {
+
+  .sketch-top-left,
+  .sketch-bottom-left,
+  .sketch-top-right,
+  .hero-backing-polaroid {
+    display: none;
+  }
 }
 
 .hero-craft-grid {
@@ -417,20 +757,198 @@ ul {
   transform: translateY(-2px);
 }
 
-/* Pinned Kraft Paper Notepad (Root Barrel Hero Sticky Note) */
+/* Pinned Kraft Paper Notepad + Interactive 3D Polaroids Collage */
 .hero-notepad-wrap {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 2.2rem 2.5rem;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+}
+
+.hero-polaroid-hint {
+  position: absolute;
+  top: -22px;
+  left: 12px;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  transform: rotate(-6deg);
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Interactive Clickable Mini Polaroids Fanned Out Around Hero Notepad */
+.hero-backing-polaroid {
+  position: absolute;
+  background: #FFFDF9;
+  padding: 8px 8px 12px 8px;
+  border-radius: 3px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.72), 0 3px 10px rgba(0, 0, 0, 0.35);
+  width: 185px;
+  z-index: 2;
+  border: 1px solid rgba(220, 205, 185, 0.55);
+  cursor: pointer;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.38s ease, z-index 0s;
+}
+
+.backing-polaroid-left {
+  top: -16px;
+  left: -34px;
+  transform: rotate(-12.5deg);
+}
+
+.backing-polaroid-right {
+  bottom: -24px;
+  right: -32px;
+  transform: rotate(11deg);
+}
+
+.backing-polaroid-bottom-left {
+  bottom: -18px;
+  left: -26px;
+  transform: rotate(-8deg);
+  width: 170px;
+}
+
+.hero-notepad-wrap:hover .backing-polaroid-left {
+  transform: rotate(-15deg) translate(-26px, -10px);
+}
+
+.hero-notepad-wrap:hover .backing-polaroid-right {
+  transform: rotate(14deg) translate(26px, 10px);
+}
+
+.hero-notepad-wrap:hover .backing-polaroid-bottom-left {
+  transform: rotate(-12deg) translate(-22px, 14px);
+}
+
+/* Hovering directly on a backing Polaroid pops it to the front! */
+.hero-backing-polaroid:hover {
+  z-index: 12 !important;
+  transform: rotate(0deg) scale(1.14) translateY(-8px) !important;
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.88), 0 0 24px rgba(232, 141, 56, 0.45);
+}
+
+.backing-polaroid-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #181411;
+  margin-bottom: 6px;
+}
+
+.backing-polaroid-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero-backing-polaroid:hover .backing-polaroid-img img {
+  transform: scale(1.06);
+}
+
+.backing-polaroid-live {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(16, 14, 12, 0.82);
+  color: var(--accent-orange);
+  font-size: 0.62rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hero-backing-polaroid:hover .backing-polaroid-live {
+  opacity: 1;
+}
+
+.backing-polaroid-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.backing-polaroid-caption {
+  display: block;
+  font-family: var(--font-hand);
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #2B2118;
+  line-height: 1.1;
+}
+
+.backing-polaroid-tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--accent-orange-deep);
+  text-transform: uppercase;
+}
+
+/* Rotating Studio Seal Stamp */
+.hero-craft-seal {
+  position: absolute;
+  top: -26px;
+  right: 8px;
+  z-index: 4;
+  pointer-events: none;
+  animation: spinSlowSeal 28s linear infinite;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes spinSlowSeal {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.notepad-paperclip {
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  width: 24px;
+  height: 36px;
+  transform: rotate(-8deg);
+  z-index: 6;
+  pointer-events: none;
 }
 
 .hero-notepad {
   position: relative;
-  background: var(--bg-kraft-note);
-  border: 1px solid rgba(190, 165, 120, 0.45);
+  z-index: 3;
+  background:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 27px,
+      rgba(160, 130, 90, 0.12) 28px),
+    var(--bg-kraft-note);
+  border: 1px solid rgba(190, 165, 120, 0.55);
   padding: 1.8rem 1.8rem 1.5rem 1.8rem;
-  border-radius: 2px;
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.5), 0 3px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.65), 0 4px 12px rgba(0, 0, 0, 0.3);
   transform: rotate(2.5deg);
   width: 100%;
   max-width: 360px;
@@ -525,10 +1043,8 @@ ul {
   height: 28px;
   width: 90px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
-  clip-path: polygon(
-    0% 3px, 2px 0%, 5px 3px, 7px 1px, 98% 2px, 100% 5px, 98% 8px, 100% 12px, 
-    97% 16px, 100% 21px, 98% 26px, 95% 28px, 3px 27px, 0% 25px, 2px 20px, 0% 15px, 2px 10px, 0% 5px
-  );
+  clip-path: polygon(0% 3px, 2px 0%, 5px 3px, 7px 1px, 98% 2px, 100% 5px, 98% 8px, 100% 12px,
+      97% 16px, 100% 21px, 98% 26px, 95% 28px, 3px 27px, 0% 25px, 2px 20px, 0% 15px, 2px 10px, 0% 5px);
   pointer-events: none;
   opacity: 0.94;
 }
@@ -639,9 +1155,13 @@ ul {
    9. "TODAY'S FLAGSHIPS" (POLAROID PHOTO PRINTS SHOWCASE)
    -------------------------------------------------------------------------- */
 .polaroids-showcase-section {
-  background: var(--bg-dark);
+  background:
+    radial-gradient(circle at 85% 20%, rgba(232, 141, 56, 0.11) 0%, transparent 55%),
+    radial-gradient(circle at 12% 75%, rgba(217, 119, 36, 0.09) 0%, transparent 55%),
+    rgba(16, 14, 12, 0.78);
   padding: 5rem 0 5.5rem;
   position: relative;
+  z-index: 2;
 }
 
 .specials-head-row {
@@ -731,12 +1251,29 @@ ul {
 }
 
 /* Natural Scattered Tilts */
-.polaroids-grid .polaroid-card:nth-child(1) { transform: rotate(-2deg); }
-.polaroids-grid .polaroid-card:nth-child(2) { transform: rotate(1.5deg); }
-.polaroids-grid .polaroid-card:nth-child(3) { transform: rotate(-1.3deg); }
-.polaroids-grid .polaroid-card:nth-child(4) { transform: rotate(1.8deg); }
-.polaroids-grid .polaroid-card:nth-child(5) { transform: rotate(-1.5deg); }
-.polaroids-grid .polaroid-card:nth-child(6) { transform: rotate(1.2deg); }
+.polaroids-grid .polaroid-card:nth-child(1) {
+  transform: rotate(-2deg);
+}
+
+.polaroids-grid .polaroid-card:nth-child(2) {
+  transform: rotate(1.5deg);
+}
+
+.polaroids-grid .polaroid-card:nth-child(3) {
+  transform: rotate(-1.3deg);
+}
+
+.polaroids-grid .polaroid-card:nth-child(4) {
+  transform: rotate(1.8deg);
+}
+
+.polaroids-grid .polaroid-card:nth-child(5) {
+  transform: rotate(-1.5deg);
+}
+
+.polaroids-grid .polaroid-card:nth-child(6) {
+  transform: rotate(1.2deg);
+}
 
 .polaroid-card:hover {
   transform: rotate(0deg) translateY(-10px) scale(1.025) !important;
@@ -907,9 +1444,14 @@ ul {
    10. "WHAT'S HAPPENING" & PINNED TIMELINE (ROOT BARREL EVENT SECTION)
    -------------------------------------------------------------------------- */
 .timeline-section {
-  background: var(--bg-dark-elevated);
+  background:
+    radial-gradient(circle at 20% 30%, rgba(232, 141, 56, 0.10) 0%, transparent 55%),
+    rgba(24, 21, 18, 0.84);
   padding: 5rem 0 5.5rem;
   position: relative;
+  z-index: 2;
+  border-top: 1px dashed rgba(232, 141, 56, 0.15);
+  border-bottom: 1px dashed rgba(232, 141, 56, 0.15);
 }
 
 .timeline-grid {
@@ -1191,4 +1733,895 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   14. INTERACTIVE HANGING PULL-CHAIN EDISON BULB & DAYLIGHT STUDIO THEME
+   -------------------------------------------------------------------------- */
+.pull-bulb-fixture {
+  position: fixed;
+  top: 62px;
+  right: max(18px, calc((100vw - var(--container-max)) / 2 - 42px));
+  z-index: 250;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.pull-bulb-fixture:active {
+  cursor: grabbing;
+}
+
+.pull-bulb-assembly {
+  position: relative;
+  width: 72px;
+  height: 168px;
+  transform-origin: top center;
+  animation: gentleBulbPendulum 5.5s ease-in-out infinite alternate;
+  transition: filter 0.35s ease;
+}
+
+.pull-bulb-fixture:hover .pull-bulb-assembly {
+  filter: drop-shadow(0 0 18px rgba(246, 185, 94, 0.55));
+}
+
+.pull-bulb-assembly.is-pulled-bounce {
+  animation: bulbPullBounce 0.65s cubic-bezier(0.28, 1.45, 0.45, 1);
+}
+
+@keyframes gentleBulbPendulum {
+  0% {
+    transform: rotate(-1.8deg);
+  }
+
+  100% {
+    transform: rotate(1.8deg);
+  }
+}
+
+@keyframes bulbPullBounce {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  30% {
+    transform: translateY(22px) rotate(-3deg);
+  }
+
+  65% {
+    transform: translateY(-7px) rotate(2deg);
+  }
+
+  85% {
+    transform: translateY(3px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.pull-bulb-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  display: block;
+}
+
+.bulb-ambient-halo,
+.bulb-filament-wire,
+.bulb-filament-core,
+.bulb-glass-shell {
+  transition: all 0.4s ease;
+}
+
+/* Tooltip Tag Next to Pull Acorn */
+.pull-bulb-tooltip {
+  position: absolute;
+  bottom: 10px;
+  right: 64px;
+  background: var(--bg-kraft-note);
+  color: #2B2118;
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  border: 1px dashed rgba(140, 105, 60, 0.55);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+  pointer-events: none;
+  transform: rotate(-5deg);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.pull-bulb-fixture:hover .pull-bulb-tooltip {
+  transform: rotate(0deg) scale(1.07);
+}
+
+@media (max-width: 900px) {
+  .pull-bulb-fixture {
+    top: 56px;
+    right: 6px;
+    z-index: 90;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  }
+
+  .pull-bulb-assembly {
+    width: 50px;
+    height: 118px;
+  }
+
+  .pull-bulb-tooltip {
+    display: none;
+  }
+
+  /* Automatically tuck the hanging bulb away while the mobile menu dropdown is open */
+  .site-header.menu-is-open .pull-bulb-fixture {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-16px) scale(0.9);
+  }
+}
+
+/*Full-Screen Warm Edison Flash Wave When Bulb Is Pulled */
+.bulb-flash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: radial-gradient(circle at calc(100% - 60px) 110px, rgba(255, 226, 155, 0.52) 0%, rgba(232, 141, 56, 0.18) 45%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.45s ease-out;
+}
+
+.bulb-flash-overlay.flash-active {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   DAYLIGHT STUDIO PAPER THEME ([data-theme="light"])
+   Triggered when the user pulls the Edison bulb cord!
+   ========================================================================== */
+html[data-theme="light"] {
+  --bg-dark: #F7F1E5;
+  --bg-dark-elevated: #EFE6D5;
+  --bg-dark-card: #FFFDF9;
+  --bg-dark-border: rgba(90, 70, 45, 0.15);
+
+  --bg-kraft: #E6D8C0;
+  --bg-kraft-warm: #EFE3CE;
+  --bg-kraft-card: #FFFDF9;
+  --bg-kraft-note: #FFF5D6;
+  --bg-kraft-border: #CBB694;
+
+  --text-light: #231A12;
+  --text-muted: #5C4B3A;
+  --text-dim: #7D6B58;
+}
+
+/* In Daylight Studio Mode, the floodlights are ON and the hanging Edison filament dims slightly */
+html[data-theme="light"] .bulb-ambient-halo {
+  opacity: 0.65;
+  filter: drop-shadow(0 0 12px rgba(232, 141, 56, 0.5));
+}
+
+html[data-theme="light"] .bulb-glass-shell {
+  fill: rgba(255, 220, 140, 0.42);
+  stroke: #D97724;
+}
+
+html[data-theme="light"] .site-header {
+  background: rgba(247, 241, 229, 0.94);
+  border-bottom: 1px solid rgba(90, 70, 45, 0.14);
+}
+
+html[data-theme="light"] .brand-wordmark,
+html[data-theme="light"] .nav-link:hover,
+html[data-theme="light"] .nav-link.active,
+html[data-theme="light"] .btn-reserve-table,
+html[data-theme="light"] .menu-toggle-btn {
+  color: #231A12;
+}
+
+html[data-theme="light"] .hero-big-heading,
+html[data-theme="light"] .specials-main-title,
+html[data-theme="light"] .footer-col-title,
+html[data-theme="light"] h1,
+html[data-theme="light"] h2 {
+  color: #231A12 !important;
+}
+
+html[data-theme="light"] .hero-craft-section strong,
+html[data-theme="light"] .live-status-label {
+  color: #231A12 !important;
+}
+
+html[data-theme="light"] .btn-craft-outline {
+  color: #231A12 !important;
+  border-color: rgba(160, 110, 50, 0.55) !important;
+  background: rgba(255, 253, 249, 0.65);
+}
+
+html[data-theme="light"] .hero-backdrop-vignette {
+  background:
+    radial-gradient(circle at 72% 45%, rgba(232, 141, 56, 0.22) 0%, rgba(247, 241, 229, 0.68) 55%, rgba(247, 241, 229, 0.95) 92%),
+    linear-gradient(180deg, rgba(247, 241, 229, 0.55) 0%, rgba(239, 230, 213, 0.45) 50%, rgba(247, 241, 229, 0.95) 100%);
+}
+
+html[data-theme="light"] .polaroids-showcase-section,
+html[data-theme="light"] .timeline-section,
+html[data-theme="light"] .client-moments-section,
+html[data-theme="light"] .site-footer-craft {
+  background: #F4ECE0 !important;
+  color: #231A12;
+}
+
+html[data-theme="light"] .spotlight-dark-card {
+  background: #FFFDF9 !important;
+  border-color: #D8C6AA !important;
+  box-shadow: 0 12px 28px rgba(80, 60, 40, 0.12) !important;
+}
+
+html[data-theme="light"] .spotlight-dark-card h4 {
+  color: #231A12 !important;
+}
+
+html[data-theme="light"] .studio-watermark-text {
+  -webkit-text-stroke: 1px rgba(60, 45, 30, 0.08);
+}
+
+html[data-theme="light"] .studio-sketch text {
+  fill: rgba(70, 50, 30, 0.55) !important;
+}
+
+html[data-theme="light"] .studio-sketch rect,
+html[data-theme="light"] .studio-sketch line,
+html[data-theme="light"] .studio-sketch circle {
+  stroke: rgba(180, 110, 40, 0.42);
+}
+
+html[data-theme="light"] .hero-edison-lights path,
+html[data-theme="light"] .hero-edison-lights line {
+  stroke: rgba(90, 65, 40, 0.35);
+}
+
+html[data-theme="light"] .project-modal-dialog {
+  background: #FFFDF9;
+  color: #231A12;
+  border-color: #D8C6AA;
+}
+
+html[data-theme="light"] .project-modal-dialog h2,
+html[data-theme="light"] .project-modal-dialog h4,
+html[data-theme="light"] .project-modal-dialog span {
+  color: #231A12 !important;
+}
+
+/* --------------------------------------------------------------------------
+   15. ARTISANAL FRONT LOADING SCREEN (BLUE HOUR STUDIO PRELOADER)
+   -------------------------------------------------------------------------- */
+.bh-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 10000;
+  background: #100E0C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  touch-action: manipulation;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.75s ease;
+}
+
+html[data-theme="light"] .bh-preloader {
+  background: #F4ECE0;
+}
+
+.bh-preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3%) scale(1.03);
+  pointer-events: none;
+}
+
+.bh-preloader-ambient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(232, 141, 56, 0.24) 0%, rgba(185, 95, 25, 0.08) 42%, transparent 72%),
+    repeating-linear-gradient(90deg,
+      rgba(255, 245, 230, 0.015) 0px,
+      rgba(255, 245, 230, 0.015) 1px,
+      transparent 1px,
+      transparent 72px),
+    repeating-linear-gradient(0deg,
+      rgba(255, 245, 230, 0.015) 0px,
+      rgba(255, 245, 230, 0.015) 1px,
+      transparent 1px,
+      transparent 72px);
+  pointer-events: none;
+}
+
+.bh-preloader-stage {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+/* Unified Centered Wrapper for Rotating Seal Halo + Polaroid Card */
+.bh-preloader-emblem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 1.15rem;
+  flex-shrink: 0;
+}
+
+.bh-preloader-halo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: spinPreloaderRing 22s linear infinite;
+  opacity: 0.88;
+}
+
+.bh-preloader-ring-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes spinPreloaderRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bh-preloader-polaroid {
+  position: relative;
+  z-index: 2;
+  background: #FFFDF9;
+  padding: 10px 10px 14px 10px;
+  border-radius: 4px;
+  border: 1px solid #E5D7C3;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.72), 0 0 32px rgba(232, 141, 56, 0.24);
+  width: 205px;
+  transform: rotate(-1.5deg);
+  animation: floatPreloaderCard 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes floatPreloaderCard {
+  0% {
+    transform: rotate(-1.8deg) translateY(0px);
+  }
+
+  100% {
+    transform: rotate(1.2deg) translateY(-5px);
+  }
+}
+
+.bh-preloader-logo-box {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: radial-gradient(circle at 50% 50%, #1F1915 0%, #0E0B09 100%);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.bh-preloader-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(232, 141, 56, 0.35));
+  animation: pulsePreloaderLogo 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes pulsePreloaderLogo {
+  0% {
+    transform: scale(0.97);
+    filter: brightness(0.95) drop-shadow(0 4px 12px rgba(232, 141, 56, 0.25));
+  }
+
+  100% {
+    transform: scale(1.03);
+    filter: brightness(1.08) drop-shadow(0 6px 22px rgba(232, 141, 56, 0.55));
+  }
+}
+
+.bh-preloader-chin {
+  padding-top: 8px;
+  text-align: center;
+}
+
+.bh-preloader-tagline {
+  font-family: var(--font-hand);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #261D15;
+  display: block;
+  line-height: 1.15;
+}
+
+.bh-preloader-progress-wrap {
+  width: 100%;
+  max-width: 240px;
+}
+
+.bh-preloader-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.bh-preloader-status {
+  font-family: var(--font-hand);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bh-preloader-percent {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFFDF9;
+  flex-shrink: 0;
+}
+
+html[data-theme="light"] .bh-preloader-percent {
+  color: #231A12;
+}
+
+.bh-preloader-track {
+  width: 100%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1px solid rgba(232, 141, 56, 0.25);
+}
+
+html[data-theme="light"] .bh-preloader-track {
+  background: rgba(90, 70, 45, 0.12);
+}
+
+.bh-preloader-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #D97724 0%, #F6B95E 100%);
+  border-radius: 99px;
+  box-shadow: 0 0 12px rgba(232, 141, 56, 0.7);
+  transition: width 0.08s linear;
+}
+
+/* Mobile & Tablet Responsive Grids & Partner Brand Cards */
+.partner-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.35rem;
+}
+
+.partner-brand-card {
+  position: relative;
+  background: #FFFDF9;
+  padding: 9px 9px 12px 9px;
+  border-radius: 4px;
+  border: 1px solid rgba(220, 205, 185, 0.55);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+  text-decoration: none;
+}
+
+.partner-logos-grid .partner-brand-card:nth-child(odd) {
+  transform: rotate(-1.2deg);
+}
+
+.partner-logos-grid .partner-brand-card:nth-child(even) {
+  transform: rotate(1.2deg);
+}
+
+.partner-brand-card:hover {
+  transform: rotate(0deg) translateY(-7px) scale(1.03) !important;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.5), 0 0 18px rgba(232, 141, 56, 0.3);
+  z-index: 5;
+}
+
+.partner-logo-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.partner-logo-box img {
+  max-width: 88%;
+  max-height: 88%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 3px;
+  transition: transform 0.35s ease;
+}
+
+.partner-brand-card:hover .partner-logo-box img {
+  transform: scale(1.06);
+}
+
+.partner-brand-info {
+  padding-top: 9px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.partner-brand-name {
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #211913;
+  line-height: 1.1;
+  transition: color 0.2s ease;
+}
+
+.partner-brand-card:hover .partner-brand-name {
+  color: var(--accent-orange-deep);
+}
+
+.partner-brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #7D6B58;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.scrapbook-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 2.25rem;
+}
+
+.founders-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 2.5rem;
+}
+
+.founder-dossier-inner {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.contact-form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .partner-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .partner-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .founder-dossier-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-notepad-wrap {
+    padding: 1rem 0;
+  }
+
+  .hero-polaroid-hint {
+    display: none;
+  }
+
+  .bh-preloader-stage {
+    max-width: 280px;
+  }
+
+  .bh-preloader-emblem {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 0.9rem;
+  }
+
+  .bh-preloader-polaroid {
+    width: 172px;
+    padding: 8px 8px 11px 8px;
+  }
+
+  .bh-preloader-logo-box {
+    padding: 0.65rem;
+  }
+
+  .bh-preloader-tagline {
+    font-size: 0.92rem;
+  }
+
+  .bh-preloader-progress-wrap {
+    max-width: 205px;
+  }
+
+  .bh-preloader-status {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .bh-preloader-emblem {
+    width: 185px;
+    height: 185px;
+  }
+
+  .bh-preloader-polaroid {
+    width: 152px;
+  }
+
+  .bh-preloader-progress-wrap {
+    max-width: 180px;
+  }
+}
+
+@media (max-height: 520px) {
+  .bh-preloader-emblem {
+    width: 175px;
+    height: 175px;
+    margin-bottom: 0.65rem;
+  }
+
+  .bh-preloader-polaroid {
+    width: 145px;
+    padding: 6px 6px 9px;
+  }
+
+  .bh-preloader-tagline {
+    font-size: 0.84rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   16. SCROLL-DOWN ANIMATIONS, POLAROID DROP-IN & HERO SCROLL INDICATOR
+   -------------------------------------------------------------------------- */
+
+/* Top Scroll Progress Ribbon in Sticky Header */
+.scroll-progress-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 350;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #D97724 0%, #F6B95E 55%, #FFE4A0 100%);
+  box-shadow: 0 0 10px rgba(232, 141, 56, 0.8);
+  transition: width 0.08s ease-out;
+}
+
+/* Animated Hero Scroll-Down Prompt */
+.hero-scroll-down-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.75rem;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-scroll-down-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.hero-scroll-down-btn:hover {
+  color: var(--accent-orange);
+  transform: translateY(3px);
+}
+
+.scroll-down-mouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid rgba(232, 141, 56, 0.65);
+  border-radius: 99px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  background: rgba(255, 253, 249, 0.03);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-down-wheel {
+  width: 4px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--accent-orange);
+  animation: scrollMouseWheel 1.7s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@keyframes scrollMouseWheel {
+  0% { transform: translateY(0); opacity: 1; }
+  75% { transform: translateY(12px); opacity: 0.15; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.scroll-down-text {
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  letter-spacing: 0.03em;
+}
+
+.scroll-down-chevron {
+  font-size: 0.78rem;
+  color: var(--accent-orange);
+  animation: bounceChevronDown 1.6s ease-in-out infinite;
+}
+
+@keyframes bounceChevronDown {
+  0%, 100% { transform: translateY(0); opacity: 0.55; }
+  50% { transform: translateY(5px); opacity: 1; }
+}
+
+/* Scroll-Reveal Base Classes (Applied automatically by Scroll Engine) */
+.bh-scroll-item {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--bh-delay, 0ms);
+}
+
+/* Fade Up Reveal (Headings, Paragraphs, Disciplines, Forms) */
+.bh-scroll-item.bh-reveal-up {
+  transform: translate3d(0, 42px, 0);
+}
+
+/* Polaroid Scrapbook Drop & Pin-Down Effect */
+.bh-scroll-item.bh-reveal-polaroid {
+  transform: translate3d(0, 56px, 0) scale(0.92) rotate(4deg);
+}
+
+/* Pinned Kraft Notepad Swing-In Effect */
+.bh-scroll-item.bh-reveal-Swing {
+  transform: translate3d(28px, 36px, 0) rotate(5deg) scale(0.95);
+  transform-origin: top center;
+}
+
+/* Active Revealed State when Scrolled into Viewport */
+.bh-scroll-item.bh-in-view {
+  opacity: 1 !important;
+}
+
+.bh-scroll-item.bh-reveal-up.bh-in-view {
+  transform: translate3d(0, 0, 0);
+}
+
+.bh-scroll-item.bh-reveal-Swing.bh-in-view {
+  transform: translate3d(0, 0, 0) rotate(1deg) scale(1);
+}
+
+/* Restore Natural Scattered Tilts on Polaroid Cards Once Revealed */
+.polaroids-grid .polaroid-card.bh-reveal-polaroid.bh-in-view:nth-child(3n+1) {
+  transform: rotate(-2deg) translate3d(0, 0, 0) scale(1);
+}
+.polaroids-grid .polaroid-card.bh-reveal-polaroid.bh-in-view:nth-child(3n+2) {
+  transform: rotate(1.5deg) translate3d(0, 0, 0) scale(1);
+}
+.polaroids-grid .polaroid-card.bh-reveal-polaroid.bh-in-view:nth-child(3n) {
+  transform: rotate(-1.3deg) translate3d(0, 0, 0) scale(1);
+}
+
+.partner-logos-grid .partner-brand-card.bh-reveal-polaroid.bh-in-view:nth-child(odd) {
+  transform: rotate(-1.2deg) translate3d(0, 0, 0) scale(1);
+}
+.partner-logos-grid .partner-brand-card.bh-reveal-polaroid.bh-in-view:nth-child(even) {
+  transform: rotate(1.2deg) translate3d(0, 0, 0) scale(1);
+}
+
+.srv-scrap-card.bh-reveal-polaroid.bh-in-view:nth-child(odd),
+.prc-scrap-card.bh-reveal-polaroid.bh-in-view:nth-child(odd),
+.founder-dossier-card.bh-reveal-polaroid.bh-in-view:nth-child(odd) {
+  transform: rotate(-0.8deg) translate3d(0, 0, 0) scale(1);
+}
+
+.srv-scrap-card.bh-reveal-polaroid.bh-in-view:nth-child(even),
+.prc-scrap-card.bh-reveal-polaroid.bh-in-view:nth-child(even),
+.founder-dossier-card.bh-reveal-polaroid.bh-in-view:nth-child(even) {
+  transform: rotate(0.8deg) translate3d(0, 0, 0) scale(1);
+}
+
+/* Washi Tape Snap-On Animation when Card Enters Viewport */
+.bh-scroll-item .washi-tape {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-12px) scale(1.15) rotate(-6deg);
+  transition: opacity 0.45s ease, transform 0.55s cubic-bezier(0.28, 1.45, 0.45, 1);
+  transition-delay: calc(var(--bh-delay, 0ms) + 240ms);
+}
+
+.bh-scroll-item.bh-in-view .washi-tape {
+  opacity: 0.94;
+  transform: translateX(-50%) translateY(0) scale(1) rotate(-1.5deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bh-scroll-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

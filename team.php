@@ -1,140 +1,152 @@
 <?php
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Leadership & Studio Collective';
-$pageDesc = 'Meet the core leaders of The Blue Hour Studios (Blue Hour Creative Studios) in Guwahati & New Delhi, India: Himon Bhuyan (Founder & Principal Software Architect) and Darshana Das (Partner — Head of Client Growth & Social Media Strategy).';
+$pageTitle = 'Founders & Studio Leadership';
+$pageDesc = 'Meet the core leaders of Blue Hour Creative Studios in Guwahati & New Delhi, India: Himon Bhuyan (Founder & Principal Software Architect) and Darshana Das (Partner — Head of Client Growth & Social Media Strategy).';
 $activePage = 'team';
 
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-  <!-- Subpage Architectural Hero Header -->
-  <section class="subpage-hero">
+  <!-- ========================================================================
+       1. SUBPAGE HERO HEADER (ROOT BARREL SCRAPBOOK STYLE)
+       ======================================================================== -->
+  <section style="padding: 4.5rem 0 3.5rem; position: relative; z-index: 2;">
     <div class="container">
-      <div class="subpage-hero-inner">
-        <div class="subpage-breadcrumb">
-          <a href="index.php">Home</a>
-          <span class="sep">/</span>
-          <span class="current">Leadership & Studio Collective</span>
+      <div style="max-width: 780px;">
+        <div class="script-kicker" style="font-size: 1.45rem; margin-bottom: 0.4rem;">
+          <a href="index.php" style="color: var(--text-muted);">Home</a>
+          <span style="color: var(--accent-orange);">&bull;</span>
+          <span>Leadership &amp; Studio Collective</span>
         </div>
-        <h1 class="subpage-title">
+
+        <h1 style="font-family: var(--font-hand); font-size: clamp(3rem, 5.5vw, 4.5rem); font-weight: 700; color: #FFFDF9; line-height: 1.06; margin-bottom: 1rem;">
           Direct Founder Access. <br>
-          <span class="text-gradient-champagne">Zero Junior Hand-offs.</span>
+          <span class="script-highlight">Zero Junior Hand-offs.</span>
+          <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon" style="margin-left: 8px;">
         </h1>
-        <p class="subpage-lead">
-          We reject the bloated agency model of slick sales pitchmen delegating your project to inexperienced junior interns. At Blue Hour Creative Studios, you partner directly with the architects who code your systems and direct your viral campaigns.
+
+        <p style="font-family: var(--font-body); font-size: 1.08rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+          We reject the bloated agency model of slick sales pitchmen delegating your project to inexperienced junior interns. At Blue Hour Creative Studios, you partner directly with the principals who code your systems and direct your viral campaigns.
         </p>
 
-        <div class="subpage-quick-stats">
-          <div class="subpage-stat-item">
-            <span class="subpage-stat-num">2</span>
-            <span class="subpage-stat-lbl">Studio Partners</span>
+        <!-- Quick Metrics -->
+        <div style="display: flex; gap: 2.25rem; flex-wrap: wrap; border-top: 1px dashed rgba(255,255,255,0.12); padding-top: 1.25rem;">
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFDF9; display: block; line-height: 1;">02</strong>
+            <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Studio Principals</span>
           </div>
-          <div class="subpage-stat-item">
-            <span class="subpage-stat-num">Direct</span>
-            <span class="subpage-stat-lbl">Founder Access</span>
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFDF9; display: block; line-height: 1;">Direct</strong>
+            <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Founder Onboarding</span>
           </div>
-          <div class="subpage-stat-item">
-            <span class="subpage-stat-num">Dual</span>
-            <span class="subpage-stat-lbl">Guwahati & New Delhi</span>
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFDF9; display: block; line-height: 1;">Dual Hub</strong>
+            <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Guwahati &amp; New Delhi</span>
           </div>
-          <div class="subpage-stat-item">
-            <span class="subpage-stat-num">&lt;4 Hrs</span>
-            <span class="subpage-stat-lbl">Average Response Time</span>
+          <div>
+            <strong style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFDF9; display: block; line-height: 1;">&lt;4 Hrs</strong>
+            <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Response SLA</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Torn Paper Divider (Dark to Kraft) -->
+  <div class="torn-divider torn-kraft-top" aria-hidden="true"></div>
+
   <!-- ========================================================================
-       STUDIO LEADERSHIP & TEAM
+       2. FOUNDERS POLAROID PORTRAITS (KRAFT PAPER SCRAPBOOK SECTION)
        ======================================================================== -->
-  <section class="team-section" id="team">
+  <section class="kraft-disciplines-section" id="team">
     <div class="container">
-      
-      <div class="section-header-editorial reveal-on-scroll">
-        <div class="section-kicker">
-          <span class="kicker-line"></span>
-          <span>01 // The Core Leadership</span>
+
+      <div class="section-head-kraft" style="margin-bottom: 2.75rem;">
+        <div>
+          <div class="script-kicker" style="color: var(--accent-orange-deep); margin-bottom: 0.25rem;">
+            <span>01 // The Core Leadership</span>
+          </div>
+          <h2 class="disciplines-headline">
+            <span>The Minds Behind Blue Hour</span>
+            <img src="assets/images/doodle_arrow.svg" alt="Arrow" class="doodle-arrow-icon">
+          </h2>
         </div>
-        <h2 class="section-headline">
-          The Minds Behind <br><span class="text-gradient-champagne">Blue Hour Studios</span>
-        </h2>
-        <p class="section-lead">
-          Direct founder access. Zero bloated agency bureaucracy or junior hand-offs. We architect the digital systems and scale the market narratives.
+        <p style="font-family: var(--font-body); font-size: 0.98rem; color: var(--text-kraft-muted); max-width: 440px;">
+          Engineering architecture and high-ROAS creative distribution led hands-on by our founding partners.
         </p>
       </div>
 
-      <div class="team-editorial-grid">
-        <?php foreach ($team as $member): ?>
-          <div class="team-card-editorial spotlight-card reveal-on-scroll">
-            <div class="team-card-inner">
-              
-              <!-- Portrait Image Container -->
-              <div class="team-photo-wrap">
-                <img src="<?= htmlspecialchars($member['image']) ?>?v=<?= file_exists($member['image']) ? filemtime($member['image']) : time() ?>" alt="<?= htmlspecialchars($member['name']) ?>" class="team-photo-img" loading="lazy">
-                <div class="team-photo-vignette"></div>
-                <div class="team-status-chip">
-                  <span class="status-dot-pulse"></span>
-                  <span>ONLINE &bull; DIRECT ACCESS</span>
+      <!-- Founders Polaroid Dossier Grid -->
+      <div class="founders-dossier-grid">
+        <?php foreach ($team as $idx => $member): ?>
+          <div class="founder-dossier-card" style="position: relative; background: #FFFDF9; border: 1px solid var(--bg-kraft-border); border-radius: 6px; padding: 1.5rem 1.5rem 2rem; box-shadow: 0 18px 40px rgba(70,50,30,0.14); transform: rotate(<?= $idx === 0 ? '-1deg' : '1deg' ?>);">
+            <span class="washi-tape washi-tape-top"></span>
+
+            <div class="founder-dossier-inner">
+              <!-- Polaroid Portrait Frame -->
+              <div style="background: #F7EFE2; padding: 8px 8px 22px 8px; border: 1px solid #DFCEB4; border-radius: 3px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); transform: rotate(-1.5deg);">
+                <div style="width: 100%; aspect-ratio: 4/5; overflow: hidden; border-radius: 2px; background: #1A1512;">
+                  <img src="<?= htmlspecialchars($member['image']) ?>?v=<?= file_exists($member['image']) ? filemtime($member['image']) : time() ?>" alt="<?= htmlspecialchars($member['name']) ?>" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="team-badge-floating">
-                  <i class="fa-solid fa-certificate"></i> <?= htmlspecialchars($member['badge']) ?>
-                </div>
+                <span style="display: block; text-align: center; font-family: var(--font-hand); font-size: 1.05rem; font-weight: 700; color: #2B2118; margin-top: 6px;">
+                  <?= htmlspecialchars($member['badge']) ?>
+                </span>
               </div>
 
-              <!-- Content Meta -->
-              <div class="team-details-wrap">
-                <div class="team-role-pill"><?= htmlspecialchars($member['role']) ?></div>
-                <h3 class="team-name-title"><?= htmlspecialchars($member['name']) ?></h3>
+              <!-- Founder Info -->
+              <div>
+                <span style="display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; color: var(--accent-orange-deep); background: #F4E8D3; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.5rem;">
+                  <?= htmlspecialchars($member['role']) ?>
+                </span>
+                <h3 style="font-family: var(--font-hand); font-size: 2.2rem; font-weight: 700; color: #211913; line-height: 1.05; margin-bottom: 0.4rem;">
+                  <?= htmlspecialchars($member['name']) ?>
+                </h3>
+
                 <?php if (!empty($member['socials']['phone'])): ?>
-                  <div style="margin-bottom: 0.65rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-champagne);">
-                    <i class="fa-solid fa-phone" style="font-size: 0.7rem; margin-right: 0.35rem;"></i>
-                    <a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $member['socials']['phone'])) ?>" style="color: inherit; text-decoration: none;"><?= htmlspecialchars($member['socials']['phone']) ?></a>
+                  <div style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: #5C4B3A; margin-bottom: 0.65rem;">
+                    <i class="fa-solid fa-phone" style="color: var(--accent-orange-deep); margin-right: 4px;"></i>
+                    <a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $member['socials']['phone'])) ?>"><?= htmlspecialchars($member['socials']['phone']) ?></a>
                   </div>
                 <?php endif; ?>
-                <p class="team-bio-text"><?= htmlspecialchars($member['bio']) ?></p>
 
-                <!-- Skill Chips -->
-                <div class="team-skills-row">
-                  <?php foreach ($member['skills'] as $skill): ?>
-                    <span class="team-skill-chip"><?= htmlspecialchars($skill) ?></span>
-                  <?php endforeach; ?>
-                </div>
+                <p style="font-family: var(--font-body); font-size: 0.88rem; color: #4A3E31; line-height: 1.55; margin-bottom: 1rem;">
+                  <?= htmlspecialchars($member['bio']) ?>
+                </p>
+              </div>
+            </div>
 
-                <!-- Footer Actions & Direct Socials -->
-                <div class="team-card-footer">
-                  <div class="team-social-links">
-                    <?php if (!empty($member['socials']['github'])): ?>
-                      <a href="<?= htmlspecialchars($member['socials']['github']) ?>" target="_blank" rel="noopener noreferrer" class="team-social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['linkedin'])): ?>
-                      <a href="<?= htmlspecialchars($member['socials']['linkedin']) ?>" target="_blank" rel="noopener noreferrer" class="team-social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['instagram'])): ?>
-                      <a href="<?= htmlspecialchars($member['socials']['instagram']) ?>" target="_blank" rel="noopener noreferrer" class="team-social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['whatsapp'])): ?>
-                      <a href="<?= htmlspecialchars($member['socials']['whatsapp']) ?>" target="_blank" rel="noopener noreferrer" class="team-social-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['email'])): ?>
-                      <a href="mailto:<?= htmlspecialchars($member['socials']['email']) ?>" class="team-social-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['phone'])): ?>
-                      <a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $member['socials']['phone'])) ?>" class="team-social-btn" title="Call <?= htmlspecialchars($member['socials']['phone']) ?>"><i class="fa-solid fa-phone"></i></a>
-                    <?php endif; ?>
-                  </div>
-
-                  <a href="contact.php?consult=<?= urlencode($member['name']) ?>" class="btn btn-ghost-editorial btn-sm magnetic-btn btn-team-consult" data-member-name="<?= htmlspecialchars($member['name']) ?>" data-member-role="<?= htmlspecialchars($member['badge']) ?>">
-                    <span>Consult with <?= htmlspecialchars(explode(' ', $member['name'])[0]) ?></span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-
+            <!-- Skills & Social Actions -->
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px dashed #DFCEB4;">
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.2rem;">
+                <?php foreach ($member['skills'] as $skill): ?>
+                  <span class="polaroid-tag"><?= htmlspecialchars($skill) ?></span>
+                <?php endforeach; ?>
               </div>
 
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+                <div style="display: flex; gap: 0.5rem;">
+                  <?php if (!empty($member['socials']['github'])): ?>
+                    <a href="<?= htmlspecialchars($member['socials']['github']) ?>" target="_blank" rel="noopener noreferrer" style="width: 34px; height: 34px; border-radius: 50%; background: #EFE6D5; color: #2B2118; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-github"></i></a>
+                  <?php endif; ?>
+                  <?php if (!empty($member['socials']['linkedin'])): ?>
+                    <a href="<?= htmlspecialchars($member['socials']['linkedin']) ?>" target="_blank" rel="noopener noreferrer" style="width: 34px; height: 34px; border-radius: 50%; background: #EFE6D5; color: #2B2118; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <?php endif; ?>
+                  <?php if (!empty($member['socials']['instagram'])): ?>
+                    <a href="<?= htmlspecialchars($member['socials']['instagram']) ?>" target="_blank" rel="noopener noreferrer" style="width: 34px; height: 34px; border-radius: 50%; background: #EFE6D5; color: #2B2118; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-instagram"></i></a>
+                  <?php endif; ?>
+                  <?php if (!empty($member['socials']['whatsapp'])): ?>
+                    <a href="<?= htmlspecialchars($member['socials']['whatsapp']) ?>" target="_blank" rel="noopener noreferrer" style="width: 34px; height: 34px; border-radius: 50%; background: #EFE6D5; color: #25d366; display: flex; align-items: center; justify-content: center;"><i class="fa-brands fa-whatsapp"></i></a>
+                  <?php endif; ?>
+                </div>
+
+                <a href="contact.php?consult=<?= urlencode($member['name']) ?>" class="btn-orange-solid" style="padding: 0.55rem 1.25rem; font-size: 0.88rem;">
+                  <span>Consult with <?= htmlspecialchars(explode(' ', $member['name'])[0]) ?></span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
+
           </div>
         <?php endforeach; ?>
       </div>
@@ -142,89 +154,49 @@ require_once __DIR__ . '/includes/header.php';
     </div>
   </section>
 
+  <!-- Torn Paper Divider (Kraft to Dark) -->
+  <div class="torn-divider torn-kraft-bottom" aria-hidden="true"></div>
+
   <!-- ========================================================================
-       STUDIO CULTURE & ENGINEERING ETHOS
+       3. STUDIO ETHOS & NON-NEGOTIABLE PRINCIPLES (DARK SECTION)
        ======================================================================== -->
-  <section class="interactive-matrix-section">
+  <section class="polaroids-showcase-section">
     <div class="container">
-      
-      <div class="section-header-editorial reveal-on-scroll">
-        <div class="section-kicker">
-          <span class="kicker-line"></span>
-          <span>02 // Our Operational Ethos</span>
-        </div>
-        <h2 class="section-headline">
-          Three Non-Negotiable <br><span class="text-gradient-mercury">Studio Principles.</span>
-        </h2>
-        <p class="section-lead">
-          How we ensure your projects are delivered on time, under budget, and built to dominate.
-        </p>
-      </div>
-
-      <div class="matrix-split-grid reveal-on-scroll" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-        
-        <div class="transparency-card spotlight-card">
-          <div class="transparency-card-header">
-            <div class="transparency-icon"><i class="fa-solid fa-microchip"></i></div>
-            <div>
-              <h4 class="transparency-title">Zero Dependency Bloat</h4>
-              <p class="transparency-sub">Craftsmanship over generic page builders.</p>
-            </div>
+      <div class="specials-head-row">
+        <div class="specials-title-wrap">
+          <div class="script-kicker"><span>02 // Operational Ethos</span></div>
+          <div class="specials-main-title">
+            <span>Three Non-Negotiable Principles</span>
+            <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon">
           </div>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-top: 0.75rem;">
-            We don't sell slow WordPress themes or heavy pre-built templates. We write bespoke code (Laravel, React, Node.js, PHP 8+) that scores 95+ on Google PageSpeed Insights and loads in sub-seconds.
-          </p>
-        </div>
-
-        <div class="transparency-card spotlight-card">
-          <div class="transparency-card-header">
-            <div class="transparency-icon"><i class="fa-solid fa-key"></i></div>
-            <div>
-              <h4 class="transparency-title">100% Client IP Ownership</h4>
-              <p class="transparency-sub">No hostage code. No vendor lock-in.</p>
-            </div>
-          </div>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-top: 0.75rem;">
-            You own every line of code, every Git commit, every graphic asset, domain, and Meta advertising account. We deliver clean turnkey handovers with complete documentation.
-          </p>
-        </div>
-
-        <div class="transparency-card spotlight-card">
-          <div class="transparency-card-header">
-            <div class="transparency-icon"><i class="fa-solid fa-chart-line"></i></div>
-            <div>
-              <h4 class="transparency-title">Obsession with Direct ROI</h4>
-              <p class="transparency-sub">Metrics that actually impact your bottom line.</p>
-            </div>
-          </div>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-top: 0.75rem;">
-            Vanity numbers don't pay bills. We judge our success by real metrics: qualified inbound leads, e-commerce sales conversion rates, customer acquisition costs, and verified ad ROAS.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Call to Action Banner -->
-      <div class="launchpad-card spotlight-card reveal-on-scroll" style="margin-top: 3.5rem; text-align: center; padding: 2.5rem 1.5rem;">
-        <span class="index-num" style="display: block; margin-bottom: 0.5rem;">DIRECT DIALOGUE //</span>
-        <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">
-          Speak Directly with Himon or Darshana
-        </h3>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem auto; font-size: 0.95rem;">
-          Schedule an introductory strategic discovery session to evaluate your software architecture or scale your viral brand distribution.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="https://wa.me/917002201534?text=Hi%20Blue%20Hour%20Studios,%20I%20would%20like%20to%20consult%20with%20your%20team" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
-            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
-            <span>Instant WhatsApp Connect</span>
-          </a>
-          <a href="contact.php" class="btn btn-primary magnetic-btn">
-            <span>Send Project Brief</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
         </div>
       </div>
 
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div style="background: rgba(32,27,23,0.9); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 2rem;">
+          <div class="discipline-icon-box"><i class="fa-solid fa-microchip"></i></div>
+          <h4 style="font-family: var(--font-hand); font-size: 1.85rem; color: #FFFDF9; margin-bottom: 0.5rem;">01. Zero Dependency Bloat</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            We don't sell sluggish pre-built templates. We write bespoke code (Laravel, React, Node.js, PHP 8+) that scores 95+ on Google PageSpeed and loads in sub-seconds.
+          </p>
+        </div>
+
+        <div style="background: rgba(32,27,23,0.9); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 2rem;">
+          <div class="discipline-icon-box"><i class="fa-solid fa-key"></i></div>
+          <h4 style="font-family: var(--font-hand); font-size: 1.85rem; color: #FFFDF9; margin-bottom: 0.5rem;">02. 100% Client IP Ownership</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            No hostage code and no vendor lock-in. You own every line of code, Git repository, graphic asset, domain, and Meta ad account from day one.
+          </p>
+        </div>
+
+        <div style="background: rgba(32,27,23,0.9); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 2rem;">
+          <div class="discipline-icon-box"><i class="fa-solid fa-chart-line"></i></div>
+          <h4 style="font-family: var(--font-hand); font-size: 1.85rem; color: #FFFDF9; margin-bottom: 0.5rem;">03. Obsession with Direct ROI</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Vanity metrics don't pay bills. We measure our success by qualified inbound leads, e-commerce checkout conversion rates, and verified ad ROAS.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
