@@ -1,208 +1,101 @@
 <?php
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Blue Hour Creative Studios | Web Development & Digital Marketing';
-$pageDesc = 'Blue Hour Creative Studios (The Blue Hour Studios) offers website development, e-commerce websites, social media management, branding, graphic design and digital marketing services for businesses in Guwahati, Assam & New Delhi.';
-$pageOgDesc = 'Blue Hour Creative Studios offers website development, e-commerce websites, social media management, branding, graphic design and digital marketing services in Guwahati, Assam & New Delhi.';
+$pageTitle = 'Blue Hour Creative Studios | Artisanal Web & Growth Studio';
+$pageDesc = 'Blue Hour Creative Studios is an artisanal software engineering and viral growth studio in Guwahati & New Delhi, India. Handcrafted websites, luxury e-commerce, and high-ROAS marketing.';
 $activePage = 'home';
 
 require_once __DIR__ . '/includes/header.php';
 ?>
 
   <!-- ========================================================================
-       HERO SECTION - MONUMENTAL EDITORIAL ARCHITECTURE
+       1. HERO SECTION (ROOT BARREL "MORE THAN A CAFE" AESTHETIC)
        ======================================================================== -->
-  <section class="hero-section" id="hero">
+  <section class="hero-craft-section" id="hero">
     <div class="container">
-      <div class="hero-grid">
+      <div class="hero-craft-grid">
         
-        <div class="hero-content reveal-on-scroll">
-          <div class="hero-editorial-badge">
-            <span class="index-num">01 //</span>
-            <span class="badge-text font-hand" style="font-size: 1.25rem; font-weight: 700; color: var(--accent-amber);">Artisanal Engineering &amp; Brand Acceleration</span>
+        <!-- Left Hero Copy -->
+        <div class="hero-main-title">
+          <div class="hero-kicker-row">
+            <span class="hero-kicker-text">More than a Studio</span>
+            <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon">
           </div>
 
-          <h1 class="hero-title" style="margin-top: 0.25rem;">
-            <span class="script-kicker" style="font-size: 1.7rem; margin-bottom: 0.35rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-              <span>More than an Agency</span>
-              <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon" style="width: 36px; height: 26px; vertical-align: middle;">
-            </span>
-            <br>
-            Engineering <span class="text-gradient-mercury">Digital Supremacy.</span> <br>
+          <h1 class="hero-big-heading">
+            Good Code. <br>
+            Great Design. <br>
             <span style="position: relative; display: inline-block;">
-              Handcrafting <span class="script-highlight" style="color: var(--accent-amber); font-weight: 700;">Iconic Brands.</span>
+              <span class="script-highlight">Iconic Brands.</span>
             </span>
           </h1>
 
-          <p class="hero-description">
-            <?= htmlspecialchars($agency['description'] ?? 'Blue Hour Creative Studios is a hybrid creative and technology powerhouse. We bridge the gap between deep software engineering and viral brand marketing — delivering scalable enterprise web applications, mobile platforms, and high-converting social campaigns that dominate modern digital markets.') ?>
+          <p class="hero-subheading">
+            Blue Hour Creative Studios bridges deep full-stack engineering with high-converting brand marketing &mdash; delivering bespoke digital storefronts, mobile architectures, and high-ROAS campaigns.
           </p>
 
-          <div class="hero-cta-group">
-            <a href="works.php" class="btn btn-amber magnetic-btn" id="heroExploreWorksBtn" style="padding: 0.85rem 1.85rem;">
-              <span>Explore Selected Works</span>
-              <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem; margin-left: 6px;"></i>
+          <div class="hero-cta-buttons">
+            <a href="#flagships" class="btn-orange-solid">
+              <span>Explore Our Crafts</span>
+              <i class="fa-solid fa-arrow-right" style="font-size: 0.85rem;"></i>
             </a>
-            <a href="pricing.php" class="btn btn-craft-outline magnetic-btn" id="heroPricingBtn" style="padding: 0.85rem 1.6rem;">
-              <i class="fa-solid fa-tags" style="color: var(--accent-amber); margin-right: 6px;"></i>
-              <span>Pricing &amp; Packages</span>
+            <a href="contact.php" class="btn-craft-outline">
+              <i class="fa-regular fa-calendar-check" style="color: var(--accent-orange);"></i>
+              <span>Reserve a Brief</span>
             </a>
-            <a href="brochure.php" class="btn btn-ghost-editorial magnetic-btn" id="heroBrochureBtn" style="padding: 0.85rem 1.5rem;">
-              <i class="fa-regular fa-file-pdf" style="color: var(--accent-amber); margin-right: 6px;"></i>
+            <a href="brochure.php" class="btn-craft-outline" style="border-color: rgba(255,255,255,0.2);">
+              <i class="fa-regular fa-file-pdf" style="color: var(--accent-orange);"></i>
               <span>Rate Card (PDF)</span>
             </a>
           </div>
 
-          <!-- Key Metrics Strip with Hairline Dividers & Kinetic Counters -->
-          <div class="hero-metrics-strip">
-            <div class="metric-strip-item">
-              <span class="metric-val counter-val" data-target="50" data-suffix="+">50+</span>
-              <span class="metric-lbl">Digital Projects Shipped</span>
+          <!-- Quick Metrics Strip -->
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap; border-top: 1px dashed rgba(255,255,255,0.12); padding-top: 1.5rem;">
+            <div>
+              <strong style="font-family: var(--font-display); font-size: 1.6rem; color: #FFFDF9; display: block; line-height: 1;">50+</strong>
+              <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Shipped Builds</span>
             </div>
-            <div class="metric-divider" aria-hidden="true"></div>
-            <div class="metric-strip-item">
-              <span class="metric-val counter-val" data-target="10" data-suffix="M+">10M+</span>
-              <span class="metric-lbl">Social Reach Generated</span>
+            <div>
+              <strong style="font-family: var(--font-display); font-size: 1.6rem; color: #FFFDF9; display: block; line-height: 1;">10M+</strong>
+              <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Social Reach</span>
             </div>
-            <div class="metric-divider" aria-hidden="true"></div>
-            <div class="metric-strip-item">
-              <span class="metric-val counter-val" data-target="4.8" data-decimals="1" data-suffix="x">4.8x</span>
-              <span class="metric-lbl">Average Client Ad ROAS</span>
+            <div>
+              <strong style="font-family: var(--font-display); font-size: 1.6rem; color: #FFFDF9; display: block; line-height: 1;">4.8X</strong>
+              <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">Average ROAS</span>
             </div>
-            <div class="metric-divider" aria-hidden="true"></div>
-            <div class="metric-strip-item">
-              <span class="metric-val counter-val" data-target="99.9" data-decimals="1" data-suffix="%">99.9%</span>
-              <span class="metric-lbl">System Uptime & SLA</span>
+            <div>
+              <strong style="font-family: var(--font-display); font-size: 1.6rem; color: #FFFDF9; display: block; line-height: 1;">99.9%</strong>
+              <span style="font-family: var(--font-hand); font-size: 1.15rem; color: var(--accent-orange); font-weight: 700;">System SLA</span>
             </div>
           </div>
         </div>
 
-        <!-- Architectural Visual Stage with Interactive Simulation Console -->
-        <div class="hero-stage reveal-on-scroll delay-2" style="position: relative;">
-          
-          <!-- Pinned Kraft Studio Sticky Memo (Root Barrel Scrapbook Note) -->
-          <div class="hero-sticky-memo">
+        <!-- Right Hero Pinned Kraft Sticky Note (Root Barrel Memo Pad) -->
+        <div class="hero-notepad-wrap">
+          <div class="hero-notepad">
+            <!-- Translucent Washi Tape at Top -->
             <span class="washi-tape washi-tape-top"></span>
-            <div class="hero-sticky-memo-title">
-              <span>Studio Highlights</span>
-              <img src="assets/images/doodle_starburst.svg" alt="Star" style="width: 18px; height: 18px;">
+
+            <div class="notepad-title-bar">
+              <span class="notepad-title">Studio Guarantee</span>
+              <img src="assets/images/doodle_starburst.svg" alt="Star" style="width: 22px; height: 22px;">
             </div>
-            <ul class="hero-sticky-memo-list">
-              <li><i class="fa-solid fa-check"></i> 100% Bespoke Code</li>
-              <li><i class="fa-solid fa-check"></i> 0% Page-Builder Bloat</li>
-              <li><i class="fa-solid fa-check"></i> High-ROAS Commerce</li>
-              <li><i class="fa-solid fa-check"></i> 99.9% Production SLA</li>
+
+            <ul class="notepad-checklist">
+              <li class="notepad-item"><i class="fa-solid fa-check"></i> 100% Bespoke Code</li>
+              <li class="notepad-item"><i class="fa-solid fa-check"></i> 0% Page-Builder Bloat</li>
+              <li class="notepad-item"><i class="fa-solid fa-check"></i> High-ROAS Commerce</li>
+              <li class="notepad-item"><i class="fa-solid fa-check"></i> Sub-Second Edge Latency</li>
+              <li class="notepad-item"><i class="fa-solid fa-check"></i> 1 Year Free Maintenance</li>
+              <li class="notepad-item"><i class="fa-solid fa-check"></i> Direct Founder Onboarding</li>
             </ul>
-          </div>
 
-          <div class="architectural-frame spotlight-card tilt-card" id="heroHardwareFrame">
-            <div class="frame-topbar">
-              <div class="frame-window-controls">
-                <span class="window-pip pip-active"></span>
-                <span class="window-pip"></span>
-                <span class="window-pip"></span>
-              </div>
-
-              <!-- Interactive Dual-Mode Switcher: GUI vs Code Blueprint -->
-              <div class="showcase-mode-tabs" id="heroShowcaseTabs">
-                <button type="button" class="showcase-tab-btn active" data-view="gui" id="tabGuiBtn">
-                  <i class="fa-regular fa-image"></i> GUI Preview
-                </button>
-                <button type="button" class="showcase-tab-btn" data-view="code" id="tabCodeBtn">
-                  <i class="fa-solid fa-terminal"></i> Architecture Blueprint
-                </button>
-              </div>
-
-              <div class="frame-telemetry">
-                <i class="fa-solid fa-signal"></i>
-                <span>STUDIO LIVE</span>
-              </div>
-            </div>
-
-            <!-- View 1: GUI Preview -->
-            <div class="frame-viewport" id="heroGuiView">
-              <img src="assets/images/project_moh_studios.jpg?v=20261123" alt="Blue Hour Creative Studios Featured Project Showcase" id="heroFeaturedImg">
-            </div>
-
-            <!-- View 2: Architecture Blueprint Code Terminal with Live Simulation Bar -->
-            <div class="frame-viewport-code" id="heroCodeView">
-              
-              <!-- Interactive Terminal Commands for Client Testing -->
-              <div class="terminal-interactive-toolbar">
-                <span style="font-size: 0.65rem; color: var(--text-muted);"><i class="fa-solid fa-play"></i> Client Interactive Console:</span>
-                <div class="terminal-cmd-group">
-                  <button type="button" class="terminal-action-btn" id="btnRunDeploy">
-                    <i class="fa-solid fa-cloud-arrow-up"></i> Simulate Deploy
-                  </button>
-                  <button type="button" class="terminal-action-btn" id="btnRunRoas">
-                    <i class="fa-solid fa-chart-line"></i> Meta ROAS Engine
-                  </button>
-                  <button type="button" class="terminal-action-btn" id="btnResetCode">
-                    <i class="fa-solid fa-code"></i> Reset View
-                  </button>
-                </div>
-              </div>
-
-              <div class="code-telemetry-strip">
-                <span class="telemetry-chip-latency"><i class="fa-solid fa-bolt"></i> Latency: 14ms (Edge Cache Hit: 99.4%)</span>
-                <span>TLS 1.3 // HTTP/3 Ready</span>
-              </div>
-
-              <!-- Live Execution Output Screen -->
-              <div class="terminal-output-console" id="terminalLiveConsole"></div>
-
-              <div id="codeStaticLines">
-                <div class="code-line"><span class="code-num">01</span><span><span class="code-comment">// Blue Hour Creative Studios — High-Performance Commerce & Telemetry Pipeline</span></span></div>
-                <div class="code-line"><span class="code-num">02</span><span><span class="code-kw">namespace</span> App\Http\Pipelines\Commerce;</span></div>
-                <div class="code-line"><span class="code-num">03</span><span></span></div>
-                <div class="code-line"><span class="code-num">04</span><span><span class="code-kw">final readonly class</span> <span class="code-fn">OrderOrchestrator</span></span></div>
-                <div class="code-line"><span class="code-num">05</span><span>{</span></div>
-                <div class="code-line"><span class="code-num">06</span><span>    <span class="code-kw">public function</span> <span class="code-fn">dispatchCheckout</span>(CheckoutPayload <span class="code-prop">$payload</span>): OrderReceipt</span></div>
-                <div class="code-line"><span class="code-num">07</span><span>    {</span></div>
-                <div class="code-line"><span class="code-num">08</span><span>        <span class="code-comment">// Sub-second inventory lock & zero-latency edge verification</span></span></div>
-                <div class="code-line"><span class="code-num">09</span><span>        <span class="code-prop">$inventory</span> = <span class="code-fn">Redis::pipeline</span>(<span class="code-kw">fn</span>(<span class="code-prop">$pipe</span>) => <span class="code-prop">$pipe</span>->decrWithGuard(<span class="code-prop">$payload</span>->sku));</span></div>
-                <div class="code-line"><span class="code-num">10</span><span>        <span class="code-prop">$telemetry</span> = <span class="code-fn">MetaPixelDispatcher::syncConversionsApi</span>(<span class="code-prop">$payload</span>);</span></div>
-                <div class="code-line"><span class="code-num">11</span><span>        </span></div>
-                <div class="code-line"><span class="code-num">12</span><span>        <span class="code-kw">return new</span> <span class="code-fn">OrderReceipt</span>(</span></div>
-                <div class="code-line"><span class="code-num">13</span><span>            status: <span class="code-str">'DISPATCHED_INSTANT'</span>,</span></div>
-                <div class="code-line"><span class="code-num">14</span><span>            latency_ms: 14.2,</span></div>
-                <div class="code-line"><span class="code-num">15</span><span>            ad_roas_multiplier: 4.8</span></div>
-                <div class="code-line"><span class="code-num">16</span><span>        );</span></div>
-                <div class="code-line"><span class="code-num">17</span><span>    }</span></div>
-                <div class="code-line"><span class="code-num">18</span><span>}</span></div>
-              </div>
-            </div>
-
-            <div class="frame-meta-footer">
-              <div class="frame-project-header">
-                <div>
-                  <h4 class="frame-project-title">Gulbani & Prasuna Ecosystem</h4>
-                  <p class="frame-project-sub">Full-Stack Luxury Commerce & Brand Authority</p>
-                </div>
-                <span class="frame-badge-flagship">FLAGSHIP BUILD</span>
-              </div>
-
-              <div class="frame-specs-pills">
-                <span class="spec-pill">Laravel 8.x</span>
-                <span class="spec-pill">Blade Engine</span>
-                <span class="spec-pill">Meta Growth Funnel</span>
-                <span class="spec-pill">4.8X ROAS</span>
-                <span class="spec-pill">Sub-Second Load</span>
-              </div>
+            <div style="margin-top: 1.4rem; padding-top: 0.8rem; border-top: 1px dashed rgba(160, 130, 90, 0.4); text-align: center;">
+              <span style="font-family: var(--font-hand); font-size: 1.1rem; color: #5C4B3A; font-weight: 700;">
+                Guwahati &bull; New Delhi &bull; Pan-India
+              </span>
             </div>
           </div>
-
-          <!-- Precision Floating Telemetry Badge -->
-          <div class="floating-spec-card pos-bottom-left">
-            <div class="spec-card-icon">
-              <i class="fa-solid fa-microchip"></i>
-            </div>
-            <div class="spec-card-text">
-              <strong>100% Bespoke Code</strong>
-              <span>Zero bloated page-builder dependencies</span>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -210,193 +103,150 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================================
-       INFINITE CONTINUOUS MOVING TICKER LINE (CAPABILITIES & SLAS)
+       TORN PAPER DIVIDER 1 (DARK TO KRAFT)
        ======================================================================== -->
-  <div class="moving-ticker-band" aria-hidden="true">
-    <div class="moving-ticker-track">
-      <!-- Set 1 -->
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">HIGH-CONCURRENCY</strong> WEB PLATFORMS</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">VIRAL REELS</strong> & SOCIAL GROWTH ENGINE</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">BESPOKE LARAVEL & REACT</strong> CODE</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">4.8X AVERAGE</strong> CLIENT META ROAS</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">ENTERPRISE ERP & CRM</strong> ARCHITECTURE</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">SUB-SECOND LATENCY</strong> ZERO BLOAT</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">100% INTELLECTUAL PROPERTY</strong> TRANSFERRED</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">GUWAHATI & NEW DELHI</strong> STUDIO HUBS</span></div>
-
-      <!-- Set 2 (Seamless Infinite Duplicate) -->
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">HIGH-CONCURRENCY</strong> WEB PLATFORMS</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">VIRAL REELS</strong> & SOCIAL GROWTH ENGINE</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">BESPOKE LARAVEL & REACT</strong> CODE</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">4.8X AVERAGE</strong> CLIENT META ROAS</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">ENTERPRISE ERP & CRM</strong> ARCHITECTURE</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">SUB-SECOND LATENCY</strong> ZERO BLOAT</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">100% INTELLECTUAL PROPERTY</strong> TRANSFERRED</span></div>
-      <div class="ticker-item"><i class="fa-solid fa-star-of-life ticker-sparkle"></i> <span><strong class="ticker-highlight">GUWAHATI & NEW DELHI</strong> STUDIO HUBS</span></div>
-    </div>
-  </div>
+  <div class="torn-divider torn-kraft-top" aria-hidden="true"></div>
 
   <!-- ========================================================================
-       SERVICES & CAPABILITIES PREVIEW
+       2. "EXPLORE OUR DISCIPLINES" (ROOT BARREL "EXPLORE OUR MENU" KRAFT SECTION)
        ======================================================================== -->
-  <!-- Torn Kraft Paper Divider Top (Dark to Kraft) -->
-  <div class="torn-paper-edge torn-kraft-top" aria-hidden="true"></div>
-
-  <section class="services-section kraft-paper-section" id="services">
+  <section class="kraft-disciplines-section" id="disciplines">
     <div class="container">
       
-      <div class="section-header-editorial reveal-on-scroll">
-        <div class="section-kicker">
-          <span class="kicker-line"></span>
-          <span>02 // Core Capabilities & Disciplines</span>
+      <div class="section-head-kraft">
+        <div>
+          <div class="script-kicker" style="color: var(--accent-orange-deep); margin-bottom: 0.25rem;">
+            <span>01 // Handcrafted Core Services</span>
+          </div>
+          <h2 class="disciplines-headline">
+            <span>Explore Our Disciplines</span>
+            <img src="assets/images/doodle_arrow.svg" alt="Arrow" class="doodle-arrow-icon">
+          </h2>
         </div>
-        <h2 class="section-headline">
-          Two Unified Disciplines. <br><span class="text-gradient-mercury">Exponential Market Impact.</span>
-        </h2>
-        <p class="section-lead">
-          We eliminate the friction between engineering and marketing. One integrated studio delivering turnkey enterprise code and hyper-growth audience acquisition.
+        <p style="font-family: var(--font-body); font-size: 0.98rem; color: var(--text-kraft-muted); max-width: 440px;">
+          From raw code architecture to viral brand marketing &mdash; six specialized craft disciplines built under one studio roof.
         </p>
       </div>
 
-      <!-- Services Category Filter Tabs -->
-      <div class="filter-bar-editorial reveal-on-scroll">
-        <button class="filter-pill-btn service-filter-tab active" data-filter="all">[ All Disciplines ]</button>
-        <button class="filter-pill-btn service-filter-tab" data-filter="Engineering">[ Software & Web Development ]</button>
-        <button class="filter-pill-btn service-filter-tab" data-filter="Creative Marketing">[ Social & Creative Growth ]</button>
-      </div>
-
-      <!-- Bento Grid of Capabilities with Spotlight Card Shaders -->
-      <div class="services-bento-grid" id="servicesGrid">
-        <?php foreach (array_slice($services, 0, 6) as $idx => $srv): ?>
-          <div class="service-card-editorial service-card spotlight-card tilt-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>" 
-               data-category="<?= htmlspecialchars($srv['category']) ?>" 
-               id="service_<?= htmlspecialchars($srv['id']) ?>">
-            
-            <div class="service-top-row">
-              <div class="service-icon-box">
-                <i class="<?= htmlspecialchars($srv['icon']) ?>"></i>
-              </div>
-              <span class="service-badge-mono"><?= htmlspecialchars($srv['badge']) ?></span>
-            </div>
-
-            <h3 class="service-card-title"><?= htmlspecialchars($srv['title']) ?></h3>
-            <p class="service-card-desc"><?= htmlspecialchars($srv['short_desc']) ?></p>
-
-            <ul class="service-deliverables-list">
-              <?php foreach ($srv['deliverables'] as $feat): ?>
-                <li>
-                  <i class="fa-solid fa-chevron-right"></i>
-                  <span><?= htmlspecialchars($feat) ?></span>
-                </li>
-              <?php endforeach; ?>
-            </ul>
+      <!-- 6 Disciplines Grid -->
+      <div class="disciplines-grid">
+        
+        <a href="/website-development/" class="discipline-card">
+          <div class="discipline-icon-box">
+            <i class="fa-solid fa-code"></i>
           </div>
-        <?php endforeach; ?>
-      </div>
-
-      <!-- Compact Quick-Explore Bar & Dedicated Service Links -->
-      <div class="reveal-on-scroll" style="margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center;" id="localServicesOverview">
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.65rem;">
-          <a href="/website-development/" class="filter-pill-btn" style="text-decoration: none;">
-            <i class="fa-solid fa-laptop-code" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> Website Development
-          </a>
-          <a href="/ecommerce-development/" class="filter-pill-btn" style="text-decoration: none;">
-            <i class="fa-solid fa-bag-shopping" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> E-Commerce Stores
-          </a>
-          <a href="/social-media-management/" class="filter-pill-btn" style="text-decoration: none;">
-            <i class="fa-brands fa-instagram" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> Social Media Management
-          </a>
-          <a href="/branding-design/" class="filter-pill-btn" style="text-decoration: none;">
-            <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> Branding &amp; Design
-          </a>
-          <a href="/seo-digital-marketing/" class="filter-pill-btn" style="text-decoration: none;">
-            <i class="fa-solid fa-magnifying-glass-chart" style="color: var(--accent-champagne); margin-right: 0.35rem;"></i> SEO &amp; Paid Ads
-          </a>
-        </div>
-
-        <a href="services.php" class="btn btn-secondary magnetic-btn">
-          <span>Explore Detailed Capabilities &amp; Architecture</span>
-          <i class="fa-solid fa-arrow-right"></i>
+          <h3 class="discipline-name">Web &amp; SaaS</h3>
+          <span class="discipline-sub">Bespoke Code</span>
         </a>
+
+        <a href="/ecommerce-development/" class="discipline-card">
+          <div class="discipline-icon-box">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </div>
+          <h3 class="discipline-name">E-Commerce</h3>
+          <span class="discipline-sub">High Conversion</span>
+        </a>
+
+        <a href="services.php#mobile" class="discipline-card">
+          <div class="discipline-icon-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 class="discipline-name">Mobile Apps</h3>
+          <span class="discipline-sub">iOS &amp; Android</span>
+        </a>
+
+        <a href="/social-media-management/" class="discipline-card">
+          <div class="discipline-icon-box">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="discipline-name">Social Growth</h3>
+          <span class="discipline-sub">4.8X Ad ROAS</span>
+        </a>
+
+        <a href="/branding-design/" class="discipline-card">
+          <div class="discipline-icon-box">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3 class="discipline-name">Branding</h3>
+          <span class="discipline-sub">Luxury Identity</span>
+        </a>
+
+        <a href="/seo-digital-marketing/" class="discipline-card">
+          <div class="discipline-icon-box">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3 class="discipline-name">Enterprise ERP</h3>
+          <span class="discipline-sub">Fleet &amp; Portals</span>
+        </a>
+
       </div>
 
     </div>
   </section>
 
   <!-- ========================================================================
-       SELECTED WORKS / PORTFOLIO PREVIEW
+       TORN PAPER DIVIDER 2 (KRAFT TO DARK)
        ======================================================================== -->
-  <section class="works-section" id="works" style="background: var(--bg-espresso); position: relative; padding-top: 5rem; padding-bottom: 5.5rem;">
+  <div class="torn-divider torn-kraft-bottom" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       3. "TODAY'S FLAGSHIPS" (ROOT BARREL "TODAY'S SPECIALS" POLAROID SECTION)
+       ======================================================================== -->
+  <section class="polaroids-showcase-section" id="flagships">
     <div class="container">
       
-      <div class="section-header-editorial reveal-on-scroll">
-        <div class="section-kicker">
-          <span class="script-kicker" style="font-size: 1.55rem;">
-            <img src="assets/images/doodle_crown.svg" alt="Crown" style="width: 32px; height: 24px; vertical-align: middle;">
-            <span>Today's Flagship Blueprints</span>
-          </span>
+      <div class="specials-head-row">
+        <div class="specials-title-wrap">
+          <div class="specials-main-title">
+            <span>Today's Flagships</span>
+            <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon">
+          </div>
+          <p class="specials-sub-title">
+            Fresh builds, client <span class="circled-text">favourites</span>, and high-conversion creations just for you.
+          </p>
         </div>
-        <h2 class="section-headline">
-          <span style="font-family: var(--font-hand); font-size: 1.35em; color: #FFF; display: block; font-weight: 700; line-height: 1.15;">
-            Curated Digital Blueprints.
-          </span>
-          Fresh builds, client favourites, and high-conversion creations.
-        </h2>
-        <p class="section-lead" style="color: #BAAFA1; max-width: 680px;">
-          Handcrafted software platforms, luxury commerce engines, and mobile architectures built for ambitious market leaders.
-        </p>
-      </div>
 
-      <!-- Flagship Preview Bar -->
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;" class="reveal-on-scroll">
-        <span class="script-kicker" style="font-size: 1.35rem; color: var(--accent-amber);">
-          <i class="fa-solid fa-camera-retro" style="font-size: 1.1rem; margin-right: 6px;"></i> [ Studio Polaroid Showcase ]
-        </span>
-        <a href="works.php" class="btn btn-craft-outline btn-sm magnetic-btn" style="padding: 0.55rem 1.25rem;">
-          <span>Browse Complete 20+ Archive</span>
-          <i class="fa-solid fa-arrow-right" style="font-size: 0.72rem; margin-left: 6px;"></i>
+        <a href="works.php" class="btn-craft-outline">
+          <span>Browse All 20+ Archive</span>
+          <i class="fa-solid fa-arrow-right" style="font-size: 0.75rem; margin-left: 4px;"></i>
         </a>
       </div>
 
-      <!-- Polaroid Showcase Grid (Root Barrel Scrapbook Film Prints) -->
-      <div class="polaroids-showcase-grid" id="projectsContainer">
+      <!-- 6 Authentic Tilted Polaroids Grid -->
+      <div class="polaroids-grid">
         <?php foreach (array_slice($projects, 0, 6) as $idx => $proj): ?>
-          <div class="polaroid-card project-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>" 
-               data-category="<?= htmlspecialchars($proj['category']) ?>"
-               data-filter-tag="<?= htmlspecialchars($proj['filter_tag'] ?? '') ?>"
-               data-project-card="<?= htmlspecialchars($proj['id']) ?>"
-               id="projCard_<?= htmlspecialchars($proj['id']) ?>">
+          <div class="polaroid-card" data-project-open="<?= htmlspecialchars($proj['id']) ?>" id="projCard_<?= htmlspecialchars($proj['id']) ?>">
             
-            <!-- Translucent Masking Tape Strip at Top -->
+            <!-- Translucent Masking Tape at Top -->
             <span class="washi-tape washi-tape-top"></span>
 
             <!-- Polaroid Photo Frame -->
-            <div class="polaroid-photo-wrap">
+            <div class="polaroid-photo-frame">
               <img src="<?= htmlspecialchars($proj['image']) ?>?v=<?= file_exists($proj['image']) ? filemtime($proj['image']) : time() ?>" alt="<?= htmlspecialchars($proj['title']) ?>" loading="lazy">
-              <span class="polaroid-badge-pill"><?= htmlspecialchars($proj['category_label'] ?? 'Flagship') ?></span>
-              <span class="polaroid-index-stamp">PRJ // <?= sprintf('%02d', $idx + 1) ?></span>
+              <span class="polaroid-badge"><?= htmlspecialchars($proj['category_label'] ?? 'Flagship') ?></span>
+              <span class="polaroid-stamp">PRJ // <?= sprintf('%02d', $idx + 1) ?></span>
             </div>
 
-            <!-- Polaroid Lower Chin (Handwritten Marker Labels & Details) -->
+            <!-- Polaroid Lower Chin -->
             <div class="polaroid-chin">
-              <span class="polaroid-client-kicker"><?= htmlspecialchars($proj['client'] ?? 'Client Confidential') ?></span>
+              <span class="polaroid-client"><?= htmlspecialchars($proj['client'] ?? 'Client Confidential') ?></span>
               <h3 class="polaroid-title"><?= htmlspecialchars($proj['title']) ?></h3>
               <p class="polaroid-desc"><?= htmlspecialchars($proj['description']) ?></p>
 
-              <div class="polaroid-tags-row">
+              <div class="polaroid-tags">
                 <?php foreach (array_slice($proj['tags'], 0, 3) as $tag): ?>
-                  <span class="polaroid-tag-chip"><?= htmlspecialchars($tag) ?></span>
+                  <span class="polaroid-tag"><?= htmlspecialchars($tag) ?></span>
                 <?php endforeach; ?>
               </div>
 
-              <div class="polaroid-footer-actions">
-                <button type="button" class="polaroid-case-btn btn-open-case-study" data-project-open="<?= htmlspecialchars($proj['id']) ?>" id="openProj_<?= htmlspecialchars($proj['id']) ?>">
+              <div class="polaroid-actions">
+                <button type="button" class="btn-open-case" data-project-open="<?= htmlspecialchars($proj['id']) ?>">
                   <span>Inspect Blueprint</span>
                   <i class="fa-solid fa-arrow-right" style="font-size: 0.8rem; margin-left: 4px;"></i>
                 </button>
 
                 <?php if (!empty($proj['live']) && $proj['live'] !== '#'): ?>
-                  <a href="<?= htmlspecialchars($proj['live']) ?>" target="_blank" rel="noopener noreferrer" class="polaroid-live-link" title="Open Live Site" aria-label="Open Live Site">
+                  <a href="<?= htmlspecialchars($proj['live']) ?>" target="_blank" rel="noopener noreferrer" class="btn-live-circle" title="Open Live Site" aria-label="Open Live Site" onclick="event.stopPropagation();">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 <?php endif; ?>
@@ -407,122 +257,10 @@ require_once __DIR__ . '/includes/header.php';
         <?php endforeach; ?>
       </div>
 
-      <!-- Prominent Button to Go to the Works Page to View All -->
-      <div style="text-align: center; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px dashed rgba(255, 255, 255, 0.14);" class="reveal-on-scroll">
-        <a href="works.php" class="btn btn-amber magnetic-btn" id="btnViewAllWorks" style="padding: 0.95rem 2.6rem; font-size: 1rem; font-weight: 700; display: inline-flex; gap: 0.75rem; align-items: center; border-radius: var(--radius-pill);">
-          <span>Go to Works Page to View All 20+ Blueprints</span>
-          <span style="font-family: var(--font-mono); font-size: 0.72rem; padding: 0.2rem 0.55rem; border-radius: var(--radius-pill); background: rgba(0, 0, 0, 0.25); font-weight: 600;"><?= count($projects) ?> Total</span>
-          <i class="fa-solid fa-arrow-right" style="font-size: 0.85rem;"></i>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       PRICING & PACKAGES PREVIEW
-       ======================================================================== -->
-  <section class="pricing-section" id="pricing">
-    <div class="container">
-      
-      <div class="section-header-editorial reveal-on-scroll">
-        <div class="section-kicker">
-          <span class="kicker-line"></span>
-          <span>04 // Transparent Investment & Packages</span>
-        </div>
-        <h2 class="section-headline">
-          Predictable Pricing. <br><span class="text-gradient-champagne">Zero Hidden Surprises.</span>
-        </h2>
-        <p class="section-lead">
-          Clear, outcome-focused packages engineered for emerging founders and scaling brands. Built with transparent deliverables and zero bloated agency retainers.
-        </p>
-
-        <!-- Category Filter Tabs -->
-        <div class="pricing-filter-tabs" id="pricingFilterTabs">
-          <button type="button" class="pricing-tab-btn active" data-filter="all">All Packages</button>
-          <button type="button" class="pricing-tab-btn" data-filter="website"><i class="fa-solid fa-laptop-code"></i> Website (One-Time)</button>
-          <button type="button" class="pricing-tab-btn" data-filter="growth"><i class="fa-solid fa-arrow-trend-up"></i> Social & Growth (Monthly)</button>
-          <button type="button" class="pricing-tab-btn" data-filter="mobile"><i class="fa-solid fa-mobile-screen-button"></i> Mobile App (Android + iOS)</button>
-        </div>
-      </div>
-
-      <!-- Pricing Cards Grid -->
-      <div class="pricing-cards-grid" id="pricingCardsGrid">
-        <?php foreach ($pricingCategories as $category): ?>
-          <?php foreach ($category['plans'] as $plan): ?>
-            <div class="pricing-card-editorial spotlight-card reveal-on-scroll <?= !empty($plan['highlight']) ? 'is-flagship' : '' ?>" data-category="<?= htmlspecialchars($category['id']) ?>">
-              <?php if (!empty($plan['highlight'])): ?>
-                <div class="pricing-badge-popular">
-                  <i class="fa-solid fa-bolt"></i> <?= htmlspecialchars($plan['badge']) ?>
-                </div>
-              <?php else: ?>
-                <div class="pricing-badge-subtle">
-                  <?= htmlspecialchars($plan['badge']) ?>
-                </div>
-              <?php endif; ?>
-
-              <div class="pricing-card-header">
-                <span class="pricing-category-pill"><?= htmlspecialchars($category['name']) ?></span>
-                <h3 class="pricing-plan-title"><?= htmlspecialchars($plan['name']) ?></h3>
-                <p class="pricing-plan-tagline"><?= htmlspecialchars($plan['tagline']) ?></p>
-              </div>
-
-              <div class="pricing-amount-wrap">
-                <div class="pricing-price-val"><?= htmlspecialchars($plan['price']) ?></div>
-                <div class="pricing-billing-cycle"><?= htmlspecialchars($plan['billing']) ?></div>
-              </div>
-
-              <div class="pricing-timeline-pill">
-                <i class="fa-regular fa-clock"></i> Timeline: <?= htmlspecialchars($plan['timeline']) ?>
-              </div>
-
-              <div class="pricing-divider"></div>
-
-              <div class="pricing-features-section">
-                <span class="features-label">Deliverables Included:</span>
-                <ul class="features-checklist">
-                  <?php foreach ($plan['features'] as $feat): ?>
-                    <li>
-                      <i class="fa-solid fa-check"></i>
-                      <span><?= htmlspecialchars($feat) ?></span>
-                    </li>
-                  <?php endforeach; ?>
-                </ul>
-
-                <?php if (!empty($plan['not_included'])): ?>
-                  <span class="features-label muted-label">Scope Boundaries:</span>
-                  <ul class="features-not-included">
-                    <?php foreach ($plan['not_included'] as $notInc): ?>
-                      <li>
-                        <i class="fa-solid fa-minus"></i>
-                        <span><?= htmlspecialchars($notInc) ?></span>
-                      </li>
-                    <?php endforeach; ?>
-                  </ul>
-                <?php endif; ?>
-              </div>
-
-              <div class="pricing-card-footer">
-                <a href="<?= htmlspecialchars(getPackageWhatsAppUrl($plan)) ?>" target="_blank" rel="noopener noreferrer" 
-                   class="btn <?= !empty($plan['highlight']) ? 'btn-primary' : 'btn-ghost-editorial' ?> btn-select-package magnetic-btn" 
-                   data-plan-name="<?= htmlspecialchars($plan['name']) ?>" 
-                   data-plan-price="<?= htmlspecialchars($plan['price']) ?> (<?= htmlspecialchars($plan['billing']) ?>)"
-                   data-plan-id="<?= htmlspecialchars($plan['id']) ?>"
-                   data-whatsapp-url="<?= htmlspecialchars(getPackageWhatsAppUrl($plan)) ?>"
-                   aria-label="Select <?= htmlspecialchars($plan['name']) ?> via WhatsApp">
-                  <span>Select Package</span>
-                  <i class="fa-brands fa-whatsapp"></i>
-                </a>
-              </div>
-            </div>
-          <?php endforeach; ?>
-        <?php endforeach; ?>
-      </div>
-
-      <!-- Link to Dedicated Pricing Page -->
-      <div style="text-align: center; margin-top: 2.5rem;" class="reveal-on-scroll">
-        <a href="pricing.php" class="btn btn-secondary magnetic-btn">
-          <span>View Transparent Costs Breakdown & Terms</span>
+      <!-- Big Button to View Complete Archive -->
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="works.php" class="btn-orange-solid" style="padding: 1rem 2.6rem; font-size: 1.05rem;">
+          <span>Explore All 20+ Digital Blueprints</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
@@ -531,381 +269,205 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ========================================================================
-       STUDIO LEADERSHIP & TEAM PREVIEW
+       4. "WHAT'S HAPPENING AT BLUE HOUR?" (ROOT BARREL EVENT TIMELINE SECTION)
        ======================================================================== -->
-  <section class="team-section" id="team">
+  <section class="timeline-section" id="timeline">
     <div class="container">
-      
-      <div class="section-header-editorial reveal-on-scroll">
-        <div class="section-kicker">
-          <span class="kicker-line"></span>
-          <span>05 // Studio Leadership & Core Collective</span>
-        </div>
-        <h2 class="section-headline">
-          The Minds Behind <br><span class="text-gradient-champagne">Blue Hour Studios</span>
-        </h2>
-        <p class="section-lead">
-          Direct founder access. Zero bloated agency bureaucracy or junior hand-offs. We architect the digital systems and scale the market narratives.
-        </p>
-      </div>
+      <div class="timeline-grid">
+        
+        <!-- Left: Featured Spotlight -->
+        <div>
+          <div class="script-kicker" style="font-size: 1.6rem; margin-bottom: 0.5rem;">
+            <span>Studio Milestones</span>
+            <img src="assets/images/doodle_crown.svg" alt="Crown" style="width: 28px; height: 22px;">
+          </div>
+          <h2 style="font-family: var(--font-hand); font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 700; color: #FFFDF9; line-height: 1.1; margin-bottom: 1rem;">
+            What's Happening at Blue Hour?
+          </h2>
+          <p style="font-family: var(--font-body); font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+            Live launches, high-ROAS ad campaigns, bespoke e-commerce drops, and continuous SLA support. There is always something brewing in our studios.
+          </p>
 
-      <div class="team-editorial-grid">
-        <?php foreach ($team as $member): ?>
-          <div class="team-card-editorial spotlight-card reveal-on-scroll">
-            <div class="team-card-inner">
+          <!-- Spotlight Card with Washi Tape -->
+          <div style="position: relative; background: var(--bg-dark-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem; box-shadow: 0 16px 40px rgba(0,0,0,0.5);">
+            <span class="washi-tape washi-tape-top"></span>
+            <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 4px; margin-bottom: 1rem;">
+              <img src="assets/images/project_moh_studios.jpg" alt="MOH Atelier" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <span class="polaroid-tag" style="background: rgba(232,141,56,0.15); color: var(--accent-orange); border-color: rgba(232,141,56,0.3); margin-bottom: 0.5rem; display: inline-block;">FLAGSHIP LAUNCH</span>
+            <h4 style="font-family: var(--font-hand); font-size: 1.6rem; font-weight: 700; color: #FFF; margin-bottom: 0.35rem;">MOH Atelier &bull; Ahmedabad</h4>
+            <p style="font-family: var(--font-body); font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+              Bespoke luxury bridal maison storefront featuring pure silk handloom showcase and private salon suite booking desk.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Pinned Kraft Sheet (Event Timeline) -->
+        <div>
+          <div class="pinned-event-sheet">
+            <!-- Red Pushpin at Top Right -->
+            <img src="assets/images/doodle_pushpin.svg" alt="Pin" class="pinned-pushpin">
+
+            <div class="pinned-title">Studio Timeline</div>
+
+            <div class="event-timeline-list">
               
-              <!-- Portrait Image Container -->
-              <div class="team-photo-wrap">
-                <img src="<?= htmlspecialchars($member['image']) ?>?v=20261101c" alt="<?= htmlspecialchars($member['name']) ?>" class="team-photo-img" loading="lazy">
-                <div class="team-photo-vignette"></div>
-                <div class="team-status-chip">
-                  <span class="status-dot-pulse"></span>
-                  <span>ONLINE &bull; DIRECT ACCESS</span>
+              <div class="event-row">
+                <div class="event-badge-box">
+                  <span class="event-date-num">2026</span>
+                  <span class="event-date-mon">Q4 Drop</span>
                 </div>
-                <div class="team-badge-floating">
-                  <i class="fa-solid fa-certificate"></i> <?= htmlspecialchars($member['badge']) ?>
+                <div class="event-info">
+                  <h5>D2C Modest &amp; Handloom Drops</h5>
+                  <p>Shipped Pahervesh (Jaipur Cotton), TehNoor Veils (UAE Abayas), and Cup2Eat (Edible Innovation).</p>
                 </div>
               </div>
 
-              <!-- Content Meta -->
-              <div class="team-details-wrap">
-                <div class="team-role-pill"><?= htmlspecialchars($member['role']) ?></div>
-                <h3 class="team-name-title"><?= htmlspecialchars($member['name']) ?></h3>
-                <?php if (!empty($member['socials']['phone'])): ?>
-                  <div style="margin-bottom: 0.65rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-champagne);">
-                    <i class="fa-solid fa-phone" style="font-size: 0.7rem; margin-right: 0.35rem;"></i>
-                    <a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $member['socials']['phone'])) ?>" style="color: inherit; text-decoration: none;"><?= htmlspecialchars($member['socials']['phone']) ?></a>
-                  </div>
-                <?php endif; ?>
-                <p class="team-bio-text"><?= htmlspecialchars($member['bio']) ?></p>
-
-                <!-- Skill Chips -->
-                <div class="team-skills-row">
-                  <?php foreach ($member['skills'] as $skill): ?>
-                    <span class="team-skill-chip"><?= htmlspecialchars($skill) ?></span>
-                  <?php endforeach; ?>
+              <div class="event-row">
+                <div class="event-badge-box">
+                  <span class="event-date-num">2026</span>
+                  <span class="event-date-mon">Q3 Drop</span>
                 </div>
-
-                <!-- Footer Actions & Direct Socials -->
-                <div class="team-card-footer">
-                  <div class="team-social-links">
-                    <?php if (!empty($member['socials']['github'])): ?>
-                      <a href="<?= htmlspecialchars($member['socials']['github']) ?>" target="_blank" rel="noopener noreferrer" class="team-social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['linkedin'])): ?>
-                      <a href="<?= htmlspecialchars($member['socials']['linkedin']) ?>" target="_blank" rel="noopener noreferrer" class="team-social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['instagram'])): ?>
-                      <a href="<?= htmlspecialchars($member['socials']['instagram']) ?>" target="_blank" rel="noopener noreferrer" class="team-social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['whatsapp'])): ?>
-                      <a href="<?= htmlspecialchars($member['socials']['whatsapp']) ?>" target="_blank" rel="noopener noreferrer" class="team-social-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['email'])): ?>
-                      <a href="mailto:<?= htmlspecialchars($member['socials']['email']) ?>" class="team-social-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <?php endif; ?>
-                    <?php if (!empty($member['socials']['phone'])): ?>
-                      <a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $member['socials']['phone'])) ?>" class="team-social-btn" title="Call <?= htmlspecialchars($member['socials']['phone']) ?>"><i class="fa-solid fa-phone"></i></a>
-                    <?php endif; ?>
-                  </div>
-
-                  <a href="contact.php?consult=<?= urlencode($member['name']) ?>" class="btn btn-ghost-editorial btn-sm magnetic-btn btn-team-consult" data-member-name="<?= htmlspecialchars($member['name']) ?>" data-member-role="<?= htmlspecialchars($member['badge']) ?>">
-                    <span>Consult with <?= htmlspecialchars(explode(' ', $member['name'])[0]) ?></span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </a>
+                <div class="event-info">
+                  <h5>Haute Couture &amp; Royal Groomswear</h5>
+                  <p>Architected MOH Atelier (Ahmedabad) &amp; Raahat by Paritha (Chennai &amp; Bangalore).</p>
                 </div>
+              </div>
 
+              <div class="event-row">
+                <div class="event-badge-box">
+                  <span class="event-date-num">2026</span>
+                  <span class="event-date-mon">Q2 Drop</span>
+                </div>
+                <div class="event-info">
+                  <h5>Heritage Hospitality Engine</h5>
+                  <p>Live room reservation suite &amp; pilgrimage tour desk for historic T.M. Hotel Madurai (Est. 1950).</p>
+                </div>
+              </div>
+
+              <div class="event-row">
+                <div class="event-badge-box">
+                  <span class="event-date-num">24/7</span>
+                  <span class="event-date-mon">Active</span>
+                </div>
+                <div class="event-info">
+                  <h5>Production SLA &amp; Founder Support</h5>
+                  <p>Zero downtime guarantees, rapid security patching, and automated performance monitors.</p>
+                </div>
               </div>
 
             </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
 
-      <!-- Link to Dedicated Team Page -->
-      <div style="text-align: center; margin-top: 2.5rem;" class="reveal-on-scroll">
-        <a href="team.php" class="btn btn-secondary magnetic-btn">
-          <span>Read Studio Philosophy & Founders' Credentials</span>
-          <i class="fa-solid fa-arrow-right"></i>
+            <div style="margin-top: 2rem; text-align: center;">
+              <a href="works.php" class="btn-orange-solid" style="padding: 0.75rem 1.75rem; font-size: 0.92rem; width: 100%; justify-content: center;">
+                <span>View Full Production Archive</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. "STUDIO MOMENTS / CLIENT WALL" (ROOT BARREL "CAFE MOMENTS" STYLE)
+       ======================================================================== -->
+  <section style="background: var(--bg-dark); padding: 5rem 0 4.5rem; position: relative;">
+    <div class="container">
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+        <div>
+          <div class="script-kicker" style="font-size: 1.6rem;">
+            <span>Client Moments</span>
+            <img src="assets/images/doodle_heart.svg" alt="Heart" style="width: 22px; height: 20px;">
+          </div>
+          <h2 style="font-family: var(--font-hand); font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 700; color: #FFFDF9; line-height: 1.1;">
+            A Peek into Our Live Partner Brands.
+          </h2>
+        </div>
+        <a href="works.php" class="script-highlight" style="font-size: 1.25rem; text-decoration: none;">
+          Explore All Partner Brands &rarr;
         </a>
       </div>
 
+      <!-- Partner Logos Strip -->
+      <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem;">
+        
+        <a href="https://paherveshbyakshree.vercel.app/" target="_blank" rel="noopener noreferrer" style="background: #FCE4E2; border-radius: 8px; padding: 1rem; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; box-shadow: 0 4px 14px rgba(0,0,0,0.3); transition: transform 0.2s ease;">
+          <img src="assets/images/client_pahervesh_sq.jpg" alt="Pahervesh" style="max-height: 75%; object-fit: contain;">
+        </a>
+
+        <a href="https://tehnoorveils.vercel.app/" target="_blank" rel="noopener noreferrer" style="background: #F1E7DD; border-radius: 8px; padding: 1rem; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; box-shadow: 0 4px 14px rgba(0,0,0,0.3); transition: transform 0.2s ease;">
+          <img src="assets/images/client_tehnoor_veils_sq.jpg" alt="TehNoor Veils" style="max-height: 75%; object-fit: contain;">
+        </a>
+
+        <a href="https://mohstudios.vercel.app/" target="_blank" rel="noopener noreferrer" style="background: #140E0A; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; box-shadow: 0 4px 14px rgba(0,0,0,0.3); transition: transform 0.2s ease;">
+          <img src="assets/images/client_moh_studios_sq.svg" alt="MOH Atelier" style="max-height: 75%; object-fit: contain;">
+        </a>
+
+        <a href="https://tmhotel.vercel.app/" target="_blank" rel="noopener noreferrer" style="background: #16080D; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; box-shadow: 0 4px 14px rgba(0,0,0,0.3); transition: transform 0.2s ease;">
+          <img src="assets/images/client_tm_hotel_sq.svg" alt="TM Hotel" style="max-height: 75%; object-fit: contain;">
+        </a>
+
+        <a href="https://raahatbyparitha-two.vercel.app/" target="_blank" rel="noopener noreferrer" style="background: #0E0B0A; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; box-shadow: 0 4px 14px rgba(0,0,0,0.3); transition: transform 0.2s ease;">
+          <img src="assets/images/client_raahat_sq.svg" alt="Raahat by Paritha" style="max-height: 75%; object-fit: contain;">
+        </a>
+
+        <a href="https://cup-2-eat-ochre.vercel.app/" target="_blank" rel="noopener noreferrer" style="background: #081B13; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem; display: flex; align-items: center; justify-content: center; aspect-ratio: 1; box-shadow: 0 4px 14px rgba(0,0,0,0.3); transition: transform 0.2s ease;">
+          <img src="assets/images/client_cup2eat_sq.svg" alt="Cup2Eat" style="max-height: 75%; object-fit: contain;">
+        </a>
+
+      </div>
+
     </div>
   </section>
 
   <!-- ========================================================================
-       OUR CLIENTS LIVE CAROUSEL & TESTIMONIALS SECTION
+       TORN PAPER DIVIDER 3 (DARK TO KRAFT)
        ======================================================================== -->
-  <section class="testimonials-section" id="testimonials">
+  <div class="torn-divider torn-kraft-top" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       6. "RESERVE YOUR BRIEF" (ROOT BARREL "RESERVE TABLE" KRAFT SECTION)
+       ======================================================================== -->
+  <section class="reserve-table-section" id="contact">
     <div class="container">
-
-      <!-- OUR CLIENTS LIVE CAROUSEL (LARGE LOGOS) -->
-      <div class="our-clients-showcase reveal-on-scroll" id="ourClients">
-        <div class="trusted-clients-header">
-          <div class="trusted-clients-kicker">
-            <span class="pulse-dot"></span>
-            <span>OUR CLIENTS &amp; PARTNER BRANDS</span>
-          </div>
-          <a href="works.php" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-champagne); text-decoration: none;">
-            VIEW ALL CASE STUDIES &rarr;
-          </a>
-        </div>
-
-        <div class="clients-carousel-viewport">
-          <div class="clients-carousel-track">
-            <?php for ($loop = 0; $loop < 2; $loop++): ?>
-              <a href="https://paherveshbyakshree.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #FCE4E2;">
-                  <img src="assets/images/client_pahervesh_sq.jpg?v=20261122b" alt="Pahervesh by Akshree" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Pahervesh by Akshree</span>
-                  <span class="trusted-client-sector">Pure Cotton Ethnic Wear</span>
-                </div>
-              </a>
-
-              <a href="https://sevipharmhealthcare.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #081424;">
-                  <img src="assets/images/client_servi_pharm_sq.svg?v=20261122" alt="Servi Pharm Healthcare" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Servi Pharm Healthcare</span>
-                  <span class="trusted-client-sector">Online Pharmacy &amp; Medical Devices</span>
-                </div>
-              </a>
-
-              <a href="https://tmhotel.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #16080D;">
-                  <img src="assets/images/client_tm_hotel_sq.svg?v=20261122" alt="T.M. Hotel Madurai" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">T.M. Hotel Madurai</span>
-                  <span class="trusted-client-sector">Heritage Hospitality Stay</span>
-                </div>
-              </a>
-
-              <a href="https://tehnoorveils.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #F1E7DD;">
-                  <img src="assets/images/client_tehnoor_veils_sq.jpg?v=20261122b" alt="TehNoor Veils" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">TehNoor Veils</span>
-                  <span class="trusted-client-sector">UAE Imported Modest Couture</span>
-                </div>
-              </a>
-
-              <a href="https://knots-facets.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #FBF6EE;">
-                  <img src="assets/images/client_knots_facets_sq.jpg?v=20261110" alt="Knots &amp; Facets" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Knots &amp; Facets</span>
-                  <span class="trusted-client-sector">Handmade Crafts &amp; Jewellery</span>
-                </div>
-              </a>
-
-              <a href="https://rinahazarika-clothing.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #1E0C0E;">
-                  <img src="assets/images/client_rina_hazarika_sq.svg?v=20261110" alt="Rina Hazarika" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Rina Hazarika</span>
-                  <span class="trusted-client-sector">Axomiya Bastra &amp; Alonkar</span>
-                </div>
-              </a>
-
-              <a href="https://mohstudios.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #120e0d;">
-                  <img src="assets/images/client_moh_sq.svg?v=20261110" alt="MOH Atelier Ahmedabad" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">MOH Atelier</span>
-                  <span class="trusted-client-sector">Heritage Gujarati Trousseaus</span>
-                </div>
-              </a>
-
-              <a href="https://raahatbyparitha-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #0d0c0b;">
-                  <img src="assets/images/client_raahat_sq.png?v=20261110" alt="Raahat by Paritha" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Raahat by Paritha</span>
-                  <span class="trusted-client-sector">Bespoke Groom Haute Couture</span>
-                </div>
-              </a>
-
-              <a href="https://cup-2-eat-ochre.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #0B2B1B;">
-                  <img src="assets/images/client_cup2eat_sq.jpg?v=20261112" alt="Cup2Eat" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Cup2Eat</span>
-                  <span class="trusted-client-sector">Edible Cups &amp; Zero Waste</span>
-                </div>
-              </a>
-
-              <a href="https://wisharico.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #FAF8F5;">
-                  <img src="assets/images/client_wishari_sq.png?v=20261112" alt="Wishari" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Wishari</span>
-                  <span class="trusted-client-sector">Artisanal &amp; Corporate Gifting</span>
-                </div>
-              </a>
-
-              <a href="https://junuclothing.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #0a0a0a;">
-                  <img src="assets/images/client_junu_sq.jpg?v=20261112" alt="JUNU by Roselyn Magar" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">JUNU (Roselyn Magar)</span>
-                  <span class="trusted-client-sector">Avant-Garde Couture &amp; Drops</span>
-                </div>
-              </a>
-
-              <a href="works.php" class="trusted-client-card">
-                <div class="trusted-logo-box">
-                  <img src="assets/images/client_pragjyotishpur.png?v=20261101e" alt="Pragjyotishpur University" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Pragjyotishpur University</span>
-                  <span class="trusted-client-sector">Campus ERP &amp; Portal</span>
-                </div>
-              </a>
-
-              <a href="works.php" class="trusted-client-card">
-                <div class="trusted-logo-box">
-                  <img src="assets/images/client_omkaar.jpg?v=20261101e" alt="Omkaar Trans Logistics" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Omkaar Trans Logistics</span>
-                  <span class="trusted-client-sector">Enterprise Fleet ERP</span>
-                </div>
-              </a>
-
-              <a href="works.php" class="trusted-client-card">
-                <div class="trusted-logo-box" style="background: #0a0a0a;">
-                  <img src="assets/images/client_kharidlo.jpg?v=20261101e" alt="Kharidlo.in Assam" loading="lazy">
-                </div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Kharidlo.in (Assam)</span>
-                  <span class="trusted-client-sector">E-Commerce &amp; Retail</span>
-                </div>
-              </a>
-
-              <a href="https://gulbani.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-monogram">GULBANI</div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Gulbani Luxury Concierge</span>
-                  <span class="trusted-client-sector">Luxury Gifting &amp; Social Ads</span>
-                </div>
-              </a>
-
-              <a href="https://chaudhary-associates.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-monogram">CA</div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Chaudhary Associates</span>
-                  <span class="trusted-client-sector">Architecture Web &amp; Growth</span>
-                </div>
-              </a>
-
-              <a href="https://prasunaclothing.vercel.app/" target="_blank" rel="noopener noreferrer" class="trusted-client-card">
-                <div class="trusted-logo-monogram">PRASUNA</div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Prasuna Clothing</span>
-                  <span class="trusted-client-sector">D2C Fashion &amp; Viral Reels</span>
-                </div>
-              </a>
-
-              <a href="works.php" class="trusted-client-card">
-                <div class="trusted-logo-monogram">BHUYAN</div>
-                <div class="trusted-client-meta">
-                  <span class="trusted-client-name">Bhuyan Commercial Group</span>
-                  <span class="trusted-client-sector">Commercial Property SaaS</span>
-                </div>
-              </a>
-            <?php endfor; ?>
-          </div>
-        </div>
-      </div>
       
-      <div class="section-header-editorial reveal-on-scroll">
-        <div class="section-kicker">
-          <span class="script-kicker" style="font-size: 1.5rem;">
-            <img src="assets/images/doodle_starburst.svg" alt="Star" style="width: 22px; height: 22px; vertical-align: middle;">
-            <span>06 // Verified Client Love</span>
-          </span>
-        </div>
-        <h2 class="section-headline">
-          <span style="font-family: var(--font-hand); font-size: 1.35em; color: #FFF; display: block; font-weight: 700; line-height: 1.15;">
-            Validated by Visionary Founders &amp; Enterprises.
-          </span>
-          Real conversations, measured exponential impact.
-        </h2>
-        <p class="section-lead">
-          See how our software architecture and viral marketing directly move the needle for client bottom lines.
-        </p>
-      </div>
+      <div class="reserve-table-card">
+        <span class="washi-tape washi-tape-top"></span>
 
-      <div class="testimonials-editorial-grid">
-        <?php foreach ($testimonials as $idx => $t): ?>
-          <div class="testimonial-card-editorial spotlight-card tilt-card reveal-on-scroll delay-<?= ($idx % 3) + 1 ?>">
-            <div class="quote-stars-row">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            
-            <p class="testimonial-quote-editorial">"<?= htmlspecialchars($t['text']) ?>"</p>
-            
-            <div class="testimonial-client-meta">
-              <div class="client-monogram-circle" style="background: <?= htmlspecialchars($t['avatar_color']) ?>;">
-                <?= strtoupper(substr($t['name'], 0, 1)) ?>
-              </div>
-              <div class="client-info-editorial">
-                <h5><?= htmlspecialchars($t['name']) ?></h5>
-                <span><?= htmlspecialchars($t['role']) ?> &bull; <?= htmlspecialchars($t['company']) ?></span>
-              </div>
-            </div>
+        <div class="reserve-copy">
+          <div class="script-kicker" style="color: var(--accent-orange-deep); margin-bottom: 0.35rem;">
+            <span>Let's Build Together</span>
+            <img src="assets/images/doodle_crown.svg" alt="Crown" class="doodle-crown-icon" style="width: 28px; height: 22px;">
           </div>
-        <?php endforeach; ?>
+          <h2>Reserve Your Digital Build</h2>
+          <p>
+            Planning a product launch, website redesign, custom e-commerce store, or viral social media campaign? We'd love to host your brand vision. Submit a brief or speak directly with our founders today.
+          </p>
+        </div>
+
+        <div class="reserve-actions">
+          <a href="contact.php" class="btn-orange-solid" style="padding: 1rem 2.25rem;">
+            <span>Book Founder Consultation</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="https://wa.me/917002201534?text=Hi%20Blue%20Hour%20Studios,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="btn-craft-outline" style="color: #2B2118; border-color: rgba(90,70,50,0.45); padding: 0.95rem 1.85rem;">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.15rem;"></i>
+            <span>Instant WhatsApp Desk</span>
+          </a>
+        </div>
+
       </div>
 
     </div>
   </section>
 
   <!-- ========================================================================
-       CALL TO ACTION & INITIATION BANNER
+       TORN PAPER DIVIDER 4 (KRAFT TO DARK)
        ======================================================================== -->
-  <section class="contact-section" id="contact" style="padding-top: 20px;">
-    <div class="container">
-      <div class="launchpad-card spotlight-card reveal-on-scroll" style="text-align: center; padding: 3.5rem 1.8rem; background: var(--bg-espresso-elevated); border: 1.5px dashed rgba(232, 141, 56, 0.4); position: relative; border-radius: 12px;">
-        <span class="washi-tape washi-tape-top"></span>
-        <span class="script-kicker" style="display: block; margin-bottom: 0.6rem; font-size: 1.45rem;">
-          <img src="assets/images/doodle_crown.svg" alt="Crown" style="width: 28px; height: 22px; vertical-align: middle;">
-          <span>Reserve a Founder Strategy Session</span>
-        </span>
-        <h2 style="font-family: var(--font-display); font-size: clamp(2.1rem, 3.8vw, 2.9rem); font-weight: 700; margin-bottom: 0.85rem; color: #FFF; line-height: 1.15;">
-          Ready to Build Something <span class="script-highlight" style="color: var(--accent-amber); font-weight: 700;">Truly Iconic?</span>
-        </h2>
-        <p style="color: #C0B5A7; max-width: 620px; margin: 0 auto 2rem auto; font-size: 1.05rem; line-height: 1.6; font-family: var(--font-body);">
-          Submit your brief directly to our founders or connect instantly on WhatsApp. We respond within 4 hours with an actionable roadmap.
-        </p>
-        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
-          <a href="https://wa.me/917002201534?text=Hi%20Blue%20Hour%20Studios,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer" class="btn btn-craft-outline magnetic-btn" style="padding: 0.95rem 2rem; font-size: 1rem;">
-            <i class="fa-brands fa-whatsapp" style="color: #25d366; font-size: 1.15rem; margin-right: 6px;"></i>
-            <span>Instant Founder Desk</span>
-          </a>
-          <a href="contact.php" class="btn btn-amber magnetic-btn" style="padding: 0.95rem 2.25rem; font-size: 1rem;">
-            <span>Open Strategic Intake Desk</span>
-            <i class="fa-solid fa-arrow-right" style="margin-left: 6px;"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="torn-divider torn-dark-top" aria-hidden="true"></div>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
